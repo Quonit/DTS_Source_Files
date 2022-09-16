@@ -1,0 +1,16 @@
+﻿//Descript.txt file for Nighty
+charset,UTF-8
+name,Dreamtale Sans
+type,ghost
+seriko.defaultsurfacedirectoryname,!original
+
+sakura.name,Dreamtale Sans
+kero.name, 
+
+craftman,Quonit
+craftmanurl,https://quonit.tumblr.com/
+
+sstp.allowunspecifiedsend,0
+shiori,yaya.dll
+
+icon,DTS.ico

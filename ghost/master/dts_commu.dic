@@ -1,0 +1,24 @@
+OnCommunicate
+ {
+	if reference0 == "user" || reference0 == "User"
+ 	{
+ 		ReplyToUser
+	}
+ 	else
+	{
+		ReplyToGhost
+ 	}
+}
+
+ReplyToUser
+{
+	TalkToUser
+}
+
+ReplyToGhost
+{
+ 	res_reference0 = reference0
+	{
+	"\0\i[55]* (He doesn't seem to notice...\w8 Maybe they're invisable to him?)\e"
+	}
+}
