@@ -1,41 +1,39 @@
 ﻿//Funny Envelopes
 bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 {
-	"a very large looking book about skeleton history"
-	"a romance novel about a monster and human"
-	"a romance novel about a monster and human that both die in the end"
+	"a hefty-looking book on skeleton history"
+	"a romance novel about a monster and human %(ANY('','that both die in the end'))"
 	"a book by that one guy who did a metric ton of cocaine"
-	"a book with the Tolkien-like birds"
+	"a book with Tolkien-like birds"
 	"an old fantasy novel about transgender wizards"
-	"a really weird book where a lot of the pages were upside down or the text went in spirals"
-	"a book about demon hunters and prophecies that was a total rip-off of that one other show"
-	"a rip-off book of that other popular series"
+	"a really weird book where a lot of the pages are upside down or the text is in spirals"
+	"a book about demon hunters and prophecies that is a total rip-off of that one other show"
+	"a rip-off of that other popular series"
 	"a book where there's a monster at the end"
 	"a book about a rare extinct bird"
-	"a book where everyone's miserable and their marriage is falling apart"
-	"a book with the rabbits and all the made-up words"
-	"a depressing book about the two dogs that escape a research lab"
-	"a cute book about the princess who lives with a dragon"
-	"a book about the kid who lived in a sewer"
-	"a book about the weird magician messing with some sociologist"
+	"a book where everyone's miserable and their marriages are falling apart"
+	"a book with rabbits and made-up words"
+	"a depressing book about two dogs who escape a research lab"
+	"a cute book about a princess who lives with a dragon"
+	"a book about a kid who lived in a sewer"
+	"a book about a weird magician messing with some sociologist"
 	"a book about the gift of fear"
-	"a book about the talking mice"
+	"a book about talking mice"
 	"a book about the Monsters and Humans War"
 	"a book about the Monsters and Humans War except with dragons"
 	"a book about a mad scientist that kept kis kids as lab rats"
 	"a book about two kids living in a treehouse"
-	"a book about the guy who thought he was a soldier but was really a robot \w4but then maybe he really was a person who just thought he was a robot"
+	"a book about a guy who thought he was a soldier but was really a robot \w4but then maybe he really was a person who just thought he was a robot"
 	"a preachy book about politics"
-	"a book with all the spaceships and social commentary"
-	"a book where everyone died at the end"
+	"a book with spaceships and social commentary"
+	"a book where everyone dies at the end"
 	"a book about serial killers"
 	"a book about made-up crime"
 	"a book about creepy occult activity in this area"
-	"a an instructional book about magic"
-	"a cursed book with the cover made of skin"
+	"an instructional book about magic"
+	"a cursed book whose cover is made of skin"
 	"a book that screams every time you open it"
-	"a mysterious journal with the '3' on it"
-	"a mysterious journal with the '2' on it"
+	"a mysterious journal with a %(ANY('2','3')) on it"
 	"a book with a glossary at the end, like come on"
 	"a sappy romance novel"
 	"a book told entirely through people's letters to each other"
@@ -46,25 +44,22 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"a book that spends most of its time threatening you"
 	"a book about a cat's nine lives"
 	"a book of short stories where a long finger came out of a bathroom sink drain"
-	"a book with the lady who has a bug for a head"
+	"a book with a lady who has a bug for a head"
 	"a book where the dude turns into a bug and it's like a metaphor or something"
-	"a book with all the flowery prose about being a barbarian"
-	"a book that was pretty good except the main character sucked"
+	"a book with flowery prose about being a barbarian"
+	"a book that's pretty good except the main character sucks"
 	"a tell-all gossip book"
 	"a really terrible book by that one actress"
-	"a book where you had to set it on fire to get the real ending"
+	"a book where you have to set it on fire to get the real ending"
 	"a book about burning books"
-	"a book about human history"
-	"a book about monster history"
-	"a book about gay vampires"
-	"a book about gay werewolves"
-	"a book about gay dragons"
-	"a book about the governess who fell in love with the guy who had his crazy wife in the attic"
-	"a super bleak book with baby eating"
-	"a really cute book about the wall flower finding a wall"
-	"a book about the giant centipede that wants to enter a famous dog show"
-	"a weird report about the killer stacks of paper"
-	"a book about the children who die horrible gruesome deaths in the chocolate factory"
+	"a book about %(ANY('human','monster')) history"
+	"a book about gay %(ANY('vampires','werewolves','dragons'))"
+	"a book about a governess who fell in love with a guy who had his crazy wife in the attic"
+	"a super bleak book with baby-eating"
+	"a really cute book about the wallflower finding a wall"
+	"a book about a giant centipede that wants to enter a famous dog show"
+	"a weird report about killer stacks of paper"
+	"a book about children who die horrible gruesome deaths in the chocolate factory"
 	"a boring book everyone has to read in school. You know what one I'm talking about."
 	"a weird book where the story's split in two and one starts at the end and one starts at the beginning and then they meet at the center"
 	"a book of stupid jokes"
@@ -75,6 +70,11 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"a book about four ladies in a zombie apocalypse"
 	"a book about a ruined salseman"
 	"an autobiography written by the guy that harrassed people into singing with him"
+	
+	//WORMDITIONS!
+	//"a book about spaceships that's really about gender"
+	
+	
 }
 
 usersfolder //Different folders for the computer
@@ -122,25 +122,19 @@ nightname //Decides which name to use for him
 {
 	if nightynight == "on"
 	{
-	"Nighty"
+		"Nighty"
 	}
 	else
 	{
-	"Nightmare"
+		"Nightmare"
 	}
 }
 
 VillageLevel //Negative variable that also catches if you've hit him or not. Used so that you can't unlock goopmare without hurting him
 {
-punchout - nicesadlevel
+	punchout - nicesadlevel
 }
 
-internalenvelope //???
-{
-	"Internal Envelope Dialogue 1 - %(exampleenvelope)"
-	"%(username)'s computer"
-	"Here is a blanklist object - %(blanklist)."
-}
 
 ItemMOO //Put this at the end of the item menu instead of typing this out 30 times
 {
@@ -168,21 +162,25 @@ backmenu //Put at the end of settings
 }
 
 pickup //why is this here instead of mouse.dic
-{
-	if punchout >= 15 && Edgybitch == "off" || nicesadlevel <= -50 && Edgybitch == "off" 
+{	
+	if Edgybitch == "on"
 	{
-	"\0\s[39]"
+		"\0\s[12]"
 	}
-	elseif Edgybitch == "on"
+	elseif (punchout >= 15 || nicesadlevel <= -50) && Edgybitch == "off" 
+	//now you don't have to check Edgybitch twice
 	{
-	"\0\s[12]"
+		"\0\s[39]"
 	}
 	elseif sleepingmode == "on"
 	{
-	"\0\s[5]"
 		if givesleepyblankie == "on"
 		{
-		"\0\s[5]\i[48]"
+			"\0\s[5]\i[48]"
+		}
+		else
+		{
+			"\0\s[5]"
 		}
 	}
 	elseif sittang == "on"
@@ -191,16 +189,18 @@ pickup //why is this here instead of mouse.dic
 	}
 	else
 	{
-	"\0\s[38]"
+		//if nicesadlevel >= 75, will randomly choose between >=75 pose and default
+		"\0\s[38]"
+		
 		if nicesadlevel >= 75
 		{
 			if blushiemode == "on"
 			{
-			"\0\s[45]\i[2]\i[3]"
+				"\0\s[45]\i[2]\i[3]"
 			}
 			else
 			{
-			"\0\s[45]\i[1]"
+				"\0\s[45]\i[1]"
 			}
 		}
 	}
@@ -212,28 +212,28 @@ surface0
 	{
 		if sittang == "on"
 		{
-		"\0\s[1]"
+			"\0\s[1]"
 		}
 		else
 		{
-		"\0\s[0]\i[12]"
+			"\0\s[0]\i[12]"
 		}
 	}
 	elseif nicesadlevel >= 25
 	{
 		if sittang == "on"
 		{
-		"\0\s[1]\i[14]"
+			"\0\s[1]\i[14]"
 		}
 		else
 		{
-		"\0\s[0]\i[14]\i[15]"
+			"\0\s[0]\i[14]\i[15]"
 		}
 	}
 	else
 	{
-	"\0\s[0]\i[10]"
-	"\0\s[0]\i[15]"
+		"\0\s[0]\i[10]"
+		"\0\s[0]\i[15]"
 	}
 }
 
@@ -241,12 +241,12 @@ annoyed
 {
 	if sittang == "on"
 	{
-	"\0\s[1]\i[9]"
+		"\0\s[1]\i[9]"
 	}
 	else
 	{
-	"\0\s[0]\i[11]\i[10]"
-	"\0\s[0]\i[13]\i[10]"
+		"\0\s[0]\i[11]\i[10]"
+		"\0\s[0]\i[13]\i[10]"
 	}
 }
 
@@ -271,12 +271,45 @@ MUNCH
 	}
 }
 
-dreambday //dream's one other appearence lol
+dreambday //dream's one other appearance lol
 {
-	"\0\s[13]Oh,\w4 it's %(bornmonthprint) %(borndayprint), \w3right?\w8\n\nThat's your birthday, \w4so uh-\0\s[7]\w8\1\s[1625]\w8\w8*\w5 (\w4.\w4.\w4.\w4)\w8\0\s[36]\n\nanDream what are you doing here!!\1\n\nComing to say hi to %(username).\0\n\nBut-\n\n\w5\1\n\n%(username) already knows about me though,\w4 so it's fine!\n\n\0\s[8]Fine but you can't stay here...\n\n\w8\1Okay!\w7\n\n\1\s[1626]Hello %(username),\w4 are you having a good birthday?\w6 I hope you are cause I dunno how to tell from here. \w8\1\s[1625]Nightmare this place is really weird.\0\s[8]\w8I know that,\w4 I live here.\1\w8\n\nOkay.\w7\1\s[1626]Happy birthday %(username)!\w8\w8\w8\1\s[10]\e"
+	"\0\s[13]Oh,\w4 it's %(bornmonthprint) %(borndayprint), \w3right?\w8\n\nThat's your birthday, \w4so uh-\0\s[7]\w8\1\s[1625]\w8\w8*\w5 (\w4.\w4.\w4.\w4)\w8\0\s[36]\n\nanDream what are you doing here!!\1\n\nComing to say hi to %(username).\0\n\nBut-\n\n\w5\1\n\n%(username) already knows about me though,\w4 so it's fine!\n\n\0\s[8]Fine but you can't stay here...\n\n\w8\1Okay!\w7\n\n\1\s[1626]Hello %(username),\w4 are you having a good birthday?\w6 I hope you are cause I dunno how to tell from here. \w8\1\s[1625]Nightmare, this place is really weird.\0\s[8]\w8I know that,\w4 I live here.\1\w8\n\nOkay.\w7\1\s[1626]Happy birthday %(username)!\w8\w8\w8\1\s[10]\e"
 }
 
 On_\person //idk what this is
 {
  	person
+}
+
+
+
+Ord
+//by Worm. returns the number in its proper ordinal
+{
+	_number = TOSTR(_argv[0])
+	_ones = (_number%10)
+	_tens = (_number/10)
+	
+	if _tens == 1 || _ones > 3
+	{
+		_number = _number+'th'
+	}
+	elseif _ones == 3
+	{
+		_number = _number+'rd'
+	}
+	elseif _ones == 2
+	{
+		_number = _number+'nd'
+	}
+	elseif _ones == 1
+	{
+		_number = _number+'st'
+	}
+	else
+	{
+		_number = _number+'th'
+	}
+	
+	_number
 }

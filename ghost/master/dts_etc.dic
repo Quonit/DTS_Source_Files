@@ -19,15 +19,15 @@
 		{
 			if Edgybitch == "on"
 			{
-			"\0\s[0]\i[13]What, \w4do you want me to sing for you or something?\e"
+				"\0\s[0]\i[13]What, \w4do you want me to sing for you or something?\e"
 			}
 			elseif intodreams == "on"
 			{
-			"\0\s[2002]* (Dream doesn't seem to know what it is...)\0\s[2002]Um\w2.\w2.\w2.\w8 Thank you\w2.\w2.\w2.\w2?\e"
+				"\0\s[2002]* (Dream doesn't seem to know what it is...)\0\s[2002]Um\w2.\w2.\w2.\w8 Thank you\w2.\w2.\w2.\w2?\e"
 			}
 			else
 			{
-			"\0\s[8]%(_filename)%(_fileext) is a music file...\n\n\w8I can't do anything with those, \w8sorry.\n\n\w8Maybe try another ghost?\e"
+				"\0\s[8]%(_filename)%(_fileext) is a music file...\n\n\w8I can't do anything with those, \w8sorry.\n\n\w8Maybe try another ghost?\e"
 			}
 		}
 		others
@@ -63,8 +63,8 @@ OnInstallBegin
 	}
 	else
 	{
-	"\0\s[4]A ghost...? \w8Sure, I'll install it.\e"
-	"\0%(surface0)* (Installing file\w4.\w4.\w4.\w4)\e"
+		"\0\s[4]A ghost...? \w8Sure, I'll install it.\e"
+		"\0%(surface0)* (Installing file\w4.\w4.\w4.\w4)\e"
 	}
 }
 OnInstallComplete
@@ -75,13 +75,13 @@ OnInstallComplete
 	{	
 		if reference1 == "Nightmare"
 		{
-		Edgybitch = "on"
-		wasemo = "on"
-		"\0\s[1]This should come with the ghost.\w8 Wonder what Quonit screwed up this time.\e"
+			Edgybitch = "on"
+			wasemo = "on"
+			"\0\s[1]This should come with the ghost.\w8 Wonder what Quonit screwed up this time.\e"
 		}
 		else //For any other shell they may install.
 		{
-		"%(surface0)\i[55]* (%(reference1) was installed.)\e" 
+			"%(surface0)\i[55]* (%(reference1) was installed.)\e" 
 		}
 	}
 	elseif reference0 == "ghost"
@@ -107,17 +107,17 @@ OnInstallFailure
 	}
 	else
 	{
-	"%(surface0)\i[55]* (The installation has failed.)\n\n\w5"
-	"\0\s[8]I couldn't install it, sorry.\n\n\w5"
+		"%(surface0)\i[55]* (The installation has failed.)\n\n\w5"
+		"\0\s[8]I couldn't install it, sorry.\n\n\w5"
 	}
 	--
 	if reference0 == "unsupported"
 	{
-	"%(surface0)\i[55]* (The file is unsupported.)\e"
+		"%(surface0)\i[55]* (The file is unsupported.)\e"
 	}	
 	elseif reference0 == "extraction"
 	{
-	"%(surface0)\i[55]* (The file could not be extracted properly.)\e"
+		"%(surface0)\i[55]* (The file could not be extracted properly.)\e"
 	}
 }
  
@@ -145,12 +145,12 @@ TalkVanishButtonHold
 }
 OnVanished
 {
-	"\0\s[3]Huh\w2.\w2.\w2.\w8\n\nI swear I saw someone,\w8 guess they disappeared\w2.\w2.\w2."
+	"\0\s[3]Huh\w2.\w2.\w2.\w8\n\nI swear I saw someone.\w8 Guess they disappeared\w2.\w2.\w2."
 }
 
 OnBIFFBegin
 {
-	"\0%(surface0)\i[55]* (Checking the e-mail\w4.\w4.\w4.)\e"
+	"\0%(surface0)\i[55]* (Checking e-mail\w4.\w4.\w4.)\e"
 }
 
 OnBIFFComplete
@@ -210,7 +210,7 @@ OnBIFFFailure
 		}
 		if Edgybitch == "off"
 		{
-		"\0\s[8]I only got an error code '%(reference[0])'.\w8\n\nSorry.\e"
+			"\0\s[8]I only got an error code '%(reference[0])'.\w8\n\nSorry.\e"
 		}
 	}
 }
@@ -264,7 +264,7 @@ OnUpdateFailure
 	}
 	elseif reference0 == "md5 miss"
 	{
-		"\0%(surface0)\i[55]* (The MD5 hash of the files don't match. \w8There was an MD5 error on file %(_file)\e"
+		"\0%(surface0)\i[55]* (The MD5 hash of the files don't match. \w8There was an MD5 error on file %(_file).)\e"
 	}
 	else //for other errors
 	{
@@ -347,6 +347,7 @@ OnHeadlinesenseFailure
 	--
 	"\e"
 }
+
 //UPDATE VARIABLES 
 //These are new variables to initialize after an update. By checking if the variable doesn't exist before initializing it, we prevent variables already in use from being overwritten. This is VERY IMPORTANT, or you risk resetting the user's progress on your new variables every time they update!
 //ISVAR is a built in YAYA function that checks if a variable exists (is initialized) or not. It returns 0 if the variable doesn't exist, and 1 if it does. -Zi
@@ -468,14 +469,14 @@ OnShellScaling
 	{
 		if Edgybitch == "on"
 		{
-			"\0\s[1]You know\w3.\w3.\w3.\n\n\w8I wonder if I can change my side on my own.\e"
+			"\0\s[1]You know\w3.\w3.\w3.\n\n\w8I wonder if I can change my size on my own.\e"
 			"\0\s[1]* (Biggest sized goop.)\e"
 		}
 		else
 		{
-		"\0\s[3]Dunno why you'd want me to take up so much of your screen\w3.\w3.\w3. \w4But okay.\e"
-		"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
-		"\0%(surface0)\i[55]* (Big size sans.)\e"
+			"\0\s[3]Dunno why you'd want me to take up so much of your screen\w3.\w3.\w3. \w4But okay.\e"
+			"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
+			"\0%(surface0)\i[55]* (Big size sans.)\e"
 		}
 		
 	}
@@ -483,13 +484,13 @@ OnShellScaling
 	{
 		if Edgybitch == "on"
 		{
-		"\0\s[1]Normal sized. \w8How boring.\e"
+			"\0\s[1]Normal sized. \w8How boring.\e"
 		}
 		else
 		{
-		"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
-		"\0\s[4]Back to normal...\e"
-		"\0%(surface0)\i[55]* (Normal sized sans.)\e"
+			"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
+			"\0\s[4]Back to normal...\e"
+			"\0%(surface0)\i[55]* (Normal sized sans.)\e"
 		}
 	}
 	elseif reference0 == 50
@@ -501,9 +502,9 @@ OnShellScaling
 		}
 		else
 		{
-		"\0\s[7]Um\w3.\w3.\w3. \w8\0\s[13]\n\nEverything is really big now.\e"
-		"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
-		"\0%(surface0)\i[55]* (Smol sans.\w8 Fun sized sans.)\e"
+			"\0\s[7]Um\w3.\w3.\w3. \w8\0\s[13]\n\nEverything is really big now.\e"
+			"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
+			"\0%(surface0)\i[55]* (Smol sans.\w8 Fun sized sans.)\e"
 		}
 	}
 }
@@ -534,4 +535,10 @@ Onsittangoffsleepingmodeon
 {
 	sittang = "off"
 	sleepingmode = "on"
+}
+
+OnSelfStand
+{
+	sittang = "off"
+	lasttalked = 0
 }

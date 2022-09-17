@@ -4,11 +4,14 @@ name,Dreamtale Sans
 type,ghost
 seriko.defaultsurfacedirectoryname,!original
 
-sakura.name,Dreamtale Sans
+sakura.name,Dreamtale Test Man
 kero.name, 
 
 craftman,Quonit
 craftmanurl,https://quonit.tumblr.com/
+
+//get rid of that stupid shell master error
+seriko.defaultsurfacedirectoryname,!original
 
 sstp.allowunspecifiedsend,0
 shiori,yaya.dll
