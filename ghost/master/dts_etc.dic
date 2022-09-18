@@ -353,14 +353,57 @@ OnHeadlinesenseFailure
 //ISVAR is a built in YAYA function that checks if a variable exists (is initialized) or not. It returns 0 if the variable doesn't exist, and 1 if it does. -Zi
 UpdateVars
 {
+	/*
+	//already set in onboot:
+	lastTalk = ""
+	lasttalked = 0
+	passmin = 0
+	passsec = 0
+	sleepingmode = "off"
+	sittang = "off"
+	*/
 	if !ISVAR('menuname'); {menuname='off'}
-	if !ISVAR('hemisphere'); {hemisphere='Northern'}
-	if !ISVAR('metalpet'); {metalpet=0}
 	if !ISVAR('sittang'); {sittang='off'}
 	if !ISVAR('intodreams'); {intodreams='off'}
-	if !ISVAR('starcrownexpo'); {starcrownexpo='off'}
+	if !ISVAR('Edgybitch'); {Edgybitch='off'}
+	if !ISVAR('mikireflag'); {mikireflag=0}
+	if !ISVAR('givesleepyblankie'); {givesleepyblankie='off'}
+	if !ISVAR('dontmovestatsitshalloween'); {dontmovestatsitshalloween='off'}
+	if !ISVAR('nowshell'); {nowshell = SHIORI3FW.ShellName}
+	
+	//toggleable
+	if !ISVAR('menusphere'); {menusphere='Northern'}
+	if !ISVAR('username'); {username='User'}
+	if !ISVAR('birthdayprint'); {birthdayprint='????'}
+	if !ISVAR('talktime'); {birthdayprint='5 minutes'}
+	//single-use
+	if !ISVAR('nightynight'); {nightynight='off'}
+	if !ISVAR('blushiemode'); {blushiemode='off'}
+	if !ISVAR('privacyrespecter'); {privacyrespecter='off'}
 	if !ISVAR('maremare'); {maremare='off'}
 	if !ISVAR('seensoul'); {seensoul='off'}
+	if !ISVAR('wasemo'); {wasemo='off'}
+	if !ISVAR('sodreamy'); {sodreamy='off'}
+	if !ISVAR('talkaboutlater'); {talkaboutlater='off'}
+	if !ISVAR('headbandexpo'); {headbandexpo='off'}
+	if !ISVAR('momstreeexpo'); {momstreeexpo='off'}
+	if !ISVAR('brotherexpo'); {brotherexpo='off'}
+	if !ISVAR('askaboutnamee'); {askaboutnamee='off'}
+	if !ISVAR('starcrownexpo'); {starcrownexpo='off'}
+	if !ISVAR('hasdreamplush'); {hasdreamplush='off'}
+	if !ISVAR('hastea'); {hastea='off'}
+	if !ISVAR('hasblankie'); {hasblankie='off'}
+	if !ISVAR('hasviolin'); {hasviolin='off'}
+	//counters
+	if !ISVAR('nicesadlevel'); {nicesadlevel=0}
+	if !ISVAR('ily'); {ily=0}
+	if !ISVAR('stroke'); {stroke=0}
+	if !ISVAR('gooppets'); {gooppets=0}
+	if !ISVAR('metalpet'); {metalpet=0}
+	if !ISVAR('punchout'); {punchout=0}
+	if !ISVAR('flirtlevel'); {flirtlevel=0}
+	if !ISVAR('snoop'); {snoop=0}
+	if !ISVAR('respect'); {respect=0}
 }
 
 OnUpdatedataCreating
@@ -535,10 +578,24 @@ Onsittangoffsleepingmodeon
 {
 	sittang = "off"
 	sleepingmode = "on"
+	"\![bind,Blanket,sun blanket,0]"
 }
 
 OnSelfStand
 {
 	sittang = "off"
 	lasttalked = 0
+}
+
+upsiedaisy
+{
+	"\s[16]"
+}
+
+OnWakeyWake
+{
+	sleepingmode='off'
+	lasttalked = 0
+	--
+	"\![bind,Blanket,sun blanket,0]"
 }

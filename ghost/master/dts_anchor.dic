@@ -128,3 +128,8 @@ OnChoiceSelect
 {
     EVAL("Select.%(reference0)")
 }
+
+OnNotifyDressupInfo
+{
+	hisdressup = reference
+}

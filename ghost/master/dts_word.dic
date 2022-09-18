@@ -50,7 +50,7 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"a book that's pretty good except the main character sucks"
 	"a tell-all gossip book"
 	"a really terrible book by that one actress"
-	"a book where you have to set it on fire to get the real ending" //Burn After Reading? never read it
+	"a book you have to set on fire to get the real ending"
 	"a book about burning books" //Fahrenheit 451
 	"a book about %(ANY('human','monster')) history"
 	"a book about gay %(ANY('vampires','werewolves','dragons'))"
@@ -64,9 +64,9 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"a weird book where the story's split in two and one starts at the end and one starts at the beginning and then they meet at the center"
 	"a book of stupid jokes"
 	"a book of thought experiments"
-	"a book of fox sounds"
+	"a book of fox sounds" //the fox says "A couple of you will grease my chin before I leave this town-o"
 	"a book where everyone's hopping around different dimensions" //the UTMV. or the latter books of His Dark Materials
-	"a book that didn't have words, it just had the same picture of the same guy on every page"
+	"a book that doesn't have words, it just has the same picture of the same guy on every page"
 	"a book about four ladies in a zombie apocalypse" //respectawoman!
 	"a book about a ruined salseman" //the man spam
 	"an autobiography written by the guy that harrassed people into singing with him" //haven't a clue
@@ -78,7 +78,10 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	//"a philosophical treatise by some old dead Greek guy"
 	//"a war that started with an apple and ended with a horse"
 	//"a collection of %(ANY('','retold '))fairy tales"
-	
+	//"a book about sad gay wizards and pretty horses"
+	//"an annotated collection of folk songs"
+	//"a book about space communism"
+	//"a novelization of some blockbuster movie"
 }
 
 usersfolder //Different folders for the computer
@@ -194,6 +197,7 @@ pickup //why is this here instead of mouse.dic
 	}
 	elseif sleepingmode == "on"
 	{
+		/*
 		if givesleepyblankie == "on"
 		{
 			"\0\s[5]\i[48]"
@@ -202,6 +206,8 @@ pickup //why is this here instead of mouse.dic
 		{
 			"\0\s[5]"
 		}
+		*/
+		"\0\s[5]"
 	}
 	elseif sittang == "on"
 	{
@@ -228,7 +234,11 @@ pickup //why is this here instead of mouse.dic
 
 surface0
 {
-	if nicesadlevel <= -25
+	if sleepingmode == "on"
+	{
+		"\0\s[5]"
+	}
+	elseif nicesadlevel <= -25
 	{
 		if sittang == "on"
 		{
@@ -337,4 +347,10 @@ Ord
 ABS
 {
 	SQRT(POW(_argv[0],2))
+}
+
+//ellipses of different wait times...
+lps
+{
+	".\w%(_argv[0]).\w%(_argv[0]).\w%(_argv[0])"
 }

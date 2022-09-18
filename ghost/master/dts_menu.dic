@@ -1267,29 +1267,33 @@ Select.sayyouresorry
 		punchout = 0
 		"\0\s[9]\i[55]* (You apologize profusely for hitting him. \w7He seems conflicted for a brief moment,\w4 then nods.)\n\n\w8\0\s[8]\i[55]\s[10]Okay\w2.\w2.\w2. \w4I believe it wasn't intentional. \w4Okay? \w4Just be careful where you put your mouse.\n\n"
 	}
-	if punchout == 2
+	elseif punchout == 2
 	{
 		punchout = 0
 		"\0\s[9]\i[55]* (You apologize profusely for hitting him. \w7He seems conflicted a second, \w3\0\s[8]then sighs.) \n\n\w8Just don't do it again,\w4 okay?\n\n"
 	}
-	if punchout >= 3
+	else
 	{
-		punchout - 1
-		"\0\s[19]* (You apologize for hitting him. \w8He sniffs.)\n\n\w8Why did you do it\w2.\w2.\w2.\w2?\n\n\w8* (You tell him you don't know why.)\n\n\w8\w8* (\w3.\w3.\w3.\w3It doesn't look like he's forgiven you yet.)\n\n"
-	}
-	if punchout >= 4
-	{
-		"\0\s[22]\i[55]* (You apologize for hurting him.)\w8\n\n* (He isn't responding.)\n\n"
-	}
-	if punchout >= 10
-	{
-		"\0\s[19]\i[55]* (You apologize for hurting him.)\w8\n\n* (He wants to forgive you.\w8 He hurts.)\0\s[23]\n\n"
-	}
-	if punchout >= 15
-	{
-		"\0\s[23]\i[55]* (He starts crying before you can get a word in.)\n\n"
-		"\0\s[23]\i[55]* (He doesn't deserve an apology.)\n\n"
-		"\0\s[22]\i[55]* (Why would you want to apologize to him?)\n\n"
+		if punchout >= 15
+		{
+			"\0\s[23]\i[55]* (He starts crying before you can get a word in.)\n\n"
+			"\0\s[23]\i[55]* (He doesn't deserve an apology.)\n\n"
+			"\0\s[22]\i[55]* (Why would you want to apologize to him?)\n\n"
+		}
+		elseif punchout >= 10
+		{
+			"\0\s[19]\i[55]* (You apologize for hurting him.)\w8\n\n* (He wants to forgive you.\w8 He hurts.)\0\s[23]\n\n"
+		}
+		elseif punchout >= 4
+		{
+			"\0\s[22]\i[55]* (You apologize for hurting him.)\w8\n\n* (He isn't responding.)\n\n"
+		}
+		else
+		{
+			//he'll accept your apology if you've hit him three times:
+			punchout - 1
+			"\0\s[19]* (You apologize for hitting him. \w8He sniffs.)\n\n\w8Why did you do it\w2.\w2.\w2.\w2?\n\n\w8* (You tell him you don't know why.)\n\n\w8\w8* (\w3.\w3.\w3.\w3It doesn't look like he's forgiven you yet.)\n\n"
+		}
 	}
 	--
 	"\![*]\q[Choose another ACTion,Onyouact]\n/
@@ -1360,18 +1364,20 @@ Select.sayafunny
 		"\0\s[16]"
 	}
 	--
-	nicesadlevel += 1
 	if punchout >=4
 	{
+		nicesadlevel -= 1
 		"\0\s[19]* (You joke about how stupid he is.)\w8\n\n* (Surprising with how many books he reads.\w6 Then again,\w6 it's not like he has a brain.)\n\n"
 		"\0\s[19]* (You talk about how funny it is that he takes himself so seriously but his AU doesn't even make any sense.)\n\n"
 		"\0\s[19]* (You joke about how proper his clothes look.)\n\n\w8* (Are those supposed to be his casual clothes?)\n\n"
 		"\0\s[19]* (You joke that his eyes look weird.)\n\n"
 		"\0\s[19]* (You poke fun at how on the default pose the yellow lining at the end of his sleeve is on the wrong side.)\n\n"
 		"\0\s[19]* (You explain how he's like an unsharped pencil.\w8 Pointless.)\n\n"
+		//"* (You ask if he wants to hear a joke.)\n\n\w8(He's wary, but listening.)\n\n\w8* (How easy it was to gain his trust.)\n\n\w8* (Well, you hit a nerve didn't you?)"
 	}
 	else
 	{
+		nicesadlevel += 1
 		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[6]\i[55]Me!\w8\n\n* (You tell him that's not very funny\w3.\w3.\w3.)\n\n\w8\0\s[12]\i[55]Well if should be. \w6Then there'd be no point releasing me on April Fools.\n\n"
 		"\0\s[0]* (You ask him if he has a joke.)\n\n\w8\0\s[4]Um\w2.\w2.\w2.\n\n\w8Oh!\w6\0\s[15] I'm so good at sleeping, I can do it with my eyes closed!\n\n"
 		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[4]\i[55]Um\w2.\w2.\w2.\n\n\w8Oh!\w8\n\n\0\s[15]\i[55]What rhymes with orange?\n\n\w8* (You tell him it doesn't.)\0\s[4]\i[55]\n\n\w8Huh?\n\n"
@@ -1532,11 +1538,11 @@ Select.nitpicktheboy
 	}
 	else
 	{
-		"\0\s[12]\i[55]* (You ask him why any of his clothes fit the way they do if he's a skeleton.)\w8\n\n\i[8]\i[55]I dunno, \w3magic\w2.\w2.\w2.\w2?\n\n"
+		"\0\s[12]\i[55]* (You ask him why any of his clothes fit the way they do if he's a skeleton.)\w8\n\n\i[8]\i[55]I dunno, \w3magic%(lps(2))\w2?\n\n"
 		"\0\s[1]\i[55]* (You ask him why he can sigh or breathe if he doesn't have lungs.)\w8\n\n\0\s[1]\i[55]That doesn't sound like my problem...\n\n"
 		"\0\s[1]\i[55]* (You ask why all of this nitpick dialogue is pulled from Zarla's Gaster ghost.)\n\n\w8\0\s[1]\i[8]\i[55]* (%(nightname) has no idea what you're talking about, \w3but the creator of the ghost gets so mad that it overruled %(nightname)'s feelings on the situation.)\n\n"
 		"\0\s[12]\i[55]* (You ask him how he's able to think without a brain.)\n\n\w8\0\s[12]\i[55]I dunno, \w2how are \f[italic,true]you\f[italic,false] supposed to think without a brain?\n\n"
-		"\0\s[1]\i[55]* (You ask him why he wears a headband all the time.)\n\n\w8\0\s[9]\i[55]It's not a headband, \w4it's a crown\w2.\w2.\w2.\n\n"
+		"\0\s[1]\i[55]* (You ask him why he wears a headband all the time.)\n\n\w8\0\s[9]\i[55]It's not a headband, \w4it's a crown%(lps(2))\n\n"
 		"\0\s[0]\i[55]* (You ask if he ever takes off his headband.)\n\n\w8\0\s[21]\i[55]Shut up!!\n\n"
 		"\0\s[12]\i[55]* (You nitpick that his brother's headband should have swirls not a star)\n\n\w8Whatever,\w3 we're allowed to be different.\n\n"
 		"\0\s[12]\i[55]* (You complain that the moon on his crown is facing the wrong way.)\n\n\w8\0\s[17]\i[55]N-no?\w7\n\n\0\s[8]\i[55]Not as far as I know...\n\n"
@@ -1544,7 +1550,7 @@ Select.nitpicktheboy
 		{
 			nicesadlevel -= 1
 			flirtlevel -= 1
-			"\0\s[7]\i[55]* (You ask why he's able to blush even though he doesn't have skin.)\n\n\w8\w8\0\s[14]\i[55]Magic?\w8 \0\s[8]I'm basically just a ball of magic so\w2.\w2.\w2.\n\n\w8* (You ask how he can be a ball of magic if he's a skeleton.)\n\n\w8\0\s[15]\i[55]It's because-\w5\0\s[12]\i[55] nevermind, whatever.\n\n"
+			"\0\s[7]\i[55]* (You ask why he's able to blush even though he doesn't have skin.)\n\n\w8\w8\0\s[14]\i[55]Magic?\w8 \0\s[8]I'm basically just a ball of magic so%(lps(2))\n\n\w8* (You ask how he can be a ball of magic if he's a skeleton.)\n\n\w8\0\s[15]\i[55]It's because-\w5\0\s[12]\i[55] nevermind, whatever.\n\n"
 		}
 	}
 	--
@@ -1563,41 +1569,68 @@ Select.bemean
 	--
 	if nicesadlevel <= -25
 	{
-		"\0\s[19]\i[55]* (You tell %(nightname) he doesn't deserve love, or the people that love him.)\n\n\w8Hey...\n\n"
-		"\0\s[12]\i[55]* (You tell him his mother hates him.)\0\s[21]\i[55]\n\n\w8But she's dead!!!\n\n"
-		"\0\s[12]\i[55]* (You ask him if he's ever been useful to anybody.)\n\n\w8* (He tries to ignore you.)\n\n"
-		"\0\s[22]\i[55]* (You try to get a word in,\w4 but he's ignoring you.)\n\n\w8\n\n"
-		"\0\s[12]\i[55]* (You express how stupid you think %(nightname)'s design looks.)\n\n\w8Why'd I try to talk to you anyways...\n\n"
-		if punchout >= 10
+		/*
 		{
-			"\0\s[19]\i[55]* (You tell him deserves everything you gave him.)\n\n\w8Hey...\n\n"
-			"\0\s[12]\i[55]* (You tell %(nightname) that he deserved everything you gave him.)\w8\n\0\s[9]...\n\n"
+		"* (You tell him what a garbage brother he is, that he can't even protect Dream from being abused.)\w8\n\n"
+		--
+			if punchout < 5
+			{
+				"Dream's tough. They... they can handle it better than I could help...\n\n"
+			}
+			else
+			{
+				"...\n\n"
+			}
 		}
-		if nightynight == "on"
+		*/
+		if nicesadlevel <= -25
 		{
-			"\0\s[12]\i[55]* (You tell him he should consider shutting up every once in a while.)\n\n\w8'Course I'd get stuck with somebody like you...\n\n"
-			"\0\s[12]\i[55]* (You gloat to him about how great it is to have a home.)\n\n\w8\0\s[19]\i[55]I have a home...\n\n"
-			"\0\s[9]\i[55]* (You tell %(nightname) you hate him.)\n\n\w8He tries to ignore you, but is obviously sad.\n\n"
-		}
-	} //End 10
-	elseif nicesadlevel <= -50
-	{
-		"\0\s[9]\i[55]* (You tell him that not even his brother should love him.)\n\n\w8\0\s[19]\i[55]...\n\n"
-		"\0\s[19]\i[55]* (You tell him nobody needs him, \w4and nobody will ever need him.)\w8\n\n* (He is a useless guardian.)\n\n"
-		"\0\s[23]\i[55]* (You tell %(nightname) he doesn't deserve sympathy.)\n\n"
-		"\0\s[22]\i[55]* (You tell %(nightname) that he should just turn into the more interesting character already.)\n\n"
-		"\0\s[22]\i[55]* (You tell %(nightname) he's a coward for not facing you.)\n\n\w8I don't-\w2 don't care.\n\n"
-		if nightynight == "on"
+			"\0\s[19]\i[55]* (You tell %(nightname) he doesn't deserve love, or the people that love him.)\n\n\w8Hey...\n\n"
+			"\0\s[12]\i[55]* (You tell him his mother hates him.)\0\s[21]\i[55]\n\n\w8But she's dead!!!\n\n"
+			"\0\s[12]\i[55]* (You ask him if he's ever been useful to anybody.)\n\n\w8* (He tries to ignore you.)\n\n"
+			"\0\s[22]\i[55]* (You try to get a word in,\w4 but he's ignoring you.)\n\n\w8\n\n"
+			"\0\s[12]\i[55]* (You express how stupid you think %(nightname)'s design looks.)\n\n\w8Why'd I try to talk to you anyways...\n\n"
+			
+			//WORMDITIONS!
+			//"* (You wonder aloud why Dream puts up with him.)"
+			//"* (You tell him he deserves everything he gets for protecting the evil side of the tree. Just think, if there weren't any negativity, you wouldn't be able to be cruel to him.)"
+			
+			
+			if punchout >= 5
+			{
+				"\0\s[19]\i[55]* (You tell him deserves everything you gave him.)\n\n\w8Hey...\n\n"
+				"\0\s[12]\i[55]* (You tell %(nightname) that he deserved everything you gave him.)\w8\n\0\s[9]...\n\n"
+				
+				//"* (You tell him this is punishment for all those bad thoughts he has.)"
+			}
+			if nightynight == "on"
+			{
+				"\0\s[12]\i[55]* (You tell him he should consider shutting up every once in a while.)\n\n\w8'Course I'd get stuck with somebody like you...\n\n"
+				"\0\s[12]\i[55]* (You gloat to him about how great it is to have a home.)\n\n\w8\0\s[19]\i[55]I have a home...\n\n"
+				"\0\s[9]\i[55]* (You tell %(nightname) you hate him.)\n\n\w8He tries to ignore you, but is obviously sad.\n\n"
+			}
+		} //End 10
+		if nicesadlevel <= -50
 		{
-			"\0\s[19]\i[55]* (You tell Nighty everybody was right about his brother and him being opposites.)\n\n\w8...\n\n"
-			"\0\s[19]\i[55]* (You tell him-)\n\n\w8\0\s[23]\i[55]\w6* (\w2 .\w2.\w2.\w5He starts crying before you get a word in.)\n\n"
-		}
-		if punchout >= 15
-		{
-			"\0\s[19]* (You tell him you hope those bruises hurt.)\n\n"
-			"\0\s[19]* (You tell him you hope those villagers try going after him again tonight.)\w5\0\s[22]\n\n"
-		}
-	} //end 20
+			"\0\s[9]\i[55]* (You tell him that not even his brother should love him.)\n\n\w8\0\s[19]\i[55]...\n\n"
+			"\0\s[19]\i[55]* (You tell him nobody needs him, \w4and nobody will ever need him.)\w8\n\n* (He is a useless guardian.)\n\n"
+			"\0\s[23]\i[55]* (You tell %(nightname) he doesn't deserve sympathy.)\n\n"
+			"\0\s[22]\i[55]* (You tell %(nightname) that he should just turn into the more interesting character already.)\n\n"
+			"\0\s[22]\i[55]* (You tell %(nightname) he's a coward for not facing you.)\n\n\w8I don't-\w2 don't care.\n\n"
+			
+			
+			if nightynight == "on"
+			{
+				"\0\s[19]\i[55]* (You tell Nighty everybody was right about his brother and him being opposites.)\n\n\w8...\n\n"
+				"\0\s[19]\i[55]* (You tell him-)\n\n\w8\0\s[23]\i[55]\w6* (\w2 .\w2.\w2.\w5He starts crying before you get a word in.)\n\n"
+			}
+			if punchout >= 15
+			{
+				"\0\s[19]* (You tell him you hope those bruises hurt.)\n\n"
+				"\0\s[19]* (You tell him you hope those villagers try going after him again tonight.)\w5\0\s[22]\n\n"
+			}
+		} //end 20
+	}
 	else //Anything under 10
 	{
 		"\0\s[12]\i[55]* (You complain about how you wish anDream were here instead.)\n\n\w8Go make your own ghost then\w2.\w2.\w2.\n\n"
@@ -2186,23 +2219,26 @@ Select.wakeup
 {
 	sleepingmode = "off"
 	givesleepyblankie = "off"
-	"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I'm up\w4.\w4.\w4.\e"
+	"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I'm up\w4.\w4.\w4.\![bind,Blanket,sun blanket,0]\e"
 }
 Select.letsleep
 {
 	"\0\s[5]"
 	--
+	/*
 	if givesleepyblankie == "on"
 	{
 		"\i[48]"
 	}
+	*/
 	--
 	"zzz\w4.\w4.\w4.\w8\0\s[37]%(username)\w4.\w4.\w4.\w4?\w8\w8\0\s[5]\w4.\w4.\w4.\e"
 }
 Select.givesleepblankie
 {
 	givesleepyblankie = "on"
-	"\0\s[5]\i[48]* (He looks comfy.)\e"
+	"\![bind,Blanket,sun blanket,1] (He looks comfy.)\e"
+	//"\0\s[5]\i[48]* (He looks comfy.)\e"
 }
 
 
@@ -2258,6 +2294,8 @@ Select.nomoresits
 }
 Select.testvariable
 {
+	"%(hisdressup)"
+	/*
 	_file = "changelog.txt"
 	_buff = ""
 	_text = ""
@@ -2274,7 +2312,7 @@ Select.testvariable
 	"%_text"
 	--
 	FCLOSE(_file)
-	
+	*/
 	
 	//nicesadlevel = 100
 	//nightynight = "on"
