@@ -27,6 +27,12 @@ element0,overlay,surface0.png,0,0
 1pattern1,1000,0,interpolate,0,0
 1pattern2,1001,100,interpolate,0,0
 1pattern3,1000,100,interpolate,0,0
+//droopy
+2interval,never
+2pattern1,0,0,stop,1
+2pattern2,1002,0,interpolate,0,0
+2pattern3,1003,100,interpolate,0,0
+2pattern4,1002,100,interpolate,0,0
 }
 
 //Side non look
@@ -36,11 +42,17 @@ surface1
 collision0,164,88,219,129,Petspot
 element0,overlay,surface1.png,0,0
 //woggle
-2interval,always,10
-2pattern0,-1,75,base,0,0
-2pattern1,1001,66,base,0,0
-2pattern2,1001,50,base,0,0
-2pattern3,-1,3,base,0,0
+1interval,always
+1pattern1,1000,0,interpolate,0,0
+1pattern2,1001,100,interpolate,0,0
+1pattern3,1000,100,interpolate,0,0
+//droopy
+2interval,never
+2pattern1,0,0,stop,1
+2pattern2,1002,0,interpolate,0,0
+2pattern3,1003,100,interpolate,0,0
+2pattern4,1002,100,interpolate,0,0
+2pattern4,0,0,start,2
 }
 
 //Cross arms

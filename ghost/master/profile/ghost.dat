@@ -1,14 +1,14 @@
 Charset,UTF-8
 __system_settings_version__,2
 GroupFlagOverride,noupdateauto,
-scriptbox.left,974
+scriptbox.left,1445
 Window.AlwaysOnTop,1
 shiori.debugnotify,0
 SurfaceTest.visible,1
 Char.VirtualDesktop,52243c72-fbac-448a-b4a4-41858b94296c
 Update.TestMode,1
-Char0.center,1186
-scriptbox.top,584
+Char0.center,1055
+scriptbox.top,447
 shell,shell\Nightmare\
 FirstBoot,booted
 Char1.center,1521
