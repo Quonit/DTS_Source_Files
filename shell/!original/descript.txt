@@ -60,7 +60,7 @@ menu.sidebar.bitmap.filename,menu_sidebar.png
 sakura.bindgroup100.name,Costume,Blushies
 sakura.bindgroup100.default,0
 
-sakura.bindgroup48.name,Blanket,sun blanket
+sakura.bindgroup48.name,Blanket,cape
 sakura.bindgroup48.default,0
 
 sakura.menuitem0,100

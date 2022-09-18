@@ -578,7 +578,7 @@ Onsittangoffsleepingmodeon
 {
 	sittang = "off"
 	sleepingmode = "on"
-	"\![bind,Blanket,sun blanket,0]"
+	"\![bind,Blanket,cape,0]"
 }
 
 OnSelfStand
@@ -597,5 +597,5 @@ OnWakeyWake
 	sleepingmode='off'
 	lasttalked = 0
 	--
-	"\![bind,Blanket,sun blanket,0]"
+	"\![bind,Blanket,cape,0]"
 }

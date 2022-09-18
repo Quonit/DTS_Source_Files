@@ -2219,7 +2219,7 @@ Select.wakeup
 {
 	sleepingmode = "off"
 	givesleepyblankie = "off"
-	"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I'm up\w4.\w4.\w4.\![bind,Blanket,sun blanket,0]\e"
+	"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I'm up\w4.\w4.\w4.\![bind,Blanket,cape,0]\e"
 }
 Select.letsleep
 {
@@ -2237,7 +2237,7 @@ Select.letsleep
 Select.givesleepblankie
 {
 	givesleepyblankie = "on"
-	"\![bind,Blanket,sun blanket,1] (He looks comfy.)\e"
+	"\![bind,Blanket,cape,1] (He looks comfy.)\e"
 	//"\0\s[5]\i[48]* (He looks comfy.)\e"
 }
 

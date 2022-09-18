@@ -145,7 +145,7 @@ OnBoot
 		passsec = 0
 		sleepingmode = "off"
 		sittang = "off"
-		"\0\s[0]\![bind,Blanket,sun blanket,0]"
+		"\0\s[0]\![bind,Blanket,cape,0]"
 	}
 	--	
 	dayslot = GetDaySlot
