@@ -254,6 +254,7 @@ OnMouseDragEnd
 			{
 				if sleepingmode == "on"
 				{
+					/*
 					if givesleepyblankie == "on"
 					{
 						"\0\s[5]\i[48]"
@@ -262,6 +263,8 @@ OnMouseDragEnd
 					{
 						"\0\s[5]"
 					}
+					*/
+					"\0\s[5]"
 				}
 				elseif sittang == "on"
 				{
@@ -277,6 +280,7 @@ OnMouseDragEnd
 		{
 			if sleepingmode == "on"
 			{
+				/*
 				if givesleepyblankie == "on"
 				{
 					"\0\s[5]\i[48]"
@@ -285,6 +289,8 @@ OnMouseDragEnd
 				{
 					"\0\s[5]"
 				}
+				*/
+				"\0\s[5]"
 			}
 			elseif sittang == "on"
 			{

@@ -133,6 +133,7 @@ RandomTalk : nonoverlap_pool
 	}
 	elseif sleepingmode == "on"
 	{
+		/*
 		if givesleepyblankie == "on"
 		{
 			"\0\s[5]\i[48]"
@@ -141,15 +142,19 @@ RandomTalk : nonoverlap_pool
 		{
 			"\0\s[5]"
 		}
-		
+		*/
+		"\0\s[5]"
 		--
+		//wake up!
+		"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I fell asleep?\![raise,OnWakeyWake]\e"
+
 		"* (He won't notice if you look through his book now.)\e"
 		"zzz\w4.\w4.\w4. \w8\w8anDream\w4.\w4.\w4. \w8\w8\w8zzz\w4.\w4.\w4. \w8\w8stop\w4.\w4.\w4. \w8flyin' away\w4.\w4.\w4. \w8\w8\w8'm tryna talk to ya\w4.\w4.\w4. \w8zzz\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8 Stop it\w4.\w4.\w4. \w8das' dumb\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8 yur gonna die Killer\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4. Cross don't\w4.\w4.\w4. cant' leave\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8 Timeline\w4.\w4.\w4.\w5 's gonna\w4.\w4.\w4. \w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 collapse\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\e"
 		"* (You wonder what he's dreaming about...)\e"
-		"zzz\w4.\w4.\w4. don't\w4.\w4.\w4. zzz\w4.\w4.\w4. don't touch the apples\w4.\w4.\w4.\e"
+		"zzz\w4.\w4.\w4. don't\w4.\w4.\w4. zzz\w4.\w4.\w4. don't touch th' apples\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4. zzz\w4.\w4.\w4. 's a Sylveon\w4.\w4.\w4. zzz\w4.\w4.\w4. 's mine\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4. flowers\w4.\w4.\w4. \w8\w8\w8stop\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4. Cillium\w4.\w4.\w4. zzz\w4.\w4.\w4. where's she\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
@@ -159,11 +164,11 @@ RandomTalk : nonoverlap_pool
 		"zzz\w4.\w4.\w4.\w8\w8\w8 Knives\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Stop bein' gross\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8\w8 anDream\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Stop runnin' away\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8\w8 Stupid sun\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Makes me all sticky\w4.\w4.\w4.\w8\w8 g'na stain the couch\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Dust\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8My'better keep 'n eye on him\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 He'a trouble-maker\w4.\w4.\w4.\e"
+		"zzz\w4.\w4.\w4.\w8\w8\w8 Dust\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8My'better keep 'n eye on him\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 He'a trouble-mak'r\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8\w8 Killer\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Just get 'long wi' 'em\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 Please.\w4.\w4.\w4\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 \w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 What's wrong with John.\w4.\w4.\w4\e"
+		"zzz\w4.\w4.\w4.\w8\w8\w8 \w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8's wrong w' John.\w4.\w4.\w4\e"
 		"zzz\w4.\w4.\w4.\w8\w8\w8 Y'\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Y'not useless\w4.\w4.\w4.\e"
-		"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Just eat it already\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4\e"
+		"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Jus' eat it 'lready\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4\e"
 		"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Wha'\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8 Twins\w4.\w4.\w4.\w4?\w8\w8 I ain't e'en wan' one\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8\w8 Tszzz\w4.\w4.\w4.\w8\w8\w8 Tszzz\w4.\w4.\w4.\w8\w8\w8 I'mma snake,\w4 hehe\w4.\w4.\w4.\e"
 		"zzz\w4.\w4.\w4.\w8\w8\w8 Staph it\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 I'm tiny but I c'n still hurt you\w4.\w4.\w4.\e"
@@ -860,7 +865,7 @@ OnMinuteChange
 		//"\![change,Shell,Nightmare]\e"
 	}
 	//Blushie Code
-	elseif blushmode == "on" && privacyrespecter == "off"
+	elseif blushirmode == "on" && privacyrespecter == "off"
 	{
 		//"\![bind,Costume,Blushies,true]\e"
 	}
@@ -896,17 +901,18 @@ OnSecondChange
 	{
 		passsec = passsec + 1
 	}
-	
+	--
 	if mikireflag == 1 && reference1 == 0
 	{
 		EndMikireTalk
 	}
-	
+	--
 	mikireflag = reference1
 	if reference2 == 1 //If two characters are dragged on top of each other
 	{
 		//This dialogue doesn't work because two characters should never be on the screen at the same time. Even Dream will likely just be drawn on the same surfaces.
 	}
+	--
 	if ASEARCH("Status",var.req.key) != -1
 	{
 		currentstatus = var.req.value[ASEARCH("Status",var.req.key)]
@@ -939,6 +945,7 @@ OnSurfaceRestore
 	}
 	elseif sleepingmode == "on"
 	{
+		/*
 		if givesleepyblankie == "on"
 		{
 			"\0\s[5]\i[48]"
@@ -947,6 +954,8 @@ OnSurfaceRestore
 		{
 			"\0\s[5]"
 		}
+		*/
+		"\0\s[5]"
 	}
 	elseif Edgybitch == "on"
 	{
