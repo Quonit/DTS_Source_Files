@@ -22,7 +22,7 @@
 	blushiemode = "off" //If blushiemode is on or off
 	ily = 0 //If you've told him you like him
 	gooppets = 0 //How many times you've pet goomare
-	metalpet = 0 //Times pet Dream?
+	metalpet = 0 //Times pet Night
 	//Bad
 	privacyrespecter = "off" //If you've been mean to him?
 	Edgybitch = "off" //Goopmare mode

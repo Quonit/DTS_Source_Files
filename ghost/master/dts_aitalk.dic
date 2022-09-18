@@ -720,7 +720,7 @@ ciderchain
 //Time stuff
 HourCheck
 {
-	if passmin >= 60
+	if passmin >= 59
 	{
 		passmin = 0
 		passhour = passhour + 1

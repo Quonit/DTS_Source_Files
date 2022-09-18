@@ -3,29 +3,29 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 {
 	"a hefty-looking book on skeleton history"
 	"a romance novel about a monster and human %(ANY('','that both die in the end'))"
-	"a book by that one guy who did a metric ton of cocaine"
-	"a book with Tolkien-like birds"
+	"a book by that one guy who did a metric ton of cocaine" //Hunter S Thompson? or are we talking Buroughs's Naked Lunch?
+	"a book with Tolkien-like birds" //tolkien-like *birds*? like, the eagles, or... Or are we talking Guardians of Ga'Hoole?
 	"an old fantasy novel about transgender wizards"
-	"a really weird book where a lot of the pages are upside down or the text is in spirals"
-	"a book about demon hunters and prophecies that is a total rip-off of that one other show"
+	"a really weird book where a lot of the text is upside-down or in spirals" //House of Leaves?
+	"a book about demon hunters and prophecies that is a total rip-off of that one other show" //something based off Supernatural, I bet. Could be The Demon's Lexicon?
 	"a rip-off of that other popular series"
-	"a book where there's a monster at the end"
+	"a book where there's a monster at the end" //...is that the sesame street book
 	"a book about a rare extinct bird"
 	"a book where everyone's miserable and their marriages are falling apart"
-	"a book with rabbits and made-up words"
-	"a depressing book about two dogs who escape a research lab"
+	"a book with rabbits and made-up words" //Watership Down!
+	"a depressing book about two dogs who escape a research lab" //see, this seems like Mrs Frisby and the Rats of NIMH, but that was mice
 	"a cute book about a princess who lives with a dragon"
 	"a book about a kid who lived in a sewer"
 	"a book about a weird magician messing with some sociologist"
 	"a book about the gift of fear"
-	"a book about talking mice"
+	"a book about talking mice" //Mrs Frisby and the Rats of NIMH, Ralph the Motorcycle Mouse, etc.
 	"a book about the Monsters and Humans War"
-	"a book about the Monsters and Humans War except with dragons"
-	"a book about a mad scientist that kept kis kids as lab rats"
-	"a book about two kids living in a treehouse"
+	"a book about the Monsters and Humans War except with dragons" //Temeraire
+	"a book about a mad scientist that kept kis kids as lab rats" //platehands
+	"a book about two kids living in a treehouse" //feck, I wanna say this is a mash-up of The Boxcar Children, The Magic Treehouse, and The Swiss Family Robinson
 	"a book about a guy who thought he was a soldier but was really a robot \w4but then maybe he really was a person who just thought he was a robot"
 	"a preachy book about politics"
-	"a book with spaceships and social commentary"
+	"a book with spaceships and social commentary" //all of them? //but could be The Ship Who Sang, could be The Imperial Radch...
 	"a book where everyone dies at the end"
 	"a book about serial killers"
 	"a book about made-up crime"
@@ -33,47 +33,51 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"an instructional book about magic"
 	"a cursed book whose cover is made of skin"
 	"a book that screams every time you open it"
-	"a mysterious journal with a %(ANY('2','3')) on it"
+	"a mysterious journal with a %(ANY('2','3')) on it" //Gravity Falls notebook
 	"a book with a glossary at the end, like come on"
 	"a sappy romance novel"
-	"a book told entirely through people's letters to each other"
-	"a romance novel that turned into a zombie apocalypse halfway through"
+	"a book told entirely through people's letters to each other" //an epistolary novel!
+	"a romance novel that turned into a zombie apocalypse halfway through" //Pride and Prejudice and Zombies?
 	"a book where it turned out the narrator was YOU!"
 	"a book that makes you rethink your life"
 	"a book that scars you for life"
-	"a book that spends most of its time threatening you"
-	"a book about a cat's nine lives"
-	"a book of short stories where a long finger came out of a bathroom sink drain"
-	"a book with a lady who has a bug for a head"
-	"a book where the dude turns into a bug and it's like a metaphor or something"
-	"a book with flowery prose about being a barbarian"
+	"a book that spends most of its time threatening you" //Series of Unfortunate Events?
+	"a book about a cat's nine lives" //I read a picture book like this
+	"a book of short stories where a long finger came out of a bathroom sink drain" //haven't read this one. could be one of the Scary Stories to Tell in the Dark?
+	"a book with a lady who has a bug for a head" //Perdido Street Station?
+	"a book where the dude turns into a bug and it's like a metaphor or something" ///Kafka's Metamorphosis
+	"a book with flowery prose about being a barbarian" //I wanna say The Eye of Argon, but...
 	"a book that's pretty good except the main character sucks"
 	"a tell-all gossip book"
 	"a really terrible book by that one actress"
-	"a book where you have to set it on fire to get the real ending"
-	"a book about burning books"
+	"a book where you have to set it on fire to get the real ending" //Burn After Reading? never read it
+	"a book about burning books" //Fahrenheit 451
 	"a book about %(ANY('human','monster')) history"
 	"a book about gay %(ANY('vampires','werewolves','dragons'))"
-	"a book about a governess who fell in love with a guy who had his crazy wife in the attic"
-	"a super bleak book with baby-eating"
-	"a really cute book about the wallflower finding a wall"
+	"a book about a governess who fell in love with a guy who had his crazy wife in the attic" //Jane Eyre
+	"a super bleak book with baby-eating" //for some reason, I keep thinking The Giver
+	"a really cute book about the wallflower finding a wall" //Perks of Being a Wallflower? I've never read it
 	"a book about a giant centipede that wants to enter a famous dog show"
-	"a weird report about killer stacks of paper"
-	"a book about children who die horrible gruesome deaths in the chocolate factory"
-	"a boring book everyone has to read in school. You know what one I'm talking about."
+	"a weird report about killer stacks of paper" //I bet there's a Steven King story like this
+	"a book about children who die horrible gruesome deaths in the chocolate factory" //Charlie and the Chocolate Factory
+	"a boring book everyone has to read in school. You know what one I'm talking about." //Lord of the Flies?
 	"a weird book where the story's split in two and one starts at the end and one starts at the beginning and then they meet at the center"
 	"a book of stupid jokes"
 	"a book of thought experiments"
 	"a book of fox sounds"
-	"a book where everyone's hopping around different dimensions"
+	"a book where everyone's hopping around different dimensions" //the UTMV. or the latter books of His Dark Materials
 	"a book that didn't have words, it just had the same picture of the same guy on every page"
-	"a book about four ladies in a zombie apocalypse"
-	"a book about a ruined salseman"
-	"an autobiography written by the guy that harrassed people into singing with him"
+	"a book about four ladies in a zombie apocalypse" //respectawoman!
+	"a book about a ruined salseman" //the man spam
+	"an autobiography written by the guy that harrassed people into singing with him" //haven't a clue
 	
 	//WORMDITIONS!
 	//"a book about spaceships that's really about gender"
-	
+	//"a really complicated family saga where everyone keeps re-using the same names"
+	//"an annotated edition of a book about nonsense"
+	//"a philosophical treatise by some old dead Greek guy"
+	//"a war that started with an apple and ended with a horse"
+	//"a collection of %(ANY('','retold '))fairy tales"
 	
 }
 
@@ -133,6 +137,22 @@ nightname //Decides which name to use for him
 VillageLevel //Negative variable that also catches if you've hit him or not. Used so that you can't unlock goopmare without hurting him
 {
 	punchout - nicesadlevel
+	/*
+	if nicesadlevel < 0
+	{
+		punchout - nicesadlevel
+	}
+	else
+	{
+		//
+	}
+	
+	
+	if punchout >= 1
+	{
+		betrayalvar + punchout
+	}
+	*/
 }
 
 
@@ -312,4 +332,9 @@ Ord
 	}
 	
 	_number
+}
+
+ABS
+{
+	SQRT(POW(_argv[0],2))
 }

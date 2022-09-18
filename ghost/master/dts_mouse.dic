@@ -339,7 +339,8 @@ MouseDoubleClickSakura
 	}
 	elseif reference4 == "Crown" //Double click crown
 	{
-		if nicesadlevel >= 25
+		
+		if nicesadlevel >= 25 && punchout < 1
 		{
 			"\s[7]\i[55]"
 			--
@@ -394,7 +395,7 @@ MouseDoubleClickSakura
 				"\s[12]Don't touch it!\e"
 				"\s[12]That thing is mine,\w4 y'know\w2.\w2.\w2.\e"
 				
-				if nicesadlevel <= -25 && punchout >= 25 //Very mean
+				if nicesadlevel <= -25 && punchout >= 5 //Very mean
 				{
 					nicesadlevel -= 1
 					"\0\s[3]Can you stop touching my crown?\w6 It's rude.\e"
@@ -466,6 +467,11 @@ Select.whatstarheadband
 
 Select.punchnighty
 {
+	if punchout == 0
+	{
+		betrayalvar = ABS(1 - nicesadlevel)
+	}
+	--
 	if privacyrespecter == "off" && (blushiemode == "on" || nightynight == "on")
 	{
 		nicesadlevel -= 1

@@ -1,18 +1,16 @@
 ﻿OnTeachName	
 {
-	if reference0 == "TEACHNAME" //ignore this
+	menuname = "on"
+	--
+	if sittang == "on"
 	{
-		menuname = "on"
-		if sittang == "on"
-		{
-			sittang == "off"
-			"\0\s[16]\w8\w8What do you want to be called?\![open,inputbox,OnNameTeach,-1]\e"
-		}
-		else
-		{
-			"\0%(surface0)What do you want to be called?\![open,inputbox,OnNameTeach,-1]\e"
-		}
-	}	else	{	} //idk what this else is even here for it's always left empty
+		sittang = "off"
+		"\0\s[16]\w8\w8What do you want to be called?\![open,inputbox,OnNameTeach,-1]"
+	}
+	else
+	{
+		"\0%(surface0)What do you want to be called?\![open,inputbox,OnNameTeach,-1]"
+	}
 }
 
 OnNameTeach
