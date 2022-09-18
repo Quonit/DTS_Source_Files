@@ -39,16 +39,25 @@ surface.append0-9
 
 surface0
 {
-	//Collision
+//Collision
 	collision0,151,92,215,130,Petspot
+
 	element0,overlay,surface0.png,0,0	
 
-	animation3.interval,never
-	animation3.pattern0,stop,1
-	animation3.pattern1,interpolate,1000,0,0,0
-	animation3.pattern2,interpolate,1001,500-800,0,0
-	animation3.pattern3,interpolate,1000,500-800,0,0
-	animation3.pattern4,start,3
+	//Blink
+	animation3.interval,random,4
+	animation3.pattern0,overlay,-1,100,0,0
+	animation3.pattern1,overlayfast,1200,50,0,0
+	animation3.pattern2,overlayfast,1201,100,0,0
+	animation3.pattern3,overlay,-1,30,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,stop,1
+	animation4.pattern1,interpolate,1000,0,0,0
+	animation4.pattern2,interpolate,1001,500-800,0,0
+	animation4.pattern3,interpolate,1000,500-800,0,0
+	animation4.pattern4,start,4
+
 }
 
 //Side non look
