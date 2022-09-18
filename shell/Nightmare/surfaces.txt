@@ -41,7 +41,14 @@ surface0
 {
 	//Collision
 	collision0,151,92,215,130,Petspot
-	element0,overlay,surface0.png,0,0						  
+	element0,overlay,surface0.png,0,0	
+
+	animation3.interval,never
+	animation3.pattern0,stop,1
+	animation3.pattern1,interpolate,1000,0,0,0
+	animation3.pattern2,interpolate,1001,500-800,0,0
+	animation3.pattern3,interpolate,1000,500-800,0,0
+	animation3.pattern4,start,3
 }
 
 //Side non look
@@ -133,6 +140,7 @@ surface8
 {
 	collision0,151,90,216,118,Petspot
 	element1,overlay,surface8.png,0,0
+	
 	//Blanket
 	animation11.interval,never
 	animation11.pattern0,overlay,1100,0,0,0
