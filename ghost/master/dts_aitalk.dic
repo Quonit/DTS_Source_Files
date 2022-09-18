@@ -865,7 +865,7 @@ OnMinuteChange
 		//"\![change,Shell,Nightmare]\e"
 	}
 	//Blushie Code
-	elseif blushirmode == "on" && privacyrespecter == "off"
+	elseif blushiemode == "on" && privacyrespecter == "off"
 	{
 		//"\![bind,Costume,Blushies,true]\e"
 	}
