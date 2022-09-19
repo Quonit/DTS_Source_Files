@@ -557,7 +557,7 @@ Select.besnoopbother
 	lasttalked = 0
 	"\0\s[11]Couldn't you just leave me alone? \w8\w8\n\n\0\s[12]It's not like I decided to be here, \w8couldn't you maybe stop bothering me?\n\n\w8\w8* (Ask him what you've done wrong?)\n\n\![*]\q[Yes,besnoopbother1]\n\![*]\q[No,continuesnooping1]\e"
 }
-Select.continuesnoopinge
+Select.continuesnooping
 {
 	lasttalked = 0
 	snoop =-5

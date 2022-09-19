@@ -16,8 +16,6 @@ MouseMoveSakura
 	if reference4 != ""
 	{
 		stroke++
-		LOGGING("======")
-		LOGGING(stroke)
 		
 		if reference4 == "Tentacle"
 		{
@@ -189,7 +187,7 @@ MouseMoveSakura
 						"\0\s[2]* (He is completely defenseless to your touches.)\e"
 						"\0\s[2]* (He is very annoyed that he's been forced to put up with this.)\e"
 						"\0\s[5]With all your stupid petting it's no %#*&ing wonder Nightmare hated you!\e"
-						if blushiemode = "on"
+						if blushiemode == "on"
 						{
 							"\0\s[4]I'm sure you did this to your old friend quite a lot.\w6 \0\s[1]I'm sure that he misses it~\e"
 						}
