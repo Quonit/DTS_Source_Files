@@ -41,14 +41,23 @@ surface0
 {
 //Collision
 	collision0,151,92,215,130,Petspot
-//Blink
-	3interval,random,4
-	3pattern0,-1,10,overlay,0,0
-	3pattern1,1200,5,overlayfast,0,0
-	3pattern2,1201,10,overlayfast,0,0
-	3pattern3,-1,3,overlay,0,0
 
-	element0,overlay,surface0.png,0,0
+	element0,overlay,surface0.png,0,0	
+
+	//Blink
+	animation3.interval,random,4
+	animation3.pattern0,overlay,-1,100,0,0
+	animation3.pattern1,overlayfast,1200,50,0,0
+	animation3.pattern2,overlayfast,1201,100,0,0
+	animation3.pattern3,overlay,-1,30,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,stop,1
+	animation4.pattern1,interpolate,1000,0,0,0
+	animation4.pattern2,interpolate,1001,500-800,0,0
+	animation4.pattern3,interpolate,1000,500-800,0,0
+	animation4.pattern4,start,4
+
 }
 
 //Side non look
@@ -140,6 +149,7 @@ surface8
 {
 	collision0,151,90,216,118,Petspot
 	element1,overlay,surface8.png,0,0
+	
 	//Blanket
 	animation11.interval,never
 	animation11.pattern0,overlay,1100,0,0,0

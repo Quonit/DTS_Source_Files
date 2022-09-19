@@ -7,3 +7,6 @@ shell.dat
 shell.dat.bak
 yaya_variable.cfg
 descript.txt
+ghost/master/profile/ghost.dat
+*.dat
+*.bak
