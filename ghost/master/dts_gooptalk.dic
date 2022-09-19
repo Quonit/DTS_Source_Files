@@ -1,7 +1,7 @@
 //--------------------Aitalk------------------------------
 GoopTalk : nonoverlap_pool
 {
-    "\0\s[0]Honestly,\w3 did you expect there to be a ghost about %(nightname) without me in it?\e"
+    "\0\s[0]Honestly,\w3 did you expect there to be a ghost about Nightmare without me in it?\e"
     "\0\s[1]You might want to go check on your %(usersfolder)\w2.\w2.\w2.\w5 I've been spending a bit of time there,\w5 maybe it got deleted?\n\n\![*]\q[Call his bluff,heisntbluffing]\n\![*]\q[Get upset,feedgoopy]\e"
     "\0\s[6]God,\w4 this place is so boring.\n\n\w8Couldn't there at least be more then one character out at a time or is that just to complicated to make?\e"
     "\0\s[0]* (You ask him if he enjoys his new home.)\n\n\w8\0\s[6]This place sucks.\e"
@@ -100,7 +100,7 @@ GoopTalk : nonoverlap_pool
 
 Select.heisntbluffing
 {
-    "\0\s[4]Alright,\w2 alright,\w4 I jist.\n\n\w8I could destroy it if I felt like it,\w3 but Quonit told me I'd be malware if I did that.\n\n\w8\0\s[1]Personally,\w2 I don't see anything wrong with that prospect.\e"
+    "\0\s[4]Alright,\w2 alright,\w4 I jest.\n\n\w8I could destroy it if I felt like it,\w3 but Quonit told me I'd be malware if I did that.\n\n\w8\0\s[1]Personally,\w2 I don't see anything wrong with that prospect.\e"
 }
 Select.feedgoopy
 {
@@ -161,7 +161,7 @@ GoopMenu
     "\![*]\q[ACT,Ongoopact] or try to give him some \![*]\q[ITEMS,goopitemsmenu]\n/
     \![*]\q[Stats,configmenu]\n/
     \![*]\q[Use some functions,dosomething]\n\n/
-    //\![*]\q[Test Variable,testvariable2]\n\n/
+    \![*]\q[Test Variable,testvariable2]\n\n/
      \![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 
@@ -210,6 +210,7 @@ Select.flirtyflirtgoop
     "\0\s[0]* (You ask him if it hurt falling from the vending machine, because he a snack.)\n\n\0\s[8]\w8Aww~\w6 somebody hungry for some negativity?\e"
     "\0\s[0]* (You ask him if he has an extra heart,\w4 because yours was just stolen.)\n\n\w8\0\s[8]If you let me leave I could get one for you~\e"
     "\0\s[0]* (You tell him your favorite food is apples.)\n\n\0\s[5]\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
+	"* (Touch Fluffy Tail?)\n\n\![*]Yes\n\![*]Yes\xThey're tentacles you sick %$#*!"
     --
     "\![*]\q[Do another ACTtion...?,toybox]\n/
     \![*]\q[Again,flirtyflirtgoop]\n/
@@ -282,5 +283,6 @@ Select.goopfood
 
 Select.testvariable2
 {
-    Edgybitch = "off"
+	"* (Touch Fluffy Tail?)\n\n\_q\![*]Yes\n\![*]Yes\_q\x\0\s[1]\i[2]\w7They're tentacles, you sick %$#*@!\w8\0\s[0]"
+   // Edgybitch = "off"
 }
