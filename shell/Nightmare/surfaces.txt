@@ -117,12 +117,11 @@ surface5
 	//Collision
 	collision0,137,91,199,132,Petspot
 	element0,overlay,surface5.png,0,0
-	//woggle
-	animation5.interval,always,10
-	animation5.pattern0,base,-1,750,0,0
-	animation5.pattern1,base,1005,660,0,0
-	animation5.pattern2,base,1005,500,0,0
-	animation5.pattern3,base,-1,30,0,0
+	//cat hair. make go faster pls
+	animation1.interval,always
+	animation1.pattern0,interpolate,1101,0,0,0
+	animation1.pattern1,interpolate,1102,150,0,0
+	animation1.pattern2,interpolate,1101,150,0,0
 }
 
 //Happy
