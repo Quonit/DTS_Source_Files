@@ -345,6 +345,7 @@ Ord
 }
 
 ABS
+//absolute value
 {
 	SQRT(POW(_argv[0],2))
 }

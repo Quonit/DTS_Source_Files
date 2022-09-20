@@ -2,16 +2,16 @@
 GoopTalk : nonoverlap_pool
 {
     "\0\s[0]Honestly,\w3 did you expect there to be a ghost about Nightmare without me in it?\e"
-    "\0\s[1]You might want to go check on your %(usersfolder)\w2.\w2.\w2.\w5 I've been spending a bit of time there,\w5 maybe it got deleted?\n\n\![*]\q[Call his bluff,heisntbluffing]\n\![*]\q[Get upset,feedgoopy]\e"
-    "\0\s[6]God,\w4 this place is so boring.\n\n\w8Couldn't there at least be more then one character out at a time or is that just to complicated to make?\e"
-    "\0\s[0]* (You ask him if he enjoys his new home.)\n\n\w8\0\s[6]This place sucks.\e"
-    "\0\s[0]* (You ask if you can hug him.)\n\n\w8\0\s[2]I think that's a stupid question to ask.\n\n\w8* (\w3.\w3.\w3.\w3Is that a yes or a no?)\n\n\w8\0\s[5]That's a no, you idiot!!!\e"
-    "\0\s[2]How long are you going to force me to stay here, anyways?\e"
+    "\0\s[0]You might want to go check on your %(usersfolder)\w2.\w2.\w2.\w5 I've been spending a bit of time there,\w5 maybe it got deleted?\n\n\![*]\q[Call his bluff,heisntbluffing]\n\![*]\q[Get upset,feedgoopy]\e"
+    "\0\s[1]i[102]God,\w4 this place is so boring.\n\n\w8Couldn't there at least be more then one character out at a time or is that just to complicated to make?\e"
+    "\0\s[0]* (You ask him if he enjoys his new home.)\n\n\w8\i[102]This place sucks.\e"
+    "\0\s[0]* (You ask if you can hug him.)\n\n\w8\i[102]I think that's a stupid question to ask.\n\n\w8* (\w3.\w3.\w3.\w3Is that a yes or a no?)\n\n\w8\0\s[5]That's a no, you idiot!!!\e"
+    "\0\s[0]How long are you going to force me to stay here, anyways?\e"
     "\0\s[1]Your computer's been running for %exh.\n\n\w8* (You ask him if that's hours or minutes.)\n\n\w8\0\s[8]Suffer and live without an answer.\e"
-    "\0\s[6]Honestly,\w3 I bet this ghost would have been a lot more interesting if I had one of my pets to talk to.\e"
-    "\0\s[4]Honestly,\w3 anDream is \f[italic,true]such\f[italic,false] an extrovert.\n\n\w8\0\s[1]I bet it would be heartbreaking to see if they found out that all their friends were liars.\e"
-    "\0\s[0]* (You ask the goop if he reads at all.)\0\s[2]\n\n\w8Please,\w4 the only reason the other one did it is because there was nothing else to do.\n\n\w8 I'm sure if his universe had phones or anything of that sort he would've scurried off with one of those,\w4 since he just wants a way to avoid people.\e"
-    "\0\s[1]* (You wonder if he's left any goop behind while wandering around your computer.)\e"
+    "\0\s[1]Honestly,\w3 I bet this ghost would have been a lot more interesting if I had one of my pets to talk to.\e"
+    "\0\s[1]Honestly,\w3 anDream is \f[italic,true]such\f[italic,false] an extrovert.\n\n\w8\0\s[1]I bet it would be heartbreaking to see if they found out that all their friends were liars.\e"
+    "\0\s[0]* (You ask the goop if he reads at all.)\0\s[1]\n\n\w8Please,\w4 the only reason the other one did it is because there was nothing else to do.\n\n\w8 I'm sure if his universe had phones or anything of that sort he would've scurried off with one of those,\w4 since he just wants a way to avoid people.\e"
+    "\0\s[0]* (You wonder if he's left any goop behind while wandering around your computer.)\e"
     "\0\s[1]You know,\w4 the little skeleton always seemed upset over his job of protecting the tree,\w4 with nothing to protect it from.\0\s[0]\w8\n\nI don't know why he'd be upset,\w3 I doubt he'd have a very fun time trying to prevent somebody from taking one with how little he tries to fight back.\w8 I suppose he really is just stupid.\e"
     "\0\s[1]I'm honestly surprised the little twat never tried to run away from home.\n\n\w8I guess he must just looove his brother,\w4 whom he never tells anything and hides from and ignores when possible.\e"
     "\0\s[4]You know,\w2 the dumb idiot always seemed so curious about the seasons,\w2 but I bet if he lived in a place with them he'd no longer be excited about it.\e"
@@ -21,7 +21,7 @@ GoopTalk : nonoverlap_pool
     {
 		"\0\s[1]You know\w5.\w5.\w5. \w8It's almost a little sad. \w8\n\nTo think he loved you at one point.\n\n\w8\0\s[0]Almost brings a tear to the eye, \w6that he actually trusted someone for once.\w8 Really taught him a valuable lesson there, huh?\e"
 		"\0\s[4]I'm surprised you don't act more distraught over losing your boyfriend.\n\n\w8Then again, I doubt you ever cared in the first place.\e"
-		"\0\s[1]There are many ways to create negativity.\w8 One of the easiest is through mere pain,\w5 but emotional ones can be more sustaining and if you do it right, \w5just as bad or even worse.\n\n\w8It's not something I try often, \w6so it's a shame I wasn't able to feed on this vessel's sadness...\e"
+		"\0\s[0]There are many ways to create negativity.\w8 One of the easiest is through mere pain,\w5 but emotional ones can be more sustaining and if you do it right, \w5just as bad or even worse.\n\n\w8It's not something I try often, \w6so it's a shame I wasn't able to feed on this vessel's sadness...\e"
     }
     if hasdreamplush == "on"
     {
@@ -109,18 +109,18 @@ Select.feedgoopy
 
 twinkchain
 {{CHAIN
-    "\0\s[0]Quo told me I'm not allowed to call Nighty a twink anymore.\w8\n\nDunno why, \w4and I disagree.\e:chain=end"
+    "\0\s[1]Quo told me I'm not allowed to call Nighty a twink anymore.\w8\n\nDunno why, \w4and I disagree.\e:chain=end"
 }}CHAIN
 
 
 //--------------------Bootend------------------------------
 OnGoopWake
 {
-    "\0\s[1]I was wondering when I'd see you again...\e"
+    "\0\s[0]I was wondering when I'd see you again...\e"
     "\0\s[0]* (You ask him if he's going to comment on the time.)\n\n\w8Why would I? \w5\0\s[1]It's not like it means anything.\e"
-    "\0\s[1]Let's hope I don't get too bored here.\e"
-    "\0\s[1]I bet you missed me.\e"
-    "\0\s[4]See?\w5 I knew you'd bring me back here.\e"
+    "\0\s[0]Let's hope I don't get too bored here.\e"
+    "\0\s[0]I bet you missed me.\e"
+    "\0\s[0]See?\w5 I knew you'd bring me back here.\e"
 }
 
 OnGoopSleep
@@ -128,7 +128,7 @@ OnGoopSleep
     "\0\s[1]Neat,\w4 I'll go mess up your %(usersfolder)."
     "\0\s[1]Have fun without me~\w8"
     "\0\s[1]In a bit.\w8"
-    "\0\s[0]See you later.\w8"
+    "\0\s[1]See you later.\w8"
     "\0\s[0]I trust I'll be seeing you again soon?\w8"
     "\0\s[4]Heh,\w4 like you can avoid me for that long.\w8"
     --
@@ -167,9 +167,9 @@ GoopMenu
 
 Ongoopact
 {
-    "\0\s[1]What do you want?\n\n"
+    "\0\s[0]What do you want?\n\n"
     "\0\s[0]What?\n\n"
-    "\0\s[1]Get it over with already.\n\n"
+    "\0\s[0]Get it over with already.\n\n"
     --
     "\![*]\q[Check,checkinguout2]\n/
     \![*]\q[Compliment...?,Oncomplementeegoop]\n/
@@ -196,7 +196,7 @@ Select.Oncomplementeegoop
     "\0\s[2]* (You tell Goopmare he is very terrifying.)\n\n\w8. . .\e"
     "\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[5]I am not!\n\n\w8* (And cute.)\n\n\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
     "\0\s[6]* (You comment on how comfy his clothes look.)\n\n\w8\0\s[8]Human skin is more fun to wear.\e"
-    "\0\s[6]* (You comment on his many tentacles.)\n\n\w8\0\s[4]Yes they're great for stabbing, \w2slicing, \w2choking, \w2and a myriad of other things.\e"
+    "\0\s[6]* (You comment on his many tentacles.)\n\n\w8\0\s[4]Yes they're great for stabbing, \w2slicing, \w2choking, \w2and myriad other things.\e"
     --
     "\![*]\q[Do another ACTtion...?,toybox]\n/
     \![*]\q[Again,Oncomplementeegoop]\n/
@@ -210,7 +210,7 @@ Select.flirtyflirtgoop
     "\0\s[0]* (You ask him if it hurt falling from the vending machine, because he a snack.)\n\n\0\s[8]\w8Aww~\w6 somebody hungry for some negativity?\e"
     "\0\s[0]* (You ask him if he has an extra heart,\w4 because yours was just stolen.)\n\n\w8\0\s[8]If you let me leave I could get one for you~\e"
     "\0\s[0]* (You tell him your favorite food is apples.)\n\n\0\s[5]\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
-	"* (Touch Fluffy Tail?)\n\n\![*]Yes\n\![*]Yes\xThey're tentacles you sick %$#*!"
+	"* (Touch Fluffy Tail?)\n\n\![*]Yes\n\![*]Yes\x\0\s[5]They're tentacles you sick %$#*!"
     --
     "\![*]\q[Do another ACTtion...?,toybox]\n/
     \![*]\q[Again,flirtyflirtgoop]\n/
@@ -283,6 +283,6 @@ Select.goopfood
 
 Select.testvariable2
 {
-	"* (Touch Fluffy Tail?)\n\n\_q\![*]Yes\n\![*]Yes\_q\x\0\s[1]\i[2]\w7They're tentacles, you sick %$#*@!\w8\0\s[0]"
+	"* (Touch Fluffy Tail?)\n\n\_q\![*]Yes\n\![*]Yes\_q\x\0\s[5]\w7They're tentacles, you sick %$#*@!\w8"
    // Edgybitch = "off"
 }

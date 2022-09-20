@@ -178,6 +178,7 @@ RandomTalk : nonoverlap_pool
 		"* (He mumbles something you don't understand.)"
 		"* (He is resting.)"
 		"* (He's really knocked out.\w5 Probably a good thing he's resting.)"
+		"zzz%(lps(4))\w8\w8\w8bu'\w8 guns scarr,\w3%(lps(4))\w8\w8\w8zzz Kall'i zzz%(lps(4))\w8\w8\w8"
 		"zzz\w4.\w4.\w4."
 		if punchout >= 3
 		{
@@ -841,7 +842,8 @@ OnMinuteChange
 		}
 		*/
 	}
-	elseif mikireflag == 1
+	--
+	if mikireflag == 1
 	{
 		MikireTalk
 	}
@@ -854,40 +856,55 @@ OnMinuteChange
 	{
 		privacyrespecter = "on"
 	}
-	
-	//Mare Code
-	elseif SHIORI3FW.ShellName == "Nightmare"
+	/*
+	--
+	case SHIORI3FW.ShellName
 	{
-		Edgybitch = "on"
+		when "Dreamtale Sans"
+		{
+			//Blushie Code
+			if blushiemode == "on" && privacyrespecter == "off"
+			{
+				//"\![bind,Costume,Blushies,true]\e"
+			}
+			--
+			if blushiemode == "off" || privacyrespecter == "on"
+			{
+				//"\![bind,Costume,Blushies,false]\e"
+			}
+			--
+			Edgybitch = "off"
+			intodreams = "off"
+		}
+		when "Nightmare"
+		{
+			//Mare Code
+			if cutscene != "on"
+			{
+				if SHIORI3FW.ShellName == "Nightmare"
+				{
+					Edgybitch = "on"
+				}
+				elseif Edgybitch == "on"
+				{
+					"\![change,Shell,Nightmare]\e"
+				}
+			}
+		}
+		when "Dream"
+		{
+			//Dream Code
+			if intodreams == "on"
+			{
+				//"\![change,Shell,Dream]\e"
+			}
+			elseif SHIORI3FW.ShellName == "Dream"
+			{
+				intodreams = "on"
+			}
+		}
 	}
-	elseif Edgybitch == "on"
-	{
-		//"\![change,Shell,Nightmare]\e"
-	}
-	//Blushie Code
-	elseif blushiemode == "on" && privacyrespecter == "off"
-	{
-		//"\![bind,Costume,Blushies,true]\e"
-	}
-	elseif blushiemode == "off" || privacyrespecter == "on"
-	{
-		//"\![bind,Costume,Blushies,false]\e"
-	}
-	//Dream Code
-	elseif intodreams == "on"
-	{
-		//"\![change,Shell,Dream]\e"
-	}
-	elseif SHIORI3FW.ShellName == "Dream"
-	{
-		intodreams = "on"
-	}
-	else
-	{
-		Edgybitch = "off"
-		intodreams = "off"
-		//"\![change,Shell,Dreamtale Sans]\e"
-	}
+	*/
 }
 
 OnSecondChange
@@ -990,6 +1007,8 @@ OnSurfaceRestore
 OnShellChanged //I hope this doesn't kill the ghost
 {
 	nowshell = reference0
+	"\0\s[0]"
+	//"this shell is now changed"
 }
 
 OnKeyPress

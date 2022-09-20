@@ -13,18 +13,18 @@ surface.append0-9
 	collisionex6,Tentacle,polygon,30,63,30,331,129,332,150,246,145,214,151,176,144,161,136,100,160,76,185,79,205,105,203,127,196,136,208,150,230,234,214,252,222,317,229,331,331,331,331,63
 	
 	//woggle
-	animation1.interval,always
-	animation1.pattern0,interpolate,1000,0,0,0
-	animation1.pattern1,interpolate,1001,1000,0,0
-	animation1.pattern2,interpolate,1000,1000,0,0
+	animation100.interval,always
+	animation100.pattern0,interpolate,1000,0,0,0
+	animation100.pattern1,interpolate,1001,1000,0,0
+	animation100.pattern2,interpolate,1000,1000,0,0
 	
 	//droopy
-	animation2.interval,never
-	animation2.pattern0,stop,1
-	animation2.pattern1,interpolate,1002,0,0,0
-	animation2.pattern2,interpolate,1003,1000,0,0
-	animation2.pattern3,interpolate,1002,1000,0,0
-	animation2.pattern4,start,2	
+	animation102.interval,never
+	animation102.pattern0,stop,100
+	animation102.pattern1,interpolate,1002,0,0,0
+	animation102.pattern2,interpolate,1003,1000,0,0
+	animation102.pattern3,interpolate,1002,1000,0,0
+	animation102.pattern4,start,102	
 }
 
 sakura.cursor
@@ -60,7 +60,7 @@ surface0
 	animation3.pattern3,overlay,-1,30,0,0
 	
 	animation4.interval,never
-	animation4.pattern0,stop,1
+	animation4.pattern0,stop,100
 	animation4.pattern1,interpolate,1000,0,0,0
 	animation4.pattern2,interpolate,1001,500-800,0,0
 	animation4.pattern3,interpolate,1000,500-800,0,0
@@ -83,12 +83,7 @@ surface2
 	//Collision
 	collision0,160,87,221,128,Petspot
 	element0,overlay,surface2.png,0,0
-	//waggle
-	animation3.interval,always,10
-	animation3.pattern0,base,-1,750,0,0
-	animation3.pattern1,base,1002,660,0,0
-	animation3.pattern2,base,1002,500,0,0
-	animation3.pattern3,base,-1,30,0,0
+
 }
 
 //Null
@@ -102,13 +97,6 @@ surface4
 {
 	//Collision
 	collision0,157,92,214,132,Petspot
-	element0,overlay,surface4.png,0,0
-	//woggle
-	animation4.interval,always,10
-	animation4.pattern0,base,-1,750,0,0
-	animation4.pattern1,base,1004,660,0,0
-	animation4.pattern2,base,1004,500,0,0
-	animation4.pattern3,base,-1,30,0,0
 }
 
 //Mad!
@@ -117,11 +105,12 @@ surface5
 	//Collision
 	collision0,137,91,199,132,Petspot
 	element0,overlay,surface5.png,0,0
+	
 	//cat hair. make go faster pls
-	animation1.interval,always
-	animation1.pattern0,interpolate,1101,0,0,0
-	animation1.pattern1,interpolate,1102,150,0,0
-	animation1.pattern2,interpolate,1101,150,0,0
+	animation0.interval,always
+	animation0.pattern0,interpolate,1101,0,0,0
+	animation0.pattern1,interpolate,1102,150,0,0
+	animation0.pattern2,interpolate,1101,150,0,0
 }
 
 //Happy
@@ -130,12 +119,6 @@ surface6
 	//Collision
 	collision0,137,96,193,130,Petspot
 	element0,overlay,surface6.png,0,0
-	//woggle
-	animation6.interval,always,10
-	animation6.pattern0,base,-1,750,0,0
-	animation6.pattern1,base,1006,660,0,0
-	animation6.pattern2,base,1006,500,0,0
-	animation6.pattern3,base,-1,30,0,0
 }
 
 //Laugh
@@ -143,12 +126,7 @@ surface7
 {
 	collision0,166,85,220,115,Petspot
 	element0,overlay,surface7.png,0,0
-	//woggle
-	animation7.interval,always,10
-	animation7.pattern0,base,-1,750,0,0
-	animation7.pattern1,base,1007,660,0,0
-	animation7.pattern2,base,1007,500,0,0
-	animation7.pattern3,base,-1,30,0,0
+
 }
 
 //scawy
@@ -161,12 +139,6 @@ surface8
 	animation11.interval,never
 	animation11.pattern0,overlay,1100,0,0,0
 
-	//waggle
-	animation8.interval,always,10
-	animation8.pattern0,base,-1,750,0,0
-	animation8.pattern1,base,1008,660,0,0
-	animation8.pattern2,base,1008,500,0,0
-	animation8.pattern3,base,-1,30,0,0
 }
 
 //sad lookdown

@@ -310,13 +310,15 @@ Select.choiceneither
 
 Select.removegoo
 {
+	cutscene = "on"
+	--
 	if dontmovestatsitshalloween == "on"
 	{
 		sodreamy = "on"
 		Edgybitch = "off"
 		"\0\s[1]Suppose it's time to leave now, \w4huh?\w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\n\n\0\s[3]Huh- \w8\i[55]\s[20]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\i[55]\s[1608]\w4\0\s[1615]\w5\0\s[1614]\w6\0\s[1615]\w6\0\s[1614]\w6\s[1615]\i[55]\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[1616]\n\n\w8anDream you're not supposed to be here!!\i[55]\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\i[55]\s[1610]\w4\i[55]\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1617]\w8.\w5.\w5.\w8Sorry you had to deal with him %(username)\w2.\w2.\w2.\n\n\w8Hopefully things go back to normal now.\x"
 		--
-		"\![change,Shell,Dreamtale Sans]"
+		"\![change,Shell,Dreamtale Sans]\0\s[0]"
 	}
 	else
 	{
@@ -344,9 +346,7 @@ Select.removegoo
 		brotherexpo = "off"
 		askaboutnamee = "off"
 		dontmovestatsitshalloween = "off"
-		"\0\s[0]Hah, \w5I honestly suspected you to be smarter then to just think you could just- \w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\0\s[3]Huh- \w8\1\s[20]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[1615]\w5\0\s[1614]\w6\0\s[1615]\w6\0\s[1614]\w6\s[1615]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[1616]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w8\w8\1\s[10]\0\n\n\w8\w8\0\s[1617]\n\n\w8.\w5.\w5.\w8Sorry about all of that.\w8 I think it'd be best if I just um\w4.\w4.\w4. \w8Reset the ghost now\w4.\w4.\w4. \w8Some things might be kinda different now that you've seen them\w4.\w4.\w4. \w5ugh, this is so disappointing.\x"
-		--
-		"\![change,Shell,Dreamtale Sans]"
+		"\![enter,passivemode]\0\s[0]Hah, \w5I honestly suspected you to be smarter than to think you could just- \w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\0\s[3]Huh- \w8\1\s[20]\![move,--X=100]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[1615]\w5\0\s[1614]\w6\0\s[1615]\w6\0\s[1614]\w6\s[1615]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[1616]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w8\w8\1\s[10]\0\n\n\w8\w8\0\s[1617]\n\n\w8.\w5.\w5.\w8Sorry about all of that.\w8 I think it'd be best if I just um\w4.\w4.\w4. \w8Reset the ghost now\w4.\w4.\w4. \w8Some things might be kinda different now that you've seen them\w4.\w4.\w4. \w5ugh, this is so disappointing.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
 	}
 }
 
@@ -1137,11 +1137,19 @@ Onyouact
 
 Select.checkinguout //Use this to give hints at stats
 {
-	"\0%(surface0)\i[55]/
-	* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+	"\0%(surface0)\i[55]"
 	--
 	if privacyrespecter == "on" && nightynight == "on"
 	{
+		if punchout >= 20
+		{
+			"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		}
+		else
+		{
+			"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		}
+		--
 		"* (He trusted you at one point.)\n\n"
 		"* (Hopefully your stats won't cause any balancing issues.)\n\n"
 		"* (Worse then if you just started off mean to him.)\n\n"
@@ -1149,6 +1157,15 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if punchout >= 10
 	{
+		if punchout >= 20
+		{
+			"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		}
+		else
+		{
+			"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		}
+		--
 		"* (Really going for it, huh?)\n\n"
 		"* (Hittable.)\n\n"
 		"* (A weird-looking punching bag.)\n\n"
@@ -1159,6 +1176,8 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if punchout >= 20
 	{
+		"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		--
 		"* (Really going for it, huh?)\n\n"
 		"* (Punchable.)\n\n"
 		"* (Hurting a lot.)\n\n"
@@ -1169,6 +1188,15 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if blushiemode == "on" && privacyrespecter == "on"
 	{
+		if punchout >= 20
+		{
+			"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		}
+		else
+		{
+			"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		}
+		--
 		"* (He trusted you at one point.)\n\n"
 		"* (Hopefully your stats won't cause any balancing issues.)\n\n"
 		"* (Worse then if you just started off mean to him.)\n\n"
@@ -1177,6 +1205,14 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if blushiemode == "on" && privacyrespecter == "on" && punchout >= 4
 	{
+		if punchout >= 20
+		{
+			"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		}
+		else
+		{
+			"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		}
 		"* (No going back at this point.)\n\n"
 		"* (Even sadder then the normal negative route.)\n\n"
 		"* (Lots of special dialogue here for this specific situation.)\n\n"
@@ -1185,6 +1221,8 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if nicesadlevel <= 25 && nicesadlevel >= -25
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (Doesn't even look like an Undertale ghost.)\n\n"
 		"* (Why would he have Undertale stats when he's got so little to do with Undertale?)\n\n"
 		"* (0/10 not even a sans.)\n\n"
@@ -1198,12 +1236,16 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if blushiemode == "on" && privacyrespecter == "off" && punchout == 0
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (Goodmode unlocked!!!)\n\n"
 		"* (Blushies :D)\n\n"
 		"* (Quonit felt like the good route wasn't very rewarding and added blushies for you.)\n\n"
 	}
 	if flirtlevel >= 10
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (Cute, apparently.)\n\n"
 		"* (Adorable.)\n\n"
 		"* (Purple.)\n\n"
@@ -1211,6 +1253,15 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if punchout >= 3
 	{
+		if punchout >= 20
+		{
+			"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		}
+		else
+		{
+			"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		}
+		--
 		"* (Probably shouldn't have hit him.)\n\n"
 		"* (Hurts.)\n\n"
 		"* (His face hurts.)\n\n"
@@ -1218,24 +1269,32 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if privacyrespecter == "off" && nightynight == "on" && nicesadlevel >= 25
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (Doesn't seem to dislike you.)\n\n"
 		"* (Cute and purple.)\n\n"
 		"* (Very flirtable.)\n\n"
 	}
 	if respect >= 5
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (Likes that you aren't snooping.)\n\n"
 		"* (respecc)\n\n"
 		"* (Sure hope you aren't exploiting the clickables.)\n\n"
 	}
 	if privacyrespecter == "on"
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (He's being awfully quiet for one reason or another.)\n\n"
 		"* (Doesn't seem to want to talk to you.)\n\n"
 		"* (Maybe you hurt his feelings or something, because he's being pretty quiet right now.)\n\n"
 	}
 	if snoop >= 5
 	{
+		"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		--
 		"* (Reads a lot of dumb books.)\n\n"
 		"* (Owns some odd titles.)\n\n"
 		"* (You expected him to be reading better stuff.)\n\n"
@@ -1244,13 +1303,22 @@ Select.checkinguout //Use this to give hints at stats
 	}
 	if nicesadlevel <= -5
 	{
+		if punchout >= 20
+		{
+			"* (NIGHTMARE - ATK ?? DEF ??)\n"
+		}
+		else
+		{
+			"* (%(TOUPPER(nightname)) - ATK ?? DEF ??)\n"
+		}
+		--
 		"* (Seen better days.)\n\n"
 		"* (Is there ever an AU where he isn't sad?)\n\n"
 		"* (This character is always used for edge.)\n\n"
 	}
 	--
 	"\![*]\q[Choose another ACTion,Onyouact]\n/
-	\![*]\q[ASK another Question,youtalk]\n/
+	\![*]\q[ASK another question,youtalk]\n/
 	\![*]\q[Again,checkinguout]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
@@ -1758,6 +1826,10 @@ Select.reexplaintree
 
 Select.reexplaindream
 {
+	if punchout >= 10
+	{
+		"* (You ask whether Dream ever hurts him like you do.)\n\n\w8\s[7]\w8\s[0]\i[12]\i[15]Dream would never do something like that!\n\n\w8\i[55]* (You ask why he doesn't tell Dream about getting hurt, then.)\n\n\w8\s[9]...\w8"
+	}
 	if passhour >= 5
 	{
 		"\0\s[9]They're probably super worried about me\w2.\w2.\w2.\w8\n\nI should get home so they know where I am.\w8\n\nI really shouldn't leave them alone this long\w2.\w2.\w2."
@@ -1777,6 +1849,8 @@ Select.reexplaindream
 			"\0\s[13]I should honestly just try and get back home...\n\n\w8\s[4]If I stay too long,\w4 they might end up worried about me."
 		}
 	}
+	--
+	"\n\n"
 	--
 	if askaboutdreamcrown != "on"
 	{
@@ -2294,7 +2368,8 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	"%(hisdressup)"
+	Edgybitch = "on"
+	"\![change,shell,Nightmare]"
 	/*
 	_file = "changelog.txt"
 	_buff = ""
