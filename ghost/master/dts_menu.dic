@@ -3,11 +3,11 @@
 	lasttalked = 0
 	"\b2"
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		GoopMenu
 	}
-	elseif intodreams == "on"
+	elseif nowmode == "intodreams"
 	{
 		DreamMenu
 	}
@@ -27,7 +27,7 @@
 			\![*]\q[No,letsleep]\e"
 		}
 	}
-	elseif VillageLevel >= 40 && Edgybitch == "off"
+	elseif VillageLevel >= 40 && nowmode == "purpleman"
 	{
 		if RAND(100) < 25
 		{
@@ -45,7 +45,7 @@
 			MenuRun
 		}
 	}
-	elseif nicesadlevel <= -20 && punchout >= 30 && Edgybitch == "off"
+	elseif nicesadlevel <= -20 && punchout >= 30 && nowmode == "purpleman"
 	{
 		if RAND(100) < 50
 		{
@@ -208,7 +208,18 @@ Select.BACKTOMENU
 {
 	"\b2"
 	--
-	MenuRun
+	if Edgybitch == "on"
+	{
+		GoopMenu
+	}
+	elseif intodreams == "on"
+	{
+		DreamMenu
+	}
+	else
+	{
+		MenuRun
+	}
 }
 
 
@@ -219,16 +230,21 @@ Select.configmenu
 
 TalkConfig
 {
+	if nowmode == "Edgybitch"
+	{
+		username = "User"
+	}
+	--
 	"\_q\b2\f[size,16]\f[align,center]~~(---STATS---)~~\n\n"
 	--
 	"\f[size,default]\f[align,left]* (You check your stats...)\n\n/
 	Name: %(username) \f[sup,1](\q[Change it?,TEACHNAME])\f[sup,0]\n"
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"Times Pet: %(gooppets)\n\n"
 	}
-	elseif intodreams == "on"
+	elseif nowmode == "intodreams"
 	{
 		"erm...\n\n" //Temp dialogue
 	}
@@ -246,7 +262,7 @@ TalkConfig
 	Updated: 9th February 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
 	//temp dialogue
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"* (Exit out of Goopmode?)\n\q[Yes,removegoo] \q[No,CANCEL]\n\n"
 	}
@@ -315,10 +331,8 @@ Select.removegoo
 	if dontmovestatsitshalloween == "on"
 	{
 		sodreamy = "on"
-		Edgybitch = "off"
-		"\0\s[1]Suppose it's time to leave now, \w4huh?\w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\n\n\0\s[3]Huh- \w8\i[55]\s[20]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\i[55]\s[1608]\w4\0\s[1615]\w5\0\s[1614]\w6\0\s[1615]\w6\0\s[1614]\w6\s[1615]\i[55]\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[1616]\n\n\w8anDream you're not supposed to be here!!\i[55]\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\i[55]\s[1610]\w4\i[55]\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1617]\w8.\w5.\w5.\w8Sorry you had to deal with him %(username)\w2.\w2.\w2.\n\n\w8Hopefully things go back to normal now.\x"
-		--
-		"\![change,Shell,Dreamtale Sans]\0\s[0]"
+		nowmode = "purpleman"
+		"\![enter,passivemode]\0\s[1]Suppose it's time to leave now, \w4huh?\w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\n\n\0\s[3]Huh- \w8\1\s[20]\![move,--X=100]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[1615]\w5\0\s[1614]\w6\0\s[1615]\w6\0\s[1614]\w6\s[1615]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[1616]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1617]\w8.\w5.\w5.\w8Sorry you had to deal with them, %(username)\w2.\w2.\w2.\n\n\w8Hopefully things go back to normal now.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
 	}
 	else
 	{
@@ -330,7 +344,7 @@ Select.removegoo
 		ily = 0
 		gooppets = 0
 		privacyrespecter = "off" //Bad
-		Edgybitch = "off"
+		nowmode = "purpleman"
 		snoop = 0
 		punchout = 0
 		sleepingmode = "off"
@@ -338,6 +352,9 @@ Select.removegoo
 		hasdreamplush = "off"
 		hastea = "off"
 		nicesadlevel = 0
+		posact = 0
+		negact = 0
+		apologized = 0
 		hasblankie = "off"
 		hasviolin = "off"
 		talkboutlater = "off" //One time use
@@ -361,7 +378,7 @@ Select.removegoo
 Select.TEACHBDAY
 {
 	dayslot = GetDaySlot
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]I really,\w5 really couldn't care less about when you were born.\e"
 	}
@@ -617,7 +634,7 @@ Select.talkinter
 }
 Select.TalksTill
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[5]Why'd you even open the menu then!\e"
 	}
@@ -643,7 +660,7 @@ Select.TALKMAX
 {
 	talktime = "30 seconds"
 	aitalkinterval = 45
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[6]God, \w4do you have attention deficit disorder or something?\e"
 	}
@@ -667,7 +684,7 @@ Select.TALKHIGH
 {
 	talktime = "minute"
 	aitalkinterval = 90
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[13]Reasonable I guess...\e"
 	}
@@ -691,7 +708,7 @@ Select.TALKNORMAL
 {
 	talktime = "3 minutes"
 	aitalkinterval = 270		
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]Fine then,\w5 %(username).\e"
 	}
@@ -715,7 +732,7 @@ Select.TALKPOOR
 {
 	talktime = "5 minutes"
 	aitalkinterval = 300
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[6]Least it's a normal speed.\e"
 	}
@@ -739,7 +756,7 @@ Select.TALKNONE
 {
 	talktime = "\0\s[8]...Guess I won't talk at all."
 	aitalkinterval = 0
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]Aw, \w4how disappointing~"
 	}
@@ -766,7 +783,7 @@ Select.TEACHNAME
 
 Select.CANCEL
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]Whatever.\e"
 		"\0\s[0]Alright then.\e"
@@ -835,7 +852,7 @@ Select.dosomething
 {
 	"\b2"
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]Hell is it you want?\n\n"
 		"\0\s[6]What do you want?\n\n"
@@ -871,7 +888,7 @@ Select.CALENDAR
 {
 	"\b2"
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]\i[55]* (Opening the calendar...)\![open,calendar]\e"
 		"\0\s[0]Ah,\w5 yes, \w5because you can't just see the date on your computer.\![open,calendar]\e"
@@ -890,7 +907,7 @@ Select.sspconfig
 {
 	"\b2"
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]* (Opening the calendar...)\![open,configurationdialog]\e"
 	}
@@ -909,7 +926,7 @@ Select.ChoiceGarbagecan
 	
 	if _gomicheck == 0
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!\e"
 		}
@@ -943,7 +960,7 @@ Select.ChoiceGarbagecan
 	}
 	elseif _gomicheck >= 1
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!\e"
 		}
@@ -1003,7 +1020,7 @@ Select.HEADLINECANCEL
 }	
 Select.bugreport
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[4]Please, \w4this thing is probably riddled with bugs and balancing issues.\w8 I doubt Quonit will do anything to fix it. \w8\0\s[1]You could try asking, though...\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
 	}
@@ -1031,7 +1048,7 @@ Select.IamcompletelysureIwanttoreset
 	respect = 0
 	blushiemode = "off"
 	privacyrespecter = "off" //Bad
-	Edgybitch = "off"
+	nowmode = "purpleman"
 	snoop = 0
 	punchout = 0
 	sodreamy = "off" //Natural
@@ -1041,6 +1058,9 @@ Select.IamcompletelysureIwanttoreset
 	hastea = "off"
 	dontmovestatsitshalloween = "off"
 	nicesadlevel = 0
+	posact = 0
+	negact = 0
+	apologized = 0
 	//One time use
 	talkboutlater = "off"
 	headbandexpo = "off"
@@ -1324,6 +1344,7 @@ Select.checkinguout //Use this to give hints at stats
 }
 Select.sayyouresorry
 {
+	apologized += 1
 	if sittang == "on"
 	{
 		sittang = "off"
@@ -1375,7 +1396,7 @@ Oncomplementee
 		"\0\s[16]"
 	}
 	--
-	nicesadlevel += 1
+	posact += 1
 	if punchout <= 10 && punchout >= 4
 	{
 		"\0\s[19]* (He seems a uncomfortable.)\w8\n\n* (You tell him his shoes look nice)\n\n\w8\0\s[9]Uhm...\w6 Thank you.\n\n"
@@ -1434,7 +1455,7 @@ Select.sayafunny
 	--
 	if punchout >=4
 	{
-		nicesadlevel -= 1
+		negact += 1
 		"\0\s[19]* (You joke about how stupid he is.)\w8\n\n* (Surprising with how many books he reads.\w6 Then again,\w6 it's not like he has a brain.)\n\n"
 		"\0\s[19]* (You talk about how funny it is that he takes himself so seriously but his AU doesn't even make any sense.)\n\n"
 		"\0\s[19]* (You joke about how proper his clothes look.)\n\n\w8* (Are those supposed to be his casual clothes?)\n\n"
@@ -1445,7 +1466,7 @@ Select.sayafunny
 	}
 	else
 	{
-		nicesadlevel += 1
+		posact += 1
 		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[6]\i[55]Me!\w8\n\n* (You tell him that's not very funny\w3.\w3.\w3.)\n\n\w8\0\s[12]\i[55]Well if should be. \w6Then there'd be no point releasing me on April Fools.\n\n"
 		"\0\s[0]* (You ask him if he has a joke.)\n\n\w8\0\s[4]Um\w2.\w2.\w2.\n\n\w8Oh!\w6\0\s[15] I'm so good at sleeping, I can do it with my eyes closed!\n\n"
 		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[4]\i[55]Um\w2.\w2.\w2.\n\n\w8Oh!\w8\n\n\0\s[15]\i[55]What rhymes with orange?\n\n\w8* (You tell him it doesn't.)\0\s[4]\i[55]\n\n\w8Huh?\n\n"
@@ -1477,7 +1498,7 @@ Select.sayafunny
 Select.flirtyflirt
 {
 	flirtlevel += 1
-	nicesadlevel += 1
+	posact += 1
 	if sittang == "on"
 	{
 		sittang = "off"
@@ -1590,7 +1611,7 @@ Select.ilynighty
 
 Select.nitpicktheboy
 {
-	nicesadlevel -= 1
+	negact += 1
 	flirtlevel -= 1
 	if sittang == "on"
 	{
@@ -1616,7 +1637,7 @@ Select.nitpicktheboy
 		"\0\s[12]\i[55]* (You complain that the moon on his crown is facing the wrong way.)\n\n\w8\0\s[17]\i[55]N-no?\w7\n\n\0\s[8]\i[55]Not as far as I know...\n\n"
 		if blushiemode == "on" && privacyrespecter == "off"
 		{
-			nicesadlevel -= 1
+			negact += 1
 			flirtlevel -= 1
 			"\0\s[7]\i[55]* (You ask why he's able to blush even though he doesn't have skin.)\n\n\w8\w8\0\s[14]\i[55]Magic?\w8 \0\s[8]I'm basically just a ball of magic so%(lps(2))\n\n\w8* (You ask how he can be a ball of magic if he's a skeleton.)\n\n\w8\0\s[15]\i[55]It's because-\w5\0\s[12]\i[55] nevermind, whatever.\n\n"
 		}
@@ -1628,7 +1649,7 @@ Select.nitpicktheboy
 
 Select.bemean
 {
-	nicesadlevel -= 1
+	negact += 1
 	if sittang == "on"
 	{
 		sittang = "off"
@@ -1779,7 +1800,7 @@ Select.reexplaincrown
 	{
 		"\0\s[12]...It's my crown, obviously."
 	}
-	elseif Edgybitch == "on"
+	elseif nowmode == "Edgybitch"
 	{
 		"\0\s[1]The crowns were really meaningful to Dream, \w2too.\n\n\w8It's why I got rid of it."
 	}
@@ -1811,9 +1832,9 @@ Select.reexplaintree
 		momstreeexpo = "on"
 		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\0\s[9]Mommy\w4.\w4.\w4. \w6I wish I knew her sometimes.\n\n\w8I\w3.\w3.\w3. \w4I think it's just my head,\w3 but I think she'd've helped me a lot on stuff.\w6If I also had her to talk to instead of just the villagers.\w6 But\w3.\w3.\w3.\n\n\w8Some of the villagers say she didn't like me, \w5but I don't know if I should just trust what they're saying or not. \w6Because I didn't know her, \w3but they did.\w5So I dunno what to think\w3.\w3.\w3."
 	}
-	elseif Edgybitch == "on"
+	elseif nowmode == "Edgybitch"
 	{
-		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom' to.\n\n\w8Technically that'd make anDream and the purple one my step-brothers, \w3when you think about it."
+		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom' to.\n\n\w8Technically that'd make anDream and the purple one my half brothers, \w3when you think about it."
 	}
 	else
 	{
@@ -2035,7 +2056,7 @@ Select.itemsmenu
 
 Select.giveoutfit
 {
-	nicesadlevel += 1
+	posact += 1
 	"\0\s[1528]\i[55]* (He looks it over weirdly.)\n\n\w8I guess it's kinda comfy\w2.\w2.\w2.\w5 Though,\w3 I'm sticking to my normal outfit."
 	"\0\s[1529]Huh...\w8\n\nIt's a lot heavier than my normal one.\n\n\w8Why are there so many extras on it?"
 	"\0\s[1530]* (He lifts his arm looking at it.)\n\n\w8Flowers?"
@@ -2046,14 +2067,14 @@ Select.giveoutfit
 }
 Select.givebook
 {
-	nicesadlevel += 1
+	posact += 1
 	"\0\s[0]\i[55]* (You gave him\w2.\w2.\w2.\w4 a book!)\0\s[4]\i[55]\n\n\w8Oh,\w3 thank you.\w6 What's it about?\n\n\w8* (You tell him it's %(bookstoread).)\0\s[13]\i[55]\n\n\w8Interesting...?"
 	--
 	"%(ItemMOO)"
 }
 Select.givegift
 {
-	nicesadlevel += 1
+	posact += 1
 	"\0\s[0]\i[55]* (You give him a purple flower!)\0\s[4]\i[55]\n\n\w8Aw, \w4that's kinda cute\w2.\w2.\w2.\w8 Too bad it won't live very long...\n\n\w8* (\w2.\w2.\w2.\w4Well he turned that dark pretty quickly.)"
 	"\0\s[13]\i[55]* (You gift him with a dream catcher.)\n\n\w8Oh\w2.\w2.\w2. \w5Thank you, \w5these are supposed to stop nightmares?\n\n\w8* (You tell him that they are.)\n\n\w8\0\s[0]\i[55]Oh\w3.\w3.\w3. \w7Well, \w5I'll try to have good dreams. \w8\n\nOkay?"
 	"\0\s[0]\i[55]* (You gift him with a color cube.)\n\n\w8\0\s[4]\i[55]What is it?\n\n\w8* (You tell him that it's a puzzle where you have to get each of the sides to be the same color.)\n\n\w8\0\s[13]\i[55]* (He attempts solving it,\w4 but he starts looking frustrated quickly.)\n\n\w8\0\s[3]\i[55]Um, \w4thanks.\w6 I'll work at it."
@@ -2089,7 +2110,7 @@ Select.givemug
 }
 Select.givhimdrank
 {
-	nicesadlevel += 1
+	posact += 1
 	"\0\s[27]\i[55]* (You pour him a drink.)\n\n\w8\s[4]This tastes nice,\w8 what is it?\n\n\w8\w4\i[55]* (You tell him it's apple juice.)\n\n\w8\w4\s[7]H-Huh?!??!\n\n\w8\i[55]* (You explain that they're from normal apples,\w4 not weird cursed ones.)\n\n\w8\w4\s[3]\i[55]* (He calms down,\w4 but still seems suspicious.)"
 	"\0\s[4]\i[55]* (You ask him if he drinks coffee.)\n\n\0\s[4]\w8I'm not opposed to it.\n\n\w8\i[55]* (You pour him some coffee.)\w8\s[27]"
 	"\0\s[27]\i[55]* (You pour him some water.)\w8\n\n\s[4]Well,\w5 I guess I was thirsty\w2.\w2.\w2.\w8\w8\s[41]"
@@ -2102,7 +2123,7 @@ Select.givhimdrank
 }
 Select.giveblankie
 {
-	nicesadlevel += 1
+	posact += 1
 	hasblankie = "on"
 	"\0\s[0]\i[55]* (You hand him a soft, comfy blanket.)\0\s[6]\i[55]\n\n\w8Aww,\w5 I'll use it when I sleep.\w5 It's very soft..."
 	--
@@ -2113,12 +2134,12 @@ Select.rude
 	"\0\s[0]\i[55]* (...You gently place a rock next to his feet.)\0\s[4]\i[55]\n\n\w8Huh?"
 	if nicesadlevel <= -25
 	{
-		nicesadlevel -= 2
+		negact += 2
 		"* (You toss the rock at him, but he catches it.)\n\n\w8What was that for!?"
 	}
 	elseif nicesadlevel <= -50
 	{
-		nicesadlevel -= 5
+		negact += 5
 	}
 	--
 	"%(ItemMOO)"
@@ -2184,7 +2205,7 @@ Select.nightyneedstoeat
 	}
 	else //THANK YOU DREAM TEAM
 	{
-		nicesadlevel += 1
+		posact += 1
 		//No modifiers, can be gotten any time of day.
 		//if it is winter
 		//{
@@ -2246,13 +2267,13 @@ Select.nightyneedstoeat
 }
 Select.feedhimactualgoodfood
 {
-	nicesadlevel += 1	
+	posact += 1	
 	"\0\s[19]* (He's so hungry he looks on the verge of tears. \w6You hold out a granola bar to him, \w4and extremely cautiously he takes it and\0\s[25]\i[55] eats it up immediately.)\e"
 	"\0\s[19]* (It's been so long since he's last eaten he looks like he's about to cry. \w6You hold out a cookie to him, \w4and reluctantly he takes and\0\s[25]\i[55] eats it.)\w8\e"
 }
 Select.plsdontsticknailsinitorsomething
 {
-	nicesadlevel -= 1
+	negact += 1
 	"\0\s[19]* (You hand him a half eaten poptart.) \w8* (He's too desperate to deny it...)\w8\0\s[25]\e"
 	"\0\s[19]* (You hand him a fruit snack.)\w8\n\n* (He tries opening it, \w4but it was already opened.)\w8\n\n * (All the snacks are gone...)\e"
 }
@@ -2285,7 +2306,7 @@ Select.forcemenuopen
 
 Select.leavemenualone
 {
-	nicesadlevel += 1
+	posact += 1
 	"\0\s[19]* (He sniffles.)\n\n"
 }
 
@@ -2368,7 +2389,7 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	Edgybitch = "on"
+	nowmode = "Edgybitch"
 	"\![change,shell,Nightmare]"
 	/*
 	_file = "changelog.txt"

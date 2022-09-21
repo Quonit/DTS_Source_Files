@@ -28,15 +28,15 @@
 RandomTalk : nonoverlap_pool
 {
 //Replace all dialogue ifs
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		GoopTalk
 	}
-	elseif intodreams == "on"
+	elseif nowmode == "intodreams"
 	{
 		DreamTalk
 	}
-	elseif VillageLevel >= 150 && punchout <= 30 && Edgybitch == "off"
+	elseif VillageLevel >= 150 && punchout <= 30 && nowmode != "Edgybitch"
 	{
 		"\0\s[22]\i[55]* (Despite everything you've done to him, \w4his life here might be better than at home.)\e"
 		"\0\s[22]\i[55]* (Might not last too much longer.)\e"
@@ -189,7 +189,8 @@ RandomTalk : nonoverlap_pool
 			"zzz\w4.\w4.\w4.\w8\w8\w8 Ngh\w2.\w2.\w2.\w8 No\w4, don't\w4.\w4.w4.\w8 Stop\w4.\w4.\w4.\w8"
 		}
 	}
-	elseif nicesadlevel <= -120 && punchout >= 80 && Edgybitch == "off" //IT ADDS UP TO 200 OK
+	elseif nicesadlevel <= -120 && punchout >= 80 && nowmode != "Edgybitch" //IT ADDS UP TO 200 OK
+	//VillageLevel >= 200 && punchout > 1 && (nicesadlevel < 1 || betrayalvar > 1)
 	{
 		"\t\*\0\s[22]* (You hear sniffing.)\w8\w8\0\s[23]\n\n* \f[italic,true]sniff sniff\f[italic,false],\n\n\w8\w4I want to go home-\w5 why can't I just go home?\n\n\w8\![*]\q[Push him over.,Goopmare]\e"
 	}
@@ -561,18 +562,18 @@ Select.besnoopbother
 Select.continuesnooping
 {
 	lasttalked = 0
-	snoop =-5
+	snoop -= 5
 	"\0\s[12]\i[55]* (You decide to accept his terms. \w8\0\s[6]\i[55]\s[10]He looks happier now.)\n\n\w8\w8* (You feel somewhat accomplished.)"
 }
 Select.besnoopbother1
 {
 	lasttalked = 0
-	snoop =-5
+	snoop -= 5
 	"\0\s[12]* (You tell him you have no idea why he's mad.)\w8\n\n\0\s[21]You keep looking through my books while I'm reading!\n\n\w8* (You remind him that he told you that you should stop asking him what the book was and to just look at it.)\n\n\w8\0\s[12]\i[55]\s[10]* (He looks down at the ground and crosses his arms like a kid.)\e"
 }
 Select.continuesnooping1
 {
-	nicesadlevel =- 3
+	negact += 3
 	"\0\s[0]\i[13]\i[55]* (You tell him that he is on your computer so he needs to deal with you.\w8\n\n\0\s[9]\i[55]* (He looks down at the ground and crosses his arms, upset.)"
 }
 	
@@ -624,7 +625,7 @@ Select.name3yes
 	nightynight = "on"
 	privacyrespecter = "off"
 	talkaboutlater = "off"
-	nicesadlevel += 5
+	posact += 5
 	"\0\s[14]It's literally the entire reason I exist.\0\s[9]And I'm not even really protecting them from anything,\w3 they just call it that for some reason. \w8\0\s[12]I just sit near a stupid tree and make sure nobody touches it,\w4 even though nobody wants to go anywhere near it except for curious three-year-olds.\n\n\0\s[9]\w8.\w3.\w3.\w3You know what?\w8 \0\s[8]This is stupid, \w6just call me Nighty or something instead of Nightmare.\e"
 }
 Select.nameno
@@ -632,20 +633,20 @@ Select.nameno
 	lasttalked = 0
 	talkaboutlater = "off"
 	privacyrespecter = "on"
-	nicesadlevel -= 5
+	negact += 5
 	"\0\s[9]...Kay.\e"
 }
 	
 Select.Doesyourworkcountyes
 {
 	lasttalked = 0
-	nicesadlevel += 4
+	posact += 4
 	"\0\s[9]I\w2.\w2.\w2. \w4I take care of Mom's tree, \w4I just don't\w2.\w2.\w2. \w4\0\s[8]I help feed it and whatever else, \w4but only anDream's apples do anything.\w8\n\n\0\s[9]Because their apples are able to be cut up and used to help numb pain,\w5 but mine are just kind of useless\w2.\w2.\w2.\e"
 }
 Select.Whotfwantstohearaboutyourwork
 {
 	lasttalked = 0
-	nicesadlevel -= 2
+	negact += 2
 	"\0\s[7]Uh- \w2Sorry!\e"
 }
 Select.Nocommentonifworkcount
@@ -658,7 +659,7 @@ Select.Nocommentonifworkcount
 Select.Goopmare
 {
 	lasttalked = 0
-	Edgybitch = "on"
+	nowmode = "Edgybitch"
 	wasemo = "on"
 	
 	"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Looks like you found me.\w4.\w4.\w5I'd say it's almost impressive.\w4 Especially if you didn't even know I was here, \w4the lengths you went through to torture him.\w8\n\n\0\s[1615]But, here you are. \w5Doesn't much matter what you said to him before.\w8\0\s[1613] You get to talk to me now.\![change,Shell,Nightmare]\e"
@@ -667,13 +668,13 @@ Select.Goopmare
 Select.hugpurpleman
 {
 	lasttalked = 0
-	nicesadlevel += 1
+	posact += 1
 	"\i[5]\s[7]* (You try to give him a hug,\w4 but the mouse cursor doesn't have arms...)\n\n\w8\s[3]What's with you trying to touch people anyways..."
 }
 Select.leavepurplemanalone
 {
 	lasttalked = 0
-	nicesadlevel += 1
+	posact += 1
 	respect += 1
 	"\i[55]* (You respect his distance.)\n\n\w8\s[3]Thanks I guess?"
 }
@@ -698,13 +699,13 @@ Select.fiveleave
 {
 	lasttalked = 0
 	//temp dialogue
-	nicesadlevel += 1
+	posact += 1
 	"Ah-\w5 Thank you!!\w8\w8\w8\-\e"
 }
 Select.fivestay
 {
 	lasttalked = 0
-	nicesadlevel -= 5
+	negact += 5
 	"O-Oh\w2.\w2.\w2.\w8 I mean, if you could soon,\w3 then\w2.\w2.\w2."
 }
 	
@@ -856,52 +857,28 @@ OnMinuteChange
 	{
 		privacyrespecter = "on"
 	}
-	/*
 	--
-	case SHIORI3FW.ShellName
+	/*
+	//mode shell check?
+	if nowmode == "Edgybitch"
 	{
-		when "Dreamtale Sans"
+		if SHIORI3FW.ShellName != "Nightmare"
 		{
-			//Blushie Code
-			if blushiemode == "on" && privacyrespecter == "off"
-			{
-				//"\![bind,Costume,Blushies,true]\e"
-			}
-			--
-			if blushiemode == "off" || privacyrespecter == "on"
-			{
-				//"\![bind,Costume,Blushies,false]\e"
-			}
-			--
-			Edgybitch = "off"
-			intodreams = "off"
+			"\![change,shell,Nightmare]"
 		}
-		when "Nightmare"
+	}
+	elseif nowmode == "intodreams"
+	{
+		if SHIORI3FW.ShellName != "Dream"
 		{
-			//Mare Code
-			if cutscene != "on"
-			{
-				if SHIORI3FW.ShellName == "Nightmare"
-				{
-					Edgybitch = "on"
-				}
-				elseif Edgybitch == "on"
-				{
-					"\![change,Shell,Nightmare]\e"
-				}
-			}
+			"\![change,shell,Dream]"
 		}
-		when "Dream"
+	}
+	else
+	{
+		if SHIORI3FW.ShellName != "Dreamtale Sans"
 		{
-			//Dream Code
-			if intodreams == "on"
-			{
-				//"\![change,Shell,Dream]\e"
-			}
-			elseif SHIORI3FW.ShellName == "Dream"
-			{
-				intodreams = "on"
-			}
+			"\![change,shell,Dreamtale Sans]"
 		}
 	}
 	*/
@@ -956,7 +933,7 @@ EndMikireTalk
 
 OnSurfaceRestore
 {
-	if VillageLevel >= 150 && Edgybitch == "off"
+	if VillageLevel >= 150 && nowmode != "Edgybitch"
 	{
 		"\0\s[22]\e"
 	}
@@ -974,7 +951,7 @@ OnSurfaceRestore
 		*/
 		"\0\s[5]"
 	}
-	elseif Edgybitch == "on"
+	elseif nowmode == "Edgybitch"
 	{
 		"\0\s[0]\e"
 	}
@@ -982,7 +959,7 @@ OnSurfaceRestore
 	{
 		"\0\s[1]\e"
 	}
-	elseif intodreams == "on"
+	elseif nowmode == "intodreams"
 	{
 		"\0\s[0]\e" //Make idles at some point
 		//Staring off at something?

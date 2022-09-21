@@ -50,7 +50,7 @@ OnAnchorSelect
 						{
 							"\0\s[12]They're somebody.\e"
 						}
-						elseif Edgybitch == "on"
+						elseif nowmode == "Edgybitch"
 						{
 							"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Hah,\0\s[7]\w4 that sap?\n\n\w8''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3whom I love so much and definitely care enough to notice things like cuts on his arm!''\n\n\w8\0\s[1]Hah, \w5bet they wouldn't be happy if they saw me.\e"
 						}
@@ -74,7 +74,7 @@ OnAnchorSelect
 				{
 					"\0\s[5]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]\_l[0,60]zzz\w4.\w4.\w4.\w8\w8 Fox person\w4.\w4.\w4.\w8\w8 thing\w4.\w4.\w4\e"
 				}
-				elseif Edgybitch == "on"
+				elseif nowmode == "Edgybitch"
 				{
 					"\0\s[4]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]\_l[0,60]They're the idiot that decided to spend nearly a year working on making this stupid crap.\e"
 				}
@@ -104,7 +104,7 @@ OnAnchorSelect
 					momstreeexpo = "on"
 					"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\0\s[9]Mommy\w4.\w4.\w4. \w6I wish I knew her sometimes.\n\n\w8I\w3.\w3.\w3. \w4I think it's just in my head,\w3 but I think she'd've helped me a lot on stuff.\w6If I also had her to talk to instead of just the villagers.\w6 But\w3.\w3.\w3.\n\n\w8Some of the villagers say she didn't like me, \w5but I don't know if I should just trust what they're saying or not. \w6Because I didn't know her, \w3but they did.\w5So I dunno what to think\w3.\w3.\w3.\e"
 				}
-				elseif Edgybitch == "on"
+				elseif nowmode == "Edgybitch"
 				{
 					"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom' to.\n\n\w8Technically that'd make Dream and the purple one my step-brothers, \w3when you think about it.\e"
 				}

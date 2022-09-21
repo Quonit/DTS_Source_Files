@@ -11,6 +11,23 @@ GoopTalk : nonoverlap_pool
     "\0\s[1]Honestly,\w3 I bet this ghost would have been a lot more interesting if I had one of my pets to talk to.\e"
     "\0\s[1]Honestly,\w3 anDream is \f[italic,true]such\f[italic,false] an extrovert.\n\n\w8\0\s[1]I bet it would be heartbreaking to see if they found out that all their friends were liars.\e"
     "\0\s[0]* (You ask the goop if he reads at all.)\0\s[1]\n\n\w8Please,\w4 the only reason the other one did it is because there was nothing else to do.\n\n\w8 I'm sure if his universe had phones or anything of that sort he would've scurried off with one of those,\w4 since he just wants a way to avoid people.\e"
+	/*
+	{
+		"\0\s[0]* (You ask the goop if he likes reading.)\0\s[1]\n\n\w8Please.\w4\0\s[0] The only reason the purple one did it is to avoid people. If he had the option,\w5 he'd've been on his phone all the time.\w8"
+		--
+		if exh > 100
+		{
+			" And given this device's been on %(exh) hours,\w4 it seems you're cut from the same cloth.\w8"
+		}
+		--
+		if blushiemode == "on"
+		{
+			" No wonder you're reduced to flirting with your captives.\w8"
+		}
+		--
+		"\e"
+	}
+	*/
     "\0\s[0]* (You wonder if he's left any goop behind while wandering around your computer.)\e"
     "\0\s[1]You know,\w4 the little skeleton always seemed upset over his job of protecting the tree,\w4 with nothing to protect it from.\0\s[0]\w8\n\nI don't know why he'd be upset,\w3 I doubt he'd have a very fun time trying to prevent somebody from taking one with how little he tries to fight back.\w8 I suppose he really is just stupid.\e"
     "\0\s[1]I'm honestly surprised the little twat never tried to run away from home.\n\n\w8I guess he must just looove his brother,\w4 whom he never tells anything and hides from and ignores when possible.\e"
@@ -247,13 +264,13 @@ Select.gooptoybox
 {
     if hasdreamplush == "off"
     {
-		nicesadlevel += 1
+		posact += 1
 		hasdreamplush == "on"
 		"\0\s[0]* (You hand him a doll of anDream.)\n\n\w8\0\s[11]Hah,\w4 wouldn't this be a thing to toy with?\n\n"
     }
     if hasblankie == "off"
     {
-		nicesadlevel += 1
+		posact += 1
 		hasblankie == "on"
 		"\0\s[0]* (You hand him a soft,\w2 comfy blanket.)\n\n\w8\0\s[8]\i[11]Cute.\w6 I bet the twins would've loved this thing.\n\n"
     }
@@ -283,6 +300,7 @@ Select.goopfood
 
 Select.testvariable2
 {
-	"* (Touch Fluffy Tail?)\n\n\_q\![*]Yes\n\![*]Yes\_q\x\0\s[5]\w7They're tentacles, you sick %$#*@!\w8"
-   // Edgybitch = "off"
+	//"* (Touch Fluffy Tail?)\n\n\_q\![*]Yes\n\![*]Yes\_q\x\0\s[5]\w7They're tentacles, you sick %$#*@!\w8"
+	// Edgybitch = "off"
+   dontmovestatsitshalloween = "on"
 }

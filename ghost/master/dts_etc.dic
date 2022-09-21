@@ -17,11 +17,11 @@
 		}
 		when ".mid", ".wav", ".mp3", ".wma", ".au" //Other file formats you might want to give your ghost a specific response to.
 		{
-			if Edgybitch == "on"
+			if nowmode == "Edgybitch"
 			{
 				"\0\s[0]\i[13]What, \w4do you want me to sing for you or something?\e"
 			}
-			elseif intodreams == "on"
+			elseif nowmode == "intodreams"
 			{
 				"\0\s[2002]* (Dream doesn't seem to know what it is...)\0\s[2002]Um\w2.\w2.\w2.\w8 Thank you\w2.\w2.\w2.\w2?\e"
 			}
@@ -56,7 +56,7 @@ Select.SetWallpaper_Cancel
  //---- OnInstallBegin -------------------------------------------------------
 OnInstallBegin
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]Ah,\w4 somebody to replace me I see?\w8\n\n\0\s[4]Oh don't worry, \w4I'm not mad about it.\w5 Here, I'll even install it for you.\e"
 		"\0\s[1]* (Installing file\w4.\w4.\w4.\w4)\e"
@@ -75,7 +75,7 @@ OnInstallComplete
 	{	
 		if reference1 == "Nightmare"
 		{
-			Edgybitch = "on"
+			nowmode == "Edgybitch"
 			wasemo = "on"
 			"\0\s[1]This should come with the ghost.\w8 Wonder what Quonit screwed up this time.\e"
 		}
@@ -100,7 +100,7 @@ OnInstallComplete
 
 OnInstallFailure
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]* (The installation has failed.)\n\n\w5"
 		"\0\s[0]How sad.\w5 It didn't work.\n\n\w5"
@@ -204,11 +204,11 @@ OnBIFFFailure
 	}
 	else
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[4]I only got an error code '%(reference[0])'.\w8\n\nHow sad.\e"
 		}
-		if Edgybitch == "off"
+		else
 		{
 			"\0\s[8]I only got an error code '%(reference[0])'.\w8\n\nSorry.\e"
 		}
@@ -217,11 +217,11 @@ OnBIFFFailure
 
 OnUpdateBegin
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0%(surface0)\i[55]* (Starting the update process.)\e"
 	}
-	if Edgybitch == "off"
+	else
 	{
 		"\0%(surface0)\i[55]* (Starting the update process.)\w8\e"
 		"\0\s[4]I wonder what kind of things could be in the update...\w8\e"
@@ -364,8 +364,14 @@ UpdateVars
 	*/
 	if !ISVAR('menuname'); {menuname='off'}
 	if !ISVAR('sittang'); {sittang='off'}
-	if !ISVAR('intodreams'); {intodreams='off'}
-	if !ISVAR('Edgybitch'); {Edgybitch='off'}
+	
+	if !ISVAR('nowmode')
+	{
+		if Edgybitch == "on"; {nowmode == "Edgybitch"}
+		elseif intodreams == "on"; {nowmode == "intodreams"}
+		else; {nowmode='purpleman'}
+	}
+	
 	if !ISVAR('mikireflag'); {mikireflag=0}
 	if !ISVAR('givesleepyblankie'); {givesleepyblankie='off'}
 	if !ISVAR('dontmovestatsitshalloween'); {dontmovestatsitshalloween='off'}
@@ -395,6 +401,27 @@ UpdateVars
 	if !ISVAR('hasblankie'); {hasblankie='off'}
 	if !ISVAR('hasviolin'); {hasviolin='off'}
 	//counters
+	
+	if !ISVAR("posact") && !ISVAR("negact")
+	{
+		if nicesadlevel > 0
+		{
+			posact = nicesadlevel
+			negact = 0
+		}
+		else
+		{
+			negact = nicesadlevel
+			posact = 0
+		}
+	}
+	elseif !ISVAR("posact") || !ISVAR("negact")
+	{
+		if !ISVAR("posact"); {posact = 0}
+		if !ISVAR("negact"); {negact = 0}
+	}
+	
+	
 	if !ISVAR('nicesadlevel'); {nicesadlevel=0}
 	if !ISVAR('ily'); {ily=0}
 	if !ISVAR('stroke'); {stroke=0}
@@ -404,6 +431,8 @@ UpdateVars
 	if !ISVAR('flirtlevel'); {flirtlevel=0}
 	if !ISVAR('snoop'); {snoop=0}
 	if !ISVAR('respect'); {respect=0}
+	if !ISVAR('betrayalvar'); {betrayalvar=0}
+	if !ISVAR('apologized'); {apologized=0}
 }
 
 OnUpdatedataCreating
@@ -462,7 +491,7 @@ OnDisplayChange
 }
 OnScreenSaverStart
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[5]What the hell is this???\e"
 	}
@@ -473,7 +502,7 @@ OnScreenSaverStart
 }
 OnScreenSaverEnd
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[5]What the hell was that??\e"
 	}
@@ -510,7 +539,7 @@ OnShellScaling
 {
 	if reference0 >= 150
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[1]You know\w3.\w3.\w3.\n\n\w8I wonder if I can change my size on my own.\e"
 			"\0\s[1]* (Biggest sized goop.)\e"
@@ -525,7 +554,7 @@ OnShellScaling
 	}
 	elseif reference0 == 100
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[1]Normal sized. \w8How boring.\e"
 		}
@@ -538,7 +567,7 @@ OnShellScaling
 	}
 	elseif reference0 == 50
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[5]Trying to get me out of the way so you don't have to think about what you did??\e"
 			"\0\s[1]Either you're trying to get me out of the way or you just have a really shitty screen.\e"

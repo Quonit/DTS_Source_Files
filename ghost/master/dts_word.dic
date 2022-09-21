@@ -137,27 +137,31 @@ nightname //Decides which name to use for him
 	}
 }
 
+nicesadlevel
+{
+	posact - negact
+}
+
 VillageLevel //Negative variable that also catches if you've hit him or not. Used so that you can't unlock goopmare without hurting him
 {
 	punchout - nicesadlevel
 	/*
-	if nicesadlevel < 0
+	if apologized == 0
 	{
-		punchout - nicesadlevel
+		if punchout < 1; {0}
+		else; {betrayalvar + (punchout-1)*constant + negact}
 	}
 	else
 	{
-		//
-	}
-	
-	
-	if punchout >= 1
-	{
-		betrayalvar + punchout
+		if punchout == 0
+		{
+			if apologized >= 2; {betrayalvar + (punchout-1)*constant + negact}
+			else; {punchout*constant + negact}
+		}
+		else; {betrayalvar + (punchout-1)*constant + negact}
 	}
 	*/
 }
-
 
 ItemMOO //Put this at the end of the item menu instead of typing this out 30 times
 {
@@ -186,7 +190,7 @@ backmenu //Put at the end of settings
 
 pickup //why is this here instead of mouse.dic
 {	
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[12]"
 	}

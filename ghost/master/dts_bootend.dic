@@ -14,6 +14,7 @@
 	nowshell = SHIORI3FW.ShellName //Current shell. Not even sure if this works...
 	menuname = "off" //If you're changing your name from the menu
 	menusphere = "Northern" //What Hemisphere you're in
+	nowmode = "purpleman"
 	//Constants
 	//Good
 	nightynight = "off" //If his name is Nightmare or Nighty
@@ -23,11 +24,14 @@
 	ily = 0 //If you've told him you like him
 	gooppets = 0 //How many times you've pet goomare
 	metalpet = 0 //Times pet Night
+	posact = 0
 	//Bad
 	privacyrespecter = "off" //If you've been mean to him?
-	Edgybitch = "off" //Goopmare mode
 	snoop = 0 //how many times you've clicked to read his book
 	punchout = 0 //How many times you've hit him
+	negact = 0
+	betrayalvar = 0 //if you got his friendship high then punched him
+	apologized = 0 //how many times you've apologized
 	//Neutral
 	nicesadlevel = 0 //Relationship variable
 	sodreamy = "off" //If you've seen Dream or not
@@ -35,7 +39,6 @@
 	maremare = "off" //If you've seen Mare before. Under friendly circumstances.
 	wasemo = "off" //If you've seen goopmare before under bad circumstances.
 	sittang = "off" //if he is sitting
-	intodreams = "off" //If Dream is here
 	//Items
 	hasdreamplush = "off" //If you've given him the Dream plush
 	hastea = "off" //If you've given him a mug
@@ -127,11 +130,11 @@ GetDaySlot
 
 OnBoot
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		OnGoopWake
 	}
-	if Edgybitch == "off"
+	if nowmode != "Edgybitch"
 	{
 		if SHIORI3FW.ShellName == "Nightmare"
 		{
@@ -223,7 +226,7 @@ OnBoot
 	*/
 	elseif dayslot == "10month 31day"
 	{
-		Edgybitch = "on"
+		nowmode = "Edgybitch"
 		dontmovestatsitshalloween = "on"
 		"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Ah, I bet you're somewhat confused. \w6Especially if you've been treating him nicely, \w2so it makes no sense for this to have happened.\0\s[1615]Well,\w4 there are a few reasons. \n\n\w8\0\s[1613]Quonit, the idiot who made this ghost, felt empathetic towards people who wouldn't go down the 'bad route' because they are too cowardly.\n\n\w8And another reason is because I'm a much better Halloween event then the crown-wearing idiot.\n\n\w8Just so you don't go whining at them about it, I'll warn you that some of the things I might say will be out of place if you're on the good route. \n\n\w8Don't worry though, \w4tomorrow everything will go back to normal. \w8Hopefully.\0\s[0]\![change,Shell,Nightmare]\e"
 	}
@@ -235,7 +238,7 @@ OnBoot
 
 normalboottalk //All temp dialogue
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		GoopWake
 	}
@@ -376,7 +379,7 @@ OnClose
 	--
 	if passmin >= 5
 	{
-		if Edgybitch == "on"
+		if nowmode == "Edgybitch"
 		{
 			OnGoopSleep
 		}
@@ -619,7 +622,7 @@ OnClose
 
 OnWindowStateRestore
 {
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		"\0\s[5]What the hell was that???\e"
 		"\0\s[5]* (The goop is back on screen.)\e"
@@ -654,7 +657,7 @@ OnGhostChanging
 			"\0\s[19]* (You open %(reference0) instead of this garbage.)"
 			"\0\s[19]* (Maybe %(reference0) will actually talk to you...)"
 		}
-		elseif Edgybitch == "on"
+		elseif nowmode == "Edgybitch"
 		{
 			"\0\s[4]Go play with your friend,\w4 %(reference0)."
 			"\0\s[1]Scat.\e"
@@ -707,7 +710,7 @@ OnGhostChanged
 			"\0\s[19]* (Switched from %(reference0) back to this idiot...)"
 			"\0\s[19]* (At least %(reference0) actually talked to you...)"
 		}
-		elseif Edgybitch == "on"
+		elseif nowmode == "Edgybitch"
 		{
 			"\0\s[4]See?\w5 I'd knew you'd come back to me.\e"
 		}

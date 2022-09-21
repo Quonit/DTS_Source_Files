@@ -7,6 +7,10 @@
 		sittang = "off"
 		"\0\s[16]\w8\w8What do you want to be called?\![open,inputbox,OnNameTeach,-1]"
 	}
+	elseif nowmode == "Edgybitch"
+	{
+		"\0\s[0]I don't care about your name.%(backmenu)"
+	}
 	else
 	{
 		"\0%(surface0)What do you want to be called?\![open,inputbox,OnNameTeach,-1]"

@@ -38,7 +38,7 @@ MouseMoveSakura
 					
 					if sleepingmode == "on"
 					{
-						nicesadlevel += 1
+						posact += 1
 						
 						if nicesadlevel <= -20 && punchout >= 20
 						{
@@ -140,7 +140,7 @@ MouseMoveSakura
 							}
 							if nicesadlevel <= -50 && punchout >= 25 //big dislike
 							{
-								nicesadlevel -= 1
+								negact += 1
 								"\0\s[19]* (Your mouse must have slipped.)\e"
 								"\0\s[19]* (He tries to avoid your touch,\w4 but can't.)\e"
 								"\0\s[19]Stop...\e"
@@ -148,7 +148,7 @@ MouseMoveSakura
 						}
 						else
 						{
-							nicesadlevel += 1
+							posact += 1
 							if sittang == "on"
 							{
 								"\0\s[1]I'm trying to read."
@@ -414,7 +414,7 @@ MouseDoubleClickSakura
 				
 				if nicesadlevel <= -25 && punchout >= 5 //Very mean
 				{
-					nicesadlevel -= 1
+					negact += 1
 					"\0\s[3]Can you stop touching my crown?\w6 It's rude.\e"
 					"\0\s[33]Ah-!\w8\s[17]\e"
 					"\0\s[33]Hey-!\w8\s[17] That's mine!!!\e"
@@ -431,7 +431,7 @@ MouseDoubleClickSakura
 	{
 		if punchout >= 30
 		{
-			nicesadlevel -= 1
+			negact += 1
 			punchout += 1
 			"\0\s[34]Ah-!!!\0\s[1622]\n\n\w8\w8Ow-\w6 ow,\w4 nngghh...\n\n\w8\w4* (That crack on his skull is bleeding.)\e"
 			"\0\s[34]\w8\w8Oh-!!!\s[1622]\n\n\w8\w8Ack-\w8 ow,\w5 It hurts...\n\n\w8\w8* (Just add to the scars, \w4why don't you?)\e"
@@ -443,7 +443,7 @@ MouseDoubleClickSakura
 		}
 		elseif punchout > 15 //&& <= 10
 		{
-			nicesadlevel -= 1
+			negact += 1
 			punchout += 1
 			"\0\s[290]Ah-\w5\0\s[23] Stop it!!!\e"
 			"\0\s[290]Hghk-! \w9\w9nnn...\e"
@@ -484,21 +484,21 @@ Select.whatstarheadband
 
 Select.punchnighty
 {
-	if punchout == 0
+	if punchout == 0 && nicesadlevel > 0
 	{
-		betrayalvar = ABS(1 - nicesadlevel)
+		betrayalvar += ABS(1 - nicesadlevel)
 	}
 	--
 	if privacyrespecter == "off" && (blushiemode == "on" || nightynight == "on")
 	{
-		nicesadlevel -= 1
+		negact += 1
 		punchout += 1
 		"\0\s[290]Ack-! %(username)??\w4\0\s[21] Why did you do that???\e"
 		"\0\s[30]Ow!! Wait,\w3\0\s[21] %(username)???\e"
 		"\0\s[30]Ah-!! Ow!!!\w4 %(username)?!\n\n\w8\0\s[21]Why did you do that???\w6 I-\w3 I thought you were my friend!\e"
 	}
 	
-	nicesadlevel -= 1
+	negact += 1
 	punchout += 1
 	"\0\s[290]Ow! \w3Why did you do that??"
 	"\0\s[290]Ow-! \w3Stop it!"
@@ -520,6 +520,6 @@ Select.readfunnyblurbsleepmode
 }
 Select.repsecttoyoumysirsleepmode
 {
-	respect +1
+	respect += 1
 	"\0\s[1]\i[55]* (There is no reason not to,\w4 but good job anyways.)\e"
 }
