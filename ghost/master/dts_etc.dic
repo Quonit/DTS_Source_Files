@@ -20,6 +20,7 @@
 			if nowmode == "Edgybitch"
 			{
 				"\0\s[0]\i[13]What, \w4do you want me to sing for you or something?\e"
+				"Pfft. Should I be flattered?"
 			}
 			elseif nowmode == "intodreams"
 			{
@@ -75,7 +76,7 @@ OnInstallComplete
 	{	
 		if reference1 == "Nightmare"
 		{
-			nowmode == "Edgybitch"
+			nowmode = "Edgybitch"
 			wasemo = "on"
 			"\0\s[1]This should come with the ghost.\w8 Wonder what Quonit screwed up this time.\e"
 		}
@@ -103,7 +104,7 @@ OnInstallFailure
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]* (The installation has failed.)\n\n\w5"
-		"\0\s[0]How sad.\w5 It didn't work.\n\n\w5"
+		"\0\s[0]How sad.\w5 It didn't work.\w8 Tch.\n\n\w5"
 	}
 	else
 	{
@@ -421,8 +422,6 @@ UpdateVars
 		if !ISVAR("negact"); {negact = 0}
 	}
 	
-	
-	if !ISVAR('nicesadlevel'); {nicesadlevel=0}
 	if !ISVAR('ily'); {ily=0}
 	if !ISVAR('stroke'); {stroke=0}
 	if !ISVAR('gooppets'); {gooppets=0}

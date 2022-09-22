@@ -89,7 +89,7 @@ MouseMoveSakura
 						//Positive
 						if nicesadlevel >= 25
 						{
-							nicesadlevel += 1
+							posact += 1
 							if sittang == "on"
 							{
 								"\0\s[1]\i[14]\i[55]* (He smiles faintly.)"

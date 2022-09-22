@@ -208,11 +208,11 @@ Select.BACKTOMENU
 {
 	"\b2"
 	--
-	if Edgybitch == "on"
+	if nowmode == "Edgybitch"
 	{
 		GoopMenu
 	}
-	elseif intodreams == "on"
+	elseif nowmode == "intodreams"
 	{
 		DreamMenu
 	}
@@ -230,7 +230,7 @@ Select.configmenu
 
 TalkConfig
 {
-	if nowmode == "Edgybitch"
+	if nowmode == "Edgybitch" && dontmovestatsitshalloween != "on"
 	{
 		username = "User"
 	}
@@ -255,8 +255,16 @@ TalkConfig
 		Times Hit: %(punchout)\n\n"
 	}
 	--
-	"Pronouns: %(heshe)/%(himher)/%(hisher) \f[sup,1](\q[Change them?,TEACHPRONOUN])\f[sup,0]\n/
-	Birthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
+	if nowmode == "Edgybitch"
+	{
+		"Pronouns: idgaf\n"
+	}
+	else
+	{
+		"Pronouns: %(heshe)/%(himher)/%(hisher) \f[sup,1](\q[Change them?,TEACHPRONOUN])\f[sup,0]\n"
+	}
+	--
+	"Birthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
 	Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
 	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
 	Updated: 9th February 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
@@ -351,7 +359,6 @@ Select.removegoo
 		wasemo = "on"
 		hasdreamplush = "off"
 		hastea = "off"
-		nicesadlevel = 0
 		posact = 0
 		negact = 0
 		apologized = 0
@@ -637,6 +644,7 @@ Select.TalksTill
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[5]Why'd you even open the menu then!\e"
+		"Wasting my time and yours?\w8\w8 Surely you have better things to do.\w8\w8\0\s[0] Toys to take apart.\w8"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -659,10 +667,11 @@ Select.TalksTill
 Select.TALKMAX
 {
 	talktime = "30 seconds"
-	aitalkinterval = 45
+	aitalkinterval = 30
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[6]God, \w4do you have attention deficit disorder or something?\e"
+		"* (He's smirking...)"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -683,10 +692,11 @@ Select.TALKMAX
 Select.TALKHIGH
 {
 	talktime = "minute"
-	aitalkinterval = 90
+	aitalkinterval = 60
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[13]Reasonable I guess...\e"
+		"Trying to make me talk myself hoarse?\w8 I don't work that way.\w8"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -707,10 +717,11 @@ Select.TALKHIGH
 Select.TALKNORMAL
 {
 	talktime = "3 minutes"
-	aitalkinterval = 270		
+	aitalkinterval = 240		
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]Fine then,\w5 %(username).\e"
+		"* (He's smirking...)\w8"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -735,6 +746,7 @@ Select.TALKPOOR
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[6]Least it's a normal speed.\e"
+		"* (He's smirking...)"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -758,6 +770,7 @@ Select.TALKNONE
 	aitalkinterval = 0
 	if nowmode == "Edgybitch"
 	{
+		aitalkinterval = (RAND(10)+1)*30
 		"\0\s[0]Aw, \w4how disappointing~"
 	}
 	elseif VillageLevel >= 150
@@ -787,6 +800,7 @@ Select.CANCEL
 	{
 		"\0\s[1]Whatever.\e"
 		"\0\s[0]Alright then.\e"
+		"\0\s[0]Keep thinking that any of this matters.\e"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -890,9 +904,11 @@ Select.CALENDAR
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[0]\i[55]* (Opening the calendar...)\![open,calendar]\e"
-		"\0\s[0]Ah,\w5 yes, \w5because you can't just see the date on your computer.\![open,calendar]\e"
-		"\0\s[6]You could also just press ctrl + D instead of making me do it.\![open,calendar]\e"
+		"\0\s[0]\i[55]* (Opening the calendar...)"
+		"\0\s[0]Ah,\w5 yes, \w5because you can't just see the date on your computer."
+		"\0\s[6]You could also just press ctrl + D instead of making me do it."
+		--
+		randomfunction
 	}
 	elseif VillageLevel >= 150
 	{
@@ -909,7 +925,7 @@ Select.sspconfig
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]* (Opening the calendar...)\![open,configurationdialog]\e"
+		"\0\s[1]* (Opening the calendar...)%(randomfunction)\e"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -1057,7 +1073,6 @@ Select.IamcompletelysureIwanttoreset
 	hasdreamplush = "off"
 	hastea = "off"
 	dontmovestatsitshalloween = "off"
-	nicesadlevel = 0
 	posact = 0
 	negact = 0
 	apologized = 0
@@ -1847,27 +1862,34 @@ Select.reexplaintree
 
 Select.reexplaindream
 {
-	if punchout >= 10
+	if nowmode == "Edgybitch"
 	{
-		"* (You ask whether Dream ever hurts him like you do.)\n\n\w8\s[7]\w8\s[0]\i[12]\i[15]Dream would never do something like that!\n\n\w8\i[55]* (You ask why he doesn't tell Dream about getting hurt, then.)\n\n\w8\s[9]...\w8"
-	}
-	if passhour >= 5
-	{
-		"\0\s[9]They're probably super worried about me\w2.\w2.\w2.\w8\n\nI should get home so they know where I am.\w8\n\nI really shouldn't leave them alone this long\w2.\w2.\w2."
+		//
 	}
 	else
 	{
-		if nicesadlevel <= -10
+		if punchout >= 10
 		{
-			"\0\s[12]They're somebody.\n\n"
+			"* (You ask whether Dream ever hurts him like you do.)\n\n\w8\s[7]\w8\s[0]\i[12]\i[15]Dream would never do something like that!\n\n\w8\i[55]* (You ask why he doesn't tell Dream about getting hurt, then.)\n\n\w8\s[9]...\w8"
 		}
-		elseif nicesadlevel <= 25
+		elseif passhour >= 5
 		{
-			"\s[4]I hope I'm not worrying them too much\w2.\w2.\w2. \w8\s[8]Well,\w4 actually,\w8 there's no doubt I am.\n\n\w8\s[9]I really shouldn't be staying away from them like this...\n\n\w8\s[13]Oh,\w4 but it's not your fault %(username).\w8\s[8] Don't worry about it."
+			"\0\s[9]They're probably super worried about me\w2.\w2.\w2.\w8\n\nI should get home so they know where I am.\w8\n\nI really shouldn't leave them alone this long\w2.\w2.\w2."
 		}
 		else
 		{
-			"\0\s[13]I should honestly just try and get back home...\n\n\w8\s[4]If I stay too long,\w4 they might end up worried about me."
+			if nicesadlevel <= -10
+			{
+				"\0\s[12]They're somebody.\n\n"
+			}
+			elseif nicesadlevel <= 25
+			{
+				"\s[4]I hope I'm not worrying them too much\w2.\w2.\w2. \w8\s[8]Well,\w4 actually,\w8 there's no doubt I am.\n\n\w8\s[9]I really shouldn't be staying away from them like this...\n\n\w8\s[13]Oh,\w4 but it's not your fault %(username).\w8\s[8] Don't worry about it."
+			}
+			else
+			{
+				"\0\s[13]I should honestly just try and get back home...\n\n\w8\s[4]If I stay too long,\w4 they might end up worried about me."
+			}
 		}
 	}
 	--
@@ -1896,7 +1918,7 @@ Select.whatswithdreamscrown
 	else
 	{
 		//temp dialogue
-		//dream crown dialogue if you've alraeady asked
+		//dream crown dialogue if you've already asked
 	}		
 	--
 	"\![*]\q[ASK another question,youtalk]\n/

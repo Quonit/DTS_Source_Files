@@ -14,6 +14,12 @@ OnTranslate
 	{
 		TOSTR(_talk)
 	}
+	
+	//trying to make Mare randomly talk on his own
+	if nowmode == "Edgybitch"
+	{
+		aitalkinterval = (RAND(10)+1)*30
+	}
 }
 OnAnchorSelect
 {
@@ -42,7 +48,7 @@ OnAnchorSelect
 				{
 					if passhour >= 5
 					{
-						"\0\s[9]They're probably super worried about me\w2.\w2.\w2.\w8\n\nI should get home so that they know where I am.\w8\n\nI really shouldn't leave them alone this long\w2.\w2.\w2.\e"
+						"\0\s[9]They're pr'y super worried about me\w2.\w2.\w2.\w8\n\nI should get home so that they know where I am.\w8\n\nI really shouldn't leave them alone this long\w2.\w2.\w2.\e"
 					}
 					else
 					{

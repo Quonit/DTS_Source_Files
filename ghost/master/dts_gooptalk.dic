@@ -2,8 +2,8 @@
 GoopTalk : nonoverlap_pool
 {
     "\0\s[0]Honestly,\w3 did you expect there to be a ghost about Nightmare without me in it?\e"
-    "\0\s[0]You might want to go check on your %(usersfolder)\w2.\w2.\w2.\w5 I've been spending a bit of time there,\w5 maybe it got deleted?\n\n\![*]\q[Call his bluff,heisntbluffing]\n\![*]\q[Get upset,feedgoopy]\e"
-    "\0\s[1]i[102]God,\w4 this place is so boring.\n\n\w8Couldn't there at least be more then one character out at a time or is that just to complicated to make?\e"
+    "\0\s[-1]\w8\w8\w8\w8\s[0]\w8You might want to go check on your %(usersfolder)\w2.\w2.\w2.\w5 I've been spending a bit of time there,\w5 maybe it got deleted?\n\n\![*]\q[Call his bluff,heisntbluffing]\n\![*]\q[Get upset,feedgoopy]\e"
+    "\0\s[1]\i[102]God,\w4 this place is so boring.\n\n\w8Couldn't there at least be more then one character out at a time or is that just to complicated to make?\e"
     "\0\s[0]* (You ask him if he enjoys his new home.)\n\n\w8\i[102]This place sucks.\e"
     "\0\s[0]* (You ask if you can hug him.)\n\n\w8\i[102]I think that's a stupid question to ask.\n\n\w8* (\w3.\w3.\w3.\w3Is that a yes or a no?)\n\n\w8\0\s[5]That's a no, you idiot!!!\e"
     "\0\s[0]How long are you going to force me to stay here, anyways?\e"
@@ -18,14 +18,18 @@ GoopTalk : nonoverlap_pool
 		if exh > 100
 		{
 			" And given this device's been on %(exh) hours,\w4 it seems you're cut from the same cloth.\w8"
-		}
-		--
-		if blushiemode == "on"
-		{
-			" No wonder you're reduced to flirting with your captives.\w8"
+			--
+			if blushiemode == "on"
+			{
+				" No wonder you're reduced to flirting with your captives.\w8"
+			}
 		}
 		--
 		"\e"
+	}
+	if gooploose == "on"
+	{
+		"* (You ask him what he thinks about the villagers.)\n\n What do I care about corpses?\n\n\w8\w8\w8* (.\w6.\w6.\w6What.)\n\n\![*]\q[What,askaboutcorpses]\![*]\q[Ignore it,thisgoesnowhere]"
 	}
 	*/
     "\0\s[0]* (You wonder if he's left any goop behind while wandering around your computer.)\e"
@@ -100,8 +104,8 @@ GoopTalk : nonoverlap_pool
     */
     if month == 10
     {
-    "\0\s[0]I might not have as many features as that purple twink, \w3but at the very least I'm a pretty damn fitting Halloween ghost,\w3 huh?\e:chain=twinkchain"
-    "\0\s[0]Quonit made a gag where I have to appear at Halloween,\w5 but is anybody \f[italic,true]really\f[italic,false] going to use this ghost by then?\e"
+		"\0\s[0]I might not have as many features as that purple twink, \w3but at the very least I'm a pretty damn fitting Halloween ghost,\w3 huh?\e:chain=twinkchain"
+		"\0\s[0]Quonit made a gag where I have to appear at Halloween,\w5 but is anybody \f[italic,true]really\f[italic,false] going to use this ghost by then?\e"
     }
     /*
     if month == 11
@@ -124,6 +128,12 @@ Select.feedgoopy
 	"\0\s[6]God,\w3 you actually fell for that??\n\n\w8\0\s[8]You idiot...\e"
 }
 
+Select.askaboutcorpses
+{
+	corpsesyay = "on"
+	"Yeah? I killed them all. What did you think a dark apple would do when let loose?"
+}
+
 twinkchain
 {{CHAIN
     "\0\s[1]Quo told me I'm not allowed to call Nighty a twink anymore.\w8\n\nDunno why, \w4and I disagree.\e:chain=end"
@@ -133,6 +143,8 @@ twinkchain
 //--------------------Bootend------------------------------
 OnGoopWake
 {
+	gooploose = "on"
+	--
     "\0\s[0]I was wondering when I'd see you again...\e"
     "\0\s[0]* (You ask him if he's going to comment on the time.)\n\n\w8Why would I? \w5\0\s[1]It's not like it means anything.\e"
     "\0\s[0]Let's hope I don't get too bored here.\e"
@@ -175,7 +187,8 @@ GoopMenu
 		"\![*]\q[Ask him to say what he just said,OnLastTalk]\n\n"
     }
     --
-    "\![*]\q[ACT,Ongoopact] or try to give him some \![*]\q[ITEMS,goopitemsmenu]\n/
+    "\![*]\q[ACT,Ongoopact] or try to ask him some \![*]\q[Questions,goopask]\n/
+	\![*]\q[ITEMS,goopitemsmenu]\n/
     \![*]\q[Stats,configmenu]\n/
     \![*]\q[Use some functions,dosomething]\n\n/
     \![*]\q[Test Variable,testvariable2]\n\n/
@@ -212,6 +225,8 @@ Select.Oncomplementeegoop
     "\0\s[2]* (You tell him he has very magnificent goop.)\n\n\w8Could you maybe not?\e"
     "\0\s[2]* (You tell Goopmare he is very terrifying.)\n\n\w8. . .\e"
     "\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[5]I am not!\n\n\w8* (And cute.)\n\n\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
+    //"\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[0]Come a little closer and try it." //make tentacles waggle threateningly
+    //"\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[0]Go swim in a tar pit,\w5 then.\w8"
     "\0\s[6]* (You comment on how comfy his clothes look.)\n\n\w8\0\s[8]Human skin is more fun to wear.\e"
     "\0\s[6]* (You comment on his many tentacles.)\n\n\w8\0\s[4]Yes they're great for stabbing, \w2slicing, \w2choking, \w2and myriad other things.\e"
     --
@@ -221,13 +236,24 @@ Select.Oncomplementeegoop
 }
 Select.flirtyflirtgoop
 {
-    "\0\s[0]* (You tell him you suffer so much that he could live off of it.)\0\s[4]\n\n\w8Yeah yeah I'm sure I could.\w6 Because one person is totally enough...\e"
+	{
+    "\0\s[0]* (You tell him you suffer so much that he could live off of it.)"
+	--
+	"\0\s[4]\n\n\w8Yeah yeah I'm sure I could.\w6 Because one person is totally enough...\e"
+	"Don't flatter yourself.\w8\w8 You suffer no more than any other self-absorbed creature I've met.\w8\w8"
+	}
     "\0\s[0]* (You tell him that you're into hentai.)\n\n\0\s[5]\w8You're %$^#ing weird!\e"
     "\0\s[0]* (You ask him how many tentacles he can summon at a time.)\n\n\0\s[8]\w8Depends on how much suffering is around.\e"
     "\0\s[0]* (You ask him if it hurt falling from the vending machine, because he a snack.)\n\n\0\s[8]\w8Aww~\w6 somebody hungry for some negativity?\e"
     "\0\s[0]* (You ask him if he has an extra heart,\w4 because yours was just stolen.)\n\n\w8\0\s[8]If you let me leave I could get one for you~\e"
     "\0\s[0]* (You tell him your favorite food is apples.)\n\n\0\s[5]\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
+    //"\0\s[0]* (You tell him your favorite food is apples.)\n\nThanks, but only my boyfriend can vore me."
+	//don't actually uncomment that one Quo
 	"* (Touch Fluffy Tail?)\n\n\![*]Yes\n\![*]Yes\x\0\s[5]They're tentacles you sick %$#*!"
+	if blushiemode == "on"
+	{
+		"Thirsty for anything that's stuck here with you, huh?"
+	}
     --
     "\![*]\q[Do another ACTtion...?,toybox]\n/
     \![*]\q[Again,flirtyflirtgoop]\n/
@@ -247,6 +273,39 @@ Select.nitpickthegoop
     "\![*]\q[Do another ACTtion...?,toybox]\n/
     \![*]\q[Again,nitpickthegoop]\n/
     \![*]\q[Nevermind,CANCEL]\e"
+}
+
+
+Select.goopask
+{
+	"\i[55]Ask about...\n\n/
+	\![*]\q[the crown?,reexplaincrown]\n/
+	\![*]\q[the tree?,reexplaintree]\n/
+	\![*]\q[his(?) brother?,reexplaindream]\n/
+	\![*]\q[%(nightname)?,explainpurple]\n"
+	--
+	if corpsesyay == "on"
+	{
+		\![*]\q[the village?,bunchaNPCs]
+	}
+	--
+	 "\![*]\q[Again,goopask]\n/
+	 \![*]\q[Back,BACKTOMENU]\n/
+    \![*]\q[Nevermind,CANCEL]\e"
+}
+
+Select.explainpurple
+{
+	"* (You ask him if he cares about %(nightname))\n\n\w8You sure don't.\w7 Why would you care if I do?\w8"
+	--
+	"%(backask)"
+}
+
+Select.bunchaNPCs
+{
+	"* (You ask him what he did after you let him go.)\n\n\w8Had a little fun,\w6 all thanks to you.\w8" //brandishing tentacles
+	--
+	"%(backask)"
 }
 
 Select.goopitemsmenu
@@ -275,9 +334,10 @@ Select.gooptoybox
 		"\0\s[0]* (You hand him a soft,\w2 comfy blanket.)\n\n\w8\0\s[8]\i[11]Cute.\w6 I bet the twins would've loved this thing.\n\n"
     }
 	"\0\s[6]* (You 'gift' him with a tiny music box.)\n\n\w8I have absolutely no use for this.\n\n* (He doesn't take it...)\n\n"
-	"\0\s[0]* (You 'give him a color cube\w2.\w2.\w2.)\n\n\w8\0\s[5]* (He throws it onto the ground and all the pieces break off.)\n\n\w8\w5* (That's one way to solve it\w2.\w2.\w2.)\n\n"
+	"\0\s[0]* (You give him a color cube\w2.\w2.\w2.)\n\n\w8\0\s[5]* (He throws it onto the ground and all the pieces break off.)\n\n\w8\w5* (That's one way to solve it\w2.\w2.\w2.)\n\n"
 	"\0\s[1]* (You consider giving him some candles,\w5 but it seems unwise.)\n\n"
 	"\0\s[1]* (You try handing him a book.)\n\n\w8\0\s[7]Hah!\w5 I'm not interested.\n\n"
+	//"\0\s[0]* (You try handing him a book.)\n\n\w8* (...As soon as a tentacle touches it,\w5 the book sinks into the goop.\w7 You can hear the ooze seep into its pages.)\n\n\w8* (...Yeah,\w5 that's probably not legible anymore.)\w8"
 	--
     "\![*]\q[Give something else??,goopitemsmenu]\n/
     \![*]\q[Again...?,gooptoybox]\n/
@@ -291,7 +351,7 @@ Select.goopfood
     "\0\s[2]* (You ask him if he wants some pasta.)\n\n\w8\0\s[8]You know, I think I'm more hungry for something a bit more meaty right now.\n\n"
     "\0\s[8]How about no?\n\n"
     "\0\s[8]* (You offer him some steak.)\n\n\w8I told you,\w3 I don't need to eat.\n\n\w8* (Picky...)\n\n"
-    "\0\s[8]* (You hand him a peice of candy.)n\n\w8\0\s[2]No thanks,\w4 I'd never eat candy that I can't verify if it was stolen from a kid or not.\n\n"
+    "\0\s[8]* (You hand him a piece of candy.)n\n\w8\0\s[2]No thanks,\w4 I'd never eat candy I can't verify was stolen from a kid or not.\n\n"
     --
     "\![*]\q[Give something else??,goopitemsmenu]\n/
     \![*]\q[Again...?,goopfood]\n/

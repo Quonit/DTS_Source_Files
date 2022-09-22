@@ -33,7 +33,6 @@
 	betrayalvar = 0 //if you got his friendship high then punched him
 	apologized = 0 //how many times you've apologized
 	//Neutral
-	nicesadlevel = 0 //Relationship variable
 	sodreamy = "off" //If you've seen Dream or not
 	sleepingmode = "off" //If he's sleeping
 	maremare = "off" //If you've seen Mare before. Under friendly circumstances.
@@ -320,7 +319,7 @@ normalboottalk //All temp dialogue
 			elseif timeslot == "lunch"
 			{
 				"\0\s[0]Oh,\w4 hi.\n\n\w8Did you eat yet?\e"
-				"\0\s[4]Sun's probably pretty bright around now...\e"
+				"\0\s[4]Sun's pr'y pretty bright around now...\e"
 				"\0\s[4]anDream's out right now,\w4 so there's not much to do...\n\n\w8So I guess I can hang out.\e"
 				"\0\s[0]* (You wonder if he's gotten around to eating lunch or not.)\e"
 				if blushiemode == "on" && privacyrespecter == "off" 

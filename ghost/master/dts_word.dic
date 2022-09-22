@@ -177,6 +177,15 @@ actigon //Put this at the end of the act menu instead of typing this out 30 time
 }
 backask //Put this at the end of the ask menu instead of typing this out 30 times
 {
+	if nowmode != "Edgybitch"
+	{
+		"\n\n\![*]\q[Ask something else,youtalk]\n"
+	}
+	else
+	{
+		"\n\n\![*]\q[Ask something else,gooptalk]\n"
+	}
+	--
 	"\n\n\![*]\q[Ask something else,youtalk]\n/
 	\![*]\q[Back to main menu,BACKTOMENU]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
@@ -358,4 +367,13 @@ ABS
 lps
 {
 	".\w%(_argv[0]).\w%(_argv[0]).\w%(_argv[0])"
+}
+
+randomfunction
+{
+	"\![open,calendar]"
+	"\![open,configurationdialog]"
+	ChoiceSystemInformation
+	"\![biff]"
+	
 }

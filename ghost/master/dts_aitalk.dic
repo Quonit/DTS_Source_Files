@@ -28,6 +28,12 @@
 RandomTalk : nonoverlap_pool
 {
 //Replace all dialogue ifs
+
+	if ghostupmin_total > 20000
+	{
+		//User says 'pry' then thinks 'oh huh, he's rubbing off on me'
+	}
+
 	if nowmode == "Edgybitch"
 	{
 		GoopTalk
@@ -250,7 +256,7 @@ RandomTalk : nonoverlap_pool
 		if nicesadlevel >= 50
 		{
 			"\0\s[13].\w2.\w2.\w2Hey,\w4 %(username)?\n\n\w8\w2.\w2.\w2.\w4Thanks for letting me stay here, \w4I guess."
-			"\0\s[9]Hey,\w4 %(username),\w4 if I'm distracting you from your work you should probably just...\w5 close me,\w3 so you can get back to it.\e"
+			"\0\s[9]Hey,\w4 %(username),\w4 if I'm distracting you from your work you should pr'y just...\w5 close me,\w3 so you can get back to it.\e"
 		}
 		if blushiemode == "on" && privacyrespecter == "off"
 		{
@@ -992,7 +998,22 @@ OnKeyPress
 {
 	if reference0 == "t"
 	{
-		OnAiTalk
+		if nowmode == "Edgybitch"
+		{
+			if GETTICKCOUNT() - lastkey < 200
+			{
+				OnAiTalk
+			}
+			else
+			{
+				lastkey = GETTICKCOUNT
+				"..."
+			}
+		}
+		else
+		{
+			OnAiTalk
+		}
 	}
 	elseif reference0 == "r"
 	{
