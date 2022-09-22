@@ -2411,8 +2411,8 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	nowmode = "Edgybitch"
-	"\![change,shell,Nightmare]"
+	//nowmode = "Edgybitch"
+	//"\![change,shell,Nightmare]"
 	/*
 	_file = "changelog.txt"
 	_buff = ""

@@ -376,3 +376,9 @@ randomfunction
 	"\![biff]"
 	
 }
+
+speed
+//text speed
+{
+	"\![set,balloonwait,%(_argv[0])]"
+}

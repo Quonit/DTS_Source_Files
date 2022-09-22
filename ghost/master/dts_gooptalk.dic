@@ -237,10 +237,10 @@ Select.Oncomplementeegoop
 Select.flirtyflirtgoop
 {
 	{
-    "\0\s[0]* (You tell him you suffer so much that he could live off of it.)"
-	--
-	"\0\s[4]\n\n\w8Yeah yeah I'm sure I could.\w6 Because one person is totally enough...\e"
-	"Don't flatter yourself.\w8\w8 You suffer no more than any other self-absorbed creature I've met.\w8\w8"
+		"\0\s[0]* (You tell him you suffer so much that he could live off of it.)"
+		--
+		"\0\s[4]\n\n\w8Yeah yeah I'm sure I could.\w6 Because one person is totally enough...\e"
+		"\n\n\w8Don't flatter yourself.\w8\w8 You suffer no more than any other self-absorbed creature I've met.\w8\w8"
 	}
     "\0\s[0]* (You tell him that you're into hentai.)\n\n\0\s[5]\w8You're %$^#ing weird!\e"
     "\0\s[0]* (You ask him how many tentacles he can summon at a time.)\n\n\0\s[8]\w8Depends on how much suffering is around.\e"
@@ -255,7 +255,8 @@ Select.flirtyflirtgoop
 	"* (Touch Fluffy Tail?)\n\n\![*]Yes\n\![*]Yes\x\0\s[5]They're tentacles you sick %$#*!"
 	if blushiemode == "on"
 	{
-		"Thirsty for anything that's stuck here with you, huh?"
+		"Thirsty for anything that's stuck here with you,\w4 huh?\w8"
+		"I heard all your lines when I was stuck in that vessel.\w8 You bore me.\w8"
 	}
     --
     "\![*]\q[Do another ACTtion...?,toybox]\n/
@@ -282,10 +283,19 @@ Select.nitpickthegoop
 Select.goopask
 {
 	"\i[55]Ask about...\n\n/
-	\![*]\q[the crown?,reexplaincrown]\n/
-	\![*]\q[the tree?,reexplaintree]\n/
-	\![*]\q[his(?) brother?,reexplaindream]\n/
-	\![*]\q[%(nightname)?,explainpurple]\n"
+	\![*]\q[the crown?,reexplaincrown]\n"
+	--
+	if momstreeexpo == "on"
+	{
+		"\![*]\q[the tree?,reexplaintree]\n"
+	}
+	--
+	if brotherexpo == "on"
+	{
+		"\![*]\q[his(?) brother?,reexplaindream]\n"
+	}
+	--
+	"\![*]\q[%(nightname)?,explainpurple]\n"
 	--
 	if corpsesyay == "on"
 	{
@@ -299,7 +309,11 @@ Select.goopask
 
 Select.explainpurple
 {
-	"* (You ask him if he cares about %(nightname))\n\n\w8You sure don't.\w7 Why would you care if I do?\w8"
+	"* (You ask him if he cares about %(nightname))\n\n\w8You sure don't.\w7 Why would you care if \f[italic,true]I\f[italic,false]\w3 do?\w8"
+	"* (You ask if you can see %(nightynight) again.)\n\n\w8So now\w3 you care about him?\w8\w8"
+	"* (You ask if you can see %(nightynight) again.)\n\n\w8Take off your skin and you'll see something close enough.\w8"
+	"\w8What do you care about that dead bitch?\w8 He's gone.\w8 That's it.\w8 I'm here now.\w8\w8\w8 That's what you wanted,\w4 right?\w8"
+	"Please.\w8 Life was boring being trapped in that vessel,\w8 forever being held back by that waste of magic's \f[italic,true]conscience\f[italic,false].\w6 But thanks to you,\w5 I'm free to have a lot more fun now.\w8"
 	--
 	"%(backask)"
 }
@@ -307,6 +321,14 @@ Select.explainpurple
 Select.bunchaNPCs
 {
 	"* (You ask him what he did after you let him go.)\n\n\w8Had a little fun,\w6 all thanks to you.\w8" //brandishing tentacles
+	"* (You ask what life in the village is like.)\n\n\w8I wouldn't consider a smear of blood and dust a ''village''.\w8"
+	"* (You ask if he feels sorry about what he's done.)\n\n\w8Do you?\w8\w8 Don't answer,\w5 I already know.\w8"
+	if brotherexpo == "on"
+	{
+		"* (You ask if Dream's okay.)\n\n\w8\w8Who?\w8\w8"
+		"* (You ask if Dream's okay.)\n\n\w8Trust me,\w5 you weren't the only one more fussed about where Dream was than what happened to their %(speed(2.5))dear brother.%(speed(1))\w8\w8"
+		"* (You ask what Dream feels about seeing him like this.)\n\n\w8Dust doesn't feel.\w8"
+	}
 	--
 	"%(backask)"
 }
