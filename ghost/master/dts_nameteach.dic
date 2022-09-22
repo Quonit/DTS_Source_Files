@@ -13,7 +13,7 @@
 	}
 	else
 	{
-		"\0%(surface0)What do you want to be called?\![open,inputbox,OnNameTeach,-1]"
+		"%(surface0)What do you want to be called?\![open,inputbox,OnNameTeach,-1]"
 	}
 }
 

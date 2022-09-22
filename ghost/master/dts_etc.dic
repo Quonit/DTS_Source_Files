@@ -33,26 +33,26 @@
 		}
 		others
 		{
-			"\0\s[0]This is %(_filename)%(_fileext).\w8\e"
+			"%(surface0)This is %(_filename)%(_fileext).\w8\e"
 		}
 	}
 }
 //This set of options sets the wallpaper up.
 Select.SetWallpaper_0
 {
-	"\![set,wallpaper,%(Wallpaperfile),center]\0\s[1]* (The image is centered.)\e"
+	"\![set,wallpaper,%(Wallpaperfile),center]\i[55]* (The image is centered.)\e"
 }
 Select.SetWallpaper_1
 {
-	"\![set,wallpaper,%(Wallpaperfile),tile]\0\s[1]* (The image is tiled.)\e"
+	"\![set,wallpaper,%(Wallpaperfile),tile]\i[55]* (The image is tiled.)\e"
 }
 Select.SetWallpaper_2
 {
-	"\![set,wallpaper,%(Wallpaperfile),stretch]\0\s[0]* (The image is stretched.)\e"
+	"\![set,wallpaper,%(Wallpaperfile),stretch]\i[55]* (The image is stretched.)\e"
 }
 Select.SetWallpaper_Cancel
 {
-	"\i[55]\s[10]\b[1]* (The wallpaper was canceled.)\e"
+	"\i[55]* (The wallpaper was canceled.)\e"
 }
  //---- OnInstallBegin -------------------------------------------------------
 OnInstallBegin
@@ -65,7 +65,7 @@ OnInstallBegin
 	else
 	{
 		"\0\s[4]A ghost...? \w8Sure, I'll install it.\e"
-		"\0%(surface0)* (Installing file\w4.\w4.\w4.\w4)\e"
+		"%(surface0)* (Installing file\w4.\w4.\w4.\w4)\e"
 	}
 }
 OnInstallComplete
@@ -125,20 +125,20 @@ OnInstallFailure
 OnInstallRefuse
 {
 	"\0\s[8]I can't install this. \w4I think it's for %(reference0) instead.\e"
-	"\0%(surface0)\i[55]* (This file is for %(reference0))\e"
+	"%(surface0)\i[55]* (This file is for %(reference0))\e"
 }
  
 OnVanishSelecting
 {
-	"\0%(surface0)\i[55]* (Do you wish to uninstall Dreamtale Sans from your computer?)\e"
+	"%(surface0)\i[55]* (Do you wish to uninstall Dreamtale Sans from your computer?)\e"
 }
 OnVanishSelected
 {
-	"\0%(surface0)\i[55]* (You've decided to uninstall Dreamtale Sans.)\e"
+	"%(surface0)\i[55]* (You've decided to uninstall Dreamtale Sans.)\e"
 }
 OnVanishCancel
 {
-	"\0%(surface0)\i[55]* (You've decided not to uninstall Dreamtale Sans.)\e"
+	"%(surface0)\i[55]* (You've decided not to uninstall Dreamtale Sans.)\e"
 }
 TalkVanishButtonHold
 {
@@ -151,30 +151,30 @@ OnVanished
 
 OnBIFFBegin
 {
-	"\0%(surface0)\i[55]* (Checking e-mail\w4.\w4.\w4.)\e"
+	"%(surface0)\i[55]* (Checking e-mail\w4.\w4.\w4.)\e"
 }
 
 OnBIFFComplete
 {
 	if reference0 == 0
 	{
-		"\0%(surface0)\i[55]* (There is no new mail.)\e"
+		"%(surface0)\i[55]* (There is no new mail.)\e"
 	}
 	elseif reference0 == 1
 	{
-		"\0%(surface0)\i[55]* (There is one new email.)\e"
+		"%(surface0)\i[55]* (There is one new email.)\e"
 	}
 	elseif reference0 > 1 && reference0 < 11
 	{
-		"\0%(surface0)\i[55]* (There are %(reference0) emails.)\e"
+		"%(surface0)\i[55]* (There are %(reference0) emails.)\e"
 	}
 	elseif reference0 > 100
 	{
-		"\0%(surface0)\i[55]* (There are %(reference0) emails unread.)\e"
+		"%(surface0)\i[55]* (There are %(reference0) emails unread.)\e"
 	}
 	else
 	{
-		"\0%(surface0)\i[55]* (There are %(reference0) emails.)\e"
+		"%(surface0)\i[55]* (There are %(reference0) emails.)\e"
 	}
 }
 
@@ -201,7 +201,7 @@ OnBIFFFailure
 	}
 	elseif reference0 == "artificial"
 	{
-		"\0%(surface0)\i[55]* (Email check was canceled.)"
+		"%(surface0)\i[55]* (Email check was canceled.)"
 	}
 	else
 	{
@@ -220,32 +220,32 @@ OnUpdateBegin
 {
 	if nowmode == "Edgybitch"
 	{
-		"\0%(surface0)\i[55]* (Starting the update process.)\e"
+		"%(surface0)\i[55]* (Starting the update process.)\e"
 	}
 	else
 	{
-		"\0%(surface0)\i[55]* (Starting the update process.)\w8\e"
+		"%(surface0)\i[55]* (Starting the update process.)\w8\e"
 		"\0\s[4]I wonder what kind of things could be in the update...\w8\e"
 	}
 	if reference0 == "artificial"
 	{
-		"\0%(surface0)\i[55]* (The user cancelled the update manually.)"
+		"%(surface0)\i[55]* (The user cancelled the update manually.)"
 	}
 }
 OnUpdateReady
 {
-	"\0%(surface0)\i[55]* (There are %(reference[0]) new files.)\w8\e"
+	"%(surface0)\i[55]* (There are %(reference[0]) new files.)\w8\e"
 }
 OnUpdateComplete
 {
 	if reference0 == "none"
 	{
-		"\0%(surface0)\i[55]* (There are no new files.)\e"
+		"%(surface0)\i[55]* (There are no new files.)\e"
 		"\0\s[2]Doesn't look like there's anything new to update with.\e"
 	}
 	else
 	{
-		"\0%(surface0)\i[55]* (Update successful!)\n\n\w8* (Do you want to read the changelog?)\n\n/
+		"%(surface0)\i[55]* (Update successful!)\n\n\w8* (Do you want to read the changelog?)\n\n/
 		\q[See Changelog,OnShowLog]   \q[No thanks,Cancel]"
 		--
 		UpdateVars
@@ -261,22 +261,22 @@ OnUpdateFailure
 	_file = SPLITPATH(reference1)[2] + SPLITPATH(reference1)[3] //This gets the name and extension of the offending file
 	if reference0 == "timeout"
 	{
-		"\0%(surface0)\i[55]* (The update connection timed out.)\e"
+		"%(surface0)\i[55]* (The update connection timed out.)\e"
 	}
 	elseif reference0 == "md5 miss"
 	{
-		"\0%(surface0)\i[55]* (The MD5 hash of the files don't match. \w8There was an MD5 error on file %(_file).)\e"
+		"%(surface0)\i[55]* (The MD5 hash of the files don't match. \w8There was an MD5 error on file %(_file).)\e"
 	}
 	else //for other errors
 	{
-		"\0%(surface0)\i[55]* (The update could not be completed.)\w8\n\n* (The error is '%(reference0)'.)\e"
+		"%(surface0)\i[55]* (The update could not be completed.)\w8\n\n* (The error is '%(reference0)'.)\e"
 	}
 }
 OnUpdate.OnDownloadBegin
 {
 	if "aitalk" _in_ reference0
 	{
-		"\0%(surface0)\i[55]* (You get the feeling he might have more things to say.)\e"
+		"%(surface0)\i[55]* (You get the feeling he might have more things to say.)\e"
 	}
 	else //for files not specified above
 	{
@@ -288,25 +288,25 @@ OnUpdate.OnMD5CompareBegin {}
 OnUpdate.OnMD5CompareComplete {}
 OnUpdate.OnMD5CompareFailure
 {
-	"\0%(surface0)\i[55]* (The MDI values don't seem to match.)\w8\e"
+	"%(surface0)\i[55]* (The MDI values don't seem to match.)\w8\e"
 }
 OnHeadlinesenseBegin
 {
-	"\0%(surface0)\i[55]* (You've selected %(reference0).)\e"
+	"%(surface0)\i[55]* (You've selected %(reference0).)\e"
 }
 OnHeadlinesense.OnFind
 {
 	if reference2 == "First" || reference2 == "First and Last"
 	{
-		"\0%(surface0)\i[55]%(reference0):"
+		"%(surface0)\i[55]%(reference0):"
 	}
 	elseif reference2 == "Next"
 	{
-		"\0%(surface0)\i[55]%(reference0):"
+		"%(surface0)\i[55]%(reference0):"
 	}
 	elseif reference2 == "Last"
 	{
-		"\0%(surface0)\i[55]%(reference0):"
+		"%(surface0)\i[55]%(reference0):"
 	}
 	--
 	"\n\n%reference3\n"
@@ -327,11 +327,11 @@ Select.Headline_Cancel
 }
 OnHeadlinesenseComplete
 {
-	"\0%(surface0)\i[55]* (No update. %(reference0).)\e"
+	"%(surface0)\i[55]* (No update. %(reference0).)\e"
 }
 OnHeadlinesenseFailure
 {
-	"\0%(surface0)\i[55]* (The feed can't updated because "
+	"%(surface0)\i[55]* (The feed can't updated because "
 	--
 	if reference0 == "can't download"
 	{
@@ -436,23 +436,23 @@ UpdateVars
 
 OnUpdatedataCreating
 {
-	"\0%(surface0)\i[55]* (* (Creating the updates2.dau file.))\e"
+	"%(surface0)\i[55]* (* (Creating the updates2.dau file.))\e"
 }
 OnUpdatedataCreated
 {
-	"\0%(surface0)\i[55]* (Successfully created updates2.dau.)\e"
+	"%(surface0)\i[55]* (Successfully created updates2.dau.)\e"
 }
 OnNarCreating
 {
-	"\0%(surface0)\i[55]* (Creating the .nar file.)\e"
+	"%(surface0)\i[55]* (Creating the .nar file.)\e"
 }
 OnNarCreated
 {
-	"\0%(surface0)\i[55]* (Successfully created '%(reference0)'.)\e"
+	"%(surface0)\i[55]* (Successfully created '%(reference0)'.)\e"
 }
 OnSNTPBegin
 {
-	"\0%(surface0)\i[55]* (Connecting to %(reference0) for the time.)\e"
+	"%(surface0)\i[55]* (Connecting to %(reference0) for the time.)\e"
 }
 OnSNTPCompare
 {
@@ -461,7 +461,7 @@ OnSNTPCompare
 	--
 	if reference3 == 0
 	{
-		"\0%(surface0)\i[55]* (The clock is accurate.)\e"
+		"%(surface0)\i[55]* (The clock is accurate.)\e"
 	}
 	else
 	{
@@ -472,15 +472,15 @@ OnSNTPCompare
 }
 OnSNTPEXECUTE
 {
-	"\0%(surface0)\i[55]* (The clock has been fixed.)\6\e"
+	"%(surface0)\i[55]* (The clock has been fixed.)\6\e"
 }
 OnSNTPCANCEL
 {
-	"\0%(surface0)\i[55]* (You decide to leave it alone.)\e"
+	"%(surface0)\i[55]* (You decide to leave it alone.)\e"
 }
 OnSNTPFailure
 {
-	"\0%(surface0)\i[55]* (The clock wasn't changed. \w8Something went wrong.)\e"
+	"%(surface0)\i[55]* (The clock wasn't changed. \w8Something went wrong.)\e"
 }
 OnDisplayChange
 {
@@ -512,19 +512,19 @@ OnScreenSaverEnd
 }
 OnApplicationBoot
 {
-	"\0%(surface0)\i[55]* (%(reference0) just started.)\e"
+	"%(surface0)\i[55]* (%(reference0) just started.)\e"
 }
 OnApplicationClose
 {
-	"\0%(surface0)\i[55]* (%(reference0) has closed.)\e"
+	"%(surface0)\i[55]* (%(reference0) has closed.)\e"
 }
 OnApplicationFileOpen
 {
-	"\0%(surface0)\i[55]Opening %(reference1).\e"
+	"%(surface0)\i[55]Opening %(reference1).\e"
 }
 OnBatteryLow
 {
-	"\0%(surface0)\i[55]* (The laptop's battery is low. \w8There is %(reference0) power left.)\e"
+	"%(surface0)\i[55]* (The laptop's battery is low. \w8There is %(reference0) power left.)\e"
 }
 OnBatteryCritical
 {
@@ -532,7 +532,7 @@ OnBatteryCritical
 }
 OnSysResourceLow
 {
-	"\0%(surface0)\i[55]* (The system resources are low.)\e"
+	"%(surface0)\i[55]* (The system resources are low.)\e"
 }
 OnShellScaling
 {
@@ -546,8 +546,8 @@ OnShellScaling
 		else
 		{
 			"\0\s[3]Dunno why you'd want me to take up so much of your screen\w3.\w3.\w3. \w4But okay.\e"
-			"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
-			"\0%(surface0)\i[55]* (Big size sans.)\e"
+			"%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
+			"%(surface0)\i[55]* (Big size sans.)\e"
 		}
 		
 	}
@@ -559,9 +559,9 @@ OnShellScaling
 		}
 		else
 		{
-			"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
+			"%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
 			"\0\s[4]Back to normal...\e"
-			"\0%(surface0)\i[55]* (Normal sized sans.)\e"
+			"%(surface0)\i[55]* (Normal sized sans.)\e"
 		}
 	}
 	elseif reference0 == 50
@@ -574,8 +574,8 @@ OnShellScaling
 		else
 		{
 			"\0\s[7]Um\w3.\w3.\w3. \w8\0\s[13]\n\nEverything is really big now.\e"
-			"\0%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
-			"\0%(surface0)\i[55]* (Smol sans.\w8 Fun sized sans.)\e"
+			"%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
+			"%(surface0)\i[55]* (Smol sans.\w8 Fun sized sans.)\e"
 		}
 	}
 }

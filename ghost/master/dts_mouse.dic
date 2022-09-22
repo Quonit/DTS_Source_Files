@@ -31,7 +31,7 @@ MouseMoveSakura
 			{
 				stroke = 0
 				
-				if reference4 == "Crown" 
+				if reference4 == "Crown" || reference4 == "Skull"
 				{
 					metalpet += 1
 					lasttalked = 0

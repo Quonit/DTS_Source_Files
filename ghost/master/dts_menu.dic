@@ -65,9 +65,9 @@
 	}
 	elseif sittang == "on"
 	{
-		"\0\s[1]\i[11]What do you need?"
-		"\0\s[1]* (. . .)"
-		"\0\s[1]\i[14]hm?"
+		"\0\s[1]\i[7]\i[11]What do you need?"
+		"\0\s[1]\i[7]* (. . .)"
+		"\0\s[1]\i[7]\i[14]hm?"
 		--
 		MenuRun
 	}
@@ -298,7 +298,7 @@ Select.changelovation
 
 Select.TEACHPRONOUN
 {
-	"\0\s[1]\i[55]\s[10]\b[1]* (Which pronouns do you use?)\w5\n\n\_q/
+	"%(surface0)\i[55]* (Which pronouns do you use?)\w5\n\n\_q/
 	\![*]\q[He-His-Him,choicemasc]\n/
 	\![*]\q[She-Her-Her,choicefem]\n/	
 	\![*]\q[They-Their-Them,choiceneither]\e"
@@ -310,7 +310,7 @@ Select.choicemasc
 	heshe = "he"
 	hisher = "his"
 	--
-	"\0\s[1]\i[55]* (The pronouns are now set to he him and his.)\e"
+	"%(surface0)\i[55]* (The pronouns are now set to he him and his.)\e"
 }
 Select.choicefem
 {
@@ -319,7 +319,7 @@ Select.choicefem
 	heshe = "she"
 	hisher = "her"
 	--
-	"\0\s[1]\i[55]* (The pronouns are now set to she her and her.)\e"
+	"%(surface0)\i[55]* (The pronouns are now set to she her and her.)\e"
 }
 Select.choiceneither
 {
@@ -329,7 +329,7 @@ Select.choiceneither
 	hisher = "their"
 	--
 
-	"\0\s[1]\i[55]* (The pronouns are now set to they them and their.)\e"
+	"%(surface0)\i[55]* (The pronouns are now set to they them and their.)\e"
 }
 
 Select.removegoo
@@ -393,7 +393,7 @@ Select.TEACHBDAY
 	{
 		if sittang == "on"
 		{
-			"\0\s[1]Write the number for the month...\![open,inputbox,OnUserBornMonth,-1]\e"
+			"\0\s[1]\i[7]Write the number for the month...\![open,inputbox,OnUserBornMonth,-1]\e"
 		}
 		else
 		{
@@ -411,18 +411,18 @@ OnUserBornMonth
 		bornmonthprint = Printmonth
 		if VillageLevel >= 150
 		{
-		"\0\s[19]...%(bornmonthprint).\w8 Day?\![open,inputbox,OnUserBornDay,-1]\e"
+			"\0\s[19]...%(bornmonthprint).\w8 Day?\![open,inputbox,OnUserBornDay,-1]\e"
 		}
 		elseif sittang == "on"
 		{
-		"\0\s[1]Write the number for the day.\![open,inputbox,OnUserBornDay,-1]\e"
+			"Write the number for the day.\![open,inputbox,OnUserBornDay,-1]\e"
 		}
 		else
 		{
 			"\0\s[4]Okay, you were born in %(bornmonthprint),right?\n\n\w8Can you write the number for the day?\![open,inputbox,OnUserBornDay,-1]\e"
 			if blushiemode == "on" && privacyrespecter == "off"
 			{
-			"\0\s[6]Okay! %(bornmonthprint), \w3right?\w8\n\nCan you write the number of the day?\![open,inputbox,OnUserBornDay,-1]\e"
+				"\0\s[6]Okay! %(bornmonthprint), \w3right?\w8\n\nCan you write the number of the day?\![open,inputbox,OnUserBornDay,-1]\e"
 			}
 		}
 	}
@@ -617,7 +617,7 @@ birthchecked
 	}
 	else
 	{
-		"\0\s[0]Your birthday is %(bornmonthprint) %(borndayprint). I'll remember.\e"
+		"%(surface0)Your birthday is %(bornmonthprint) %(borndayprint). I'll remember.\e"
 	}
 }
 
@@ -879,9 +879,9 @@ Select.dosomething
 	}
 	else
 	{
-		"\0%(surface0)What do you want me to do?\n\n"
-		"\0%(surface0)Fine, what do you need?\n\n"
-		"\0%(surface0)What do you want?\n\n"
+		"%(surface0)What do you want me to do?\n\n"
+		"%(surface0)Fine, what do you need?\n\n"
+		"%(surface0)What do you want?\n\n"
 		if blushiemode == "on" && privacyrespecter == "off" && sittang != "on"
 		{
 			"\0\s[20]Whatever you need!\n\n"
@@ -912,12 +912,14 @@ Select.CALENDAR
 	}
 	elseif VillageLevel >= 150
 	{
-		"\0\s[19]\i[55]* (Opening the calendar...)\![open,calendar]\e"
+		"\0\s[19]\i[55]* (Opening the calendar...)\![open,calendar]"
 	}
 	else
 	{
-		"\0%(surface0)\i[55]* (Opening the calendar...)\![open,calendar]\e"
+		"%(surface0)\i[55]* (Opening the calendar...)\![open,calendar]"
 	}
+	--
+	"%(funmenu)"
 }
 Select.sspconfig
 {
@@ -925,16 +927,18 @@ Select.sspconfig
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]* (Opening the calendar...)%(randomfunction)\e"
+		"\0\s[1]* (Opening the calendar...)%(randomfunction)"
 	}
 	elseif VillageLevel >= 150
 	{
-		"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]\e"
+		"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]"
 	}
 	else
 	{
-		"\0%(surface0)\i[55]* (Opening the SSP config menu...)\![open,configurationdialog]\e"
+		"%(surface0)\i[55]* (Opening the SSP config menu...)\![open,configurationdialog]"
 	}
+	--
+	"%(funmenu)"
 }
 Select.ChoiceGarbagecan
 {
@@ -944,15 +948,15 @@ Select.ChoiceGarbagecan
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!\e"
+			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!"
 		}
 		elseif VillageLevel >= 150
 		{
-			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cT-\w5There wasn't-\w6 Wasn't anything in there\w4.\w4.\w4.\e"
+			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cT-\w5There wasn't-\w6 Wasn't anything in there\w4.\w4.\w4."
 		}
 		elseif privacyrespecter == "off" && blushiemode == "on"
 		{
-			"\0\s[6]Okay!!\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[8]\cThere wasn't anything there.\e"
+			"\0\s[6]Okay!!\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[8]\cThere wasn't anything there."
 		}
 		else
 		{
@@ -968,8 +972,8 @@ Select.ChoiceGarbagecan
 				}
 				else
 				{
-					"\0\s[0]Fine,\w4 I'll go empty it.\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[8]\cThere wasn't anything there.\w8 Good.\e"		
-					"\0\s[8]If you really need me to...\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[8]\cThere wasn't anything in there.\e"
+					"\0\s[0]Fine,\w4 I'll go empty it.\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[8]\cThere wasn't anything there.\w8 Good."		
+					"\0\s[8]If you really need me to...\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[8]\cThere wasn't anything in there."
 				}
 			}
 		}
@@ -978,12 +982,12 @@ Select.ChoiceGarbagecan
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!\e"
+			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!"
 		}
 		elseif VillageLevel >= 150
 		{
 			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cI-\w6 I got it\w4.\w4.\w4.\e"
-			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cI-\w6 I-\w8.\w4.\w4.got\w8\n\n* (You tell him to give it up.)\e"
+			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cI-\w6 I-\w8.\w4.\w4.got\w8\n\n* (You tell him to give it up.)"
 		}
 		else
 		{
@@ -996,16 +1000,18 @@ Select.ChoiceGarbagecan
 				if privacyrespecter == "off" && blushiemode == "on"
 				{
 					"\0\s[6]Okay!!\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[6]\cGot it!!\e"
-					"\0\s[6]Okay!!\w8\n\n* (He seems weirdly excited about it.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[20]\cIt's empty now!\e"
+					"\0\s[6]Okay!!\w8\n\n* (He seems weirdly excited about it.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[20]\cIt's empty now!"
 				}
 				else
 				{
 					"\0\s[11]Can't you just do it yourself?\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\0\s[8]\cDone.\e"	
-					"\0\s[12]If I have to...\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\0\s[8]\cThere, it's empty.\e"
+					"\0\s[12]If I have to...\w8\w8\s[-1]\w8\w8\w8\w8\w8\![raise,OnGarbagecanEmpty]\w9\w9\w9\0\s[8]\cThere, it's empty."
 				}
 			}
 		}
 	}
+	--
+	"%(funmenu)"
 }
 OnGarbagecanEmpty
 {
@@ -1052,10 +1058,12 @@ Select.bugreport
 	{
 		"\0\s[0]Sure\w2.\w2.\w2.\w8 I can't really fix myself,\w8 so you should really tell them if something's wrong\w2.\w2.\w2.\n\n\w8\_qDiscord:   Quonit#9934\nTumblr:   @Quonit\e"
 	}
+	--
+	"%(funmenu)"
 }
 Select.resettheghost
 {
-	"\0\s[1]\i[55]* (Are you completely sure you want to reset this ghost? \w8Remember, %(Nightname) will only remember your name,\w4 pronouns, \w4and birthday.)\n\n\![*]\q[Yes,IamcompletelysureIwanttoreset]\n\![*]\q[No,Cancel]\e"
+	"\i[55]* (Are you completely sure you want to reset this ghost? \w8Remember, %(Nightname) will only remember your name,\w4 pronouns, \w4and birthday.)\n\n\![*]\q[Yes,IamcompletelysureIwanttoreset]\n\![*]\q[No,Cancel]\e"
 }
 Select.IamcompletelysureIwanttoreset
 {
@@ -1124,8 +1132,8 @@ Onyouact
 		"\0\s[16]\w8"
 	}
 	--
-	"\0%(surface0)What is it?\n\n"
-	"\0%(surface0)What do you want?\n\n"
+	"%(surface0)What is it?\n\n"
+	"%(surface0)What do you want?\n\n"
 	--
 	"\![*]\q[Check,checkinguout]\n"
 	--
@@ -1172,7 +1180,7 @@ Onyouact
 
 Select.checkinguout //Use this to give hints at stats
 {
-	"\0%(surface0)\i[55]"
+	"%(surface0)\i[55]"
 	--
 	if privacyrespecter == "on" && nightynight == "on"
 	{
@@ -2039,6 +2047,13 @@ Select.askboutgoopy
 
 Select.itemsmenu
 {
+	
+	if sittang == "on"
+	{
+		sittang = "off"
+		"\0\s[16]"
+	}
+	--
 	if nicesadlevel <= -50 && punchout >= 20
 	{
 		"\0\s[19]* (He'd object,\w4 but is afraid you'll hurt him.)\n\n"
@@ -2195,6 +2210,13 @@ Select.toybox
 
 Select.nightyneedstoeat
 {
+	
+	if sittang == "on"
+	{
+		sittang = "off"
+		"\0\s[16]"
+	}
+	--
 	if privacyrespecter == "on" && punchout <= 3
 	{
 		"\0\s[12]No offense,\w4 but I don't take food from strangers.\e"
@@ -2313,9 +2335,9 @@ Select.iiiimsinginintherain
 
 OnChoiceTimeout
 {
-	"\0\s[1]Nevermind then...\e"	
-	"\0\s[1]Just tell me when you need something.\e"	
-	"\0\s[1]...\e"
+	"%(surface0)Nevermind then...\e"	
+	"%(surface0)Just tell me when you need something.\e"	
+	"%(surface0)...\e"
 }
 
 //Alt Menu Starts
@@ -2340,22 +2362,12 @@ Select.wakeup
 }
 Select.letsleep
 {
-	"\0\s[5]"
-	--
-	/*
-	if givesleepyblankie == "on"
-	{
-		"\i[48]"
-	}
-	*/
-	--
-	"zzz\w4.\w4.\w4.\w8\0\s[37]%(username)\w4.\w4.\w4.\w4?\w8\w8\0\s[5]\w4.\w4.\w4.\e"
+	"\0\s[5]zzz\w4.\w4.\w4.\w8\0\s[37]%(username)\w4.\w4.\w4.\w4?\w8\w8\0\s[5]\w4.\w4.\w4.\e"
 }
 Select.givesleepblankie
 {
 	givesleepyblankie = "on"
 	"\![bind,Blanket,cape,1] (He looks comfy.)\e"
-	//"\0\s[5]\i[48]* (He looks comfy.)\e"
 }
 
 

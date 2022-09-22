@@ -196,6 +196,14 @@ backmenu //Put at the end of settings
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 
+funmenu //Put at the end of functions
+{
+	"\n\n\![*]\q[Back to functions,dosomething]\n/
+	\![*]\q[Back to main menu,BACKTOMENU]\n/
+	\![*]\q[Nevermind,CANCEL]\e"
+}
+
+
 pickup //why is this here instead of mouse.dic
 {	
 	if nowmode == "Edgybitch"
@@ -274,8 +282,57 @@ surface0
 	}
 	else
 	{
-		"\0\s[0]\i[10]"
-		"\0\s[0]\i[15]"
+		if sittang == "on"
+		{
+			"\0\s[1]"
+		}
+		else
+		{
+			"\0\s[0]\i[10]"
+			"\0\s[0]\i[15]"
+		}
+	}
+}
+
+attn
+{
+	if sleepingmode == "on"
+	{
+		"\0\s[5]"
+	}
+	elseif nicesadlevel <= -25
+	{
+		if sittang == "on"
+		{
+			"\0\s[1]\i[9]"
+		}
+		else
+		{
+			"\0\s[0]\i[12]"
+		}
+	}
+	elseif nicesadlevel >= 25
+	{
+		if sittang == "on"
+		{
+			"\0\s[1]\i[7]\i[14]"
+		}
+		else
+		{
+			"\0\s[0]\i[14]\i[15]"
+		}
+	}
+	else
+	{
+		if sittang == "on"
+		{
+			"\0\s[1]\i[7]"
+		}
+		else
+		{
+			"\0\s[0]\i[10]"
+			"\0\s[0]\i[15]"
+		}
 	}
 }
 

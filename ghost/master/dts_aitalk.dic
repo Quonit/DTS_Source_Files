@@ -76,6 +76,7 @@ RandomTalk : nonoverlap_pool
 		else
 		{
 			//moving some old dialogue to here WOW
+			"\0\s[1]\i[55]* (He seems to be stifling giggles.\w5 You wonder what he's reading.)\w8"
 			"\0\s[1]\i[55]* (You ask him what book he's reading.)\n\n\w8\0\i[8]\i[55]Shouldn't you be able to read the cover yourself?\n\n\w8*(You ask him if the book is good.)\n\n\w8If it wasn't, do you think I'd be reading it?\e"
 			"\0\s[1]\i[55]* (He looks very focused on his book.)\e"
 			"\0\s[1]\i[55]* (He doesn't say anything.\w8 He must be really interested in that book.)\e"
@@ -139,16 +140,6 @@ RandomTalk : nonoverlap_pool
 	}
 	elseif sleepingmode == "on"
 	{
-		/*
-		if givesleepyblankie == "on"
-		{
-			"\0\s[5]\i[48]"
-		}
-		else
-		{
-			"\0\s[5]"
-		}
-		*/
 		"\0\s[5]"
 		--
 		//wake up!
@@ -366,6 +357,13 @@ RandomTalk : nonoverlap_pool
 				}
 			}
 		}
+		
+		/*
+		Spring - mild. Normal. Doesn't rain.
+		Summer - warmer. Very light rain occassionally.
+		Fall - a tad cold? windy
+		Winter - Cold, heavy rains.
+		*/
 		if season == "Spring"
 		{
 			"\0\s[4]A lot of people try to eat outside during the spring\w2.\w2.\w2.\n\n\w8They kinda view it as like,\w4 a fun sorta thing. \w8It's like\w3.\w3.\w3.\w4 When kids build treehouses for fun.\w8\n\nMe and Dream live in a treehouse and usually eat near the apple tree,\w8\s[0]\i[11] so it's just really normal stuff but everyone else treats it like a novelty.\e"
@@ -384,12 +382,17 @@ RandomTalk : nonoverlap_pool
 			\![*]\q[No,Novacation]\e"
 			"\0\s[4]I read some people swim in the summer.\w4It sounds more like a human thing to me, \w4I'm pretty sure I'd sink.\e"
 			"\0\s[13]Lots of people describe that it feels like they're melting when it's super hot\w2.\w2.\w2. \w5\0\s[19]I really hope they don't mean it\w2.\w2.\w2.\e"
+			if nicesadlevel >= 25
+			{
+				"It doesn't rain that heavily in summer back in the village, but when it does...\w5 Sometimes we get thunderstorms.\w8 I've always liked them.\w5 The noise,\w3 and the%(lps(3))\w8 Dream tends to stay in the treehouse with me,\w3 when they can.\w8"
+			}
 			
 		}
 		if season == "Autumn"
 		{
 			"\0\s[4]Lots of berries should start being good to pick this month.\n\n\w8I always like doing that,\w4 it's one of the few things I'm still able to enjoy.\w6\0\s[8] Though,\w2 sometimes it stains my clothes a bit.\e"
 			"\0\s[4]I used to love carving pumpkins with anDream,\w4 but-\0\s[8]\w8Um...\n\n\w8\0\s[13]I still can cook the seeds after though.\w6 That's a fun thing to do...\e"
+			"Do the trees change color where you are?\w8 I've read about that,\w5 the leaves turning gold and red in the autumn.\w8\w6 Sometimes I wonder what Mom's tree would look like like that,\w5 but then I remember that it's the leaves dying,\w3 so...\w6"
 		}
 		if season == "Winter" 
 		{
@@ -407,7 +410,7 @@ RandomTalk : nonoverlap_pool
 			//"\0\s[13]I know a lot of people like to make new-years resolutions\w4.\w4.\w4. \w6Do you do that?\e"
 			//"\0\s[13]Hope that the year hasn't been too mean to you %(username)...\e"
 			"\0\s[4]While researching your world I found out that a lot of people make special kinds of beverages for winter, \w4like 'apple cider' and things like that. \w8\n\nI wonder what kind of apples you have in your world, because I doubt they're magic like ours, \w4with how occasionally and casually you eat things with them in it.\e:chain=ciderchain"
-			"\0\s[13]I heard in Winter all of the plants die and trees loose their leaves.\w8\n\n\0\s[4].\w2.\w2.\w2That doesn't happen here,\w5 though.\n\n\w8There are kinda seasons,\w5 but it's more of a 'which part of the year is slightly colder or warmer' thing\w2.\w2.\w2.\e"
+			"\0\s[13]I heard that in some places, during winter all the plants die and the trees lose their leaves.\w8\n\n\0\s[4].\w2.\w2.\w2That doesn't happen here,\w5 though.\n\n\w8There are kinda seasons,\w5 but it's more of a 'which part of the year is slightly colder or warmer' thing\w2.\w2.\w2.\e"
 			if nicesadlevel <= -10
 			{
 				"\0\s[0]\i[11]\i[55]* (He feels cold.)\e"
@@ -416,6 +419,7 @@ RandomTalk : nonoverlap_pool
 			if nicesadlevel >= 25
 			{
 				"\0\s[0]\i[14]I think if it snowed where we lived,\w4 me and anDream would've liked to play in it more when we were younger\w2.\w2.\w2.\n\n\w8\0\s[0]\i[11]I also bet that like most things,\w4 someone would've pushed me down into it and I wouldn't feel safe playing out there anymore.\e"
+				//"It's the rainy season back home.\w5 Summer tends to have light rains,\w3 but in winter,\w3 they're a lot more vigorous.\w5"
 			}
 		}
 	//}

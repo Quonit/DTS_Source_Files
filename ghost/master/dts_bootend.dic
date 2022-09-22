@@ -696,7 +696,7 @@ OnGhostChanged
 	if reference0 == "Dreamtale Sans"
 	{
 		"\0\s[7]\i[55]* (He seems kind of confused...)\n\n\w8\s[7]Uhm\w2.\w2.\w2. \w8Hi again?\e"
-		"\0%(surface0)\i[55]* (He doesn't seem to have noticed he was reloaded.)\n\n\w8\s[0]?\e"
+		"%(surface0)\i[55]* (He doesn't seem to have noticed he was reloaded.)\n\n\w8\s[0]?\e"
 		if sittang == "on"
 		{
 			"\0\s[1]\i[55]* (He doesn't seem to have noticed he was reloaded.)"
