@@ -186,8 +186,7 @@ backask //Put this at the end of the ask menu instead of typing this out 30 time
 		"\n\n\![*]\q[Ask something else,gooptalk]\n"
 	}
 	--
-	"\n\n\![*]\q[Ask something else,youtalk]\n/
-	\![*]\q[Back to main menu,BACKTOMENU]\n/
+	"\![*]\q[Back to main menu,BACKTOMENU]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 backmenu //Put at the end of settings

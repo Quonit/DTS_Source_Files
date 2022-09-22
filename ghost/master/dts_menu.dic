@@ -2024,7 +2024,7 @@ Select.askboutgoopy
 	"\0\s[7]!\w8\w8\n\n\s[9].\w2.\w2.\w2.\w2I don't wanna talk about it.\w8\n\n* (Disappointing.)"
 	"\0\s[7]!\w8\w8\n\n\s[13].\w2.\w2.\w2.\w5Just\w2.\w2.\w2.\w2.\w5 \s[8]Forget you saw anything."
 	--
-	"\![*]\q[ASK another question,youtalk]\n/
+	"\n\n\![*]\q[ASK another question,youtalk]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 

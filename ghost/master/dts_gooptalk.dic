@@ -247,8 +247,11 @@ Select.flirtyflirtgoop
     "\0\s[0]* (You ask him if it hurt falling from the vending machine, because he a snack.)\n\n\0\s[8]\w8Aww~\w6 somebody hungry for some negativity?\e"
     "\0\s[0]* (You ask him if he has an extra heart,\w4 because yours was just stolen.)\n\n\w8\0\s[8]If you let me leave I could get one for you~\e"
     "\0\s[0]* (You tell him your favorite food is apples.)\n\n\0\s[5]\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
-    //"\0\s[0]* (You tell him your favorite food is apples.)\n\nThanks, but only my boyfriend can vore me."
-	//don't actually uncomment that one Quo
+	if username == "Khitty"
+	//there we go
+	{
+		 "\0\s[0]* (You tell him your favorite food is apples.)\n\nThanks, but only my boyfriend can vore me."
+	}
 	"* (Touch Fluffy Tail?)\n\n\![*]Yes\n\![*]Yes\x\0\s[5]They're tentacles you sick %$#*!"
 	if blushiemode == "on"
 	{
@@ -286,7 +289,7 @@ Select.goopask
 	--
 	if corpsesyay == "on"
 	{
-		\![*]\q[the village?,bunchaNPCs]
+		"\![*]\q[the village?,bunchaNPCs]"
 	}
 	--
 	 "\![*]\q[Again,goopask]\n/

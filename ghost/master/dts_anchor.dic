@@ -67,7 +67,7 @@ OnAnchorSelect
 						else
 						{
 							brotherexpo = "on"
-							"\0\s[6]\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Oh, \w3that's my twin brother. \w8\0\s[4]Lets see\w2.\w2.\w2.\w8\w8\n\n\0\s[3]Me and them are supposed to \w2'protect the village' by keeping the tree alive and watering it and whatever else.\w8\0\s[0] They like doing it a lot because they really like the people there and want to protect them, \w4\0\s[6]which I think makes him super nice\w4.\w4.\w4. \0\s[9]\w8\n\n\w8\0\s[7]Uh- \w8\0\s[6]we also built a treehouse together! \w8\n\n\0\s[0]It's kinda near the tree, and we both live in it. \w5We built it with some of the villagers when we were little.\s[8]\w8\n\nI kinda wish they were here with me,\w5 \0\s[9]but they're not\w4.\w4.\w4. \w8They're probably just having a lot of fun at home.\e"
+							"\0\s[6]\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Oh, \w3that's my twin brother. \w8\0\s[4]Lets see\w2.\w2.\w2.\w8\w8\n\n\0\s[3]Me and them are supposed to \w2'protect the village' by keeping the tree alive and watering it and whatever else.\w8\0\s[0] They like doing it a lot because they really like the people there and want to protect them, \w4\0\s[6]which I think makes them super nice\w4.\w4.\w4. \0\s[9]\w8\n\n\w8\0\s[7]Uh- \w8\0\s[6]we also built a treehouse together! \w8\n\n\0\s[0]It's kinda near the tree, and we both live in it. \w5We built it with some of the villagers when we were little.\s[8]\w8\n\nI kinda wish they were here with me,\w5 \0\s[9]but they're not\w4.\w4.\w4. \w8They're probably just having a lot of fun at home.\e"
 						}
 					}
 				}
