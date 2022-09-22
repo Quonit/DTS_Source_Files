@@ -319,7 +319,7 @@ normalboottalk //All temp dialogue
 			elseif timeslot == "lunch"
 			{
 				"\0\s[0]Oh,\w4 hi.\n\n\w8Did you eat yet?\e"
-				"\0\s[4]Sun's pr'y pretty bright around now...\e"
+				"\0\s[4]Sun's pry pretty bright around now...\w8\s[32] Heh, \w4pry-pretty.\e"
 				"\0\s[4]anDream's out right now,\w4 so there's not much to do...\n\n\w8So I guess I can hang out.\e"
 				"\0\s[0]* (You wonder if he's gotten around to eating lunch or not.)\e"
 				if blushiemode == "on" && privacyrespecter == "off" 

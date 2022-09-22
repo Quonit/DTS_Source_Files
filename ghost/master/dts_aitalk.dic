@@ -256,7 +256,7 @@ RandomTalk : nonoverlap_pool
 		if nicesadlevel >= 50
 		{
 			"\0\s[13].\w2.\w2.\w2Hey,\w4 %(username)?\n\n\w8\w2.\w2.\w2.\w4Thanks for letting me stay here, \w4I guess."
-			"\0\s[9]Hey,\w4 %(username),\w4 if I'm distracting you from your work you should pr'y just...\w5 close me,\w3 so you can get back to it.\e"
+			"\0\s[9]Hey,\w4 %(username),\w4 if I'm distracting you from your work you should pry just...\w5 close me,\w3 so you can get back to it.\e"
 		}
 		if blushiemode == "on" && privacyrespecter == "off"
 		{
