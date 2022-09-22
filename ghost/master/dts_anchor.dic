@@ -3,6 +3,7 @@ OnTranslate
 	_talk = reference0
 	_talk = REPLACE(_talk, "anDream", "\_a[Dream]Dream\_a")
 	_talk = REPLACE(_talk, "Mom's tree", "\_a[Mom's tree]Mom's tree\_a")
+	_talk = REPLACE(_talk, "anTree", "\_a[Mom's tree]the tree\_a")
 	_talk = REPLACE(_talk, "Quonit", "\_a[Quonit]Quonit\_a")
 	_talk = REPLACE(_talk, "anNight", "\_a[Nightmare]Nightmare\_a")
 	

@@ -148,90 +148,95 @@ OnBoot
 		sleepingmode = "off"
 		sittang = "off"
 		"\0\s[0]\![bind,Blanket,cape,0]"
-	}
-	--	
-	dayslot = GetDaySlot
-	timeslot = GetTimeSlot
-	
-	//if SHIORI3FW.ShellName != "Nightmare"
-	//{
-	//"\0\s[1].\w2.\w2.\w8\w8\0\s[0]\![change,shell,Passive Nighty]\0\s[7]Ah!\w8\n\n\0\s[13]Um\w2.\w2.\w2.\w6\0\s[4] How's your day?\e"
-	//}
-	
-	--
-	if dayslot == userbirthday
-	{
-		if VillageLevel >= 150
+		--	
+		dayslot = GetDaySlot
+		timeslot = GetTimeSlot
+		
+		//if SHIORI3FW.ShellName != "Nightmare"
+		//{
+		//"\0\s[1].\w2.\w2.\w8\w8\0\s[0]\![change,shell,Passive Nighty]\0\s[7]Ah!\w8\n\n\0\s[13]Um\w2.\w2.\w2.\w6\0\s[4] How's your day?\e"
+		//}
+		
+		--
+		if dayslot == userbirthday
 		{
-			"\0\s[19]* (Happy birthday.)"
-		}
-		else
-		{
-			
-			if sodreamy == "on"
+			if VillageLevel >= 150
 			{
-				"%(dreambday)\e"
-			}
-			elseif blushiemode == "on" && privacyrespecter == "off" 
-			{
-				"\0\s[6]Happy birthday %(username)!!\0\s[29]\e"
+				"\0\s[19]* (Happy birthday.)"
 			}
 			else
 			{
-				"\0\s[0]It's %(bornmonthprint) %(borndayprint), right?\w8\n\n\0\s[6].\w3.\w3.\w3Happy birthday then.\e"
-			}
-		}
-	}
-	elseif dayslot == "1month 1day"
-	{
-		"\0\s[9]Another year gone...\e"
-	}
-	elseif dayslot == "5month 28day"
-	{
-		"\0\s[4]I'm pretty sure Quonit told me something about today\w2.\w2.\w2.\w5\0\s[2] I forgot what it was, though.\e"
-	}
-	/*
-	elseif dayslot == "12month 21day" //If sodreamy == "on" Dream appears
-	{
-		intodreams == "on"
-		"Aah! Where...! I'm looking for someone... Do you- maybe know... (hand on head) sorry! :looks around: I- I'm sorry... My name is Dream, yours is...? (something clicks). %(username)? Okay..."
-			"\0\s[1]\i[14]\i[55]\w8\w8\w8*\w4 ( \w4. \w4. \w4.\w4)\w8\w8\n\n* (He looks to be enjoying his book.)\w8\w8\w8\n\n* (Disturb him?)\e"
-			--
-			"\n\n/
-			\![*]\q[Yes,disturbhimbdayyes]\n/
-			\![*]\q[No,disturbhimbdayno]\e"
-			Select.disturbhimbdayyes
-			{
-				if privacyrespecter == "on"
+				
+				if sodreamy == "on"
 				{
-				"\0\s[12]If I have to spend my birthday here at least don't make it hell.\e"
+					"%(dreambday)\e"
+				}
+				elseif blushiemode == "on" && privacyrespecter == "off" 
+				{
+					"\0\s[6]Happy birthday %(username)!!\0\s[29]\e"
 				}
 				else
 				{
-				"0\s[1]\i[55]\w8\w8\w8*\w4 (\w4. \w4. \w4.\w4)\w8\w8\i[7]\w8\w8\n\n\0\w8\n\n\w8\i[55]\0\s[1]\i[7]!\n\n\w8Oh, \w5hello!\0\s[16]\n\n\w8\w8\0\s[20]Today is me and my brother's birthday. \w6\0\s[13]I\w3.\w3.\w3. \w6really wish I can spend it with them, \w4since they've always loved their birthday.\n\n"
-				--
-				if blushiemode == "on" && privacyrespecter == "off"|| nightynight == "on" && privacyrespecter == "off"
-				{
-					"\w8I spend it every year at home...\w8 But I don't want to because every year only anDream gets to have fun so\w4.\w4.\w4.\w8\0\s[20]I wanna spend it with you!\e"
-				}
-				--
-				if blushiemode == "off"
-				{
-					"\w8I spend it every year at home...\w8 But I don't want to because every year only anDream gets to have fun so\w4.\w4.\w4.\w8\0\s[20]I wanna spend it with you!\e"
-				}
+					"\0\s[0]It's %(bornmonthprint) %(borndayprint), right?\w8\n\n\0\s[6].\w3.\w3.\w3Happy birthday then.\e"
 				}
 			}
-	}
-	*/
-	elseif dayslot == "10month 31day"
-	{
-		nowmode = "Edgybitch"
-		dontmovestatsitshalloween = "on"
-		"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Ah, I bet you're somewhat confused. \w6Especially if you've been treating him nicely, \w2so it makes no sense for this to have happened.\0\s[1615]Well,\w4 there are a few reasons. \n\n\w8\0\s[1613]Quonit, the idiot who made this ghost, felt empathetic towards people who wouldn't go down the 'bad route' because they are too cowardly.\n\n\w8And another reason is because I'm a much better Halloween event then the crown-wearing idiot.\n\n\w8Just so you don't go whining at them about it, I'll warn you that some of the things I might say will be out of place if you're on the good route. \n\n\w8Don't worry though, \w4tomorrow everything will go back to normal. \w8Hopefully.\0\s[0]\![change,Shell,Nightmare]\e"
-	}
-	else
-	{
-		"%(normalboottalk)"
+		}
+		elseif dayslot == "1month 1day"
+		{
+			"\0\s[9]Another year gone...\e"
+		}
+		elseif dayslot == "5month 28day"
+		{
+			"\0\s[4]I'm pretty sure Quonit told me something about today\w2.\w2.\w2.\w5\0\s[2] I forgot what it was, though.\e"
+		}
+		/*
+		elseif dayslot == "4month 1day"
+		{
+			//guess what it's Not Hanahaki time
+		}
+		
+		elseif dayslot == "12month 21day" //If sodreamy == "on" Dream appears
+		{
+			intodreams == "on"
+			"Aah! Where...! I'm looking for someone... Do you- maybe know... (hand on head) sorry! :looks around: I- I'm sorry... My name is Dream, yours is...? (something clicks). %(username)? Okay..."
+				"\0\s[1]\i[14]\i[55]\w8\w8\w8*\w4 ( \w4. \w4. \w4.\w4)\w8\w8\n\n* (He looks to be enjoying his book.)\w8\w8\w8\n\n* (Disturb him?)\e"
+				--
+				"\n\n/
+				\![*]\q[Yes,disturbhimbdayyes]\n/
+				\![*]\q[No,disturbhimbdayno]\e"
+				Select.disturbhimbdayyes
+				{
+					if privacyrespecter == "on"
+					{
+					"\0\s[12]If I have to spend my birthday here at least don't make it hell.\e"
+					}
+					else
+					{
+					"0\s[1]\i[55]\w8\w8\w8*\w4 (\w4. \w4. \w4.\w4)\w8\w8\i[7]\w8\w8\n\n\0\w8\n\n\w8\i[55]\0\s[1]\i[7]!\n\n\w8Oh, \w5hello!\0\s[16]\n\n\w8\w8\0\s[20]Today is me and my brother's birthday. \w6\0\s[13]I\w3.\w3.\w3. \w6really wish I can spend it with them, \w4since they've always loved their birthday.\n\n"
+					--
+					if blushiemode == "on" && privacyrespecter == "off"|| nightynight == "on" && privacyrespecter == "off"
+					{
+						"\w8I spend it every year at home...\w8 But I don't want to because every year only anDream gets to have fun so\w4.\w4.\w4.\w8\0\s[20]I wanna spend it with you!\e"
+					}
+					--
+					if blushiemode == "off"
+					{
+						"\w8I spend it every year at home...\w8 But I don't want to because every year only anDream gets to have fun so\w4.\w4.\w4.\w8\0\s[20]I wanna spend it with you!\e"
+					}
+					}
+				}
+		}
+		*/
+		elseif dayslot == "10month 31day"
+		{
+			nowmode = "Edgybitch"
+			dontmovestatsitshalloween = "on"
+			"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Ah, I bet you're somewhat confused. \w6Especially if you've been treating him nicely, \w2so it makes no sense for this to have happened.\0\s[1615]Well,\w4 there are a few reasons. \n\n\w8\0\s[1613]Quonit, the idiot who made this ghost, felt empathetic towards people who wouldn't go down the 'bad route' because they are too cowardly.\n\n\w8And another reason is because I'm a much better Halloween event then the crown-wearing idiot.\n\n\w8Just so you don't go whining at them about it, I'll warn you that some of the things I might say will be out of place if you're on the good route. \n\n\w8Don't worry though, \w4tomorrow everything will go back to normal. \w8Hopefully.\0\s[0]\![change,Shell,Nightmare]\e"
+		}
+		else
+		{
+			"%(normalboottalk)"
+		}
 	}
 }
 

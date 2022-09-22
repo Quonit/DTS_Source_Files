@@ -42,13 +42,14 @@ GoopTalk : nonoverlap_pool
     {
 		"\0\s[1]You know\w5.\w5.\w5. \w8It's almost a little sad. \w8\n\nTo think he loved you at one point.\n\n\w8\0\s[0]Almost brings a tear to the eye, \w6that he actually trusted someone for once.\w8 Really taught him a valuable lesson there, huh?\e"
 		"\0\s[4]I'm surprised you don't act more distraught over losing your boyfriend.\n\n\w8Then again, I doubt you ever cared in the first place.\e"
-		"\0\s[0]There are many ways to create negativity.\w8 One of the easiest is through mere pain,\w5 but emotional ones can be more sustaining and if you do it right, \w5just as bad or even worse.\n\n\w8It's not something I try often, \w6so it's a shame I wasn't able to feed on this vessel's sadness...\e"
+		"\0\s[0]There are many ways to create negativity.\w8 One of the easiest is through mere pain,\w5 but emotional scars can be more sustaining and if you do it right, \w5just as bad or even worse.\n\n\w8It's not something I try often, \w6so it's a shame I wasn't able to feed on this vessel's sadness...\e"
+		//"If you think I admire your cruelty,\w3 don't bother.\w8 Pathetic,\w4 wasting all your time on this one creature when there's so much more subtle yet effective means of creating negativity.\w8"
     }
     if hasdreamplush == "on"
     {
 		"\0\s[11]* (Looks like he still has that doll\w2.\w2.\w2.)\e"
     }
-    if hasblakie == "on"
+    if hasblankie == "on"
     {
 		"\0\s[8]\i[11]That was a real cute blanket you gave to little Night back there.\w8 Bet he'd be sad to see it ripped up like this.\e"
 		"\0\s[1]* (He pulls out the blanket...)\n\n\w8\0\s[8]\i[11]* (It doesn't look any good for sleeping anymore.)\e"
@@ -62,10 +63,14 @@ GoopTalk : nonoverlap_pool
 		"\0\s[1]Man,\w5 somebody's got a $%^& poor sleeping schedule.\n\n\w8\0\s[0]What,\w5 you afraid of having a 'nightmare'?\e"
 		"\0\s[1]* (You wonder if you'll see a spooky ghost this late at night.)\n\n\w8\0\s[8]* (Oh,\w4 there it is.)\e"
     }
+	if ghostupmin > 60
+	{
+		"* (You tell him with all the time you spent unlocking him,\w4 you'd think he'd be a little more grateful.)\w8\n\nPlay stupid games...\w8"
+	}
     /*
     if month == 1
     {
-    ""
+		"\0\s[0]Another year closer to your own death,\w4 hm?\w8"
     }
     if month == 2
     {
@@ -73,11 +78,14 @@ GoopTalk : nonoverlap_pool
     }
     if month == 3
     {
-    ""
+		if day == 15
+		{
+			"* (Some phrase is sticking in your thoughts...\w8 ''Beware the ides...''?)"
+		}
     }
     if month == 4
     {
-    ""
+		"* (Some phrase is sticking in your thoughts...\w8 Something like\w5 ''April is the cruellest month,\w3 breeding lilacs out of the dead land...'')\w8"
     }
     if month == 5
     {
@@ -86,7 +94,8 @@ GoopTalk : nonoverlap_pool
     */
     if month == 6
     {
-    "\0\s[0]* (You talk about how great the summer is.)\n\n\w8\0\s[4]Yeah yeah,\w6 I'm sure you'd love it,\w4 not having any goop to get thin and gross from the heat.\e"
+		"\0\s[0]* (You talk about how great the summer is.)\n\n\w8\0\s[4]Yeah yeah,\w6 I'm sure you'd love it,\w4 not having any goop to get thin and gross from the heat.\e"
+		"* (Is he dripping more than normal?)\w8"
     }
     /*
     if month == 7
@@ -106,15 +115,27 @@ GoopTalk : nonoverlap_pool
     {
 		"\0\s[0]I might not have as many features as that purple twink, \w3but at the very least I'm a pretty damn fitting Halloween ghost,\w3 huh?\e:chain=twinkchain"
 		"\0\s[0]Quonit made a gag where I have to appear at Halloween,\w5 but is anybody \f[italic,true]really\f[italic,false] going to use this ghost by then?\e"
+		if dontmovestatsitshalloween == "on"
+		{
+			{
+				"\0\s[0]Bet you're happy Quonit made it so you get to see me on Halloween.\w8 All the reward with %(ANY('none of the cruelty on your conscience')),'no need to dirty your own hands').\w8 Heh.\w8"
+				--
+				if RAND(5) < 2
+				{
+					" You should go thank them.\w6 They made all the cruelty happen offscreen so you don't need it sullying your thoughts.\w8"
+				}
+			}
+		}
     }
-    /*
+    
     if month == 11
     {
-    ""
+		"\0\s[0]Felt like keeping me around,\w4 huh?\w8"
     }
+	/*
     if month == 12
     {
-    ""
+		"%(lps(4))Apparently,\w5 in places where it snows,\w8 the solstice means a lot.\w8\w4 The nexus of the waxing darkness and its waning.\w8\w6 They host revelries to mask their worries that \f[italic,true]this year\f[italic,false]\w4 the light and warmth might not decide to come back.%(lps(8))\w7\n\nBut it doesn't snow near anTree,\w3 so the villagers only have some stiff ceremonial garbage.\w8\w6 Before I killed them all, of course.\w8\e"
     }
     */
 }
@@ -131,7 +152,7 @@ Select.feedgoopy
 Select.askaboutcorpses
 {
 	corpsesyay = "on"
-	"Yeah? I killed them all. What did you think a dark apple would do when let loose?"
+	"Yeah?\w4 I killed them all.\w7 What did you think\w4 a dark apple would do when let loose?\w8"
 }
 
 twinkchain
@@ -143,6 +164,8 @@ twinkchain
 //--------------------Bootend------------------------------
 OnGoopWake
 {
+	dayslot = GetDaySlot
+	timeslot = GetTimeSlot
 	gooploose = "on"
 	--
     "\0\s[0]I was wondering when I'd see you again...\e"
@@ -217,6 +240,7 @@ Select.checkinguout2
     "\0\s[0]\i[55]* (NIGHTMARE - ATK ?? DEF ??)\n* (There he is!!!)\n\n"
     "\0\s[0]\i[55]* (GOOPMARE - ATK ?? DEF ??)\n* (Needs a bath.)\n\n"
     "\0\s[0]\i[55]* (NIGHTMARE - ATK ?? DEF ??)\n* (Goopy!)\n\n"
+    "\0\s[0]\i[55]* (NIGHTMARE - ATK ?? DEF ??)\n* (Hates you and everyone...?)\n\n"
     "\0\s[0]\i[55]* (GOOPMARE - ATK ?? DEF ??)\n* (Edgy.)\n\n"
 }
 
@@ -247,6 +271,7 @@ Select.flirtyflirtgoop
     "\0\s[0]* (You ask him if it hurt falling from the vending machine, because he a snack.)\n\n\0\s[8]\w8Aww~\w6 somebody hungry for some negativity?\e"
     "\0\s[0]* (You ask him if he has an extra heart,\w4 because yours was just stolen.)\n\n\w8\0\s[8]If you let me leave I could get one for you~\e"
     "\0\s[0]* (You tell him your favorite food is apples.)\n\n\0\s[5]\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]\e"
+	"* (You tell him you went through so much effort,\w3 just to unlock him.)\n\n\w8And?\w8\w8"
 	if username == "Khitty"
 	//there we go
 	{
@@ -310,8 +335,8 @@ Select.goopask
 Select.explainpurple
 {
 	"* (You ask him if he cares about %(nightname))\n\n\w8You sure don't.\w7 Why would you care if \f[italic,true]I\f[italic,false]\w3 do?\w8"
-	"* (You ask if you can see %(nightynight) again.)\n\n\w8So now\w3 you care about him?\w8\w8"
-	"* (You ask if you can see %(nightynight) again.)\n\n\w8Take off your skin and you'll see something close enough.\w8"
+	"* (You ask if you can see %(nightname) again.)\n\n\w8So now\w3 you care about him?\w8\w8"
+	"* (You ask if you can see %(nightname) again.)\n\n\w8Take off your skin and you'll see something close enough.\w8"
 	"\w8What do you care about that dead bitch?\w8 He's gone.\w8 That's it.\w8 I'm here now.\w8\w8\w8 That's what you wanted,\w4 right?\w8"
 	"Please.\w8 Life was boring being trapped in that vessel,\w8 forever being held back by that waste of magic's \f[italic,true]conscience\f[italic,false].\w6 But thanks to you,\w5 I'm free to have a lot more fun now.\w8"
 	--

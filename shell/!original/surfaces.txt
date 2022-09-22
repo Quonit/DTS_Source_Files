@@ -417,6 +417,7 @@ surface8
 	//Collision
 	collision0,104,32,174,51,Crown
 	collision1,108,63,169,87,Face
+	collisionex2,Skull,polygon,107,60,110,40,125,24,147,23,169,29,150,48,117,62
 	element1,overlay,surface1008.png,0,0
 
 	//Blushies
@@ -463,6 +464,7 @@ surface12
 	//Collision
 	collision0,115,53,185,76,Crown
 	collision1,116,75,173,98,Face
+	collisionex2,Skull,polygon,117,70,122,44,132,34,151,28,171,33,181,45,185,55,161,71,138,77,117,72
 	element1,overlay,surface1012.png,0,0
 
 	//Blushies
@@ -477,6 +479,7 @@ surface13
 	collision0,119,47,190,75,Crown
 	collision1,140,68,192,100,Face
 	element1,overlay,surface1013.png,0,0
+	collisionex2,Skull,polygon,122,75,119,55,133,37,163,29,183,44,161,61,132,73
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1613,0,0,0
@@ -488,6 +491,7 @@ surface14
 	//Collision
 	collision0,114,45,185,57,Crown
 	collision1,140,68,192,100,Face
+	collisionex2,Skull,polygon,112,57,124,41,145,28,170,32,183,44,160,58,139,62
 	element1,overlay,surface1014.png,0,0
 	//Blushies
 	animation100.interval,bind
@@ -500,6 +504,7 @@ surface15
 	//Collision
 	collision0,113,20,183,42,Crown
 	collision1,113,40,166,83,Face
+	collisionex2,Skull,polygon,115,42,125,22,145,12,167,24,182,39,162,43
 	element1,overlay,surface1015.png,0,0
 	//Blushies
 	animation100.interval,bind
@@ -557,6 +562,7 @@ surface19
 	//Collision
 	collision0,94,42,162,61,Crown
 	collision1,99,66,154,88,Face
+	collisionex2,Skull,polygon,98,64,98,41,110,22,134,14,159,37,136,57,120,67
 	element1,overlay,surface1019.png,0,0
 	//Blushies
 	animation100.interval,bind
@@ -569,6 +575,7 @@ surface20
 	//Collision
 	collision0,109,28,178,68,Crown
 	collision1,112,52,170,85,Face
+	collisionex2,Skull,polygon,112,53,118,30,138,18,163,19,178,31,155,44,126,52
 
 	element1,overlay,surface1020.png,0,0
 
@@ -633,6 +640,7 @@ surface25
 {
 	collision0,116,42,186,72,Crown
 	collision1,118,77,172,96,Face
+	collisionex2,Skull,polygon,122,71,123,50,136,30,154,24,174,35,188,56,161,68,138,76
 	element1,overlay,surface1024.png,0,0
 	//Blushies
 	animation100.interval,bind
@@ -645,6 +653,7 @@ surface26
 	collision0,115,30,186,51,Crown
 	collision1,108,46,168,87,Face
 	collision2,136,95,171,130,Dollie
+	collisionex3,Skull,polygon,118,58,119,38,145,22,164,31,180,45,155,56
 	element1,overlay,surface1025.png,0,0
 	//Blushies
 	animation100.interval,bind
@@ -655,6 +664,7 @@ surface26
 surface27
 {
 	element1,overlay,surface1026.png,0,0
+	collisionex2,Skull,polygon,128,72,122,47,147,30,176,37,185,57,161,70
 	//Blushies
 	//100interval,bind
 	//100pattern0,1526,0,add,0,0
@@ -669,6 +679,7 @@ surface28
 {
 	collision0,112,35,186,57,Crown
 	collision1,112,59,168,89,Face
+	collisionex2,Skull,polygon,111,56,118,34,168,28,184,49,151,57
 	element1,overlay,surface1027.png,0,0
 }
 
@@ -677,6 +688,7 @@ surface29
 {
 	collision0,115,34,186,47,Crown
 	collision1,114,59,171,87,Face
+	collisionex2,Skull,polygon,117,55,125,30,147,18,170,25,180,42,158,56
 	element0,overlay,surface1028.png,0,0
 	animation41.interval,runonce
 	animation41.pattern0,base,1518,600,0,0
@@ -701,6 +713,7 @@ surface30
 //19 but like happy
 surface31
 {
+	collisionex2,Skull,polygon,102,67,104,36,122,22,145,21,164,41,134,54
 	element0,overlay,surface1031.png,0,0
 }
 
@@ -709,6 +722,7 @@ surface32
 {
 	collision0,107,39,186,61,Crown
 	collision1,112,72,168,91,Face
+	collisionex2,Skull,polygon,114,71,111,44,125,27,146,22,170,35,155,56
 	element0,overlay,surface1032.png,0,0
 }
 
@@ -733,6 +747,7 @@ surface35
 {
 	collision0,115,27,186,48,Crown
 	collision1,111,49,168,87,Face
+	collisionex2,Skull,polygon,112,43,128,23,150,17,184,42,160,52
 	element0,overlay,surface1035.png,0,0
 }
 
@@ -771,6 +786,7 @@ surface40
 {
 	collision0,118,20,186,40,Crown
 	collision1,115,46,171,83,Face
+	collisionex2,Skull,polygon,119,40,132,18,155,11,185,32,166,43
 	element0,overlay,surface1040.png,0,0
 }
 
@@ -811,6 +827,7 @@ surface43
 {
 	collision0,118,34,197,53,Crown
 	collision1,118,60,179,93,Face
+	collisionex2,Skull,polygon,148,141,161,109,180,101,223,122,192,135,169,140
 	element0,overlay,surface1043.png,0,0
 
 	//Eyes

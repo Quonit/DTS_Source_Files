@@ -220,7 +220,7 @@ RandomTalk : nonoverlap_pool
 		"\0\s[13]\i[55]* (He's fiddling with his hands.)\e"
 		"\0\s[4]Would having wings even be all that fun?\w8\n\nI feel like they'd just get in the way of everything.\e"
 		"\0\s[4]Maybe I should go out and get more outfits at some point.\w8 This ones gettin' kinda old.\e"
-		"\0\s[4]I hope nobody sneaks up on Mom's Tree while I'm not there\w2.\w2.\w2.\e"
+		"\0\s[4]I hope nobody sneaks up on Mom's tree while I'm not there\w2.\w2.\w2.\e"
 		"\0\s[0]\i[11]\i[55]* (He's pretty quiet today.)\e"
 		"\0\s[7]\i[55]* (You poke him.)\n\n\w8\s[0]\i[13]\i[15]Could you not?\n\n\![*]\q[Hug him,hugpurpleman]\n\![*]\q[Respect his wishes,leavepurplemanalone]\e\e"
 		"\0\s[4]Kinda wonder what the world would be like if I never existed\w2.\w2.\w2.\w8\n\n\i[55]* (Is that normal for him?)\e"

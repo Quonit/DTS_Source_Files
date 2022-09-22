@@ -158,6 +158,7 @@ MouseMoveSakura
 							else
 							{
 								"\0\s[13]* (He's letting you pet him,\w4 but is still wary.)\e"
+								"\0\s[13]* (Looks like he's still not sure what to make of you.)"
 								//temp dialogue
 								//"Why are you petting me?"
 								//"* (His skull feels smooth.) Why are you doing that..."
