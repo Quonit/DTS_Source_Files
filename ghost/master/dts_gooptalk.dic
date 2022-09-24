@@ -8,7 +8,6 @@ GoopTalk : nonoverlap_pool
     "\0\s[0]* (You ask if you can hug him.)\n\n\w8\i[102]I think that's a stupid question to ask.\n\n\w8* (\w3.\w3.\w3.\w3Is that a yes or a no?)\n\n\w8\0\s[5]That's a no, you idiot!!!\e"
     "\0\s[0]How long are you going to force me to stay here, anyways?\e"
     "\0\s[1]Your computer's been running for %exh.\n\n\w8* (You ask him if that's hours or minutes.)\n\n\w8\0\s[8]Suffer and live without an answer.\e"
-    "\0\s[1]Honestly,\w3 I bet this ghost would have been a lot more interesting if I had one of my pets to talk to.\e"
     "\0\s[1]Honestly,\w3 anDream is \f[italic,true]such\f[italic,false] an extrovert.\n\n\w8\0\s[1]I bet it would be heartbreaking to see if they found out that all their friends were liars.\e"
     "\0\s[0]* (You ask the goop if he reads at all.)\0\s[1]\n\n\w8Please,\w4 the only reason the other one did it is because there was nothing else to do.\n\n\w8 I'm sure if his universe had phones or anything of that sort he would've scurried off with one of those,\w4 since he just wants a way to avoid people.\e"
 	/*
@@ -45,6 +44,7 @@ GoopTalk : nonoverlap_pool
 		"\0\s[0]There are many ways to create negativity.\w8 One of the easiest is through mere pain,\w5 but emotional scars can be more sustaining and if you do it right, \w5just as bad or even worse.\n\n\w8It's not something I try often, \w6so it's a shame I wasn't able to feed on this vessel's sadness...\e"
 		//"If you think I admire your cruelty,\w3 don't bother.\w8 Pathetic,\w4 wasting all your time on this one creature when there's so much more subtle yet effective means of creating negativity.\w8"
     }
+	/*
     if hasdreamplush == "on"
     {
 		"\0\s[11]* (Looks like he still has that doll\w2.\w2.\w2.)\e"
@@ -54,6 +54,7 @@ GoopTalk : nonoverlap_pool
 		"\0\s[8]\i[11]That was a real cute blanket you gave to little Night back there.\w8 Bet he'd be sad to see it ripped up like this.\e"
 		"\0\s[1]* (He pulls out the blanket...)\n\n\w8\0\s[8]\i[11]* (It doesn't look any good for sleeping anymore.)\e"
     }
+	*/
     if hastea == "on"
     {
 		"\0\s[1]* (You wonder if he's going to drink anything from the mug you gave %(nightname) earlier,\w3 but then you realize that he probably broke it\w2.\w2.\w2.)\e"
@@ -114,7 +115,7 @@ GoopTalk : nonoverlap_pool
     if month == 10
     {
 		"\0\s[0]I might not have as many features as that purple twink, \w3but at the very least I'm a pretty damn fitting Halloween ghost,\w3 huh?\e:chain=twinkchain"
-		"\0\s[0]Quonit made a gag where I have to appear at Halloween,\w5 but is anybody \f[italic,true]really\f[italic,false] going to use this ghost by then?\e"
+		//"\0\s[0]Quonit made a gag where I have to appear at Halloween,\w5 but is anybody \f[italic,true]really\f[italic,false] going to use this ghost by then?\e"
 		if dontmovestatsitshalloween == "on"
 		{
 			{

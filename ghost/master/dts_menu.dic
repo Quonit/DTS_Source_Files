@@ -597,7 +597,7 @@ birthchecked
 	{
 		if VillageLevel >= 150
 		{
-			"\0\s[19]* (He would've said something if he wasn't afraid.)\e"
+			"\0\s[19]* (He would've said something if he weren't afraid.)\e"
 		}
 		elseif blushiemode == "on" && privacyrespecter == "off"
 		{
@@ -675,7 +675,7 @@ Select.TALKMAX
 	}
 	elseif VillageLevel >= 150
 	{
-		"\0\s[19]* (He doesn't say anything about the extremely often talking time.)\e"
+		"\0\s[19]* (He doesn't say anything about the extremely short talking interval.)\e"
 	}
 	else
 	{
@@ -1046,7 +1046,7 @@ Select.bugreport
 {
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[4]Please, \w4this thing is probably riddled with bugs and balancing issues.\w8 I doubt Quonit will do anything to fix it. \w8\0\s[1]You could try asking, though...\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
+		"\0\s[4]Please, \w4this thing is no doubt riddled with bugs and balancing issues.\w8\0\s[1] Go bug Quonit to fix it if you care that much:\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
 	}
 	elseif nicesadlevel <= -50 && punchout >= 20
 	{
@@ -1482,7 +1482,7 @@ Select.sayafunny
 	{
 		negact += 1
 		"\0\s[19]* (You joke about how stupid he is.)\w8\n\n* (Surprising with how many books he reads.\w6 Then again,\w6 it's not like he has a brain.)\n\n"
-		"\0\s[19]* (You talk about how funny it is that he takes himself so seriously but his AU doesn't even make any sense.)\n\n"
+		"\0\s[19]* (You talk about how funny it is that he takes himself so seriously but his AU doesn't even make any sense.)\n\n\0\s[11]* (Looks like he understands he was insulted,\w4 but not how.)\w8\n\n"
 		"\0\s[19]* (You joke about how proper his clothes look.)\n\n\w8* (Are those supposed to be his casual clothes?)\n\n"
 		"\0\s[19]* (You joke that his eyes look weird.)\n\n"
 		"\0\s[19]* (You poke fun at how on the default pose the yellow lining at the end of his sleeve is on the wrong side.)\n\n"
@@ -1492,7 +1492,7 @@ Select.sayafunny
 	else
 	{
 		posact += 1
-		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[6]\i[55]Me!\w8\n\n* (You tell him that's not very funny\w3.\w3.\w3.)\n\n\w8\0\s[12]\i[55]Well if should be. \w6Then there'd be no point releasing me on April Fools.\n\n"
+		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[6]\i[55]Me!\w8\n\n* (You tell him that's not very funny\w3.\w3.\w3.)\n\n\w8\0\s[12]\i[55]Well, it should be.\w6\n\n\w6* (%(lps(5))Is he okay?)\w8\n\n"
 		"\0\s[0]* (You ask him if he has a joke.)\n\n\w8\0\s[4]Um\w2.\w2.\w2.\n\n\w8Oh!\w6\0\s[15] I'm so good at sleeping, I can do it with my eyes closed!\n\n"
 		"\0\s[0]\i[55]* (You ask him if he has a joke.)\n\n\w8\0\s[4]\i[55]Um\w2.\w2.\w2.\n\n\w8Oh!\w8\n\n\0\s[15]\i[55]What rhymes with orange?\n\n\w8* (You tell him it doesn't.)\0\s[4]\i[55]\n\n\w8Huh?\n\n"
 		"\0\s[0]\i[55]* (You tell him your friend told you stop acting like a flamingo,\w6 so you had to put your foot down.)\n\n\w8\0\s[6]\i[55]snerk-\w4 hehehe!\n\n"
@@ -1537,7 +1537,7 @@ Select.flirtyflirt
 		"\0\s[1]\i[55]* (You tell him you think he looks nice.)\n\n\w8\0\s[28]\i[55]Um\w3.\w3.\w3.\w4 thank you?\n\n"
 		"\0\s[0]\i[55]* (You tell that you think his hands look heavy, \w5and if you could hold them.)\n\n\w8\0\s[13]\i[55]Um\w2.\w2.\w2.\w5 I don't think you can,\w4 no.\n\n"
 		"\0\s[0]\i[55]* (You ask him how he's so cute.)\n\n\0\s[6]\i[55]\w8Because Quonit drew me!!\w6 Go thank them or something.\n\n"
-		"\0\s[0]\i[55]* (You ask if you can borrow a kiss.\w6 Don't worry,\w4 you'll return it.)\n\n\0\s[13]\i[55]\w8But I'm a ghost...?\w6 How would you do that?\n\n"
+		"\0\s[0]\i[55]* (You ask if you can borrow a kiss.\w6 Don't worry,\w4 you'll return it.)\n\n\0\s[13]\i[55]\w8But I... don't know-?\w6 Can you do that in this weird,\w7 dimension,\w8 thing?\w8\n\n"
 	}
 	if blushiemode == "on"
 	{
@@ -1549,8 +1549,11 @@ Select.flirtyflirt
 	}
 	else
 	{
+		/*
 		"\0\s[1]\i[55]* (You ask him if he can come to your place some time.)\n\n\w8\w4\0\s[1]\i[8]\i[55]That doesn't sound possible? \w8I can't even go back to my home,\w4 how am I supposed to appear in yours?\n\n\w8\w4* (You tell him you meant metaphorically.)\n\n\w8\w4That still doesn't make any sense. How would I metaphorically go to your place?\w8\n\n* (\w3.\w3.\w2.You give up.)\n\n"
 		"\0\s[1]\i[55]* (You wonder outloud what a skeleton like him is doing in a place like this.)\n\n\w8\0\s[1]\i[8]\i[55]You brought me here?\n\n"
+		*/
+		"\0\s[0]\i[55]* (You tell him he's the apple of your eye.\n\n\w8\0\s[0]\i[11]\i[55]I... what?\n\n* (Looks like he's never heard the phrase before.)\w8\n\n"
 		"\0\s[0]\i[55]* (You tell him you're horribly lost, \w3and need directions to his heart.)\n\n\w8\0\s[12]\i[55]Stop being weird about it...\n\n"
 		"\0\s[0]\i[55]* (You tell him you're going to the optometrist to get your eyes checked. \w7For some reason, \w4you can’t take them off of him.)\n\n\0\s[4]\w8\i[55]What's an optometrist?\n\n"
 		"\0\s[0]\i[55]* (You ask if you can tie his shoes.\w6 You couldn't want anybody else falling for him.)\n\n\0\s[4]\i[55]\w8My shoes don't have laces though?\n\n"
@@ -1699,7 +1702,7 @@ Select.bemean
 		*/
 		if nicesadlevel <= -25
 		{
-			"\0\s[19]\i[55]* (You tell %(nightname) he doesn't deserve love, or the people that love him.)\n\n\w8Hey...\n\n"
+			//"\0\s[19]\i[55]* (You tell %(nightname) he doesn't deserve love, or the people that love him.)\n\n\w8Hey...\n\n"
 			"\0\s[12]\i[55]* (You tell him his mother hates him.)\0\s[21]\i[55]\n\n\w8But she's dead!!!\n\n"
 			"\0\s[12]\i[55]* (You ask him if he's ever been useful to anybody.)\n\n\w8* (He tries to ignore you.)\n\n"
 			"\0\s[22]\i[55]* (You try to get a word in,\w4 but he's ignoring you.)\n\n\w8\n\n"
@@ -1855,16 +1858,16 @@ Select.reexplaintree
 	elseif blushiemode == "on" && privacyrespecter == "off"
 	{
 		momstreeexpo = "on"
-		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\0\s[9]Mommy\w4.\w4.\w4. \w6I wish I knew her sometimes.\n\n\w8I\w3.\w3.\w3. \w4I think it's just my head,\w3 but I think she'd've helped me a lot on stuff.\w6If I also had her to talk to instead of just the villagers.\w6 But\w3.\w3.\w3.\n\n\w8Some of the villagers say she didn't like me, \w5but I don't know if I should just trust what they're saying or not. \w6Because I didn't know her, \w3but they did.\w5So I dunno what to think\w3.\w3.\w3."
+		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\0\s[9]Mommy\w4.\w4.\w4. \w6I wish I knew her sometimes.\n\n\w8I\w3.\w3.\w3. \w4I think it's just my head,\w3 but I think she'd've helped me a lot on stuff.\w6If I also had her to talk to instead of just the villagers.\w6 But\w3.\w3.\w3.\n\n\w8Some of the villagers say she wouldn't have liked me, \w5but I don't know if I should just trust what they're saying or not. \w6Because I didn't know her, \w3but they did.\w5So I dunno what to think\w3.\w3.\w3."
 	}
 	elseif nowmode == "Edgybitch"
 	{
-		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom' to.\n\n\w8Technically that'd make anDream and the purple one my half brothers, \w3when you think about it."
+		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom' too.\n\n\w8Technically that'd make anDream and the purple one my half brothers \w3when you think about it."
 	}
 	else
 	{
 		momstreeexpo = "on"
-		"\0\s[0]\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Our Mom used to take care of this tree that's supposed to\w8\0\s[4]\w8.\w8.\w8.\w8 \0\s[2]protect the village, \w8or something. \w8\n\n\0\s[0]It's basically just some magical signifier to tell us how the people in our village are feeling. \w8\n\nIt was dying once so our Mom merged with it after creating me and my brother.\w8 We're supposed to protect it sense she can't anymore."
+		"\0\s[0]\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Our Mom used to take care of this tree that's supposed to\w8\0\s[4]\w8.\w8.\w8.\w8 \0\s[2]protect the village, \w8or something. \w8\n\n\0\s[0]It's basically just some magical signifier to tell us how the people in our village are feeling. \w8\n\nIt was dying once so our Mom merged with it after creating me and my brother.\w8 We're supposed to protect it since she can't anymore."
 	}
 	--
 	"%(backask)"
@@ -1974,7 +1977,7 @@ Select.waxingandwaining
 	}
 	elseif blushiemode == "on"
 	{
-		"\0\s[6]My eyes actually change depending on how I feel!\0\s[20]\n\n\w8Quonit wanted there to make my eyes look like my symbol, \w4the moon,\w4 because anDream's already could be starry.\w4 So they made it so that my eyes can wax and wane.\n\n\w8\0\s[15]Basically,\w4 if I'm happier,\w3 more of the light yellow side is showing,\w3 and if I'm sadder,\w3 more of the purple dark side is showing.\n\n"
+		"\0\s[6]Oh, my eyes!\w8\0\s[0]i[11] They actually wax and wane like the moon,\w7 which I think is pretty neat!\w8 anDream's eyes get all starry when they're excited,\w5 but mine are more subtle.\w7\w8\0\s[4] Uh, more yellow if I'm happy,\w5 more purple\0\s[13]... otherwise.\w8\0\s[6] But you make me happy, so-!\w8\n\n"
 	}
 	else
 	{
@@ -2396,7 +2399,7 @@ Onnotouchsoul
 	if seensoul != "on"
 	{
 		seensoul = "on"
-		"It's kind of a weird one\w2.\w2.\w2.\w8 Neither me or Dream are actually monsters,\w4 or humans\w2.\w2.\w2.\w8 Second one is probaby a bit more obivous-\w4 but basically our souls don't really look like either."
+		"It's kind of a weird one\w2.\w2.\w2.\w8 Neither me or Dream are actually monsters,\w4 or humans\w2.\w2.\w2.\w8 Second one is probaby a bit more obvious-\w4 but basically our souls don't really look like either."
 	}
 	else
 	{

@@ -141,8 +141,8 @@ MouseMoveSakura
 							if nicesadlevel <= -50 && punchout >= 25 //big dislike
 							{
 								negact += 1
-								"\0\s[19]* (Your mouse must have slipped.)\e"
-								"\0\s[19]* (He tries to avoid your touch,\w4 but can't.)\e"
+								"\0\s[19]* (Stupid oversenssitive hitboxes.)\e"
+								"\0\s[19]* (He shudders as he tries to avoid your cursor.)\e"
 								"\0\s[19]Stop...\e"
 							}
 						}
@@ -184,10 +184,10 @@ MouseMoveSakura
 						"\0\s[6]* (He begrudgingly put up with it,\w3 though he doesn't have much of a choice,\w2 though.)\e"
 						"\0\s[2]* (He is very grumpy.)\e"
 						"\0\s[2]You know,\w3 there's better things you could be doing right about now.\e"
-						"\0\s[8]Usually,\w3 humans are too busy bleeding out to try and touch me.\e"
+						"\0\s[8]Usually,\w3 humans are too busy bleeding out to try to touch me.\e"
 						"\0\s[2]* (He is completely defenseless to your touches.)\e"
 						"\0\s[2]* (He is very annoyed that he's been forced to put up with this.)\e"
-						"\0\s[5]With all your stupid petting it's no %#*&ing wonder Nightmare hated you!\e"
+						"\0\s[5]With all your stupid petting\w3 it's no %#*&ing wonder Nightmare hated you!\e"
 						if blushiemode == "on"
 						{
 							"\0\s[4]I'm sure you did this to your old friend quite a lot.\w6 \0\s[1]I'm sure that he misses it~\e"

@@ -202,7 +202,8 @@ RandomTalk : nonoverlap_pool
 	{
 		"\0\s[4]I wonder how things are back at home...\e"
 		"\0\s[4]I wish I had a staff or something. \w8That'd be cool.\e"
-		"\0\s[4]I heard once that the golden apples on Mom's tree heal people of sickness. \w8\n\n\0\s[3]It sounds really important for something that was only mentioned once...\e"
+		//"\0\s[4]I heard once that the golden apples on Mom's tree heal people of sickness. \w8\n\n\0\s[3]It sounds really important for something that was only mentioned once...\e"
+		"\0\s[4]I keep hearing that the golden apples on Mom's tree are valuable beause they heal people of sickness. \w8\n\n\0\s[3]They're more like painkillers... and\w5\0\s[8] it'd be nice if the dark apples had any use at all.\e"
 		"\0\s[4]\i[55]* (He looks like he's thinking about something else.)\e"
 		"\0\s[0]\i[11]\i[55]* (Smells like old books and purple.)\e"
 		"\0\s[4]You know, I wish I could play an instrument.\w8\n\nMaybe a violin or something?\e"
@@ -235,7 +236,7 @@ RandomTalk : nonoverlap_pool
 		//Positive Route
 		if nicesadlevel >= 15
 		{
-			"\0\s[4]You know,\w5 swimming sounds kinda fun. \w6\0\s[6]Me and anDream do it sometimes!\n\n\w8\0\s[9]Though I had to stop 'cause.\w3\w3.\w3.\w5 later anDream would start inviting their friends too,\w4 and they-\n\n\w8\w4.\w4.\w4.\w5\0\s[12]I don't want to talk about it.\e"
+			"\0\s[4]You know,\w5 swimming sounds kinda fun. \w6\0\s[6]Me and anDream do it sometimes!\n\n\w8\0\s[9]Though I had to stop 'cause.\w3\w3.\w3.\w5 later people anDream knows would start inviting themselves along,\w4 and they-\n\n\w8\w4.\w4.\w4.\w5\0\s[12]I don't want to talk about it.\e"
 			//Neither of these things work
 			"\0\s[13]I try to read poetry sometimes too\w2.\w2.\w2.\w6 I think it's also good,\w4 maybe I could try writing some at some point? \0\s[8]\w8Not like anybody would read it...\e"
 			if talkaboutlater != "on" && nightynight != "on" //If both of those are not equal (!=) to on
@@ -257,7 +258,7 @@ RandomTalk : nonoverlap_pool
 			"\0\s[32]* (He seems happy.)\e"
 			"\0\s[6]I think my brother would like to meet you one day! \w8\0\s[20]They'd be happy I made a friend, \w3y'know? \w6\0\s[13]Cause I don't have those at home.\n\n\w8\0\s[20]Thank you a lot...\e"
 			"\0\s[28]* (He's blushing a lot, for whatever reason.)"
-			"\0\s[0]\i[55]* (You ask him if he's ever had a crush on anybody.)\n\n\w8\0\s[28]\i[55]Um- \w4well- \w2not- \w3not anybody from home at least!\e"
+			"\0\s[0]\i[55]* (You ask him if he's ever had a crush on anybody.)\n\n\w8\0\s[28]\i[55]Um- \w4well- \w2not- \w3not anybody at home at least!\e"
 			"\0\s[0]\i[55]* (You blow him a random kiss.)\n\n\w8\0\s[28]\i[55]Um- \0\s[28]!\e"
 		}
 		//Misc
@@ -367,7 +368,8 @@ RandomTalk : nonoverlap_pool
 		*/
 		if season == "Spring"
 		{
-			"\0\s[4]A lot of people try to eat outside during the spring\w2.\w2.\w2.\n\n\w8They kinda view it as like,\w4 a fun sorta thing. \w8It's like\w3.\w3.\w3.\w4 When kids build treehouses for fun.\w8\n\nMe and Dream live in a treehouse and usually eat near the apple tree,\w8\s[0]\i[11] so it's just really normal stuff but everyone else treats it like a novelty.\e"
+			"\0\s[4]Spring's drier in the village than most other seasons,\w5 so a lot of people enjoy the opportunity to eat outside.\w8 They actively%(lps(3)) cultivate the experience?\w8 It's like%(lps(3)), when there's enough free time for the kids to build a treehouse for fun.\w8\n\nThing is,\w5 me and Dream live in a treehouse and we usually eat near Mom's tree,\w5 so%(lps(3)) it's not that special to us.\w5 Just another way we're different,\w3 I guess.\w8\e"
+			//"\0\s[4]A lot of people try to eat outside during the spring\w2.\w2.\w2.\n\n\w8They kinda view it as like,\w4 a fun sorta thing. \w8It's like\w3.\w3.\w3.\w4 When kids build treehouses for fun.\w8\n\nMe and Dream live in a treehouse and usually eat near the apple tree,\w8\s[0]\i[11] so it's just really normal stuff but everyone else treats it like a novelty.\e"
 		}
 		if season == "Summer"
 		{
@@ -381,7 +383,7 @@ RandomTalk : nonoverlap_pool
 			\![*]\q[Yes,Yesvacation]\n/
 			\![*]\q[Maybe,Maybevacation]\n/
 			\![*]\q[No,Novacation]\e"
-			"\0\s[4]I read some people swim in the summer.\w4It sounds more like a human thing to me, \w4I'm pretty sure I'd sink.\e"
+			"\0\s[4]I liked swimming with Dream before\0\s[8]%(lps(4)) Well,\w3 I'd really end up just walking along the bottom of the lake because of bone density and all that.\w8\e"
 			"\0\s[13]Lots of people describe that it feels like they're melting when it's super hot\w2.\w2.\w2. \w5\0\s[19]I really hope they don't mean it\w2.\w2.\w2.\e"
 			if nicesadlevel >= 25
 			{
@@ -410,7 +412,7 @@ RandomTalk : nonoverlap_pool
 			//"\0\s[8]My brother's probably going to end up going to one of those big new years parties...\w8\n\n\0\s[12]I just hope I don't have to go.\w5 Reading's more fun than people.\e"
 			//"\0\s[13]I know a lot of people like to make new-years resolutions\w4.\w4.\w4. \w6Do you do that?\e"
 			//"\0\s[13]Hope that the year hasn't been too mean to you %(username)...\e"
-			"\0\s[4]While researching your world I found out that a lot of people make special kinds of beverages for winter, \w4like 'apple cider' and things like that. \w8\n\nI wonder what kind of apples you have in your world, because I doubt they're magic like ours, \w4with how occasionally and casually you eat things with them in it.\e:chain=ciderchain"
+			"\0\s[4]While researching your world I found out that a lot of people make special kinds of beverages for winter, \w4like 'apple cider' and things like that. \w8\n\nI keep having to remind myself that there are non-magic apples in other places,\w6 even with how often you casually eat things with apples in them.\e:chain=ciderchain"
 			"\0\s[13]I heard that in some places, during winter all the plants die and the trees lose their leaves.\w8\n\n\0\s[4].\w2.\w2.\w2That doesn't happen here,\w5 though.\n\n\w8There are kinda seasons,\w5 but it's more of a 'which part of the year is slightly colder or warmer' thing\w2.\w2.\w2.\e"
 			if nicesadlevel <= -10
 			{
@@ -680,7 +682,7 @@ Select.hugpurpleman
 {
 	lasttalked = 0
 	posact += 1
-	"\i[5]\s[7]* (You try to give him a hug,\w4 but the mouse cursor doesn't have arms...)\n\n\w8\s[3]What's with you trying to touch people anyways..."
+	"\i[5]\s[7]* (You try to give him a hug,\w4 but the mouse cursor doesn't have arms...)\n\n\w8\s[3]What's with you trying to touch people anyways...?"
 }
 Select.leavepurplemanalone
 {
@@ -727,12 +729,12 @@ Select.dreamfinechores
 }
 Select.dreamnofinechores
 {
-	"\0\s[0]\i[11]I don't think it's right either,\w6 but I can't do anything about it\w3.\w3.\w3.\w8\w4\n\nanDream has to spend so much time protecting me from people that I feel kind of\w3.\w3.\w3.\w3 Useless when trying to help them out.\w8\w4\n\n\s[12]'s not like I have the social power to do anything."
+	"\0\s[0]\i[11]I don't think it's right either,\w6 but I can't do anything about it\w3.\w3.\w3.\w8\w4\n\nanDream has to spend so much time protecting me from people that I feel kind of\w3.\w3.\w3.\w3 useless when trying to help them out.\w8\w4\n\n\s[12]'s not like I have the social clout to do anything."
 }
 	
 ciderchain
 {{CHAIN
-	"\0\s[0]Now that I think on it more,\w4 I wonder if the Mom's tree's apples taste anything like your world's apples.\e:chain=end"
+	"\0\s[0]Now that I think on it more,\w4 I wonder if the apples on Mom's tree taste anything like your world's apples.\e:chain=end"
 }}CHAIN
 
 //Time stuff

@@ -250,7 +250,7 @@ normalboottalk //All temp dialogue
 	{
 		"\0\s[19]* (He's back here again...)\e"
 		"\0\s[19]* (Aw,\w3 he's scared.)\e"
-		"\0\s[19]* (He shouldn't be super upset to be here honestly.\w5 Not like you treat him any worse then the people he lives with.)\e"
+		"\0\s[19]* (He shouldn't be super upset to be here, honestly.\w5 Not like you treat him any worse then the people he lives with.)\e"
 		"\0\s[22]* (Avoidant as always...)\e"
 	}
 	elseif RAND(100) < 40

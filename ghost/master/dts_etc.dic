@@ -59,7 +59,7 @@ OnInstallBegin
 {
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]Ah,\w4 somebody to replace me I see?\w8\n\n\0\s[4]Oh don't worry, \w4I'm not mad about it.\w5 Here, I'll even install it for you.\e"
+		"\0\s[1]Ah,\w4 somebody to replace me, I see?\w8\n\n\0\s[4]Oh don't worry, \w4I'm not mad about it.\w5 Here, I'll even install it for you.\e"
 		"\0\s[1]* (Installing file\w4.\w4.\w4.\w4)\e"
 	}
 	else
@@ -541,7 +541,7 @@ OnShellScaling
 		if nowmode == "Edgybitch"
 		{
 			"\0\s[1]You know\w3.\w3.\w3.\n\n\w8I wonder if I can change my size on my own.\e"
-			"\0\s[1]* (Biggest sized goop.)\e"
+			"\0\s[1]* (Biggest-sized goop.)\e"
 		}
 		else
 		{
@@ -555,7 +555,7 @@ OnShellScaling
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[1]Normal sized. \w8How boring.\e"
+			"\0\s[1]Normal-sized. \w8How boring.\e"
 		}
 		else
 		{
@@ -575,7 +575,7 @@ OnShellScaling
 		{
 			"\0\s[7]Um\w3.\w3.\w3. \w8\0\s[13]\n\nEverything is really big now.\e"
 			"%(surface0)\i[55]* (He doesn't seem to have noticed.)\e"
-			"%(surface0)\i[55]* (Smol sans.\w8 Fun sized sans.)\e"
+			"%(surface0)\i[55]* (Smol sans.\w8 Fun-sized sans.)\e"
 		}
 	}
 }

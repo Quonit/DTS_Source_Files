@@ -33,6 +33,10 @@ OnNameTeach
 	{
 		"\0\s[12]That's my brother's name. \w8You can't use it.\![open,inputbox,OnNameTeach,-1]"
 	}
+	elseif reference0 == "mare"
+	{
+		"\0\s[12]\w8Yeah\0\s[8]... I... No,\w4 \0\s[3]It's... \0\s[8]still too close to my name.\![open,inputbox,OnNameTeach,-1]"
+	}
 	elseif reference0 == "ink" || reference0 == "error"
 	{
 		username = tempname
@@ -53,7 +57,7 @@ OnNameTeach
 		username = tempname
 		"\0\s[3]I think I met somebody named that once...\w8 Anyways."
 	}
-	elseif reference0 == "mom" || reference0 == "mommy"
+	elseif reference0 == "mom" || reference0 == "mommy"  || reference0 == "mum"
 	{
 		"\0\s[11]...weirdo.\![open,inputbox,OnNameTeach,-1]"
 	}
