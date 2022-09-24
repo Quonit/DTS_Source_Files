@@ -931,7 +931,9 @@ Select.sspconfig
 	}
 	elseif VillageLevel >= 150
 	{
-		"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]"
+		"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]\w8\w8\w8\n\n/
+		*(You yell at \0\s[18]him for opening the wrong function.)\w8\n\n/
+		\0\s[19]Sorry! Sorry!\![open,configurationdialog] You'll  have to use CTRL+D to close the calendar.\w5 I'm-s- I'm sorry.\w8"
 	}
 	else
 	{
@@ -2051,7 +2053,7 @@ Select.itemsmenu
 	if sittang == "on"
 	{
 		sittang = "off"
-		"\0\s[16]"
+		"\0\s[16]\w5"
 	}
 	--
 	if nicesadlevel <= -50 && punchout >= 20
@@ -2423,8 +2425,9 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	//nowmode = "Edgybitch"
-	//"\![change,shell,Nightmare]"
+	"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]\w8\w8\w8\n\n/
+	*(You yell at \0\s[18]him for opening the wrong function.)\w8\n\n/
+	\0\s[19]Sorry! Sorry!\![open,configurationdialog] You'll  have to use CTRL+D to close the calendar.\w5 I'm-s- I'm sorry.\w8"
 	/*
 	_file = "changelog.txt"
 	_buff = ""

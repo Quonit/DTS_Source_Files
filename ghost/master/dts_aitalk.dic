@@ -175,7 +175,8 @@ RandomTalk : nonoverlap_pool
 		"* (He mumbles something you don't understand.)"
 		"* (He is resting.)"
 		"* (He's really knocked out.\w5 Probably a good thing he's resting.)"
-		"zzz%(lps(4))\w8\w8\w8bu'\w8 guns scarr,\w3%(lps(4))\w8\w8\w8zzz Kall'i zzz%(lps(4))\w8\w8\w8"
+		"zzz%(lps(4))\w8\w8\w8bu'\w8 guns scarr,\w3%(lps(4))\w8\w8\w8zzz Kall'iss zzz%(lps(4))\w8\w8\w8"
+		"zzz Bu' I%(lps(4)) zzz wanna tell evr'one zzz\w8"
 		"zzz\w4.\w4.\w4."
 		if punchout >= 3
 		{
@@ -234,7 +235,7 @@ RandomTalk : nonoverlap_pool
 		//Positive Route
 		if nicesadlevel >= 15
 		{
-			"\0\s[4]You know,\w5 swimming sounds kinda fun. \w6\0\s[6]Me and anDream do it sometimes!\n\n\w8\0\s[9]Though I had to stop cause.\w3\w3.\w3.\w5 later anDream would start inviting their friends too,\w4 and they-\n\n\w8\w4.\w4.\w4.\w5\0\s[12]I don't want to talk about it.\e"
+			"\0\s[4]You know,\w5 swimming sounds kinda fun. \w6\0\s[6]Me and anDream do it sometimes!\n\n\w8\0\s[9]Though I had to stop 'cause.\w3\w3.\w3.\w5 later anDream would start inviting their friends too,\w4 and they-\n\n\w8\w4.\w4.\w4.\w5\0\s[12]I don't want to talk about it.\e"
 			//Neither of these things work
 			"\0\s[13]I try to read poetry sometimes too\w2.\w2.\w2.\w6 I think it's also good,\w4 maybe I could try writing some at some point? \0\s[8]\w8Not like anybody would read it...\e"
 			if talkaboutlater != "on" && nightynight != "on" //If both of those are not equal (!=) to on

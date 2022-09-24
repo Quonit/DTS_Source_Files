@@ -444,7 +444,7 @@ speed
 /*
 
 OnES
-//you'll need my srievents.cgi file for this is you wanna use it
+//you'll need my srievents.cgi file for this if you wanna use it
 //i moved my copy from the Radio into your Extras folder, if you wanna try it out
 {
 	_year = GETTIME()[0]
