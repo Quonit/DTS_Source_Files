@@ -4,12 +4,14 @@ GroupFlagOverride,noupdateauto,
 scriptbox.left,1445
 Window.AlwaysOnTop,1
 shiori.debugnotify,0
+SurfaceTest.visible,1
 Char.VirtualDesktop,8d85ae08-b108-4537-bedd-1380ddef632a
 Update.TestMode,1
-Char0.center,1695
+Char0.center,1672
 scriptbox.top,447
-shell,shell\!original\
+shell,shell\Nightmare\
 FirstBoot,booted
-Char1.center,1041
+Char1.center,1521
 shell.ischanged.2,1
+DeveloperPalette.visible,1
 __system_written_flag_do_not_remove__,written
