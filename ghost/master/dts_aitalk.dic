@@ -987,7 +987,7 @@ OnSurfaceRestore
 		if hasdreamplush == "on"
 		{
 			"\0\s[26]\e"
-			"\s[0]\i[18]"
+			"\s[0]\i[22]"
 		}
 	}
 }
