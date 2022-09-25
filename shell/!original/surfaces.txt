@@ -113,6 +113,14 @@ surface0
 	//limp arm
 	animation8.interval,runonce
 	animation8.pattern0,overlay,1209,0,0,0
+	//Dream plush
+	animation18.interval,never
+	animation15.pattern0,stop,9
+	animation18.pattern0,overlay,1225,0,0,0
+	//Mare plush
+	animation19.interval,never
+	animation15.pattern0,stop,9
+	animation19.pattern0,overlay,1226,0,0,0
 
 	//Tentacles
 	animation16.interval,never
