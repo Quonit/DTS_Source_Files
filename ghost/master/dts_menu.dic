@@ -1130,7 +1130,7 @@ Onyouact
 {
 	if sittang == "on"
 	{
-		sittang == "off"
+		sittang = "off"
 		"\0\s[16]\w8"
 	}
 	--

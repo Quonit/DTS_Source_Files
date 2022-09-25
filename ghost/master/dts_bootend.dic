@@ -694,7 +694,7 @@ OnGhostChanging
 			"\0\s[1]\i[55]* (Switching to %(reference0).)"
 			"\0\s[1]Maybe I can find a better place to read while you catch up with %(reference0)..."
 		}
-		elseif nicesadlevel >= -10
+		elseif nicesadlevel <= -10
 		{
 			"\0\s[0]\i[13]Maybe I can find some better ways to spend my time while you're distracting yourself with %(reference0) instead."
 			"\0\s[0]\i[13]\i[15]Hope you aren't as much of a jerk to %(reference0)."
