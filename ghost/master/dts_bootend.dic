@@ -714,7 +714,7 @@ OnGhostChanging
 
 OnGhostChanged
 {
-	"\0\s[0]\i[55]\s[10]"
+	"\0\s[0]\i[55]"
 	--
 	if reference0 == "Dreamtale Sans"
 	{

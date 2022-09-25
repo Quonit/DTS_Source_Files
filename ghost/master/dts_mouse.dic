@@ -297,7 +297,7 @@ OnMouseDragEnd
 	}
 	else
  	{
- 		"\i[55]\s[10]"
+ 		"\i[55]"
 	}
 }
 
@@ -359,7 +359,7 @@ MouseDoubleClickSakura
 			}
 			if blushiemode == "on" || nicesadlevel >= 100
 			{
-				"\0\s[0]\i[55]* (You ask if you can see what he looks like without the crown on.)\n\n\w8\0\s[13]Well\w2.\w2.\w2.\w8 Only for a second.\n\n\w8\s[44]\i[1]* (He takes it off.)\n\n\w8It feels kind of bare without it on\w2.\w2.\w2.\w8\n\n\s[44]\i[2]* (He puts it back on.)\e"
+				"\0\s[0]\i[55]* (You ask if you can see what he looks like without the crown on.)\n\n\w8\0\s[13]Well\w2.\w2.\w2.\w8 Only for a second.\n\n\w8\s[26]\i[1]* (He takes it off.)\n\n\w8It feels kind of bare without it on\w2.\w2.\w2.\w8\n\n\s[26]\i[2]* (He puts it back on.)\e"
 			}
 		}
 		else //Default text
