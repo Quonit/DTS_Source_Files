@@ -9,7 +9,7 @@
 		{
 			Wallpaperfile = reference0
 			
-			"\0\s[0]The file you dropped is %(_filename)%(_fileext).\w8\i[55]How would you like us to set this picture as your wallpaper?\n\n[half]/
+			"\0\s[0]The file you dropped is %(_filename)%(_fileext).\w8\i[55]How would you like to set this picture as your wallpaper?\n\n[half]/
 			\q[Centered,SetWallpaper_0]\n/
 			\q[Tiled,SetWallpaper_1]\n/
 			\q[Stretched,SetWallpaper_2]\n\n/

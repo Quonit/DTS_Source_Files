@@ -76,8 +76,8 @@ RandomTalk : nonoverlap_pool
 		else
 		{
 			//moving some old dialogue to here WOW
-			"\0\s[1]\i[55]* (He seems to be stifling giggles.\w5 You wonder what he's reading.)\w8"
-			"\0\s[1]\i[55]* (You ask him what book he's reading.)\n\n\w8\0\i[8]\[20]Shouldn't you be able to read the cover yourself?\n\n\i[55]\w8*(You ask him if the book is good.)\n\n\w8\i[20]If it wasn't, do you think I'd be reading it?\e"
+			"\0\s[1]\i[14]\i[55]* (He seems to be stifling giggles.\w5 You wonder what he's reading.)\w8"
+			"\0\s[1]\i[55]* (You ask him what book he's reading.)\n\n\w8\0\i[8]\i[20]Shouldn't you be able to read the cover yourself?\n\n\i[55]\w8*(You ask him if the book is good.)\n\n\w8\i[20]If it wasn't, do you think I'd be reading it?\e"
 			"\0\s[1]\i[55]* (He looks very focused on his book.)\e"
 			"\0\s[1]\i[55]* (He doesn't say anything.\w8 He must be really interested in that book.)\e"
 			"\0\s[1]\i[55]* (You wonder if he's hungry about now...)\n\n\w8\![*]\q[Feed him something?,nightyneedstoeat]\e"
@@ -122,7 +122,7 @@ RandomTalk : nonoverlap_pool
 			if timeslot == "earlymorning"
 			{
 				"\0\s[1]\i[8]Shouldn't you be asleep by now?\e"
-				"\0\s[1]* (He doesn't look tired, somehow.)\e"
+				"\0\s[1]\i[55]* (He doesn't look tired, somehow.)\e"
 			}
 			if timeslot == "morning"
 			{
@@ -267,7 +267,7 @@ RandomTalk : nonoverlap_pool
 			"\0\s[32]* (He seems happy.)\e"
 			"\0\s[6]I think my brother would like to meet you one day! \w8\0\s[20]They'd be happy I made a friend, \w3y'know? \w6\0\s[13]Cause I don't have those at home.\n\n\w8\0\s[20]Thank you a lot...\e"
 			"\0\s[28]* (He's blushing a lot, for whatever reason.)"
-			"\0\s[0]\i[55]* (You ask him if he's ever had a crush on anybody.)\n\n\w8\0\s[28]Um- \w4well- \w2not- \w3not anybody at home at least!\e"
+			"\0\s[0]\i[55]* (You ask him if he's ever had a crush on anybody.)\n\n\w8\0\s[7]Um- \w4well- \w2\s[3]not- \w3\s[8]not anybody at home at least!\s[28]\e"
 			"\0\s[0]\i[55]* (You blow him a random kiss.)\n\n\w8\0\s[13]Um- \0\s[28]!\e"
 		}
 		//Misc
@@ -321,7 +321,7 @@ RandomTalk : nonoverlap_pool
 				}
 				when "Gaster"
 				{
-					"\0\s[4]\i[55]* (He eyes Gaster cautiously...)\n\n\w8I didn't know there were other skeletons besides me and Dream\w2.\w2.\w2.\e"
+					"\0\s[4]\i[55]* (He eyes Gaster cautiously...)\n\n\w8\i[23]I didn't know there were other skeletons besides me and Dream\w2.\w2.\w2.\e"
 					"\0\s[4]\i[55]* (He looks at Gaster...)\n\n\w8\i[23]He looks very\w2.\w2.\w2. \w8professional.\n\n\w8\w8\0\s[8]I wouldn't want to bother him\w2.\w2.\w2.\e"
 				}
 				when "Jockey"
@@ -440,7 +440,7 @@ RandomTalk : nonoverlap_pool
 		{
 			//Something something schooling. Usually me and Dream would have gotten caught up in lessons... gee I hope I'm not missing any lessons...
 			//"\0\s[4]I'm pretty sure school also starts on Mondays?\w8\n\nWe don't really have that where I'm from,\w4 usually parents just teach their kids at home\w2.\w2.\w2.\w4\0\s[9]\e"
-			"\0\s[0]\i[55]* (Smells like coffee.)\e"
+			"\0\s[0]\i[55]* (Smells like coffee%(lps(5)) \w8 Isn't he a little young for coffee?)\e"
 			"\0\s[13]Hope you don't have to work too hard today %(username).\e"
 		}
 		if weekday == 2 //Tuesday
@@ -477,7 +477,7 @@ RandomTalk : nonoverlap_pool
 		if timeslot == "earlymorning"
 		{
 			"\0\s[4]Is it morning for you now?\w8 It's hard to tell from in here.\e"		
-			"\0\s[0]* (You ask him for the time.)\w8\w8\n\nIt's still night, right?\w8\n\n* (You tell him to check the clock.)\w8\n\n\0\s[4]\w2*\w4(\w4.\w4.\w4.\w4)\w8\n\n\w8\0\s[8]I need to keep better track of time...\e"
+			"\0\s[0]* (You ask him for the time.)\w8\w8\n\nIt's still night, right?\w8\n\n* (You tell him to check the clock.)\w8\n\n\0\s[4]\i[55]\w2*\w4(\w4.\w4.\w4.\w4)\w8\n\n\w8\0\s[8]I need to keep better track of time...\e"
 			if nicesadlevel >= 25
 			{
 				"\0\s[0]\i[14]So,\w3 %(username),\w3 did you watch the sunrise as well?\n\n\w8Of course they're different sunrises,\w3 but it's still pretty.\e"
@@ -519,7 +519,7 @@ RandomTalk : nonoverlap_pool
 		if timeslot == "evening"
 		{
 			"\0\s[0]* (You tell him it's about dinnertime.)\n\n\w8\0\s[13]Oh, \w3I didn't notice.\w5 .\w4.\w4.Maybe you should go eat something.\e"
-			"\0\s[4]Sometimes it's difficult to catch the sun when it's setting\w3.\w3.\w3.\w8\n\nObviously you know when it is,\w8 but the entire village is surrounded by a thick forest,\w8 and especially a lot of the trees around the edge are really tall.\n\n\w8\s[0]\i[15]\i[14]I found that the best view is when you can get up on the old fire towers in the forest-\w8 Only me and anDream can go up there though,\w4 since no one else dares to go into the forest.\e"
+			"\0\s[4]Sometimes it's difficult to catch the sun when it's setting\w3.\w3.\w3.\w8\n\nObviously you know when it is,\w8 but the entire village is surrounded by a thick forest,\w8 and especially a lot of the trees around the edge are really tall.\n\n\w8\s[0]\i[15]\i[14]I found that the best view is when you can get up on the old fire towers-\w8 Only me and anDream can go up there though,\w4 since no one else dares to go into the forest.\e"
 		}
 		if timeslot == "latenight"
 		{
@@ -535,7 +535,7 @@ RandomTalk : nonoverlap_pool
 		if timeslot == "midnight"
 		{
 			"\0\s[0]\i[15]\i[55]* (You wonder if a spooky ghost will pop out in the middle of the night.)\n\n\w8\w8* (Oh look,\w8 a ghost's right here.)\e"
-			"\0\s[0]\i[15]\i[55]* (You tell %(nightname) he should be getting to bed,\w8 it's important to get the rest you need.)\n\n\w80\s[0]Yeah\w3.\w3.\w3.Probably.\w8\0\s[0]\i[11] Bet anDream would be happier if I could just sleep instead of whatever this is.\e"
+			"\0\s[0]\i[15]\i[55]* (You tell %(nightname) he should be getting to bed,\w8 it's important to get the rest you need.)\n\n\w80Yeah\w3.\w3.\w3.Probably.\w8\i[11] Bet anDream would be happier if I could just sleep instead of whatever this is.\e"
 			if nicesadlevel >= 50
 			{
 				"\0\s[5]\i[55]\w8\w8\w8\w8*( \w4.\w4.\w4.)\n\n\w8zzz\w4.\w4.\w4.\n\n\w8\w8* (Wow,\w3 he actually managed to sleep.)\![raise,Onsittangoffsleepingmodeon]"
@@ -578,7 +578,7 @@ Select.repsecttoyoumysir
 Select.besnoopbother
 {
 	lasttalked = 0
-	"\0\s[11]Couldn't you just leave me alone? \w8\w8\n\n\0\s[12]It's not like I decided to be here, \w8couldn't you maybe stop bothering me?\n\n\w8\w8* (Ask him what you've done wrong?)\n\n\![*]\q[Yes,besnoopbother1]\n\![*]\q[No,continuesnooping1]\e"
+	"\0\s[11]Couldn't you just leave me alone? \w8\w8\n\n\0\s[12]It's not like I decided to be here, \w8couldn't you maybe stop bothering me?\n\n\w8\w8\i[55]* (Ask him what you've done wrong?)\n\n\![*]\q[Yes,besnoopbother1]\n\![*]\q[No,continuesnooping1]\e"
 }
 Select.continuesnooping
 {
@@ -590,7 +590,7 @@ Select.besnoopbother1
 {
 	lasttalked = 0
 	snoop -= 5
-	"\0\s[12]* (You tell him you have no idea why he's mad.)\w8\n\n\0\s[21]You keep looking through my books while I'm reading!\n\n\w8* (You remind him that he told you that you should stop asking him what the book was and to just look at it.)\n\n\w8\0\s[12]\i[55]* (He looks down at the ground and crosses his arms like a kid.)\e"
+	"\0\s[12]\i[55]* (You tell him you have no idea why he's mad.)\w8\n\n\0\s[21]You keep looking through my books while I'm reading!\n\n\i[55]\w8* (You remind him that he told you that you should stop asking him what the book was and to just look at it.)\n\n\w8\0\s[12]\i[55]* (He looks down at the ground and crosses his arms like a kid.)\e"
 }
 Select.continuesnooping1
 {
@@ -682,6 +682,7 @@ Select.Goopmare
 	lasttalked = 0
 	nowmode = "Edgybitch"
 	wasemo = "on"
+	
 	"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Looks like you found me.\w4.\w4.\w5I'd say it's almost impressive.\w4 Especially if you didn't even know I was here, \w4the lengths you went through to torture him.\w8\n\n\0\s[1615]But, here you are. \w5Doesn't much matter what you said to him before.\w8\0\s[1613] You get to talk to me now.\![change,Shell,Nightmare]\e"
 }
 
@@ -728,6 +729,7 @@ Select.fivestay
 	negact += 5
 	"O-Oh\w2.\w2.\w2.\w8 I mean, if you could soon,\w3 then\w2.\w2.\w2."
 }
+	
 	
 Select.dreamfinechores
 {
@@ -987,7 +989,6 @@ OnSurfaceRestore
 		if hasdreamplush == "on"
 		{
 			"\0\s[26]\e"
-			"\s[0]\i[18]"
 		}
 	}
 }
