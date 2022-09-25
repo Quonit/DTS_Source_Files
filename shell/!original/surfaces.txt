@@ -858,13 +858,29 @@ surface43
 surface44
 {
 	element0,overlay,surface1044.png,0,0
-	//Crown
+	//Holding Crown
 	animation1.interval,never
+	animation1.pattern0,stop,3
+	animation1.pattern0,stop,4
 	animation1.pattern0,overlay,1218,0,0,0
 	//Put on
 	animation2.interval,never
-	animation2.pattern0,overlay,1219,0,0,0
-	animation2.pattern1,overlay,1220,500,0,0
+	animation2.pattern0,stop,3
+	animation2.pattern0,stop,4
+	animation2.pattern2,overlay,1219,0,0,0
+	animation2.pattern3,overlay,1220,500,0,0
+	//Normal Crown
+	animation3.interval,always
+	animation3.pattern0,overlay,1221,0,0,0
+	//Crossed arms
+	animation4.interval,always
+	animation4.pattern0,overlay,1222,0,0,0
+	//dream plush
+	animation5.interval,never
+	animation5.pattern0,overlay,1223,0,0,0
+	//mare plush
+	animation6.interval,never
+	animation6.pattern0,overlay,1224,0,0,0
 }
 
 //Positive Pick-Up
