@@ -69,7 +69,7 @@ RandomTalk : nonoverlap_pool
 			"\0\s[1]Least I'm allowed to sit down while I'm here." //Add pose
 			"\0\s[1]\i[55]\i[9]* (He looks annoyed...)"
 			"\0\s[1]Don't even know why I'm here if you aren't even paying attention to me\w3.\w3.\w3."
-			"\0\s[1]\i[55]* (You ask him what he's reading.)\n\n\w8\i[9]* (\w3.\w3.\w3.He eyes you annoyedly.)"
+			"\0\s[1]\i[55]* (You ask him what he's reading.)\n\n\w8\i[9]* \w3.\w3.\w3."
 			--
 			"\e"
 		}
@@ -77,7 +77,7 @@ RandomTalk : nonoverlap_pool
 		{
 			//moving some old dialogue to here WOW
 			"\0\s[1]\i[55]* (He seems to be stifling giggles.\w5 You wonder what he's reading.)\w8"
-			"\0\s[1]\i[55]* (You ask him what book he's reading.)\n\n\w8\0\i[8]\i[55]Shouldn't you be able to read the cover yourself?\n\n\w8*(You ask him if the book is good.)\n\n\w8If it wasn't, do you think I'd be reading it?\e"
+			"\0\s[1]\i[55]* (You ask him what book he's reading.)\n\n\w8\0\i[8]\[20]Shouldn't you be able to read the cover yourself?\n\n\i[55]\w8*(You ask him if the book is good.)\n\n\w8\i[20]If it wasn't, do you think I'd be reading it?\e"
 			"\0\s[1]\i[55]* (He looks very focused on his book.)\e"
 			"\0\s[1]\i[55]* (He doesn't say anything.\w8 He must be really interested in that book.)\e"
 			"\0\s[1]\i[55]* (You wonder if he's hungry about now...)\n\n\w8\![*]\q[Feed him something?,nightyneedstoeat]\e"
@@ -131,7 +131,7 @@ RandomTalk : nonoverlap_pool
 			if timeslot == "latenight"
 			{
 				"\0\s[1]\i[55]* (%(nightname) doesn't seem tired in the slightest.)\e"
-				"\0\s[1]\i[55]* (You ask %(nightname) if he's going to bed soon.)\n\n\w8\0\s[1]\i[7]\i[55]Are you?\e"
+				"\0\s[1]\i[55]* (You ask %(nightname) if he's going to bed soon.)\n\n\w8\i[7]\i[20]Are you?\e"
 			}
 			if timeslot == "midnight"
 			{
@@ -200,7 +200,7 @@ RandomTalk : nonoverlap_pool
 	elseif nicesadlevel <= -120 && punchout >= 80 && nowmode != "Edgybitch" //IT ADDS UP TO 200 OK
 	//VillageLevel >= 200 && punchout > 1 && (nicesadlevel < 1 || betrayalvar > 1)
 	{
-		"\t\*\0\s[22]* (You hear sniffing.)\w8\w8\0\s[23]\n\n* \f[italic,true]sniff sniff\f[italic,false],\n\n\w8\w4I want to go home-\w5 why can't I just go home?\n\n\w8\![*]\q[Push him over.,Goopmare]\e"
+		"\t\*\0\s[22]* (You hear sniffing.)\w8\w8\0\s[23]\n\n* \f[italic,true]sniff sniff\f[italic,false] *\n\n\w8\w4I want to go home-\w5 why can't I just go home?\n\n\w8\![*]\q[Push him over.,Goopmare]\e"
 	}
 	elseif nicesadlevel >= 50 && nightynight != "on" && talkaboutlater != "on" //This is a failsafe if it still hasn't triggered the dialogue, somehow.
 	{
@@ -212,7 +212,6 @@ RandomTalk : nonoverlap_pool
 	{
 		"\0\s[4]I wonder how things are back at home...\e"
 		"\0\s[4]I wish I had a staff or something. \w8That'd be cool.\e"
-		//"\0\s[4]I heard once that the golden apples on Mom's tree heal people of sickness. \w8\n\n\0\s[3]It sounds really important for something that was only mentioned once...\e"
 		"\0\s[4]I keep hearing that the golden apples on Mom's tree are valuable beause they heal people of sickness. \w8\n\n\0\s[3]They're more like painkillers... and\w5\0\s[8] it'd be nice if the dark apples had any use at all.\e"
 		"\0\s[4]\i[55]* (He looks like he's thinking about something else.)\e"
 		"\0\s[0]\i[11]\i[55]* (Smells like old books and purple.)\e"
@@ -227,7 +226,7 @@ RandomTalk : nonoverlap_pool
 		"\0\s[0]\i[11]\i[55]* (He's pretty quiet today.)\e"
 		"\0\s[7]\i[55]* (You poke him.)\n\n\w8\s[0]\i[13]\i[15]Could you not?\n\n\![*]\q[Hug him,hugpurpleman]\n\![*]\q[Respect his wishes,leavepurplemanalone]\e\e"
 		"\0\s[4]Kinda wonder what the world would be like if I never existed\w2.\w2.\w2.\w8\n\n\i[55]* (Is that normal for him?)\e"
-		"\0\s[0]\i[55]* (You ask him for the time.)\n\n\w8\s[4]It's\w3.\w3.\w3.\w8 Um\w3.\w3.\w3.\n\n\w8\i[55]* (You ask him why he doesn't know the time.\w8 There's a clock right in his menu.)\n\n\w8\0\s[4]Huh?"
+		"\0\s[0]\i[55]* (You ask him for the time.)\n\n\w8\s[4]It's\w3.\w3.\w3.\w8 Um\w3.\w3.\w3.\n\n\w8\i[55]* (You ask him why he doesn't know the time.\w8 There's a clock right in his menu.)\n\n\w8\i[23]Huh?"
 		//if dialogue
 		//Negative Route
 		if nicesadlevel <= -10
@@ -248,7 +247,7 @@ RandomTalk : nonoverlap_pool
 		{
 			"\0\s[4]You know,\w5 swimming sounds kinda fun. \w6\0\s[6]Me and anDream do it sometimes!\n\n\w8\0\s[9]Though I had to stop 'cause.\w3\w3.\w3.\w5 later people anDream knows would start inviting themselves along,\w4 and they-\n\n\w8\w4.\w4.\w4.\w5\0\s[12]I don't want to talk about it.\e"
 			//Neither of these things work
-			"\0\s[13]I try to read poetry sometimes too\w2.\w2.\w2.\w6 I think it's also good,\w4 maybe I could try writing some at some point? \0\s[8]\w8Not like anybody would read it...\e"
+			"\0\s[13]I read poetry sometimes\w2.\w2.\w2.\w6 There's so much really good out there,\w4 and I think maybe I could try writing some at some point? \0\s[8]\w8Not like anybody would read it...\e"
 			if talkaboutlater != "on" && nightynight != "on" //If both of those are not equal (!=) to on
 			{
 				"\0\s[9]\i[55]* (He looks upset.)\w8\w8\n\n* (Ask him what's wrong?)\n\n/
@@ -268,8 +267,8 @@ RandomTalk : nonoverlap_pool
 			"\0\s[32]* (He seems happy.)\e"
 			"\0\s[6]I think my brother would like to meet you one day! \w8\0\s[20]They'd be happy I made a friend, \w3y'know? \w6\0\s[13]Cause I don't have those at home.\n\n\w8\0\s[20]Thank you a lot...\e"
 			"\0\s[28]* (He's blushing a lot, for whatever reason.)"
-			"\0\s[0]\i[55]* (You ask him if he's ever had a crush on anybody.)\n\n\w8\0\s[28]\i[55]Um- \w4well- \w2not- \w3not anybody at home at least!\e"
-			"\0\s[0]\i[55]* (You blow him a random kiss.)\n\n\w8\0\s[28]\i[55]Um- \0\s[28]!\e"
+			"\0\s[0]\i[55]* (You ask him if he's ever had a crush on anybody.)\n\n\w8\0\s[28]Um- \w4well- \w2not- \w3not anybody at home at least!\e"
+			"\0\s[0]\i[55]* (You blow him a random kiss.)\n\n\w8\0\s[13]Um- \0\s[28]!\e"
 		}
 		//Misc
 		if hasdreamplush == "on"
@@ -322,8 +321,8 @@ RandomTalk : nonoverlap_pool
 				}
 				when "Gaster"
 				{
-					"\0\s[4]* (He eyes Gaster cautiously...)\n\n\w8I didn't think there were other skeletons\w2.\w2.\w2.\e"
-					"\0\s[4]\i[55]* (He looks at Gaster...)\n\n\w8\0\s[4]He looks very\w2.\w2.\w2. \w8professional.\n\n\w8\w8\0\s[8]I wouldn't want to bother him\w2.\w2.\w2.\e"
+					"\0\s[4]\i[55]* (He eyes Gaster cautiously...)\n\n\w8I didn't know there were other skeletons besides me and Dream\w2.\w2.\w2.\e"
+					"\0\s[4]\i[55]* (He looks at Gaster...)\n\n\w8\i[23]He looks very\w2.\w2.\w2. \w8professional.\n\n\w8\w8\0\s[8]I wouldn't want to bother him\w2.\w2.\w2.\e"
 				}
 				when "Jockey"
 				{
@@ -340,7 +339,7 @@ RandomTalk : nonoverlap_pool
 				}
 				when "Papyrus"
 				{
-					"\0\s[4]* (Smells like spaghetti.)\e"
+					"\0\s[4]\i[55]* (Smells like spaghetti.)\e"
 				}
 				when "Sans and Papyrus"
 				{
@@ -379,11 +378,10 @@ RandomTalk : nonoverlap_pool
 		if season == "Spring"
 		{
 			"\0\s[4]Spring's drier in the village than most other seasons,\w5 so a lot of people enjoy the opportunity to eat outside.\w8 They actively%(lps(3)) cultivate the experience?\w8 It's like%(lps(3)), when there's enough free time for the kids to build a treehouse for fun.\w8\n\nThing is,\w5 me and Dream live in a treehouse and we usually eat near Mom's tree,\w5 so%(lps(3)) it's not that special to us.\w5 Just another way we're different,\w3 I guess.\w8\e"
-			//"\0\s[4]A lot of people try to eat outside during the spring\w2.\w2.\w2.\n\n\w8They kinda view it as like,\w4 a fun sorta thing. \w8It's like\w3.\w3.\w3.\w4 When kids build treehouses for fun.\w8\n\nMe and Dream live in a treehouse and usually eat near the apple tree,\w8\s[0]\i[11] so it's just really normal stuff but everyone else treats it like a novelty.\e"
 		}
 		if season == "Summer"
 		{
-			"\0\s[0]I wonder how hot it gets for you\w2.\w2.\w2. \w8but where I'm from it never really gets more then a little warm.\e"
+			"\0\s[0]I wonder how hot it gets for you\w2.\w2.\w2. \w8Where I'm from it never really gets more than a little warm.\e"
 			"\0\s[4]A lot of the gardens start sprouting around summer\w3.\w3.\w3.\n\n\w8Me and anDream were often asked to help out,\w5 though people don't ask me as much anymore...\w8 So usually anDream often gets rounded up into helping with other people's chores\w2.\w2.\w2.\n/
 			\![*]\q[Sounds off,dreamfinechores]\n/
 			\![*]\q[Sounds bad,dreamnofinechores]\n/
@@ -397,7 +395,7 @@ RandomTalk : nonoverlap_pool
 			"\0\s[13]Lots of people describe that it feels like they're melting when it's super hot\w2.\w2.\w2. \w5\0\s[19]I really hope they don't mean it\w2.\w2.\w2.\e"
 			if nicesadlevel >= 25
 			{
-				"It doesn't rain that heavily in summer back in the village, but when it does...\w5 Sometimes we get thunderstorms.\w8 I've always liked them.\w5 The noise,\w3 and the%(lps(3))\w8 Dream tends to stay in the treehouse with me,\w3 when they can.\w8"
+				"\0\s[4]It doesn't rain that heavily in summer back in the village, but when it does...\w5 Sometimes we get thunderstorms.\w8 I've always liked them.\w5 The noise,\w3 and the%(lps(3))\s[13]\w8 Dream tends to stay in the treehouse with me,\w3 when they can.\w8"
 			}
 			
 		}
@@ -405,7 +403,7 @@ RandomTalk : nonoverlap_pool
 		{
 			"\0\s[4]Lots of berries should start being good to pick this month.\n\n\w8I always like doing that,\w4 it's one of the few things I'm still able to enjoy.\w6\0\s[8] Though,\w2 sometimes it stains my clothes a bit.\e"
 			"\0\s[4]I used to love carving pumpkins with anDream,\w4 but-\0\s[8]\w8Um...\n\n\w8\0\s[13]I still can cook the seeds after though.\w6 That's a fun thing to do...\e"
-			"Do the trees change color where you are?\w8 I've read about that,\w5 the leaves turning gold and red in the autumn.\w8\w6 Sometimes I wonder what Mom's tree would look like like that,\w5 but then I remember that it's the leaves dying,\w3 so...\w6"
+			"\0\s[4]Do the trees change color where you are?\w8 I've read about that,\w5 the leaves turning gold and red in the autumn.\w8\w6 Sometimes I wonder what Mom's tree would look like like that,\0\s[3]\w5 but then I remember that it's the leaves dying,\w3 so...\w6"
 		}
 		if season == "Winter" 
 		{
@@ -482,11 +480,11 @@ RandomTalk : nonoverlap_pool
 			"\0\s[0]* (You ask him for the time.)\w8\w8\n\nIt's still night, right?\w8\n\n* (You tell him to check the clock.)\w8\n\n\0\s[4]\w2*\w4(\w4.\w4.\w4.\w4)\w8\n\n\w8\0\s[8]I need to keep better track of time...\e"
 			if nicesadlevel >= 25
 			{
-				"\0\s[0]\i[55]\i[14]So,\w3 %(username),\w3 did you watch the sunrise as well?\n\n\w8Of course they're different sunrises,\w3 but it's still pretty.\e"
+				"\0\s[0]\i[14]So,\w3 %(username),\w3 did you watch the sunrise as well?\n\n\w8Of course they're different sunrises,\w3 but it's still pretty.\e"
 			}
 			if hastea == "on"
 			{
-				"\0\s[26]* (He's drinking coffee.)\e"
+				"\0\s[27]* (He's drinking coffee.)\e"
 			}
 		}
 		if timeslot == "morning"
@@ -516,7 +514,7 @@ RandomTalk : nonoverlap_pool
 				"\0\s[8]\i[55]* (He looks tired.)\w8\n\n* (That's strange,\w4 it's the middle of the afternoon.)\e"
 				"\0\s[8]\i[55]* (%(nightname) is acting tired..)\w8\n\n* (You ask him if he's going to take a nap.)\n\n\w8Maybe\w4.\w4.\w4.\n\n\w8\0\s[1]\i[55]* (He sits down.)\e:eval=sittang='on'"
 			}
-			"\0\s[8]\i[55]* (You ask %(nightname) if he wants a snack.)\0\s[4]\w8\n\nOh,\w3 sure.\n\n\w8* (You hand him some fruit snacks.)\0\s[25]\e"
+			"\0\s[8]\i[55]* (You ask %(nightname) if he wants a snack.)\0\s[4]\w8\n\nOh,\w3 sure.\n\n\w8\i[55]* (You hand him some fruit snacks.)\0\s[25]\e"
 		}
 		if timeslot == "evening"
 		{
@@ -537,7 +535,7 @@ RandomTalk : nonoverlap_pool
 		if timeslot == "midnight"
 		{
 			"\0\s[0]\i[15]\i[55]* (You wonder if a spooky ghost will pop out in the middle of the night.)\n\n\w8\w8* (Oh look,\w8 a ghost's right here.)\e"
-			"\0\s[0]\i[15]\i[55]* (You tell %(nightname) he should be getting to bed,\w8 it's important to get the rest you need.)\n\n\w8Yeah\w3.\w3.\w3.Probably.\w8\0\s[0]\i[11] Bet anDream would be happier if I could just sleep instead of whatever this is.\e"
+			"\0\s[0]\i[15]\i[55]* (You tell %(nightname) he should be getting to bed,\w8 it's important to get the rest you need.)\n\n\w80\s[0]Yeah\w3.\w3.\w3.Probably.\w8\0\s[0]\i[11] Bet anDream would be happier if I could just sleep instead of whatever this is.\e"
 			if nicesadlevel >= 50
 			{
 				"\0\s[5]\i[55]\w8\w8\w8\w8*( \w4.\w4.\w4.)\n\n\w8zzz\w4.\w4.\w4.\n\n\w8\w8* (Wow,\w3 he actually managed to sleep.)\![raise,Onsittangoffsleepingmodeon]"
@@ -586,7 +584,7 @@ Select.continuesnooping
 {
 	lasttalked = 0
 	snoop -= 5
-	"\0\s[12]\i[55]* (You decide to accept his terms. \w8\0\s[6]\i[55]\s[10]He looks happier now.)\n\n\w8\w8* (You feel somewhat accomplished.)"
+	"\0\s[12]\i[55]* (You decide to accept his terms. \w8\0\s[6]\i[55]He looks happier now.)\n\n\w8\w8* (You feel somewhat accomplished.)"
 }
 Select.besnoopbother1
 {
@@ -782,7 +780,7 @@ OnMinuteChange
 		}
 		elseif hour == 5
 		{
-			"\0\s[7]\i[55]* (He notices what time it is.)\n\n\w8Ah-\w4 I better get back home soon.\n\n\w8Otherwise Dream might notice I'm not there when they wake up\w2.\w2.\w2. \w4And\w2.\w2.\w2.\n\n\w8* (Let him leave?)\n\n/
+			"\0\s[7]\i[55]* (He notices what time it is.)\n\n\w8\0\s[7]Ah-\w4 I better get back home soon.\n\n\w8Otherwise Dream might notice I'm not there when they wake up\w2.\w2.\w2. \w4And\w2.\w2.\w2.\n\n\w8\i[55]* (Let him leave?)\n\n/
 			\![*]\q[Yes,fiveleave]\n/
 			\![*]\q[No,fivestay]\e"
 			}

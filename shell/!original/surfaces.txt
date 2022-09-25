@@ -69,7 +69,7 @@ surface0
 	//Annoyed
 	animation11.interval,never
 	animation11.pattern1,stop,7
-	animation11.pattern0,overlay,1121,0,0,0
+	animation11.pattern0,overlay,1121,0,-1,0
 	
 	//Worried Eyes
 	animation12.interval,never
@@ -136,6 +136,19 @@ surface0
 	animation17.pattern1,interpolate,1302,80,0,0
 	animation17.pattern2,interpolate,1303,80,0,0
 	animation17.pattern3,interpolate,0,80,0,0
+
+	//testing annoyed eyes - 18, 19, 20
+	animation18.interval,never
+	animation18.pattern1,stop,7
+	animation18.pattern0,overlay,1121,0,-1,0
+
+	animation19.interval,never
+	animation19.pattern1,stop,7
+	animation19.pattern0,overlay,1121,0,-2,0
+
+	animation20.interval,never
+	animation20.pattern1,stop,7
+	animation20.pattern0,overlay,1121,0,-3,0
 
 	//Blushies
 	animation100.interval,bind
@@ -662,7 +675,43 @@ surface26
 	collision1,108,46,168,87,Face
 	collision2,136,95,171,130,Dollie
 	collisionex3,Skull,polygon,118,58,119,38,145,22,164,31,180,45,155,56
-	element1,overlay,surface1025.png,0,0
+	
+	element0,overlay,surface1044.png,0,0
+	
+	//if you want him to fold his arms without the doll
+	animation0.interval,never
+	animation0.pattern0,stop,5
+	
+	//Holding Crown
+	animation1.interval,never
+	animation1.pattern0,stop,3
+	animation1.pattern1,stop,4
+	animation1.pattern2,stop,5
+	animation1.pattern3,overlay,1218,0,0,0
+	//Put on
+	animation2.interval,never
+	animation2.pattern0,stop,3
+	animation2.pattern1,stop,4
+	animation2.pattern2,stop,5
+	animation2.pattern3,overlay,1219,0,0,0
+	animation2.pattern4,overlay,1220,500,0,0
+	//Normal Crown
+	animation3.interval,runonce
+	animation3.pattern0,overlay,1221,0,0,0
+	//Crossed arms
+	animation4.interval,runonce
+	animation4.pattern0,overlay,1222,0,0,0
+	//dream plush
+	animation5.interval,runonce
+	animation5.pattern0,overlay,1223,0,0,0
+	//mare plush
+	animation6.interval,never
+	animation6.pattern0,stop,5
+	animation6.pattern1,overlay,1224,0,0,0
+	//Look up eyes
+	animation7.interval,never
+	animation7.pattern0,overlay,1135,0,0,0
+
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1625,0,0,0
@@ -868,19 +917,19 @@ surface44
 	//Holding Crown
 	animation1.interval,never
 	animation1.pattern0,stop,3
-	animation1.pattern0,stop,4
-	animation1.pattern0,overlay,1218,0,0,0
+	animation1.pattern1,stop,4
+	animation1.pattern2,overlay,1218,0,0,0
 	//Put on
 	animation2.interval,never
 	animation2.pattern0,stop,3
-	animation2.pattern0,stop,4
+	animation2.pattern1,stop,4
 	animation2.pattern2,overlay,1219,0,0,0
 	animation2.pattern3,overlay,1220,500,0,0
 	//Normal Crown
-	animation3.interval,always
+	animation3.interval,runonce
 	animation3.pattern0,overlay,1221,0,0,0
 	//Crossed arms
-	animation4.interval,always
+	animation4.interval,runonce
 	animation4.pattern0,overlay,1222,0,0,0
 	//dream plush
 	animation5.interval,never

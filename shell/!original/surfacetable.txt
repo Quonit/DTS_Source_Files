@@ -18,7 +18,7 @@ group,G
 	16,Up0
 	10,Null
 	11,Slight Disgust
-	12,Minor Annoyence
+	12,Minor Annoyance
 	13,Shy
 	14,Joking
 	15,hum
