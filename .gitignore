@@ -1,17 +1,14 @@
 
-
-yaya_variable.cfg
+ghost\master\yaya_variable.cfg
 ghost.dat
 ghost.dat.bak
 history.dat
 var.txt
 shell.dat
 shell.dat.bak
-yaya_variable.cfg
-ghost/master/descript.txt
-ghost/master/profile/ghost.dat
+ghost\master\descript.txt
+ghost\master\profile\ghost.dat
 *.dat
 *.bak
 *.dat
 *.bak
-ghost/master/yaya_variable.cfg

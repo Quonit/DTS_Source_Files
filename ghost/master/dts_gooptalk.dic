@@ -244,6 +244,10 @@ Select.checkinguout2
     "\0\s[0]\i[55]* (NIGHTMARE - ATK ?? DEF ??)\n* (Hates you and everyone...?)\n\n"
     "\0\s[0]\i[55]* (GOOPMARE - ATK ?? DEF ??)\n* (Edgy.)\n\n"
     "\0\s[0]\i[55]* (GOOPMARE - ATK ?? DEF ??)\n* (Spoiled the whole barrel?)\n\n"
+	if nightynight == "on"
+	{
+    "\0\s[0]\i[55]* (MARE - ATK ?? DEF ??)\n* (The ''Mare'' of Night-Mare.)\n\n"
+	}
 }
 
 Select.Oncomplementeegoop
