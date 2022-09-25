@@ -27,6 +27,7 @@ surface.append0-9
 	animation102.pattern4,start,102
 	
 	//DISAPPEAR THE TENTACLES
+	animation104.interval,never
 	animation104.pattern0,stop,100
 	
 	//Pull in
@@ -35,7 +36,7 @@ surface.append0-9
 	animation105.pattern1,interpolate,1006,0,0,0
 	animation105.pattern2,interpolate,1005,80,0,0
 	animation105.pattern3,interpolate,1004,80,0,0
-	animation105.pattern4,interpolate,0,80,0,0
+	animation105.pattern4,interpolate,-1,80,0,0
 	
 	//Pull out
 	animation106.interval,never
@@ -43,7 +44,7 @@ surface.append0-9
 	animation106.pattern1,interpolate,1004,0,0,0
 	animation106.pattern2,interpolate,1005,80,0,0
 	animation106.pattern3,interpolate,1006,80,0,0
-	animation106.pattern0,start,100
+	animation106.pattern4,start,100
 }
 
 sakura.cursor

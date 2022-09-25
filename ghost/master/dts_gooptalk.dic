@@ -11,7 +11,7 @@ GoopTalk : nonoverlap_pool
     "\0\s[1]Honestly,\w3 anDream is \f[italic,true]such\f[italic,false] an extrovert.\n\n\w8\0\s[1]I bet it would be heartbreaking to see if they found out that all their friends were liars.\e"
     "\0\s[0]* (You ask the goop if he reads at all.)\0\s[1]\n\n\w8Please,\w4 the only reason the other one did it is because there was nothing else to do.\n\n\w8 I'm sure if his universe had phones or anything of that sort he would've scurried off with one of those,\w4 since he just wants a way to avoid people.\e"
 	{
-		"\0\s[0]* (You ask the goop if he likes reading.)\0\s[1]\n\n\w8Please.\w4\0\s[0] The only reason the purple one did it is to avoid people. If he had the option,\w5 he'd've been on his phone all the time.\w8"
+		"\0\s[0]* (You ask the goop if he likes reading.)\0\s[7]\n\n\w8Please.\w4\0\s[0] The only reason the purple one did it is to avoid people. If he had the option,\w5 he'd've been on his phone all the time.\w8"
 		--
 		if exh > 100
 		{
@@ -146,7 +146,7 @@ Select.heisntbluffing
 }
 Select.feedgoopy
 {
-	"\0\s[6]God,\w3 you actually fell for that??\n\n\w8\0\s[8]You idiot...\e"
+	"\0\s[7]God,\w3 you actually fell for that??\n\n\w8\0\s[8]You idiot...\e"
 }
 
 Select.askaboutcorpses
