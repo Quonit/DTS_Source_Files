@@ -1553,7 +1553,7 @@ Select.flirtyflirt
 		"\0\s[1]\i[55]* (You ask him if he can come to your place some time.)\n\n\w8\w4\0\s[1]\i[8]\i[55]That doesn't sound possible? \w8I can't even go back to my home,\w4 how am I supposed to appear in yours?\n\n\w8\w4* (You tell him you meant metaphorically.)\n\n\w8\w4That still doesn't make any sense. How would I metaphorically go to your place?\w8\n\n* (\w3.\w3.\w2.You give up.)\n\n"
 		"\0\s[1]\i[55]* (You wonder outloud what a skeleton like him is doing in a place like this.)\n\n\w8\0\s[1]\i[8]\i[55]You brought me here?\n\n"
 		*/
-		"\0\s[0]\i[55]* (You tell him he's the apple of your eye.\n\n\w8\0\s[0]\i[11]\i[55]I... what?\n\n* (Looks like he's never heard the phrase before.)\w8\n\n"
+		"\0\s[0]\i[55]* (You tell him he's the apple of your eye.)\n\n\w8\0\s[0]\i[11]I... what?\n\n* (Looks like he's never heard the phrase before.)\w8\n\n"
 		"\0\s[0]\i[55]* (You tell him you're horribly lost, \w3and need directions to his heart.)\n\n\w8\0\s[12]\i[55]Stop being weird about it...\n\n"
 		"\0\s[0]\i[55]* (You tell him you're going to the optometrist to get your eyes checked. \w7For some reason, \w4you can’t take them off of him.)\n\n\0\s[4]\w8\i[55]What's an optometrist?\n\n"
 		"\0\s[0]\i[55]* (You ask if you can tie his shoes.\w6 You couldn't want anybody else falling for him.)\n\n\0\s[4]\i[55]\w8My shoes don't have laces though?\n\n"
@@ -1830,7 +1830,7 @@ Select.reexplaincrown
 	}
 	elseif nowmode == "Edgybitch"
 	{
-		"\0\s[1]The crowns were really meaningful to Dream, \w2too.\n\n\w8It's why I got rid of it."
+		"\0\s[1]The crowns were really meaningful to anDream, \w2too.\n\n\w8It's why I got rid of it."
 	}
 	elseif blushiemode == "on" || nicesadlevel >= 100
 	{
@@ -1838,7 +1838,7 @@ Select.reexplaincrown
 	}
 	elseif nicesadlevel >= 25
 	{
-		"\0\s[4]\w2.\w2.\w2.\w2I think Dream is more attached to their crown than I am to mine.\w8\n\n\s[15]I think it's cool and all,\w5 pretty as well,\w4\s[13] but I'm fine with taking it off every once in a while.\w8 \s[4]I have a mark on my head anyways\w2.\w2.\w2.\w8\s[13] But I don't think I've ever really seen Dream take theirs off."
+		"\0\s[4]\w2.\w2.\w2.\w2I think anDream is more attached to their crown than I am to mine.\w8\n\n\s[15]I think it's cool and all,\w5 pretty as well,\w4\s[13] but I'm fine with taking it off every once in a while.\w8 \s[4]I have a mark on my head anyways\w2.\w2.\w2.\w8\s[13] But I don't think I've ever really seen anDream take theirs off."
 	}
 	else
 	{
@@ -2015,7 +2015,7 @@ Select.looksoul
 		else
 		{
 			"\0\s[0]\i[11]Well\w2.\w2.\w2.\w8\n\n\w8\i[55]* (He still seems hesitant,\w8 but he thinks about it.)\n\n\w8\s[0]\i[12]As long as you promise not to touch it.\n\n"
-			"\0\s[4]Hm\w2.\w2.\w2.\w8\n\n\i[55]* (He considers it.)\n\n\w8\s[13]\w2.\w2.\w2.\w8Only if you promise not to touch it."
+			"\0\s[4]Hm\w2.\w2.\w2.\w8\n\n\i[55]* (He considers it.)\n\n\w8\s[13]\w2.\w2.\w2.\w8Only if you promise not to touch it.\n\n"
 			--
 			"\![*]\q[Promise,Onnotouchsoul]\n/
 			\![*]\q[Do Not,dotouchsoul]\e"
@@ -2279,7 +2279,7 @@ Select.nightyneedstoeat
 		{
 			"\0\s[0]\i[55]* (You offer him a bowl of soup.)\n\n\w8* (He looks it over.)\n\n\w8What's in it?\n\n\w8* (You ask him if he wants any.)\w8\n\n\0\s[11]Uhm\w4.\w4.\w4. \w7no thank you?\w8\i[55]\n\n"
 			"\0\s[0]\i[55]* (You offer a salad to him.)\n\n\w8* (He takes the bowl \0\s[25]\i[55] and uses his hands to eat the leaves first.)\w8\n\n* (He doesn't say thank you but you know he's happy.)\w8\n\n"
-			"\0\s[1]\i[55]* (You slice a tangerine for him.)\n\n\w8\0\s[1]\i[7]* (He picks at it.)\0\s[1]\i[39]\i[55]\n\n"
+			"\0\s[1]\i[55]* (You slice a tangerine for him.)\n\n\w8\0\s[1]\i[7]\i[55]* (He picks at it.)\0\s[1]\i[39]\i[55]\n\n"
 			if blushiemode == "on"
 			{
 				"\0\s[0]\i[55]* (You hand him a box full of cookies decorated with heart shapes.)\w8\n\n\0\s[20]\i[55]He smiles.\n\n\w8\0\s[20]Aww\w3.\w3.\w3. \w6Thank you, %(username). \w6It means a lot to me.\0\s[25]\i[55]\w8\n\n"
@@ -2411,7 +2411,7 @@ Onnotouchsoul
 	"\w8\w8\w8\w8\n\n\0\s[12]There,\w5 happy?"
 	"\w8\w8\w8\w8\n\n\0\s[0]..."
 	--
-	"\![*]\q[ASK another question,youtalk]\n/
+	"\n\n\![*]\q[ASK another question,youtalk]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 Select.dotouchsoul

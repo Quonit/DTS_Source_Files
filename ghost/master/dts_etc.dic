@@ -604,6 +604,7 @@ MenuCheck
 
 Onsittangoffsleepingmodeon
 {
+	sleptiem = 1
 	sittang = "off"
 	sleepingmode = "on"
 	"\![bind,Blanket,cape,0]"

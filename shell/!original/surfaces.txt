@@ -810,7 +810,6 @@ surface41
 //SOUL
 surface42
 {
-	collision0,118,34,197,53,Crown
 	collision1,118,60,179,93,Face
 	collision2,136,108,165,140,Soul
 	element0,overlay,surface1042.png,0,0

@@ -232,6 +232,29 @@ OnBoot
 			nowmode = "Edgybitch"
 			dontmovestatsitshalloween = "on"
 			"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Ah, I bet you're somewhat confused. \w6Especially if you've been treating him nicely, \w2so it makes no sense for this to have happened.\0\s[1615]Well,\w4 there are a few reasons. \n\n\w8\0\s[1613]Quonit, the idiot who made this ghost, felt empathetic towards people who wouldn't go down the 'bad route' because they are too cowardly.\n\n\w8And another reason is because I'm a much better Halloween event then the crown-wearing idiot.\n\n\w8Just so you don't go whining at them about it, I'll warn you that some of the things I might say will be out of place if you're on the good route. \n\n\w8Don't worry though, \w4tomorrow everything will go back to normal. \w8Hopefully.\0\s[0]\![change,Shell,Nightmare]\e"
+			
+			/*
+			"\0\s[nightmare]\w8\w8Well, well.\w8"
+			--
+			if %TOLOWER(username) != "user"
+			{
+				"'%(username)', is it?"
+			}
+			else
+			{
+				"'%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
+			}
+			"\n\n\w8 I hear you've been giving a certain skeleton a bad time.\w8 Well,\w6 congratualtions.\w8\w7 You get to deal with me\w6 now.\w8"
+			--
+			if nicesadlevel >= 25
+			{
+				"\n\n* (You try to explain that you haven't been mistreating %(nightname), but the goop isn't having it.)"
+			}
+			--
+			"\n\n* (You get the feeling things might go back to normal after Halloween%(lps(5))/
+			\0\s[0]\![change,Shell,Nightmare]\e"
+			
+			*/
 		}
 		else
 		{

@@ -90,6 +90,7 @@ RandomTalk : nonoverlap_pool
 			if nicesadlevel >= 25
 			{
 				"\0\s[1]\i[55]\w8.\w8.\w8.\n\n\w8\w8\w8\w8\0\s[5]\i[55]\w8\w8\w8Z\w6Z\w6Z\w6.\w6.\w6.\w8\w8\w8\n\n* (It looks like he fell asleep.)\w8\n\n* (Poor thing\w3.\w3.\w3.\w8 He must've not slept during night.)\![raise,Onsittangoffsleepingmodeon]"
+				
 			}
 			if nicesadlevel >= 50
 			{
@@ -142,49 +143,58 @@ RandomTalk : nonoverlap_pool
 	{
 		"\0\s[5]"
 		--
-		//wake up!
-		"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I fell asleep?\![raise,OnWakeyWake]\e"
-
-		"* (He won't notice if you look through his book now.)\e"
-		"zzz\w4.\w4.\w4. \w8\w8anDream\w4.\w4.\w4. \w8\w8\w8zzz\w4.\w4.\w4. \w8\w8stop\w4.\w4.\w4. \w8flyin' away\w4.\w4.\w4. \w8\w8\w8'm tryna talk to ya\w4.\w4.\w4. \w8zzz\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8 Stop it\w4.\w4.\w4. \w8das' dumb\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8 yur gonna die Killer\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4. Cross don't\w4.\w4.\w4. cant' leave\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8 Timeline\w4.\w4.\w4.\w5 's gonna\w4.\w4.\w4. \w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 collapse\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\e"
-		"* (You wonder what he's dreaming about...)\e"
-		"zzz\w4.\w4.\w4. don't\w4.\w4.\w4. zzz\w4.\w4.\w4. don't touch th' apples\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4. zzz\w4.\w4.\w4. 's a Sylveon\w4.\w4.\w4. zzz\w4.\w4.\w4. 's mine\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4. flowers\w4.\w4.\w4. \w8\w8\w8stop\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4. Cillium\w4.\w4.\w4. zzz\w4.\w4.\w4. where's she\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Stupid\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 AU wiki\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Fake information\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Nah\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Why i gotta go to a'\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8 Stup'd wedding\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Big dumb castle\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Who's g'na even clean it\w4.\w4.\w4.\w4?\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Knives\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Stop bein' gross\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 anDream\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Stop runnin' away\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Stupid sun\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Makes me all sticky\w4.\w4.\w4.\w8\w8 g'na stain the couch\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Dust\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8My'better keep 'n eye on him\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 He'a trouble-mak'r\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Killer\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Just get 'long wi' 'em\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 Please.\w4.\w4.\w4\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 \w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8's wrong w' John.\w4.\w4.\w4\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Y'\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Y'not useless\w4.\w4.\w4.\e"
-		"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Jus' eat it 'lready\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4\e"
-		"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Wha'\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8 Twins\w4.\w4.\w4.\w4?\w8\w8 I ain't e'en wan' one\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Tszzz\w4.\w4.\w4.\w8\w8\w8 Tszzz\w4.\w4.\w4.\w8\w8\w8 I'mma snake,\w4 hehe\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Staph it\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 I'm tiny but I c'n still hurt you\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 Stop\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Stop bein' nice to each other\w4.\w4.\w4. \w8zzz\w4.\w4.\w4.\w8\w8\w8's gross\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4.\w8\w8\w8 woooo\w4.\w4.\w4. \w4zzz\w4.\w4.\w4. \w8\w8\w8Meme Squad\w4.\w4.\w4.\w8\w8\w8 hehe\w4.\w4.\w4.\e"
-		"zzz\w4.\w4.\w4. Cross\w4.\w4.\w4. zzz\w4.\w4.\w4. stop runnin' off\w4.\w4.\w4. \w8\w8\w8 zzz\w4.\w4.\w4.\e"
-		"* (He mumbles something you don't understand.)"
-		"* (He is resting.)"
-		"* (He's really knocked out.\w5 Probably a good thing he's resting.)"
-		"zzz%(lps(4))\w8\w8\w8bu'\w8 guns scarr,\w3%(lps(4))\w8\w8\w8zzz Kall'iss zzz%(lps(4))\w8\w8\w8"
-		"zzz Bu' I%(lps(4)) zzz wanna tell evr'one zzz\w8"
-		"zzz\w4.\w4.\w4."
-		if punchout >= 3
+		if RAND(34/sleptiem) < 1
 		{
-			"* (He tenses.)\n\n\w8Stop\w4.\w4.\w4.\w8\w8\w8 Don't touch me\w4.\w4.\w4."
-			"zzz\w4.\w4.\w4.\w8\w8\w8 ngck\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 not again\w4.w4.\w4. zzz\w4.\w4.\w4.\w8\w8\w8 leave me 'lone\w4.\w4.\w4."
-			"zzz\w4.\w4.\w4.\w8\w8\w8 Just\w4.\w4.\w4. zzz\w4.\w4.\w4.\w8\w8\w8 I wanna go home\w4.\w4.\w4."
-			"zzz\w4.\w4.\w4.\w8\w8\w8 sorry\w4.\w4.\w4. \w8I'm sorry\w4.\w4.\w4. sorry... \w4sorry...\w8"
-			"zzz\w4.\w4.\w4.\w8\w8\w8 Ngh\w2.\w2.\w2.\w8 No\w4, don't\w4.\w4.w4.\w8 Stop\w4.\w4.\w4.\w8"
+			//wake up!
+			"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I fell asleep?\![raise,OnWakeyWake]\e"
+		}
+		else
+		{	
+			//wake up!
+			"zzz\w4.\w4.\w4.\w8\0\s[37]hm\w4.\w4.\w4.\w4?\w8\w8 Oh\w4.\w4.\w4.\n\n\w8\w8\0\s[16]\w8\0\s[8]I fell asleep?\![raise,OnWakeyWake]\e"
+
+			"* (He won't notice if you look through his book now.)\e"
+			"zzz\w4.\w4.\w4. \w8\w8anDream\w4.\w4.\w4. \w8\w8\w8zzz\w4.\w4.\w4. \w8\w8stop\w4.\w4.\w4. \w8flyin' away\w4.\w4.\w4. \w8\w8\w8'm tryna talk to ya\w4.\w4.\w4. \w8zzz\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8 Stop it\w4.\w4.\w4. \w8das' dumb\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8 yur gonna die Killer\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4. Cross don't\w4.\w4.\w4. cant' leave\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8 Timeline\w4.\w4.\w4.\w5 's gonna\w4.\w4.\w4. \w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 collapse\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\e"
+			"* (You wonder what he's dreaming about...)\e"
+			"zzz\w4.\w4.\w4. don't\w4.\w4.\w4. zzz\w4.\w4.\w4. don't touch th' apples\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4. zzz\w4.\w4.\w4. 's a Sylveon\w4.\w4.\w4. zzz\w4.\w4.\w4. 's mine\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4. flowers\w4.\w4.\w4. \w8\w8\w8stop\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4. Cillium\w4.\w4.\w4. zzz\w4.\w4.\w4. where's she\w4.\w4.\w4. zzz\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Stupid\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 AU wiki\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Fake information\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Nah\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Why i gotta go to a'\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8 Stup'd wedding\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Big dumb castle\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Who's g'na even clean it\w4.\w4.\w4.\w4?\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Knives\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Stop bein' gross\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 anDream\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Stop runnin' away\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Stupid sun\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8Makes me all sticky\w4.\w4.\w4.\w8\w8 g'na stain the couch\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Dust\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8My'better keep 'n eye on him\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 He'a trouble-mak'r\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Killer\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Just get 'long wi' 'em\w4.\w4.\w4.\w8\w8 zzz\w4.\w4.\w4.\w8\w8 Please.\w4.\w4.\w4\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 \w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8's wrong w' John.\w4.\w4.\w4\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Y'\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Y'not useless\w4.\w4.\w4.\e"
+			"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Jus' eat it 'lready\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4\e"
+			"anDream\w4.\w4.\w4.\w8\w8\w8zzz\w4.\w4.\w4.\w8\w8\w8 Wha'\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8 Twins\w4.\w4.\w4.\w4?\w8\w8 I ain't e'en wan' one\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Tszzz\w4.\w4.\w4.\w8\w8\w8 Tszzz\w4.\w4.\w4.\w8\w8\w8 I'mma snake,\w4 hehe\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Staph it\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 I'm tiny but I c'n still hurt you\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 Stop\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 Stop bein' nice to each other\w4.\w4.\w4. \w8zzz\w4.\w4.\w4.\w8\w8\w8's gross\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4.\w8\w8\w8 woooo\w4.\w4.\w4. \w4zzz\w4.\w4.\w4. \w8\w8\w8Meme Squad\w4.\w4.\w4.\w8\w8\w8 hehe\w4.\w4.\w4.\e"
+			"zzz\w4.\w4.\w4. Cross\w4.\w4.\w4. zzz\w4.\w4.\w4. stop runnin' off\w4.\w4.\w4. \w8\w8\w8 zzz\w4.\w4.\w4.\e"
+			"* (He mumbles something you don't understand.)"
+			"'course 'sa real word%(lps(5)) zzz\w8 why 'lse would'e use it? zzz\w8\w8\e"
+			"* (He is resting.)"
+			"* (He's really knocked out.\w5 Probably a good thing he's resting.)"
+			"zzz%(lps(4))\w8\w8\w8bu'\w8 guns scarr,\w3%(lps(4))\w8\w8\w8zzz Kall'iss zzz%(lps(4))\w8\w8\w8"
+			"zzz Bu' I%(lps(4)) zzz wanna tell evr'one zzz\w8"
+			"zzz\w4.\w4.\w4."
+			if punchout >= 3
+			{
+				"* (He tenses.)\n\n\w8Stop\w4.\w4.\w4.\w8\w8\w8 Don't touch me\w4.\w4.\w4."
+				"zzz\w4.\w4.\w4.\w8\w8\w8 ngck\w4.\w4.\w4.\w8\w8\w8 zzz\w4.\w4.\w4.\w8\w8\w8 not again\w4.w4.\w4. zzz\w4.\w4.\w4.\w8\w8\w8 leave me 'lone\w4.\w4.\w4."
+				"zzz\w4.\w4.\w4.\w8\w8\w8 Just\w4.\w4.\w4. zzz\w4.\w4.\w4.\w8\w8\w8 I wanna go home\w4.\w4.\w4."
+				"zzz\w4.\w4.\w4.\w8\w8\w8 sorry\w4.\w4.\w4. \w8I'm sorry\w4.\w4.\w4. sorry... \w4sorry...\w8"
+				"zzz\w4.\w4.\w4.\w8\w8\w8 Ngh\w2.\w2.\w2.\w8 No\w4, don't\w4.\w4.w4.\w8 Stop\w4.\w4.\w4.\w8"
+			}
 		}
 	}
 	elseif nicesadlevel <= -120 && punchout >= 80 && nowmode != "Edgybitch" //IT ADDS UP TO 200 OK
@@ -582,7 +592,7 @@ Select.besnoopbother1
 {
 	lasttalked = 0
 	snoop -= 5
-	"\0\s[12]* (You tell him you have no idea why he's mad.)\w8\n\n\0\s[21]You keep looking through my books while I'm reading!\n\n\w8* (You remind him that he told you that you should stop asking him what the book was and to just look at it.)\n\n\w8\0\s[12]\i[55]\s[10]* (He looks down at the ground and crosses his arms like a kid.)\e"
+	"\0\s[12]* (You tell him you have no idea why he's mad.)\w8\n\n\0\s[21]You keep looking through my books while I'm reading!\n\n\w8* (You remind him that he told you that you should stop asking him what the book was and to just look at it.)\n\n\w8\0\s[12]\i[55]* (He looks down at the ground and crosses his arms like a kid.)\e"
 }
 Select.continuesnooping1
 {
@@ -742,6 +752,7 @@ HourCheck
 {
 	if passmin >= 59
 	{
+		sleptiem += 1
 		passmin = 0
 		passhour = passhour + 1
 	}
