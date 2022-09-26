@@ -29,7 +29,7 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"a book where everyone dies at the end"
 	"a book about serial killers"
 	"a book about made-up crime"
-	"a book about creepy occult activity in this area"
+	"a book about creepy occult activity around here"
 	"an instructional book about magic"
 	"a cursed book whose cover is made of skin"
 	"a book that screams every time you open it"
@@ -72,16 +72,18 @@ bookstoread //Stolen from Zarla's hs ghost. Some are written by me.
 	"an autobiography written by the guy that harrassed people into singing with him" //haven't a clue
 	"a book about the oldest tricks"
 	//WORMDITIONS!
-	//"a book about spaceships that's really about gender"
-	//"a really complicated family saga where everyone keeps re-using the same names"
-	//"an annotated edition of a book about nonsense"
-	//"a philosophical treatise by some old dead Greek guy"
-	//"a war that started with an apple and ended with a horse"
-	//"a collection of %(ANY('','retold '))fairy tales"
-	//"a book about sad gay wizards and pretty horses"
-	//"an annotated collection of folk songs"
-	//"a book about space communism"
-	//"a novelization of some blockbuster movie"
+	"a book about spaceships that's really about gender"
+	"a really complicated family saga where everyone keeps re-using the same names"
+	"an annotated edition of a book about nonsense"
+	"a philosophical treatise by some old dead Greek guy"
+	"a war that started with an apple and ended with a horse"
+	"a collection of %(ANY('','retold '))fairy tales"
+	"a book about sad gay wizards and pretty horses"
+	"an annotated collection of folk songs"
+	"a book about space communism"
+	"a novelization of some blockbuster movie"
+	"a book about knights and wizards"
+	"a book about ponies"
 }
 
 usersfolder //Different folders for the computer

@@ -1159,7 +1159,9 @@ Onyouact
 	--
 	"\![*]\q[Compliment,Oncomplementee]\n/
 	\![*]\q[Joke,sayafunny]\n/
-	\![*]\q[Judge,nitpicktheboy]\n/
+	\![*]\q[Story,storytime]\n/
+	\![*]\q[Goad,iwantgoopy]\n/
+	\![*]\q[Mock,nitpicktheboy]\n/
 	\![*]\q[Tease,bemean]\n\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
@@ -1487,7 +1489,7 @@ Select.sayafunny
 		"\0\s[19]* (You joke that his eyes look weird.)\n\n"
 		"\0\s[19]* (You poke fun at how on the default pose the yellow lining at the end of his sleeve is on the wrong side.)\n\n"
 		"\0\s[19]* (You explain how he's like an unsharped pencil.\w8 Pointless.)\n\n"
-		//"* (You ask if he wants to hear a joke.)\n\n\w8(He's wary, but listening.)\n\n\w8* (How easy it was to gain his trust.)\n\n\w8* (Well, you hit a nerve didn't you?)"
+		"* (You ask if he wants to hear a joke.)\n\n\w8(He's wary, but listening.)\n\n\w8* (How easy it was to gain his trust.)\n\n\w8* (Well, you hit a nerve didn't you?)"
 	}
 	else
 	{
@@ -1499,6 +1501,8 @@ Select.sayafunny
 		"\0\s[0]\i[55]* (Why couldn't the bicycle stand up?)\w8\w4\n\n* (Because it was two-tired!)\n\n\0\s[4]\w8What's a bicycle?\n\n"
 		"\0\s[0]\i[55]* (You tell %(nightname) that parallel lines have so much in common.)\n\n\w8*(It's a shame they'll never meet.)\n\n\0\s[6]\w8mehehehe!\n\n\w8\i[55]* (He at least understood the math joke...)\n\n"
 		"\0\s[0]\i[55]* (As you suspected, \w5someone has been adding soil to your garden.) \w8* (The plot thickens.)\n\n\0\s[6]\w8mehehehe!\n\n\w8Me and anDream help in gardens at home!!\n\n"
+		"\i[55]* (You tell him an elaborate story that ends with a horrible pun.)\n\n\w8\w5* (He seems at a loss what to make of it until he catches your expression.)\n\n...Huh.\w8"
+		"\i[55]* (You get halfway through telling in an in-joke before you realize he won't get it.)"
 		if flirtlevel >= 10
 		{
 			"\0\s[0]\i[55]* (You ask him if he's a chicken.)\n\n\0\s[13]Um\w2.\w2.\w2.\w4 Why do you ask?\n\n\w8\i[55]* (Because he's \f[italic,true]impeccable\f[italic,false].)\n\n\w8\0\s[8]That's not even very funny...\n\n"
@@ -1625,6 +1629,25 @@ Select.ilynighty
 	}
 }
 
+Select.storytime
+{
+	"\i[55]* (You tell him about a creature that would spin off its skin every night to do mischief, and was only stopped by a clever dosing of salt.)\w8\n\n* (He's less grossed out than you expected.\w8 One of the benefits of not having skin,\w4 you suppose.)"
+	"\i[55]* (You tell him a spooky story about a creature demanding the return of its tailypo.\w8 You make your voice especially creaky for the critter's lines.)\n\nYeah, that's why you never eat anything that can talk."
+	{
+		"\i[55]* (You tell him about a child forced to complete impossible tasks for a witch,\w6 who only succeeds through the help of an enchanted doll from her dead mother.)\n\n\w8* (He keeps very attentive to the parts where she entreats her mother's spirit.)"
+		--
+		if nicesadlevel >= 25
+		{
+			"When I was younger,\w4 I sometimes thought I could hear my mom talking to me from anTree...\n\n\w8\w8* (He seems like he's going to elaborate,\w5 but doesn't.)"
+		}
+	}
+	"\i[55]* (You sing him a little ballad you learned when you were a kid - a song that tells a story.)\n\n* (He appreciates it.)"
+	"\i[55]* (You tell him about a silly little thing that happened to you in the past couple weeks.)"
+	--
+	"%(actigon)"
+	
+}
+
 //  ██████╗ ███████╗    ███╗   ███╗███████╗ █████╗ ███╗   ██╗
 //  ██╔══██╗██╔════╝    ████╗ ████║██╔════╝██╔══██╗████╗  ██║
 //  ██████╔╝█████╗      ██╔████╔██║█████╗  ███████║██╔██╗ ██║
@@ -1632,6 +1655,27 @@ Select.ilynighty
 //  ██████╔╝███████╗    ██║ ╚═╝ ██║███████╗██║  ██║██║ ╚████║
 //  ╚═════╝ ╚══════╝    ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝
 //                                                           
+
+Select.iwantgoopy
+{
+	negact += 1
+	"\0\s[22]\i[55]* (You tell %(nightname) that he should just turn into the more interesting character already.)\n\n"
+	"\i[55]* (You tell him the people who hurt him don't deserve to live.)\n\nE-everyone deserves to...\n\n\i[55]You ask him if he really believes that.)\n\n\w8\w8...\w8"
+	"\i[55]* (You tell him everyone hates him anyway, so why not become the 'nightmare' they always said he was?)"
+	"\i[55]* (You tell him he'd be cooler if he killed people.)"
+	"\i[55]* (You tell him his pacifism is dumb.)"
+	"\i[55]* (You tell him he's boring like this.)\n\nWhy'd you bring me here, then?\n\n\i[55]* (You tell him you have a hunch he knows exactly how to become more interesting.)"
+	"\i[55]* (You tell him to stop hiding behind Dream.)"
+	"\i[55]* (You tell him you wouldn't put up with this,\w4 so why does he?)"
+	"\i[55]* (You tell him it's ''kill or be killed'',\w4 and the sooner he realized that,\w4 the better.)"
+	"\i[55]* (You tell him to stop being so emotional all the time.)"
+	"\i[55]* (You tell him he's just delaying the inevitable.)"
+	"\i[55]* (You tell him his options are to be a corpse or a killer.)"
+	"\i[55]* (You tell him if he doesn't want to get hit,\w3 he should start fighting back.)"
+	--
+	"%(actigon)"
+}
+
 
 Select.nitpicktheboy
 {
@@ -1682,7 +1726,6 @@ Select.bemean
 	--
 	if nicesadlevel <= -25
 	{
-		/*
 		{
 		"* (You tell him what a garbage brother he is, that he can't even protect Dream from being abused.)\w8\n\n"
 		--
@@ -1695,40 +1738,11 @@ Select.bemean
 				"...\n\n"
 			}
 		}
-		*/
-		if nicesadlevel <= -25
-		{
-			//"\0\s[19]\i[55]* (You tell %(nightname) he doesn't deserve love, or the people that love him.)\n\n\w8Hey...\n\n"
-			"\0\s[12]\i[55]* (You tell him his mother hates him.)\0\s[21]\n\n\w8But she's dead!!!\n\n"
-			"\0\s[12]\i[55]* (You ask him if he's ever been useful to anybody.)\n\n\w8* (He tries to ignore you.)\n\n"
-			"\0\s[22]\i[55]* (You try to get a word in,\w4 but he's ignoring you.)\n\n\w8\n\n"
-			"\0\s[12]\i[55]* (You express how stupid you think %(nightname)'s design looks.)\n\n\w8Why'd I try to talk to you anyways...\n\n"
-			
-			//WORMDITIONS!
-			//"* (You wonder aloud why Dream puts up with him.)"
-			//"* (You tell him he deserves everything he gets for protecting the evil side of the tree. Just think, if there weren't any negativity, you wouldn't be able to be cruel to him.)"
-			
-			
-			if punchout >= 5
-			{
-				"\0\s[19]\i[55]* (You tell him deserves everything you gave him.)\n\n\w8Hey...\n\n"
-				"\0\s[12]\i[55]* (You tell %(nightname) that he deserved everything you gave him.)\w8\n\0\s[9]...\n\n"
-				
-				//"* (You tell him this is punishment for all those bad thoughts he has.)"
-			}
-			if nightynight == "on"
-			{
-				"\0\s[12]\i[55]* (You tell him he should consider shutting up every once in a while.)\n\n\w8'Course I'd get stuck with somebody like you...\n\n"
-				"\0\s[12]\i[55]* (You gloat to him about how great it is to have a home.)\n\n\w8\0\s[19]I have a home...\n\n"
-				"\0\s[9]\i[55]* (You tell %(nightname) you hate him.)\n\n\w8He tries to ignore you, but is obviously sad.\n\n"
-			}
-		} //End 10
 		if nicesadlevel <= -50
 		{
 			"\0\s[9]\i[55]* (You tell him that not even his brother should love him.)\n\n\w8\0\s[19]...\n\n"
 			"\0\s[19]\i[55]* (You tell him nobody needs him, \w4and nobody will ever need him.)\w8\n\n* (He is a useless guardian.)\n\n"
 			"\0\s[23]\i[55]* (You tell %(nightname) he doesn't deserve sympathy.)\n\n"
-			"\0\s[22]\i[55]* (You tell %(nightname) that he should just turn into the more interesting character already.)\n\n"
 			"\0\s[22]\i[55]* (You tell %(nightname) he's a coward for not facing you.)\n\n\w8\0\s[22]I don't-\w2 don't care.\n\n"
 			
 			
@@ -1742,7 +1756,36 @@ Select.bemean
 				"\0\s[19]* (You tell him you hope those bruises hurt.)\n\n"
 				"\0\s[19]* (You tell him you hope those villagers try going after him again tonight.)\w5\0\s[22]\n\n"
 			}
-		} //end 20
+		}
+		"\0\s[12]\i[55]* (You tell him his mother hates him.)\0\s[21]\n\n\w8But she's dead!!!\n\n"
+		"\0\s[12]\i[55]* (You ask him if he's ever been useful to anybody.)\n\n\w8* (He tries to ignore you.)\n\n"
+		"\0\s[22]\i[55]* (You try to get a word in,\w4 but he's ignoring you.)\n\n\w8\n\n"
+		"\0\s[12]\i[55]* (You express how stupid you think %(nightname)'s design looks.)\n\n\w8Why'd I try to talk to you anyways...\n\n"
+		
+		//WORMDITIONS!
+		"* (You wonder aloud why Dream puts up with him.)"
+		"* (You tell him he deserves everything he gets for protecting the evil side of the tree. Just think, if there weren't any negativity, you wouldn't be able to be cruel to him.)"
+		"\i[55]* (You tell him no one would miss him if he %(ANY('were to vanish','died')).)"
+		
+		
+		if punchout >= 5
+		{
+			"\0\s[19]\i[55]* (You tell him deserves everything you gave him.)\n\n\w8Hey...\n\n"
+			"\0\s[12]\i[55]* (You tell %(nightname) that he deserved everything you gave him.)\w8\n\0\s[9]...\n\n"
+			
+			"* (You tell him this is punishment for all those bad thoughts he has.)"
+		}
+		if nightynight == "on"
+		{
+			"\0\s[12]\i[55]* (You tell him he should consider shutting up every once in a while.)\n\n\w8'Course I'd get stuck with somebody like you...\n\n"
+			"\0\s[12]\i[55]* (You gloat to him about how great it is to have a home.)\n\n\w8\0\s[19]I have a home...\n\n"
+			"\0\s[9]\i[55]* (You tell %(nightname) you hate him.)\n\n\w8He tries to ignore you, but is obviously sad.\n\n"
+		}
+		if blushiemode == "on" && punchout > 3
+		{
+			"* (You mock him for thinking anyone could ever love him.)"
+			"* (You mock him for thinking he's worthy of love.)"
+		}
 	}
 	else //Anything under 10
 	{
@@ -1750,7 +1793,11 @@ Select.bemean
 		"\0\s[12]\i[55]* (You inform him that his belt looks like it says 'NO' sometimes.)\n\n\w8\0\s[12]No it doesn't!\w8\n\n\0\s[3]It's supposed to be an 'N' and a crescent...\n\n"
 		"\0\s[12]\i[55]* (You tell him his eyes look stupid.)\n\n\w8* (He's pretending like you aren't there.)\n\n"
 		"\0\s[9]\i[55]* (You say-)\n\n\w5\0\s[9]Why are you being mean to me...?\n\n"
+		"\i[55]* (You tell him he's so silly sometimes.)\n\nI didn't ask you."
+		"\i[55]* (You tell him he can be such a child.)\n\n(He's ignoring you.)"
+		"\i[55]* (You tell him he's gross and weird.)"
 	}
+	"* (You call him a beautiful little fool.)\n\n* (He seems unsure how to take it.)\n\n...That's not funny?\w8"
 	--
 	"\![*]\q[Again,bemean]\n/
 	%(actigon)"

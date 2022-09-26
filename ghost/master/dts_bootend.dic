@@ -325,69 +325,69 @@ normalboottalk //All temp dialogue
 				//"\0\s[1]\i[55] (Looks like he pulled an allnighter.)\e" //Sleepy Tired
 			}
 		}
-			elseif timeslot == "morning"
+		elseif timeslot == "morning"
+		{
+			if privacyrespecter == "on"
 			{
-				if privacyrespecter == "on"
-				{
 				"\0\s[1]\i[55]* (It doesn't seem like he's got anything to say to you this morning.)\e:eval=sittang='on'"
-				}
-				else
-				{
-					"\0\s[1].\w3.\w3.\w3\i[7]\w8Oh, good morning %(username).\e:eval=sittang='on'"
-					//"\0\s[1]\i[55]* (You wonder how much he slept last night.)\e" //tired pose
-					"\0\s[0]\i[14]\i[15]Enjoying the sun?\e"
-					"\0\s[4]Hope I don't miss out on any lessons...\e"
-					if blushiemode == "on" && privacyrespecter == "off" 
-					{
-						"\0\s[0]\i[14]\i[15]Good morning,\w2 %(username).\e"
-						"\0\s[6]Morning.\w5 Did you sleep well?\e"
-					}
-				}
 			}
-			elseif timeslot == "lunch"
+			else
 			{
-				"\0\s[0]Oh,\w4 hi.\n\n\w8Did you eat yet?\e"
-				"\0\s[4]Sun's pry pretty bright around now...\w8\s[32] Heh, \w4pry-pretty.\e"
-				"\0\s[4]anDream's out right now,\w4 so there's not much to do...\n\n\w8So I guess I can hang out.\e"
-				"\0\s[0]* (You wonder if he's gotten around to eating lunch or not.)\e"
+				"\0\s[1].\w3.\w3.\w3\i[7]\w8Oh, good morning %(username).\e:eval=sittang='on'"
+				//"\0\s[1]\i[55]* (You wonder how much he slept last night.)\e" //tired pose
+				"\0\s[0]\i[14]\i[15]Enjoying the sun?\e"
+				"\0\s[4]Hope I don't miss out on any lessons...\e"
 				if blushiemode == "on" && privacyrespecter == "off" 
 				{
-					"\0\s[6]Hello %(username)!\w8\n\nHave you eaten today?\e"
+					"\0\s[0]\i[14]\i[15]Good morning,\w2 %(username).\e"
+					"\0\s[6]Morning.\w5 Did you sleep well?\e"
 				}
 			}
-			elseif timeslot == "afternoon"
+		}
+		elseif timeslot == "lunch"
+		{
+			"\0\s[0]Oh,\w4 hi.\n\n\w8Did you eat yet?\e"
+			"\0\s[4]Sun's pry pretty bright around now...\w8\s[32] Heh, \w4pry-pretty.\e"
+			"\0\s[4]anDream's out right now,\w4 so there's not much to do...\n\n\w8So I guess I can hang out.\e"
+			"\0\s[0]* (You wonder if he's gotten around to eating lunch or not.)\e"
+			if blushiemode == "on" && privacyrespecter == "off" 
 			{
-				"\0\s[4]It's the hottest part of the day right now, right?\e"
-				"\0\s[4]anDream's busy right now\w2.\w2.\w2.\e"
-				"\0\s[0]\i[8]Hello %(username),\w4 is your afternoon going well?\e"
-				"\0\s[0]* (Good afternoon.)\e"
-				if blushiemode == "on" && privacyrespecter == "off" 
-				{
-					"\0\s[6]Hottest part of the day, right?\w8\n\nStay safe!!\w5 I don't wanna lose you!\e"
-					"\0\s[4]Snack time yet?\e"
-				}
+				"\0\s[6]Hello %(username)!\w8\n\nHave you eaten today?\e"
 			}
-			elseif timeslot == "evening"
+		}
+		elseif timeslot == "afternoon"
+		{
+			"\0\s[4]It's the hottest part of the day right now, right?\e"
+			"\0\s[4]anDream's busy right now\w2.\w2.\w2.\e"
+			"\0\s[0]\i[8]Hello %(username),\w4 is your afternoon going well?\e"
+			"\0\s[0]* (Good afternoon.)\e"
+			if blushiemode == "on" && privacyrespecter == "off" 
 			{
-				"\0\s[4]Day's coming to an end...\e"
-				"\0\s[0]Oh...\n\n\w8How's your evening going?\e"
-				if blushiemode == "on" && privacyrespecter == "off" 
-				{
-					"\0\s[0]\i[14]Hello %(username),\w4 is your afternoon going well?\e"
-				}
+				"\0\s[6]Hottest part of the day, right?\w8\n\nStay safe!!\w5 I don't wanna lose you!\e"
+				"\0\s[4]Snack time yet?\e"
 			}
-			elseif timeslot == "latenight"
+		}
+		elseif timeslot == "evening"
+		{
+			"\0\s[4]Day's coming to an end...\e"
+			"\0\s[0]Oh...\n\n\w8How's your evening going?\e"
+			if blushiemode == "on" && privacyrespecter == "off" 
 			{
-				"\0\s[1]\i[8]You heading to bed soon?\e:eval=sittang='on'"
-				"\0\s[6]Where I'm from,\w3 during the night you can see a lotta stars!\e"
-				"\0\s[0]You heading to bed soon?\e"
-				if blushiemode == "on" && privacyrespecter == "off" 
-				{
-					"\0\s[20]How's the night,\w2 %(username)?\e"
-				}
+				"\0\s[0]\i[14]Hello %(username),\w4 is your afternoon going well?\e"
 			}
-			else //Midnight
+		}
+		elseif timeslot == "latenight"
+		{
+			"\0\s[1]\i[8]You heading to bed soon?\e:eval=sittang='on'"
+			"\0\s[6]Where I'm from,\w3 during the night you can see a lotta stars!\e"
+			"\0\s[0]You heading to bed soon?\e"
+			if blushiemode == "on" && privacyrespecter == "off" 
 			{
+				"\0\s[20]How's the night,\w2 %(username)?\e"
+			}
+		}
+		else //Midnight
+		{
 			"\0\s[1]\i[55]* (Looks like he's staying up.)\e:eval=sittang='on'"
 			"\0\s[1]\i[55]* (Looks like he doesn't sleep either.)\e:eval=sittang='on'"
 			"\0\s[1]\i[55]* (It's quiet.)\e:eval=sittang='on'"
@@ -396,6 +396,10 @@ normalboottalk //All temp dialogue
 				"\0\s[20]Heh, \w3you staying up too?\e"
 				"\0\s[0]\i[14]\i[15]How's your night going, %(username)?\e"
 			}
+		}
+		if (hour >= 21 || hour < 3) && nicesadlevel > 80
+		{
+			"Oh! Oh- wait wait!\w8\w7\s[15] ''Well met by moonlight,\w4 proud Titania.''\n\n* (You comment that the quote is ''ill-met''.)\n\nWell yeah,\w5 but I don't think this is a particularly 'ill' meeting,\w5 y'know?\w8\e"
 		}
 	}
 }
