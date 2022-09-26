@@ -26,9 +26,13 @@ surface.append0-9
 	animation102.pattern3,interpolate,1002,1000,0,0
 	animation102.pattern4,start,102
 	
-	//DISAPPEAR THE TENTACLES
-	animation104.interval,never
-	animation104.pattern0,stop,100
+	//ANGRYCLES
+	animation103.interval,never
+	animation103.pattern0,stop,100
+	animation103.pattern1,interpolate,1007,0,0,0
+	animation103.pattern2,interpolate,1008,1000,0,0
+	animation103.pattern3,interpolate,1007,1000,0,0
+	animation103.pattern4,start,102
 	
 	//Pull in
 	animation105.interval,never
