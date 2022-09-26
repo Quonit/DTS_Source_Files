@@ -32,7 +32,7 @@ surface.append0-9
 	animation103.pattern1,interpolate,1007,0,0,0
 	animation103.pattern2,interpolate,1008,1000,0,0
 	animation103.pattern3,interpolate,1007,1000,0,0
-	animation103.pattern4,start,102
+	animation103.pattern4,start,103
 	
 	//Pull in
 	animation105.interval,never
