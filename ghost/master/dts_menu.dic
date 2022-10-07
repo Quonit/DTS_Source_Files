@@ -13,19 +13,20 @@
 	}
 	elseif sleepingmode == "on"
 	{
+		"zzz\w4.\w4.\w4.\w8\n\n* (Wake him up?)\n\n"
+		--
 		if hasblankie == "off"
 		{
-			"zzz\w4.\w4.\w4.\w8\n\n* (Wake him up?)\n\n/
-			\![*]\q[Yes,wakeup]\n/
-			\![*]\q[No,letsleep]\e"
+			"[*]\q[Give him a blanket,givesleepblankie]\n"
 		}
-		else
+		--
+		if nicesadlevel > 50
 		{
-			"zzz\w4.\w4.\w4.\w8\n\n * (Wake him up?)\n\n/
-			\![*]\q[Give him a blanket,givesleepblankie]\n/
-			\![*]\q[Yes,wakeup]\n/
-			\![*]\q[No,letsleep]\e"
+			"\![*]\q[Tell him something nice,nicewords]\n"
 		}
+		--
+		"\![*]\q[Yes,wakeup]\n/
+		\![*]\q[No,letsleep]\e"
 	}
 	elseif VillageLevel >= 40 && nowmode == "purpleman"
 	{
@@ -799,7 +800,7 @@ Select.CANCEL
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[1]Whatever.\e"
-		"\0\s[0]Alright then.\e"
+		"\0\s[0]Go bother someone else.\e"
 		"\0\s[0]Keep thinking that any of this matters.\e"
 	}
 	elseif VillageLevel >= 150
@@ -904,9 +905,9 @@ Select.CALENDAR
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[0]\i[55]* (Opening the calendar...)"
-		"\0\s[0]Ah,\w5 yes, \w5because you can't just see the date on your computer."
-		"\0\s[6]You could also just press ctrl + D instead of making me do it."
+		"\0\s[0]\i[55]* (Opening the calendar...)\w8"
+		"\0\s[0]Ah,\w5 yes, \w5because you can't just see the date on your computer.\w8"
+		"\0\s[6]You could also just press ctrl + D instead of making me do it.\w8"
 		--
 		randomfunction
 	}
@@ -1482,7 +1483,8 @@ Select.sayafunny
 	--
 	if punchout >=4
 	{
-		negact += 1
+		if nicesadlevel > 25; {negact += 10}
+		else; {negact += 1}
 		"\0\s[19]* (You joke about how stupid he is.)\w8\n\n* (Surprising with how many books he reads.\w6 Then again,\w6 it's not like he has a brain.)\n\n"
 		"\0\s[19]* (You talk about how funny it is that he takes himself so seriously but his AU doesn't even make any sense.)\n\n\0\s[11]* (Looks like he understands he was insulted,\w4 but not how.)\w8\n\n"
 		"\0\s[19]* (You joke about how proper his clothes look.)\n\n\w8* (Are those supposed to be his casual clothes?)\n\n"
@@ -1553,6 +1555,7 @@ Select.flirtyflirt
 	}
 	else
 	{
+		"\i[55]* (You call him a cutie-pie.)"
 		"\0\s[0]\i[55]* (You tell him he's the apple of your eye.)\n\n\w8\0\s[0]\i[11]I... what?\n\n* (Looks like he's never heard the phrase before.)\w8\n\n"
 		"\0\s[0]\i[55]* (You tell him you're horribly lost, \w3and need directions to his heart.)\n\n\w8\0\s[12]Stop being weird about it...\n\n"
 		"\0\s[0]\i[55]* (You tell him you're going to the optometrist to get your eyes checked. \w7For some reason, \w4you can’t take them off of him.)\n\n\0\s[4]\w8What's an optometrist?\n\n"
@@ -1631,10 +1634,10 @@ Select.ilynighty
 
 Select.storytime
 {
-	"\i[55]* (You tell him about a creature that would spin off its skin every night to do mischief, and was only stopped by a clever dosing of salt.)\w8\n\n* (He's less grossed out than you expected.\w8 One of the benefits of not having skin,\w4 you suppose.)"
+	"\i[55]* (You tell him about a creature that would spin off its skin every night to do mischief,\w4 and was only stopped by a clever dosing of salt.)\w8\n\n* (He's less grossed out than you expected.\w8 One of the benefits of not having skin,\w4 you suppose.)"
 	"\i[55]* (You tell him a spooky story about a creature demanding the return of its tailypo.\w8 You make your voice especially creaky for the critter's lines.)\n\nYeah, that's why you never eat anything that can talk."
 	{
-		"\i[55]* (You tell him about a child forced to complete impossible tasks for a witch,\w6 who only succeeds through the help of an enchanted doll from her dead mother.)\n\n\w8* (He keeps very attentive to the parts where she entreats her mother's spirit.)"
+		"\i[55]* (You tell him about a child forced to complete impossible tasks for a witch,\w6 who only succeeds through the help of an enchanted doll from her dead mother.)\n\n\w8* (He keeps very attentive to the parts where she entreats her mother's spirit.)\n\n"
 		--
 		if nicesadlevel >= 25
 		{
@@ -1658,7 +1661,8 @@ Select.storytime
 
 Select.iwantgoopy
 {
-	negact += 1
+	if nicesadlevel > 25; {negact += 10}
+	else; {negact += 1}
 	"\0\s[22]\i[55]* (You tell %(nightname) that he should just turn into the more interesting character already.)\n\n"
 	"\i[55]* (You tell him the people who hurt him don't deserve to live.)\n\nE-everyone deserves to...\n\n\i[55]You ask him if he really believes that.)\n\n\w8\w8...\w8"
 	"\i[55]* (You tell him everyone hates him anyway, so why not become the 'nightmare' they always said he was?)"
@@ -1667,11 +1671,14 @@ Select.iwantgoopy
 	"\i[55]* (You tell him he's boring like this.)\n\nWhy'd you bring me here, then?\n\n\i[55]* (You tell him you have a hunch he knows exactly how to become more interesting.)"
 	"\i[55]* (You tell him to stop hiding behind Dream.)"
 	"\i[55]* (You tell him you wouldn't put up with this,\w4 so why does he?)"
-	"\i[55]* (You tell him it's ''kill or be killed'',\w4 and the sooner he realized that,\w4 the better.)"
+	"\i[55]* (You tell him it's ''kill or be killed'',\w4 and the sooner he realizes that,\w4 the better.)"
 	"\i[55]* (You tell him to stop being so emotional all the time.)"
 	"\i[55]* (You tell him he's just delaying the inevitable.)"
 	"\i[55]* (You tell him his options are to be a corpse or a killer.)"
-	"\i[55]* (You tell him if he doesn't want to get hit,\w3 he should start fighting back.)"
+	if punchout > 1
+	{
+		"\i[55]* (You tell him if he doesn't want to get hit,\w3 he should start fighting back.)"
+	}
 	--
 	"%(actigon)"
 }
@@ -1679,7 +1686,8 @@ Select.iwantgoopy
 
 Select.nitpicktheboy
 {
-	negact += 1
+	if nicesadlevel > 25; {negact += 10}
+	else; {negact += 1}
 	flirtlevel -= 1
 	if sittang == "on"
 	{
@@ -1705,7 +1713,8 @@ Select.nitpicktheboy
 		"\0\s[12]\i[55]* (You complain that the moon on his crown is facing the wrong way.)\n\n\w8\0\s[17]N-no?\w7\n\n\0\s[8]Not as far as I know...\n\n"
 		if blushiemode == "on" && privacyrespecter == "off"
 		{
-			negact += 1
+			if nicesadlevel > 25; {negact += 10}
+			else; {negact += 1}
 			flirtlevel -= 1
 			"\0\s[7]\i[55]* (You ask why he's able to blush even though he doesn't have skin.)\n\n\w8\w8\0\s[14]Magic?\w8 \0\s[8]I'm basically just a ball of magic so%(lps(2))\n\n\w8* (You ask how he can be a ball of magic if he's a skeleton.)\n\n\w8\0\s[15]It's because-\w5\0\s[12] nevermind, whatever.\n\n"
 		}
@@ -1717,7 +1726,8 @@ Select.nitpicktheboy
 
 Select.bemean
 {
-	negact += 1
+	if nicesadlevel > 25; {negact += 10}
+	else; {negact += 1}
 	if sittang == "on"
 	{
 		sittang = "off"
@@ -1920,7 +1930,7 @@ Select.reexplaindream
 {
 	if nowmode == "Edgybitch"
 	{
-		//
+		"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Hah,\0\s[7]\w4 that sap?\n\n\w8''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3whom I love so much and definitely care enough to notice things like cuts on his arm!''\n\n\w8\0\s[1]Hah, \w5bet they wouldn't be happy if they saw me."
 	}
 	else
 	{
@@ -1951,13 +1961,16 @@ Select.reexplaindream
 	--
 	"\n\n"
 	--
-	if askaboutdreamcrown != "on"
+	if nowmode != "Edgybitch"
 	{
-		"\![*]\q[That doesn't seem right...,whatswithdreamscrown]\n"
-	}
-	else
-	{
-		"\![*]\q[Ask about Dream's crown,whatswithdreamscrown]\n"
+		if askaboutdreamcrown != "on"
+		{
+			"\![*]\q[That doesn't seem right...,whatswithdreamscrown]\n"
+		}
+		else
+		{
+			"\![*]\q[Ask about Dream's crown,whatswithdreamscrown]\n"
+		}
 	}
 	--
 	"\![*]\q[ASK another question,youtalk]\n/
@@ -2338,7 +2351,7 @@ Select.nightyneedstoeat
 		if timeslot == "afternoon" //snacc
 		{
 			"\0\s[0]\i[55]* (You offer him a bowl of soup.)\n\n\w8* (He looks it over.)\n\n\w8What's in it?\n\n\w8* (You ask him if he wants any.)\w8\n\n\0\s[11]Uhm\w4.\w4.\w4. \w7no thank you?\w8\i[55]\n\n"
-			"\0\s[0]\i[55]* (You offer a salad to him.)\n\n\w8* (He takes the bowl \0\s[25]\i[55] and uses his hands to eat the leaves first.)\w8\n\n* (He doesn't say thank you but you know he's happy.)\w8\n\n"
+			"\0\s[0]\i[55]* (You offer a salad to him.)\n\n\w8* (He takes the bowl \0\s[25]\i[55]and uses his hands to eat the leaves first.)\w8\n\n* (He doesn't say thank you but you know he's happy.)\w8\n\n"
 			"\0\s[1]\i[55]* (You slice a tangerine for him.)\n\n\w8\0\s[1]\i[7]\i[55]* (He picks at it.)\0\s[1]\i[39]\i[55]\n\n"
 			if blushiemode == "on"
 			{
@@ -2435,6 +2448,15 @@ Select.givesleepblankie
 	"\![bind,Blanket,cape,1] (He looks comfy.)\e"
 }
 
+Select.nicewords
+{
+	"* (You tell him he's a wonderful brother.)"
+	"* (You tell him he doesn't deserve anything that happened to him.)"
+	"* (You tell him that Dream is lucky to have him as a brother.)"
+	"* (You tell him Dream will believe and accept him, no matter what he's done.)"
+	"* (You say that things will get better for him.)"
+	"* (You tell him he deserves to be happy.)"
+}
 
 //     _____ ____  __  ____ 
 //    / ___// __ \/ / / / / 
@@ -2488,7 +2510,9 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	"\0\s[1]\i[55]* (You ask him what book he's reading.)\n\n\w8\0\i[8]\i[20]Shouldn't you be able to read the cover yourself?\n\n\i[55]\w8*(You ask him if the book is good.)\n\n\w8\0If it wasn't, do you think I'd be reading it?"
+	dontmovestatsitshalloween = "on"
+	nowmode = "Edgybitch"
+	"\![change,Shell,Nightmare]"
 	/*
 	_file = "changelog.txt"
 	_buff = ""

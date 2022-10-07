@@ -27,7 +27,7 @@ OnAnchorSelect
 	if "http://" _in_ reference0
 	{
 		"\j[%(reference0)]\e"
-		}
+	}
 	else 
 	{
 		case reference0
@@ -113,7 +113,7 @@ OnAnchorSelect
 				}
 				elseif nowmode == "Edgybitch"
 				{
-					"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom', too.\n\n\w8Technically that'd make Dream and the purple one my half brothers \w3when you think about it.\e"
+					"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8Now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom', too.\n\n\w8Technically that'd make Dream and the purple one my half brothers \w3when you think about it.\e"
 				}
 				else
 				{

@@ -89,7 +89,7 @@ RandomTalk : nonoverlap_pool
 			"\0\s[16]* (He gets back up.)\![raise,OnSelfStand]"
 			if nicesadlevel >= 25
 			{
-				"\0\s[1]\i[55]\w8.\w8.\w8.\n\n\w8\w8\w8\w8\0\s[5]\i[55]\w8\w8\w8Z\w6Z\w6Z\w6.\w6.\w6.\w8\w8\w8\n\n* (It looks like he fell asleep.)\w8\n\n* (Poor thing\w3.\w3.\w3.\w8 He must've not slept during night.)\![raise,Onsittangoffsleepingmodeon]"
+				"\0\s[1]\i[55]\w8.\w8.\w8.\n\n\w8\w8\w8\w8\0\s[5]\i[55]\w8\w8\w8Z\w6Z\w6Z\w6.\w6.\w6.\w8\w8\w8\n\n* (It looks like he fell asleep.)\w8\n\n* (Poor thing\w3.\w3.\w3.\w8 He must've not slept during night.)\w6\![raise,Onsittangoffsleepingmodeon]\w8"
 				
 			}
 			if nicesadlevel >= 50
@@ -208,8 +208,19 @@ RandomTalk : nonoverlap_pool
 		\![*]\q[Yes,whatswronglilbb]\n/
 		\![*]\q[No,lethimbeplsfortheloveofgod]\e"
 	}
+	elseif ((lastalked >= 120) && (RAND(2) < 1)) || ((lastalked >= 15) && (lasttalked < 120) && (RAND(120/lasttalked) < 1))
+	{
+		sittang = "on"
+		"\0\s[1]\i[55]* (He sits down.)\e"
+	}
 	else //Normal stuff
 	{
+		if lasttalked >= 15 //If he doesn't talk for 15 minutes
+		{
+			sittang = "on"
+			"\0\s[1]\i[55]* (He sits down.)\e"
+		}
+		"\0\s[13]Wonder what this place even is...\e"
 		"\0\s[4]I wonder how things are back at home...\e"
 		"\0\s[4]I wish I had a staff or something. \w8That'd be cool.\e"
 		"\0\s[4]I keep hearing that the golden apples on Mom's tree are valuable beause they heal people of sickness. \w8\n\n\0\s[3]They're more like painkillers... and\w5\0\s[8] it'd be nice if the dark apples had any use at all.\e"
@@ -217,13 +228,16 @@ RandomTalk : nonoverlap_pool
 		"\0\s[0]\i[11]\i[55]* (Smells like old books and purple.)\e"
 		"\0\s[4]You know, I wish I could play an instrument.\w8\n\nMaybe a violin or something?\e"
 		"\0\s[4]Once I get home I should try to clean around the treehouse again...\w6 anDream rarely picks up their stuff.\e"
-		"\0\s[4]I wonder how much it rains there...\e"
+		"\0\s[4]I wonder how much it rains there...\w6 D'you have to do any burning?\e"
+		"\0\s[13]'S weird not feeling any breeze or hearing any bugs around%(lps(4)) But there aren't any people,\w3 so that evens out.\e"
 		"\0\s[4]I wonder when I'll get to go back home.\w8 Not that I was really gonna do anything... \w4But...\e"
 		"\0\s[13]\i[55]* (He's fiddling with his hands.)\e"
 		"\0\s[4]Would having wings even be all that fun?\w8\n\nI feel like they'd just get in the way of everything.\e"
 		"\0\s[4]Maybe I should go out and get more outfits at some point.\w8 This ones gettin' kinda old.\e"
 		"\0\s[4]I hope nobody sneaks up on Mom's tree while I'm not there\w2.\w2.\w2.\e"
+		"\0\s[0]\i[11]Been thinking about cuckoos a lot lately...\w5\s[4]Not sure why.\w8"
 		"\0\s[0]\i[11]\i[55]* (He's pretty quiet today.)\e"
+		"* (He's muttering something under his breath.\w4 It's kinda rhythmic,\w4 maybe it's lyrics?)\w7"
 		"\0\s[7]\i[55]* (You poke him.)\n\n\w8\s[0]\i[13]\i[15]Could you not?\n\n\![*]\q[Hug him,hugpurpleman]\n\![*]\q[Respect his wishes,leavepurplemanalone]\e\e"
 		"\0\s[4]Kinda wonder what the world would be like if I never existed\w2.\w2.\w2.\w8\n\n\i[55]* (Is that normal for him?)\e"
 		"\0\s[0]\i[55]* (You ask him for the time.)\n\n\w8\s[4]It's\w3.\w3.\w3.\w8 Um\w3.\w3.\w3.\n\n\w8\i[55]* (You ask him why he doesn't know the time.\w8 There's a clock right in his menu.)\n\n\w8\i[23]Huh?"
@@ -403,7 +417,7 @@ RandomTalk : nonoverlap_pool
 		{
 			"\0\s[4]Lots of berries should start being good to pick this month.\n\n\w8I always like doing that,\w4 it's one of the few things I'm still able to enjoy.\w6\0\s[8] Though,\w2 sometimes it stains my clothes a bit.\e"
 			"\0\s[4]I used to love carving pumpkins with anDream,\w4 but-\0\s[8]\w8Um...\n\n\w8\0\s[13]I still can cook the seeds after though.\w6 That's a fun thing to do...\e"
-			"\0\s[4]Do the trees change color where you are?\w8 I've read about that,\w5 the leaves turning gold and red in the autumn.\w8\w6 Sometimes I wonder what Mom's tree would look like like that,\0\s[3]\w5 but then I remember that it's the leaves dying,\w3 so...\w6"
+			"\0\s[4]Do the trees change color where you are?\w8 I've read about that,\w5 the leaves turning gold and red in the autumn.\n\n\w8\w6Sometimes I wonder what Mom's tree would look like like that,\0\s[3]\w5 but then I remember that it's the leaves dying,\w3 so...\w6"
 		}
 		if season == "Winter" 
 		{
@@ -489,9 +503,9 @@ RandomTalk : nonoverlap_pool
 		}
 		if timeslot == "morning"
 		{
-			"\0\s[0]anDream always gets up earlier then me.\w8\n\n\i[11].\w3.\w3.\w3They used to be a pretty late sleeper.\w8 Got no idea why it changed\w3.\w3.\w3."
+			"\0\s[0]anDream always gets up earlier than me.\w8\n\n\i[11].\w3.\w3.\w3They used to be a pretty late sleeper.\w8 Got no idea why it changed\w3.\w3.\w3."
 			"\0\s[4]Wonder what it is like for you outside in the morning\w2.\w2.\w2.\w8 You guys have weather and seasons and stuff,\w8 right?\n\n\w8So it's probably different\w3.\w3.\w3.\e"
-			"\0\s[0]\i[55]* (It's breakfast,\w3 so it's a good idea to eat.)\w8\n\n\)[*]\q[Feed him something?,nightyneedstoeat]\e"
+			"\0\s[0]\i[55]* (It's breakfast,\w3 so it's a good idea to eat.)\w8\n\n\[*]\q[Feed him something?,nightyneedstoeat]\e"
 			if hastea == "on"
 			{
 				"\0\s[27]* (He drinks some early morning tea.)\e"
@@ -870,11 +884,6 @@ OnMinuteChange
 	{
 		MikireTalk
 	}
-	elseif sittang == "off" && lasttalked >= 15 && sleepingmode != "on" //If he doesn't talk for 15 minutes
-	{
-		sittang = "on"
-		"\0\s[1]\i[55]* (He sits down.)\e"
-	}
 	elseif nicesadlevel <= -25 //Might change later. what is this.
 	{
 		privacyrespecter = "on"
@@ -965,7 +974,7 @@ OnSurfaceRestore
 	}
 	elseif nowmode == "Edgybitch"
 	{
-		"\0\s[0]\e"
+		"\0\s[0]"
 	}
 	elseif sittang == "on"
 	{

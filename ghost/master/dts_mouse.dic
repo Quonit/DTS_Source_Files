@@ -72,7 +72,7 @@ MouseMoveSakura
 								"zzz\w4.\w4.\w4.\w8\w8 \w4.\w4.\w4.Don't touch\w4.\w4.\w4.\e"
 								"zzz\w4.\w4.\w4.\e"
 								"'s mine\w4.\w4.\w4.\w8\w8 Don't take\w4.\w4.\w4.\e"
-								"hmm\w4.\w4.\w4.\w8\w8 *(username)\w4.\w4.\w4.\w4?\e"
+								"hmm\w4.\w4.\w4.\w8\w8 %(username)\w4.\w4.\w4.\w4?\e"
 							}
 							if nicesadlevel <= 10
 							{
@@ -472,14 +472,16 @@ Select.punchnighty
 	--
 	if privacyrespecter == "off" && (blushiemode == "on" || nightynight == "on")
 	{
-		negact += 1
+		if nicesadlevel > 25; {negact += 10}
+		else; {negact += 1}
 		punchout += 1
 		"\0\s[290]Ack-! %(username)??\w4\0\s[21] Why did you do that???\e"
 		"\0\s[30]Ow!! Wait,\w3\0\s[21] %(username)???\e"
 		"\0\s[30]Ah-!! Ow!!!\w4 %(username)?!\n\n\w8\0\s[21]Why did you do that???\w6 I-\w3 I thought you were my friend!\e"
 	}
 	
-	negact += 1
+	if nicesadlevel > 25; {negact += 10}
+	else; {negact += 1}
 	punchout += 1
 	"\0\s[290]Ow! \w3Why did you do that??"
 	"\0\s[290]Ow-! \w3Stop it!"

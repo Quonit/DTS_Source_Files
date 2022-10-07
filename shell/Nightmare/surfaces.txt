@@ -30,8 +30,8 @@ surface.append0-9
 	animation103.interval,never
 	animation103.pattern0,stop,100
 	animation103.pattern1,interpolate,1007,0,0,0
-	animation103.pattern2,interpolate,1008,1000,0,0
-	animation103.pattern3,interpolate,1007,1000,0,0
+	animation103.pattern2,interpolate,1008,100-500,0,0
+	animation103.pattern3,interpolate,1007,100-500,0,0
 	animation103.pattern4,start,103
 	
 	//Pull in
@@ -135,6 +135,9 @@ surface5
 	animation0.pattern0,interpolate,1101,0,0,0
 	animation0.pattern1,interpolate,1102,150,0,0
 	animation0.pattern2,interpolate,1101,150,0,0
+	
+	animation1.interval,runonce
+	animation1.pattern0,start,103
 }
 
 //Happy

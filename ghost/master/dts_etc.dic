@@ -151,7 +151,14 @@ OnVanished
 
 OnBIFFBegin
 {
-	"%(surface0)\i[55]* (Checking e-mail\w4.\w4.\w4.)\e"
+	if nowmode != "Edgybitch"
+	{
+		"%(surface0)\i[55]* (Checking e-mail\w4.\w4.\w4.)\e"
+	}
+	else
+	{
+		"\C\w8\w8Yeah,\w5 yeah.\w5%(lps(4))"
+	}
 }
 
 OnBIFFComplete
@@ -197,7 +204,14 @@ OnBIFFFailure
 	}
 	elseif reference0 == "defect"
 	{
-		"\0\s[0]\i[55]* (The email account was not set up properly.)\w8\n\n* (It can be reset at the POP menu.)\![open,configurationdialog]\e"
+		if nowmode != "Edgybitch"
+		{
+			"\0\s[0]\i[55]* (The email account was not set up properly.)\w8\n\n* (It can be reset at the POP menu.)\![open,configurationdialog]\e"
+		}
+		else
+		{
+			"Ain't working.\w5 Might wanna reset your account at the POP menu.\w8\![open,configurationdialog]\w8\n\n* (He's smirking for some reason)"
+		}
 	}
 	elseif reference0 == "artificial"
 	{
@@ -607,7 +621,7 @@ Onsittangoffsleepingmodeon
 	sleptiem = 1
 	sittang = "off"
 	sleepingmode = "on"
-	"\![bind,Blanket,cape,0]"
+	"\C\![bind,Blanket,cape,0]\w8"
 }
 
 OnSelfStand
@@ -626,5 +640,5 @@ OnWakeyWake
 	sleepingmode='off'
 	lasttalked = 0
 	--
-	"\![bind,Blanket,cape,0]"
+	"\C\![bind,Blanket,cape,0]"
 }

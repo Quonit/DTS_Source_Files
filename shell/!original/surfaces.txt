@@ -116,11 +116,11 @@ surface0
 	//Dream plush
 	animation22.interval,never
 	animation22.pattern0,stop,8
-	animation22.pattern0,overlay,1225,0,0,0
+	animation22.pattern1,overlay,1225,0,0,0
 	//Mare plush
 	animation21.interval,never
 	animation21.pattern0,stop,8
-	animation21.pattern0,overlay,1226,0,0,0
+	animation21.pattern1,overlay,1226,0,0,0
 
 	//Tentacles
 	animation16.interval,never

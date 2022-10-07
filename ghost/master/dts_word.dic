@@ -185,7 +185,7 @@ backask //Put this at the end of the ask menu instead of typing this out 30 time
 	}
 	else
 	{
-		"\n\n\![*]\q[Ask something else,gooptalk]\n"
+		"\n\n\![*]\q[Ask something else,goopask]\n"
 	}
 	--
 	"\![*]\q[Back to main menu,BACKTOMENU]\n/
@@ -419,6 +419,8 @@ lps
 
 randomfunction
 {
+	"\C"
+	--
 	"\![open,calendar]"
 	"\![open,configurationdialog]"
 	ChoiceSystemInformation
