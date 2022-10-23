@@ -172,6 +172,10 @@ surface8
 surface9
 {
 	element0,overlay,surface9.png,0,0
+	
+	//Eye looking away
+	animation11.interval,never
+	animation11.pattern0,overlay,1202,0,0,0
 }
 
 //Cross arms. FIX THIS i want it to be 10 but stupid stupid stupid kero
