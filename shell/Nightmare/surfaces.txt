@@ -156,15 +156,15 @@ surface7
 
 }
 
-//scawy
+//eyeroll
 surface8
 {
 	collision0,151,90,216,118,Petspot
 	element0,overlay,surface8.png,0,0
 	
-	//Blanket
-	animation11.interval,never
-	animation11.pattern0,overlay,1100,0,0,0
+	animation0.interval,runonce
+	animation0.pattern0,stop,100
+	animation0.pattern1,start,102
 
 }
 
