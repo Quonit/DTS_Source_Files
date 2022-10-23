@@ -1982,15 +1982,14 @@ Select.whatswithdreamscrown
 	if askaboutdreamcrown != "on"
 	{
 		askaboutdreamcrown = "on"
-		"\0\s[11]Huh? \w4What are you talking about? \w4\0\s[15]anDream's insignia has always been a star, \w2and mine has always been a moon.\w8\n\n\0\s[8]We're both named after night-themed things, \w3did you think anDream's insignia would be a sun or something?\n\n"
+		"\0\s[11]Huh? \w4What are you talking about? \w4\0\s[15]anDream's insignia has always been a star, \w2and mine has always been a moon.\w8\n\n\0\s[8]We're both named after night-themed things, \w3did you think anDream's symbol would be a sun or something?"
 	}
 	else
 	{
-		//temp dialogue
-		//dream crown dialogue if you've already asked
+		"\0\s[0]\i[11]They're more attached to their crown than I am... \w8\s[7]I mean- \w8\s[8]don't get me wrong, \w5I like mine and all,\w8\s[4] but I'm not as\w4.\w4.\w4.\w8\n\n\w8\s[8]Keeping the crown on isn't as important to me."
 	}		
 	--
-	"\![*]\q[ASK another question,youtalk]\n/
+	"\n\n\![*]\q[ASK another question,youtalk]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 

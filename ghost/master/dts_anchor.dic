@@ -42,7 +42,6 @@ OnAnchorSelect
 				}
 				elseif sittang == "on"
 				{
-					//temp dialogue
 					"\0\s[1]"
 				}
 				else
