@@ -197,16 +197,10 @@ surface11
 	element1,overlay,surface1511.png,0,0
 }
 
-//Cross arms
+//Pickup
 surface12
 {
-	element0,overlay,surface1512.png,0,0
-	//waggle
-	animation12.interval,always,10
-	animation12.pattern0,base,-1,750,0,0
-	animation12.pattern1,base,1012,660,0,0
-	animation12.pattern2,base,1012,500,0,0
-	animation12.pattern3,base,-1,30,0,0
+	element0,overlay,surface12.png,0,0
 }
 
 surface1012
