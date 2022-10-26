@@ -5,7 +5,7 @@ GoopTalk : nonoverlap_pool
     "\0\s[0]\i[105]\w8\s[-1]\w8\w8\w8\w8\s[0]\i[106]\w8You might want to go check on your %(usersfolder)\w2.\w2.\w2.\w5 I've been spending a bit of time there,\w5 maybe it got deleted?\n\n\![*]\q[Call his bluff,heisntbluffing]\n\![*]\q[Get upset,feedgoopy]\e"
     "\0\s[1]\i[102]God,\w4 this place is so boring.\n\n\w8Couldn't there at least be more than one character out at a time or is that just too complicated to make?\e"
     "\0\s[0]* (You ask him if he enjoys his new home.)\n\n\w8\i[102]This place sucks.\e"
-    "\0\s[0]* (You ask if you can hug him.)\n\n\w8\s[8]I think that's a stupid question to ask.\n\n\w8\[0]\i[102]* (\w3.\w3.\w3.\w3Is that a yes or a no?)\n\n\w8\0\s[5]That's a no, you idiot!!!\e"
+    "\0\s[0]* (You ask if you can hug him.)\n\n\w8\s[8]I think that's a stupid question to ask.\n\n\w8\s[0]\i[102]* (\w3.\w3.\w3.\w3Is that a yes or a no?)\n\n\w8\0\s[5]That's a no, you idiot!!!\e"
     "\0\s[0]How long are you going to force me to stay here, anyways?\e"
 	"\0\s[0]* (Probably causing problems on purpose.)\w6"
 	"\0\s[0]Wonder if you're still thinking about Night.\w7 Or have you forgotten him already?\w5"

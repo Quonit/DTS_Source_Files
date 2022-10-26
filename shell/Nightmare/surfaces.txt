@@ -107,6 +107,12 @@ surface2
 	//Collision
 	collision0,160,87,221,128,Petspot
 	element0,overlay,surface2.png,0,0
+	
+	animation0.interval,runonce
+	animation0.pattern0,overlay,1300,0,0,0
+	
+	animation1.interval,runonce
+	animation1.pattern0,overlay,1203,0,0,0
 
 }
 
@@ -201,6 +207,12 @@ surface11
 surface12
 {
 	element0,overlay,surface12.png,0,0
+	
+	animation0.interval,always
+	animation0.pattern0,interpolate,1009,0,0,0
+	animation0.pattern1,interpolate,1010,1000,0,0
+	animation0.pattern2,interpolate,1009,1000,0,0
+	
 }
 
 surface1012
