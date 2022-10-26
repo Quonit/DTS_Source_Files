@@ -235,7 +235,7 @@ surface1
 	animation100.pattern0,add,1601,0,0,0
 }
 
-//Shrug
+//Shrug or something
 surface2
 {
 	//Collision
@@ -243,7 +243,6 @@ surface2
 	collision1,114,55,172,89,Face
 	collisionex2,Skull,polygon,118,51,124,34,141,21,157,24,174,29,184,43,157,53,118,53
 	
-
 	element0,overlay,surface1002.png,0,0
 	//talk
 	animation15.interval,talk,4
@@ -265,6 +264,16 @@ surface2
 	//Stop Talking-----------------------------------------------------------------------------
 	animation55.interval,never
 	animation55.pattern0,stop,15
+
+	//Eyes
+	//Annoyed side look
+	animation2.interval,runonce
+	animation2.pattern0,overlay,1136,0,0,0
+	
+	//Arms
+	//Shrug
+	animation3.interval,runonce
+	animation3.pattern0,overlay,1227,0,0,0
 
 	//Blushies
 	animation100.interval,bind
