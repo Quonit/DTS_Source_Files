@@ -336,6 +336,9 @@ Select.choiceneither
 Select.removegoo
 {
 	cutscene = "on"
+	sittang = "off"
+	reversetalktime
+	
 	--
 	if dontmovestatsitshalloween == "on"
 	{
@@ -2509,32 +2512,40 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	dontmovestatsitshalloween = "on"
-	nowmode = "Edgybitch"
-	"\![change,Shell,Nightmare]"
 	/*
-	_file = "changelog.txt"
-	_buff = ""
-	_text = ""
-	FCHARSET(1)
-	
-	if FOPEN(_file,'r') //'r' tells it to read the file
+	"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\s[1512]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\s[1517]\w8\w8\w5\s[1513]\w8\w8\w8\s[1514]Looks like you found me.\w4.\w4.\w5I'd say it's almost impressive.\w4 Especially if you didn't even know I was here, \w4the lengths you went through to torture him.\w8\n\nBut, here you are. \w5Doesn't much matter what you said to him before.\w8\s[1513] You get to talk to me now."
+	*/
+	"\n\n\q[Test again?,testvariable]/
+	\n\q[Test goo?,testgoo]/
+	\n\q[Put him back?,changeshell]/
+	\n\q[Close,CANCEL]"
+}
+
+
+Select.changeshell
+{
+	"\![change,Shell,Dreamtale Sans]"
+}
+
+Select.testgoo
+{
+	"\0\s[23]Ah-!\s[24]\c\w8\w8\w8\w8\w8\w8\w8\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
+	--
+	if TOLOWER(username) != "user"
 	{
-		for _buff = FREAD(_file); _buff != -1; _buff = FREAD(_file)
-		{
-			_text += "%(_buff)\n"
-		}
+		"'%(username)', is it?"
+	}
+	else
+	{
+		"'\s[10002]\i[107]\i[3]%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
 	}
 	--
-	"%_text"
+	"\n\n\w8\s[10002]\i[107]\i[1]I hear you've been giving a certain skeleton a bad time.\w8\w8\n\n\i[5]Well,\w6 congratualtions.\w6\s[10002]\i[102]\w8\w7 You get to deal with me\w6 now.\w8"
 	--
-	FCLOSE(_file)
-	*/
-	
-	//nicesadlevel = 100
-	//nightynight = "on"
-	//"..."
+	if nicesadlevel >= 25
+	{
+		"\n\n\w8\w8\w8* (You try to explain that you haven't been mistreating %(nightname), \s[10002]\i[5]\i[103]but the goop isn't having it.)"
+	}
 	--
-	"\n\n\q[Test again?,testvariable]/
-	\n\q[Close,CANCEL]"
+	"\n\n\w8\w8\w8\s[10002]\i[2]\i[3]* (You get the feeling things might go back to normal after Halloween%(lps(5)))\w8\w8\s[10002]\i[2]\i[105]\w8\![change,Shell,Nightmare]\s[0]\i[106]"
 }

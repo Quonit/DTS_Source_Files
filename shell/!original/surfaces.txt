@@ -656,13 +656,13 @@ surface24
 {
 	element1,overlay,surface1504.png,0,0
 	animation34.interval,runonce
-	animation34.pattern0,base,1506,200,0,0
-	animation34.pattern1,base,1507,200,0,0
-	animation34.pattern2,base,1508,200,0,0
-	animation34.pattern3,base,1509,200,0,0
-	animation34.pattern4,base,1510,250,0,0
-	animation34.pattern5,base,1511,250,0,0
-	animation34.pattern6,base,1312,250,0,0
+	animation34.pattern0,base,1506,230,0,0
+	animation34.pattern1,base,1507,230,0,0
+	animation34.pattern2,base,1508,230,0,0
+	animation34.pattern3,base,1509,230,0,0
+	animation34.pattern4,base,1510,290,0,0
+	animation34.pattern5,base,1511,290,0,0
+	animation34.pattern6,base,1312,290,0,0
 }
 
 //Eat
@@ -1044,6 +1044,12 @@ surface1512
 	animation38.interval,never
 	animation38.pattern0,overlay,1206,140,0,0
 	
+	animation40.interval,never
+	animation40.pattern0,overlay,1205,200,0,0
+	animation40.pattern1,overlay,-1,200,0,0
+	animation40.pattern2,overlay,1206,200,0,0
+	animation40.pattern3,overlay,1205,200,0,0
+	
 	//waggle
 	animation100.interval,always
 	animation100.pattern0,interpolate,1306,0,0,0
@@ -1056,19 +1062,20 @@ surface1513
 {
 	element0,overlay,surface1513.png,0,0
 }
+
 surface1514
 {
 	element0,overlay,surface1514.png,0,0
 	//waggle
 	animation100.interval,always
 	animation100.pattern0,interpolate,1308,0,0,0
-	animation100.pattern1,interpolate,1309,1308,0,0
-	animation100.pattern2,interpolate,1308,1308,0,0
+	animation100.pattern1,interpolate,1309,550,0,0
+	animation100.pattern2,interpolate,1308,550,0,0
 }
-surface1516
-{
-	element0,overlay,surface1516.png,0,0
-}
+//surface1516
+//{
+//	element0,overlay,surface1516.png,0,0
+//}
 surface1517
 {
 	element0,overlay,surface1517.png,0,0
@@ -1186,6 +1193,82 @@ surface2006 //Happy?
 //	element0,overlay,surface2007.png,0,0
 //}
 
+//Mare stuff
+
+//Cross arms
+surface10002
+{
+	element0,overlay,surface11002.png,0,0
+	
+	//Arms
+	//On Cheek
+	animation0.interval,runonce
+	animation0.pattern0,overlay,10300,0,0,0
+	//Crossed
+	animation2.interval,never
+	animation2.pattern0,stop,0
+	animation2.pattern1,overlay,10301,0,0,0
+	
+	//Expressions
+	//Smirk
+	animation1.interval,runonce
+	animation1.pattern0,overlay,10203,0,0,0
+	//grr
+	animation3.interval,never
+	animation3.pattern0,stop,1
+	animation3.pattern1,overlay,10204,0,0,0
+	//scawy
+	animation5.interval,never
+	animation5.pattern0,stop,1
+	animation5.pattern1,overlay,10205,0,0,0
+	
+	//woggle
+	animation100.interval,always
+	animation100.pattern0,interpolate,10000,0,0,0
+	animation100.pattern1,interpolate,10001,1000,0,0
+	animation100.pattern2,interpolate,10000,1000,0,0
+	
+	//droopy
+	animation102.interval,never
+	animation102.pattern0,stop,100
+	animation102.pattern1,interpolate,10022,0,0,0
+	animation102.pattern2,interpolate,10003,1000,0,0
+	animation102.pattern3,interpolate,10022,1000,0,0
+	animation102.pattern4,start,102
+	
+	//ANGRYCLES
+	animation103.interval,never
+	animation103.pattern0,stop,100
+	animation103.pattern1,interpolate,10007,0,0,0
+	animation103.pattern2,interpolate,10008,100-500,0,0
+	animation103.pattern3,interpolate,10007,100-500,0,0
+	animation103.pattern4,start,103
+	
+	//Pull in
+	animation105.interval,never
+	animation105.pattern0,stop,100
+	animation105.pattern1,interpolate,10006,0,0,0
+	animation105.pattern2,interpolate,10005,80,0,0
+	animation105.pattern3,interpolate,10004,80,0,0
+	animation105.pattern4,interpolate,-1,80,0,0
+	
+	//Pull out
+	animation106.interval,never
+	animation106.pattern0,stop,100
+	animation106.pattern1,interpolate,10004,0,0,0
+	animation106.pattern2,interpolate,10005,80,0,0
+	animation106.pattern3,interpolate,10006,80,0,0
+	animation106.pattern4,start,100
+	
+	//curly
+	animation107.interval,never
+	animation107.pattern0,stop,100
+	animation107.pattern1,interpolate,10011,0,0,0
+	animation107.pattern2,interpolate,10012,700,0,0
+	animation107.pattern3,interpolate,10011,700,0,0
+	animation107.pattern4,start,107
+
+}
 
 //ToolTips HotSpots <3 <3 <3
 sakura.tooltips 
@@ -1231,4 +1314,7 @@ surface100000
 	
 	animation9.interval,never
 	animation9.pattern0,overlay,1016,0,0,0
+	
+	animation10.interval,never
+	animation10.pattern0,overlay,1025,0,0,0
 }

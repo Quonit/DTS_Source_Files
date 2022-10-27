@@ -1006,7 +1006,14 @@ OnSurfaceRestore
 OnShellChanged //I hope this doesn't kill the ghost
 {
 	nowshell = reference0
-	"\0\s[0]"
+	if nowshell == "Nightmare"
+	{
+		"\0\s[0]\i[106]"
+	}
+	else
+	{
+		"\0\s[0]"
+	}
 	//"this shell is now changed"
 }
 

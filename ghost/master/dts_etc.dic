@@ -642,3 +642,28 @@ OnWakeyWake
 	--
 	"\C\![bind,Blanket,cape,0]"
 }
+
+
+reversetalktime
+{
+	if "30" _in_ talktime
+	{
+		aitalkinterval = 30
+	}
+	elseif "5" _in_ talktime
+	{
+		aitalkinterval = 300
+	}
+	elseif "guess" _in_ TOLOWER(talktime)
+	{
+		aitalkinterval = 0
+	}
+	elseif "3" _in_ talktime
+	{
+		aitalkinterval = 180
+	}
+	else //every minute is just 'minute'
+	{
+		aitalkinterval = 60
+	}
+}
