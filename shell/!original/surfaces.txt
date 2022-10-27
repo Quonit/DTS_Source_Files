@@ -1198,74 +1198,74 @@ surface2006 //Happy?
 //Cross arms
 surface10002
 {
-	element0,overlay,surface11002.png,0,0
+	element0,overlay,surface1524.png,0,0
 	
 	//Arms
 	//On Cheek
 	animation0.interval,runonce
-	animation0.pattern0,overlay,10300,0,0,0
+	animation0.pattern0,overlay,1228,0,0,0
 	//Crossed
 	animation2.interval,never
 	animation2.pattern0,stop,0
-	animation2.pattern1,overlay,10301,0,0,0
+	animation2.pattern1,overlay,1229,0,0,0
 	
 	//Expressions
 	//Smirk
 	animation1.interval,runonce
-	animation1.pattern0,overlay,10203,0,0,0
+	animation1.pattern0,overlay,1140,0,0,0
 	//grr
 	animation3.interval,never
 	animation3.pattern0,stop,1
-	animation3.pattern1,overlay,10204,0,0,0
+	animation3.pattern1,overlay,1141,0,0,0
 	//scawy
 	animation5.interval,never
 	animation5.pattern0,stop,1
-	animation5.pattern1,overlay,10205,0,0,0
+	animation5.pattern1,overlay,1142,0,0,0
 	
 	//woggle
 	animation100.interval,always
-	animation100.pattern0,interpolate,10000,0,0,0
-	animation100.pattern1,interpolate,10001,1000,0,0
-	animation100.pattern2,interpolate,10000,1000,0,0
+	animation100.pattern0,interpolate,1313,0,0,0
+	animation100.pattern1,interpolate,1314,1000,0,0
+	animation100.pattern2,interpolate,1313,1000,0,0
 	
 	//droopy
 	animation102.interval,never
 	animation102.pattern0,stop,100
-	animation102.pattern1,interpolate,10022,0,0,0
-	animation102.pattern2,interpolate,10003,1000,0,0
-	animation102.pattern3,interpolate,10022,1000,0,0
+	animation102.pattern1,interpolate,1325,0,0,0
+	animation102.pattern2,interpolate,1315,1000,0,0
+	animation102.pattern3,interpolate,1325,1000,0,0
 	animation102.pattern4,start,102
 	
 	//ANGRYCLES
 	animation103.interval,never
 	animation103.pattern0,stop,100
-	animation103.pattern1,interpolate,10007,0,0,0
-	animation103.pattern2,interpolate,10008,100-500,0,0
-	animation103.pattern3,interpolate,10007,100-500,0,0
+	animation103.pattern1,interpolate,1319,0,0,0
+	animation103.pattern2,interpolate,1320,100-500,0,0
+	animation103.pattern3,interpolate,1319,100-500,0,0
 	animation103.pattern4,start,103
 	
 	//Pull in
 	animation105.interval,never
 	animation105.pattern0,stop,100
-	animation105.pattern1,interpolate,10006,0,0,0
-	animation105.pattern2,interpolate,10005,80,0,0
-	animation105.pattern3,interpolate,10004,80,0,0
+	animation105.pattern1,interpolate,1318,0,0,0
+	animation105.pattern2,interpolate,1317,80,0,0
+	animation105.pattern3,interpolate,1316,80,0,0
 	animation105.pattern4,interpolate,-1,80,0,0
 	
 	//Pull out
 	animation106.interval,never
 	animation106.pattern0,stop,100
-	animation106.pattern1,interpolate,10004,0,0,0
-	animation106.pattern2,interpolate,10005,80,0,0
-	animation106.pattern3,interpolate,10006,80,0,0
+	animation106.pattern1,interpolate,1316,0,0,0
+	animation106.pattern2,interpolate,1317,80,0,0
+	animation106.pattern3,interpolate,1318,80,0,0
 	animation106.pattern4,start,100
 	
 	//curly
 	animation107.interval,never
 	animation107.pattern0,stop,100
-	animation107.pattern1,interpolate,10011,0,0,0
-	animation107.pattern2,interpolate,10012,700,0,0
-	animation107.pattern3,interpolate,10011,700,0,0
+	animation107.pattern1,interpolate,1323,0,0,0
+	animation107.pattern2,interpolate,1324,700,0,0
+	animation107.pattern3,interpolate,1323,700,0,0
 	animation107.pattern4,start,107
 
 }

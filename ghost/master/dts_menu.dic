@@ -2540,7 +2540,7 @@ Select.testgoo
 		"'\s[10002]\i[107]\i[3]%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
 	}
 	--
-	"\n\n\w8\s[10002]\i[107]\i[1]I hear you've been giving a certain skeleton a bad time.\w8\w8\n\n\i[5]Well,\w6 congratualtions.\w6\s[10002]\i[102]\w8\w7 You get to deal with me\w6 now.\w8"
+	"\n\n\w8\s[10002]\i[107]\i[1]I hear you've been giving a certain skeleton a bad time.\w8\w8\n\n\i[5]Well,\w6 congratulations.\w6\s[10002]\i[102]\w8\w7 You get to deal with me\w6 now.\w8"
 	--
 	if nicesadlevel >= 25
 	{
