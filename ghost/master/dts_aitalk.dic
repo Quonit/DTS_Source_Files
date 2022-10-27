@@ -696,7 +696,6 @@ Select.Goopmare
 	lasttalked = 0
 	nowmode = "Edgybitch"
 	wasemo = "on"
-	
 	"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\s[1512]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\s[1517]\w8\w8\w5\s[1513]\w8\w8\w8\s[1514]Looks like you found me.\w4.\w4.\w5I'd say it's almost impressive.\w4 Especially if you didn't even know I was here, \w4the lengths you went through to torture him.\w8\n\nBut, here you are. \w5Doesn't much matter what you said to him before.\w8\s[1513] You get to talk to me now.\![change,Shell,Nightmare]\e"
 }
 
