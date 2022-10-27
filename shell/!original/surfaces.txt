@@ -662,7 +662,7 @@ surface24
 	animation34.pattern3,base,1509,200,0,0
 	animation34.pattern4,base,1510,250,0,0
 	animation34.pattern5,base,1511,250,0,0
-	animation34.pattern6,base,1512,250,0,0
+	animation34.pattern6,base,1312,250,0,0
 }
 
 //Eat
@@ -1033,43 +1033,37 @@ surface1512
 	element0,overlay,surface1512.png,0,0
 	//Smile
 	animation35.interval,never
-	animation35.pattern0,overlay,1203,140,57,220
+	animation35.pattern0,overlay,1203,140,0,0
 
 	animation36.interval,never
-	animation36.pattern0,overlay,1204,140,57,220
+	animation36.pattern0,overlay,1204,140,0,0
 	//Flex
 	animation37.interval,never
-	animation37.pattern0,overlay,1205,140,90,221
+	animation37.pattern0,overlay,1205,140,0,0
 
 	animation38.interval,never
-	animation38.pattern0,overlay,1206,140,90,221
+	animation38.pattern0,overlay,1206,140,0,0
+	
+	//waggle
+	animation100.interval,always
+	animation100.pattern0,interpolate,1306,0,0,0
+	animation100.pattern1,interpolate,1307,1306,0,0
+	animation100.pattern2,interpolate,1306,1306,0,0
 }
 
-//Goopmare because I fucked up
+//idk how to make a delay for it to turn into 1514 but I'd like to
 surface1513
 {
 	element0,overlay,surface1513.png,0,0
-	//woggle
-	animation45.interval,always,10
-	animation45.pattern0,base,-1,750,0,0
-	animation45.pattern1,base,1514,660,0,0
-	animation45.pattern2,base,1514,500,0,0
-	animation45.pattern3,base,-1,30,0,0
 }
 surface1514
 {
 	element0,overlay,surface1514.png,0,0
-}
-//Goopmare because I fucked up
-surface1515
-{
-	element0,overlay,surface1515.png,0,0
-	//woggle
-	animation46.interval,always,10
-	animation46.pattern0,base,-1,750,0,0
-	animation46.pattern1,base,1516,660,0,0
-	animation46.pattern2,base,1516,500,0,0
-	animation46.pattern3,base,-1,30,0,0
+	//waggle
+	animation100.interval,always
+	animation100.pattern0,interpolate,1308,0,0,0
+	animation100.pattern1,interpolate,1309,1308,0,0
+	animation100.pattern2,interpolate,1308,1308,0,0
 }
 surface1516
 {
