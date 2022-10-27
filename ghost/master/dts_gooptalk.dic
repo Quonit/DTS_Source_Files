@@ -278,11 +278,11 @@ Select.checkinguout2
 
 Oncomplementeegoop
 {
-    "\0\s[2]* (You tell him he has very magnificent goop.)\n\n\w8\s[8]Could you maybe not?"
+    "\0\s[2]\i[3]\i[2]* (You tell him he has very magnificent goop.)\n\n\w8\s[8]Could you maybe not?"
     "\0\s[2]* (You tell Goopmare he is very terrifying.)\n\n\w8. . ."
-    "\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[5]I am not!\n\n\w8* (And cute.)\n\n\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]"
-    "\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[5]Come a little closer and try it." //make tentacles waggle threateningly
-    "\0\s[2]* (You tell him he looks huggable.)\n\n\w8\0\s[8]Go swim in a tar pit,\w5 then.\w8"
+    "\0\s[2]\i[3]\i[2]* (You tell him he looks huggable.)\n\n\w8\0\s[5]I am not!\n\n\w8* (And cute.)\n\n\w8\f[italic,true]HISSSSSSSSSSSSSSS!\f[italic,false]"
+    "\0\s[2]\i[3]\i[2]* (You tell him he looks huggable.)\n\n\w8\0\s[5]Come a little closer and try it." //make tentacles waggle threateningly
+    "\0\s[2]\i[3]\i[2]* (You tell him he looks huggable.)\n\n\w8\0\s[8]Go swim in a tar pit,\w5 then.\w8"
     "\0\s[6]* (You comment on how comfy his clothes look.)\n\n\w8\0\s[8]Human skin is more fun to wear."
     "\0\s[6]* (You comment on his many tentacles.)\n\n\w8\0\s[4]Yes they're great for stabbing, \w2slicing, \w2choking, \w2and myriad other things."
     --

@@ -49,6 +49,14 @@ surface.append0-9
 	animation106.pattern2,interpolate,1005,80,0,0
 	animation106.pattern3,interpolate,1006,80,0,0
 	animation106.pattern4,start,100
+	
+	//curly
+	animation107.interval,never
+	animation107.pattern0,stop,100
+	animation107.pattern1,interpolate,1011,0,0,0
+	animation107.pattern2,interpolate,1012,1000,0,0
+	animation107.pattern3,interpolate,1011,1000,0,0
+	animation107.pattern4,start,107
 }
 
 sakura.cursor
@@ -108,11 +116,27 @@ surface2
 	collision0,160,87,221,128,Petspot
 	element0,overlay,surface2.png,0,0
 	
+	//Arms
+	//On Cheek
 	animation0.interval,runonce
 	animation0.pattern0,overlay,1300,0,0,0
+	//Crossed
+	animation2.interval,never
+	animation2.pattern0,stop,0
+	animation2.pattern0,overlay,1301,0,0,0
 	
+	//Expressions
+	//Smirk
 	animation1.interval,runonce
 	animation1.pattern0,overlay,1203,0,0,0
+	//grr
+	animation3.interval,never
+	animation3.pattern0,stop,1
+	animation3.pattern1,overlay,1204,0,0,0
+	//scawy
+	animation5.interval,never
+	animation5.pattern0,stop,1
+	animation5.pattern1,overlay,1205,0,0,0
 
 }
 
