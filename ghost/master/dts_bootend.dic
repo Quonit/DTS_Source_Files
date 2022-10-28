@@ -232,7 +232,7 @@ OnBoot
 			nowmode = "Edgybitch"
 			dontmovestatsitshalloween = "on"
 			
-			"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
+			"\![enter,passivemode]\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
 			--
 			if TOLOWER(username) != "user" && username != ""
 			{
@@ -250,7 +250,7 @@ OnBoot
 				"\n\n\w8\w8\w8* (You try to explain that you haven't been mistreating %(nightname), \s[10002]\i[5]\i[103]but the goop isn't having it.)"
 			}
 			--
-			"\n\n\w8\w8\w8\s[10002]\i[2]\i[3]* (You get the feeling things might go back to normal after Halloween%(lps(5)))\w8\w8\s[10002]\i[2]\i[3]\i[105]\w8\![change,Shell,Nightmare]"
+			"\n\n\w8\w8\w8\s[10002]\i[2]\i[3]* (You get the feeling things might go back to normal after Halloween%(lps(5)))\w8\w8\x\![leave,passivemode]\x\s[10002]\i[2]\i[3]\i[105]\w8\![change,Shell,Nightmare]"
 		}
 		else
 		{
