@@ -231,31 +231,26 @@ OnBoot
 		{
 			nowmode = "Edgybitch"
 			dontmovestatsitshalloween = "on"
-			"\0\s[23]Ah-!\0\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\0\s[1612]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\0\s[1617]\w8\w8\0\s[1613]Ah, I bet you're somewhat confused. \w6Especially if you've been treating him nicely, \w2so it makes no sense for this to have happened.\0\s[1615]Well,\w4 there are a few reasons. \n\n\w8\0\s[1613]Quonit, the idiot who made this ghost, felt empathetic towards people who wouldn't go down the 'bad route' because they are too cowardly.\n\n\w8And another reason is because I'm a much better Halloween event then the crown-wearing idiot.\n\n\w8Just so you don't go whining at them about it, I'll warn you that some of the things I might say will be out of place if you're on the good route. \n\n\w8Don't worry though, \w4tomorrow everything will go back to normal. \w8Hopefully.\0\s[0]\![change,Shell,Nightmare]\e"
 			
-			/*
-			"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\s[1512]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\s[1517]\w8\w8\w5\s[1513]\w8\w8\w8\s[1514]Looks like you found me.\w4.\w4.\w5I'd say it's almost impressive.\w4 Especially if you didn't even know I was here, \w4the lengths you went through to torture him.\w8\n\nBut, here you are. \w5Doesn't much matter what you said to him before.\w8\s[1513] You get to talk to me now."
-			"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\s[1512]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\s[1517]\w8\w8\w5\s[1513]\w8\w8\w8\s[1514]\w8\w8Well, well.\s[0]\![change,Shell,Nightmare]\w8"
+			"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
 			--
-			if %TOLOWER(username) != "user"
+			if TOLOWER(username) != "user" && username != ""
 			{
 				"'%(username)', is it?"
 			}
 			else
 			{
-				"'%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
+				"\s[10002]\i[107]\i[3]'%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
 			}
-			"\n\n\w8 I hear you've been giving a certain skeleton a bad time.\w8 Well,\w6 congratualtions.\w8\w7 You get to deal with me\w6 now.\w8"
+			--
+			"\n\n\w8\s[10002]\i[107]\i[1]I hear you've been giving a certain skeleton a bad time.\w8\w8\n\n\i[5]Well,\w6 congratulations.\w6\s[10002]\i[102]\w8\w7 You get to deal with me\w6 now.\w8"
 			--
 			if nicesadlevel >= 25
 			{
-				"\n\n* (You try to explain that you haven't been mistreating %(nightname), but the goop isn't having it.)"
+				"\n\n\w8\w8\w8* (You try to explain that you haven't been mistreating %(nightname), \s[10002]\i[5]\i[103]but the goop isn't having it.)"
 			}
 			--
-			"\n\n* (You get the feeling things might go back to normal after Halloween%(lps(5))/
-			\0\s[0]\![change,Shell,Nightmare]\e"
-			
-			*/
+			"\n\n\w8\w8\w8\s[10002]\i[2]\i[3]* (You get the feeling things might go back to normal after Halloween%(lps(5)))\w8\w8\s[10002]\i[2]\i[3]\i[105]\w8\![change,Shell,Nightmare]"
 		}
 		else
 		{
