@@ -69,6 +69,7 @@
 		"\0\s[1]\i[7]\i[11]What do you need?"
 		"\0\s[1]\i[7]* (. . .)"
 		"\0\s[1]\i[7]\i[14]hm?"
+		"\0\s[1]\i[11]\i[14]What do you want?"
 		--
 		MenuRun
 	}
@@ -83,7 +84,6 @@
 		elseif blushiemode == "on" && privacyrespecter == "off"
 		{
 			"\0\s[6]What do you need %(username)?"
-			"\0\s[1]\i[11]\i[14]What do you want?"
 			"\0\s[20]What is it you need?"
 		}
 		elseif nicesadlevel >= 15
