@@ -74,22 +74,24 @@ OnNameTeach
 	else
 	{
 		username = tempname
-		
-		if menuname == "on"
-		{
-			"Cool...%(backmenu)" //\e put here to stop it from playing the rest of the intro dialogue.
-		}
-		else
-		{
-			"Cool..."
-		}
+		"Cool..."
 	}
 	--
-	"\w8\s[4]\n\nSo what do you go by?\n\n/
-	\w5\_q/
-	\![*]\q[He/Him/His,choicefirsthehim]\n/
-	\![*]\q[She/Her/Hers,choicefirstsheher]\n/
-	\![*]\q[They/Them/Their,choicefirsttheythem]\e"
+	if menuname == "on"
+	{
+		"%(backmenu)" //\e put here to stop it from playing the rest of the intro dialogue.
+	}
+	else
+	{
+		"\nCool..."
+	
+		--
+		"\w8\s[4]\n\nSo what do you go by?\n\n/
+		\w5\_q/
+		\![*]\q[He/Him/His,choicefirsthehim]\n/
+		\![*]\q[She/Her/Hers,choicefirstsheher]\n/
+		\![*]\q[They/Them/Their,choicefirsttheythem]\e"
+	}
 }
 
 Select.choicefirsthehim
@@ -126,6 +128,8 @@ FirstBootDone
 }
 
 NameDone
-{
+{		
 	"\0\s[0]I'll call you %(username).\w8 If you ever want to change your name, \w8just go back into the Configuration menu.\e"
 }
+
+

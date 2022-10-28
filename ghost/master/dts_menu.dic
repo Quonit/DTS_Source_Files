@@ -1141,16 +1141,16 @@ Onyouact
 	"%(surface0)What is it?\n\n"
 	"%(surface0)What do you want?\n\n"
 	--
-	"\![*]\q[Check,checkinguout]\n"
+	"\_q\![*]\q[Check,checkinguout]\n"
 	--
 	if punchout >= 1
 	{
-		"\![*]\q[Apologize,sayyouresorry]\n"
+		"\![*]\q[Apologize,sayyouresorry] "
 	}
 	--
 	if nicesadlevel >= 69 && nightynight == "on" && privacyrespecter == "off"
 	{
-		"\![*]\q[Flirt,flirtyflirt]\n"
+		"\![*]\q[Flirt,flirtyflirt] "
 	}
 	--
 	if flirtlevel >= 30 && blushiemode == "off"
@@ -1161,12 +1161,12 @@ Onyouact
 		"\![*]\q[Say???,ilynighty]\n"
 	}
 	--
-	"\![*]\q[Compliment,Oncomplementee]\n/
+	"\![*]\q[Compliment,Oncomplementee] /
 	\![*]\q[Joke,sayafunny]\n/
-	\![*]\q[Story,storytime]\n/
-	\![*]\q[Goad,iwantgoopy]\n/
-	\![*]\q[Mock,nitpicktheboy]\n/
-	\![*]\q[Tease,bemean]\n\n/
+	\![*]\q[Story,storytime] /
+	\![*]\q[Tease,bemean]\n/
+	\![*]\q[Goad,iwantgoopy] /
+	\![*]\q[Mock,nitpicktheboy]\n\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -1666,6 +1666,7 @@ Select.iwantgoopy
 {
 	if nicesadlevel > 25; {negact += 10}
 	else; {negact += 1}
+	--
 	"\0\s[22]\i[55]* (You tell %(nightname) that he should just turn into the more interesting character already.)\n\n"
 	"\i[55]* (You tell him the people who hurt him don't deserve to live.)\n\nE-everyone deserves to...\n\n\i[55]You ask him if he really believes that.)\n\n\w8\w8...\w8"
 	"\i[55]* (You tell him everyone hates him anyway, so why not become the 'nightmare' they always said he was?)"
@@ -2150,8 +2151,8 @@ Select.itemsmenu
 		"\![*]\q[A drink,givhimdrank]	"
 	}
 	--
-	"\![*]\q[A rock,rude]	 \![*]\q[Some food,nightyneedstoeat]\n/
-	\![*]\q[A book,givebook]	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
+	" \![*]\q[A rock,rude]	 \![*]\q[Some food,nightyneedstoeat]\n/
+	\![*]\q[A book,givebook] 	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
 }
 
 Select.giveoutfit
@@ -2531,13 +2532,13 @@ Select.testgoo
 {
 	"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
 	--
-	if TOLOWER(username) != "user"
+	if TOLOWER(username) != "user" && username != ""
 	{
 		"'%(username)', is it?"
 	}
 	else
 	{
-		"'\s[10002]\i[107]\i[3]%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
+		"\s[10002]\i[107]\i[3]'%(username)', eh?\w3 - how ironic that you let him call you that.\w7"
 	}
 	--
 	"\n\n\w8\s[10002]\i[107]\i[1]I hear you've been giving a certain skeleton a bad time.\w8\w8\n\n\i[5]Well,\w6 congratulations.\w6\s[10002]\i[102]\w8\w7 You get to deal with me\w6 now.\w8"
