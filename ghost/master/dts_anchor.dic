@@ -58,7 +58,7 @@ OnAnchorSelect
 						}
 						elseif nowmode == "Edgybitch"
 						{
-							"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Hah,\0\s[7]\w4 that sap?\n\n\w8''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3whom I love so much and definitely care enough to notice things like cuts on his arm!''\n\n\w8\0\s[1]Hah, \w5bet they wouldn't be happy if they saw me.\e"
+							"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]\s[7]Hah,\w4 that sap?\n\n\w8''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3\s[8]whom I love so much and definitely care enough to notice things like\s[2]\i[2]\i[5]\i[103] cuts on his arm!''\n\n\w8\0\s[7]Hah, \w5\s[0]bet they wouldn't be happy if they saw me.\e"
 						}
 						elseif blushiemode == "on"
 						{
@@ -68,6 +68,20 @@ OnAnchorSelect
 						{
 							brotherexpo = "on"
 							"\0\s[6]\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Oh, \w3that's my twin brother. \w8\0\s[4]Lets see\w2.\w2.\w2.\w8\w8\n\n\0\s[3]Me and them are supposed to \w2'protect the village' by keeping the tree alive and watering it and whatever else.\w8\0\s[0] They like doing it a lot because they really like the people there and want to protect them, \w4\0\s[6]which I think makes them super nice\w4.\w4.\w4. \0\s[9]\w8\n\n\w8\0\s[7]Uh- \w8\0\s[6]we also built a treehouse together! \w8\n\n\0\s[0]It's kinda near the tree, and we both live in it. \w5We built it with some of the villagers when we were little.\s[8]\w8\n\nI kinda wish they were here with me,\w5 \0\s[9]but they're not\w4.\w4.\w4. \w8They're probably just having a lot of fun at home.\e"
+						}
+					}
+					--
+					"\n\n"
+					--
+					if nowmode != "Edgybitch"
+					{
+						if askaboutdreamcrown != "on"
+						{
+							"\![*]\q[That doesn't seem right...,whatswithdreamscrown]\n"
+						}
+						else
+						{
+							"\![*]\q[Ask about Dream's crown,whatswithdreamscrown]\n"
 						}
 					}
 				}
@@ -82,7 +96,7 @@ OnAnchorSelect
 				}
 				elseif nowmode == "Edgybitch"
 				{
-					"\0\s[4]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]\_l[0,60]They're the idiot that decided to spend nearly a year working on making this stupid crap.\e"
+					"\0\s[4]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]\_l[0,60]\s[8]They're the idiot that decided to spend nearly a year working on making this stupid crap.\e"
 				}
 				elseif privacyrespecter == "on"
 				{
@@ -112,7 +126,7 @@ OnAnchorSelect
 				}
 				elseif nowmode == "Edgybitch"
 				{
-					"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8Now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom', too.\n\n\w8Technically that'd make Dream and the purple one my half brothers \w3when you think about it.\e"
+					"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\s[2]\i[2]\[5]Hah. \w4\s[3]Dead person.\n\n\w8\s[8]Now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2\s[0]the tree's still my 'Mom', too.\n\n\w8\s[2]Technically that'd make Dream and the purple one my half brothers \w3when you think about it.\e"
 				}
 				else
 				{

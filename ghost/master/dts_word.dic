@@ -246,7 +246,11 @@ pickup //why is this here instead of mouse.dic
 
 surface0
 {
-	if sleepingmode == "on"
+	if nowmode == "Edgybitch"
+	{
+		"\0\s[0]"
+	}
+	elseif sleepingmode == "on"
 	{
 		"\0\s[5]"
 	}
@@ -288,7 +292,11 @@ surface0
 
 attn
 {
-	if sleepingmode == "on"
+	if nowmode == "Edgybitch"
+	{
+		"\0\s[0]"
+	}
+	elseif sleepingmode == "on"
 	{
 		"\0\s[5]"
 	}
