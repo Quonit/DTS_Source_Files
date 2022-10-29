@@ -3,11 +3,13 @@ Changelog for Dreamtale Sans!
 
 --- 29th October 2022 ---
 Additions:
+-Wormspawn helps with the ghost now!!
 -Completely revamped goopmode for Halloween!
 -Replaced shrug pose
 -Touched up the right click menu because it was fuzzy
 -Changed some of the ACT menu options
 -Replaced several pieces of dialogue to fit with the Black Apple Blues lore, fanfic series... about  him: https://archiveofourown.org/series/2690965
+-Rewrote the readme.txt
 
 Bugfixes:
 -Cutscenes now work... Probably.

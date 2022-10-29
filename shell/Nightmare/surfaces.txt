@@ -312,12 +312,80 @@ surface20
 //NM Gets shot
 surface21
 {
-	element1,overlay,surface1503.png,0,0
 	animation35.interval,runonce
-	animation35.pattern0,base,1611,200,0,0
+	animation35.pattern0,base,1611,0,0,0
 	animation35.pattern1,base,1612,200,0,0
 	animation35.pattern2,base,1613,300,0,0
 	animation35.pattern3,base,1614,300,0,0
+}
+
+//open eyes
+surface22
+{
+	element0,overlay,surface1615.png,0,0
+	
+	//blink blink
+	animation1.interval,never
+	animation1.pattern0,overlay,1209,0,0,0
+	//no blink
+	animation2.interval,never
+	animation2.pattern0,stop,1
+}
+
+//DREAM GO AWAY
+surface23
+{
+	element0,overlay,surface1616.png,0,0
+	
+	//talk
+	animation20.interval,talk,4
+	animation20.pattern0,alternativestart,(21,22,23)
+
+	animation21.interval,never
+	animation21.pattern0,overlay,1207,100,0,0
+	animation21.pattern1,overlay,1206,130,0,0
+	animation21.pattern2,overlay,-1,100,0,0
+
+	animation22.interval,never
+	animation22.pattern0,overlay,1206,140,0,0
+	animation22.pattern1,overlay,-1,100,0,0
+
+	animation23.interval,never
+	animation23.pattern0,overlay,1207,140,0,0
+	animation23.pattern1,overlay,-1,100,0,0
+
+	//Stop Talking-----------------------------------------------------------------------------
+	animation55.interval,never
+	animation55.pattern0,stop,20
+}
+
+//Copy of Night's 44
+surface24
+{
+	element0,overlay,surface1617.png,0,0
+	//Arms
+	//Holding Crown
+	animation1.interval,never
+	animation1.pattern0,stop,30
+	animation1.pattern1,stop,4
+	animation1.pattern2,overlay,1318,0,0,0
+	//Put on
+	animation22.interval,never
+	animation22.pattern0,stop,30
+	animation22.pattern1,stop,4
+	animation22.pattern2,overlay,1319,0,0,0
+	animation22.pattern3,overlay,1320,500,0,0
+	//Normal Crown
+	animation30.interval,runonce
+	animation30.pattern0,overlay,1321,0,0,0
+	//Crossed arms
+	animation4.interval,runonce
+	animation4.pattern0,overlay,1322,0,0,0
+	
+	//Eyes
+	//Closed eyes
+	animation8.interval,never
+	animation8.pattern0,overlay,1208,0,0,0
 }
 
 surface1600
@@ -391,20 +459,15 @@ surface1614
 {
 	element0,overlay,surface1614.png,0,0
 }
-//open eyes
-surface1615
-{
-	element0,overlay,surface1615.png,0,0
-}
-//DREAM GO AWAY
-surface1616
-{
-	element0,overlay,surface1616.png,0,0
-}
 //Surface 8
 surface1617
 {
 	element0,overlay,surface1617.png,0,0
+}
+//pickup crown
+surface1618
+{
+	element0,overlay,surface1618.png,0,0
 }
 
 //bluh bluh
