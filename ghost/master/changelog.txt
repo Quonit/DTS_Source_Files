@@ -1,6 +1,19 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
 
+--- 29th October 2022 ---
+Additions:
+-Completely revamped goopmode for Halloween!
+-Replaced shrug pose
+-Touched up the right click menu because it was fuzzy
+-Changed some of the ACT menu options
+-Replaced several pieces of dialogue to fit with the Black Apple Blues lore, fanfic series... about  him: https://archiveofourown.org/series/2690965
+
+Bugfixes:
+-Cutscenes now work... Probably.
+-skeleton will no longer fall into the superposition of being both asleep and awake
+-Various ones I forgot
+
 --- 10th Febuary 2022 ---
 Bugfixes:
 -His mouth no longer moves when speaking during narrator text while sitting
