@@ -374,7 +374,7 @@ Select.removegoo
 		brotherexpo = "off"
 		askaboutnamee = "off"
 		dontmovestatsitshalloween = "off"
-		"\![enter,passivemode]\0\s[0]Hah, \w5I honestly suspected you to be smarter than to think you could just- \w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\0\s[3]Huh- \w8\1\s[20]\![move,--X=100]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[22]\w5\i[2]\w6\s[22]\w6\i[2]\w6\s[22]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[23]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1618]\w8\w8\w8\w8\s[24]\i[1]\i[8]\w8\0\s[24]\i[22]\i[8]\w8.\w5.\w5.\w8Sorry about all of that.\w8 I think it'd be best if I just um\w4.\w4.\w4. \w8Reset the ghost now\w4.\w4.\w4. \w8Some things might be kinda different now that you've seen them\w4.\w4.\w4. \w5ugh, this is so disappointing.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
+		"\![enter,passivemode]\0\s[2]\i[2]\i[5]Hah, \w5\s[2]\i[2]I honestly suspected you to be smarter than to think you could just- \w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\0\s[3]\i[103]Huh- \w8\1\s[20]\![move,--X=100]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[22]\w5\i[2]\w6\s[22]\w6\i[2]\w6\s[22]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[23]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1618]\w8\w8\w8\w8\s[24]\i[1]\i[8]\w8\0\s[24]\i[22]\i[8]\w8.\w5.\w5.\w8Sorry about all of that.\w8 I think it'd be best if I just um\w4.\w4.\w4. \w8Reset the ghost now\w4.\w4.\w4. \w8Some things might be kinda different now that you've seen them\w4.\w4.\w4. \w5ugh, this is so disappointing.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
 	}
 }
 
@@ -391,7 +391,7 @@ Select.TEACHBDAY
 	dayslot = GetDaySlot
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]I really,\w5 really couldn't care less about when you were born.\e"
+		"\0\s[8]I really,\w5 really couldn't care less about when you were born.\e"
 	}
 	else
 	{
@@ -648,7 +648,7 @@ Select.TalksTill
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[5]Why'd you even open the menu then!\e"
-		"Wasting my time and yours?\w8\w8 Surely you have better things to do.\w8\w8\0\s[0] Toys to take apart.\w8"
+		"\0\s[8]Wasting my time and yours?\w8\w8 Surely you have better things to do.\w8\w8\0\s[0] Toys to take apart.\w8"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -674,8 +674,8 @@ Select.TALKMAX
 	aitalkinterval = 30
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[6]God, \w4do you have attention deficit disorder or something?\e"
-		"* (He's smirking...)"
+		"\0\s[8]God, \w4do you have attention deficit disorder or something?\e"
+		"\s[2]\i[2]* (He's smirking...)"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -699,8 +699,8 @@ Select.TALKHIGH
 	aitalkinterval = 60
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[13]Reasonable I guess...\e"
-		"Trying to make me talk myself hoarse?\w8 I don't work that way.\w8"
+		"\0\s[8]Reasonable I guess...\e"
+		"\0\s[8]Trying to make me talk myself hoarse?\w8\s[2]\i[2] I don't work that way.\w8"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -724,8 +724,8 @@ Select.TALKNORMAL
 	aitalkinterval = 240		
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]Fine then,\w5 %(username).\e"
-		"* (He's smirking...)\w8"
+		"\0\s[8]Fine then,\w5 %(username).\e"
+		"\0\s[2]\i[2]* (He's smirking...)\w8"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -749,8 +749,8 @@ Select.TALKPOOR
 	aitalkinterval = 300
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[6]Least it's a normal speed.\e"
-		"* (He's smirking...)"
+		"\0\s[8]Least it's a normal speed.\e"
+		"\0\s[2]\i[2]* (He's smirking...)"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -775,7 +775,7 @@ Select.TALKNONE
 	if nowmode == "Edgybitch"
 	{
 		aitalkinterval = (RAND(10)+1)*30
-		"\0\s[0]Aw, \w4how disappointing~"
+		"\0\s[2]Aw, \w4how disappointing~"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -802,9 +802,9 @@ Select.CANCEL
 {
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]Whatever.\e"
-		"\0\s[0]Go bother someone else.\e"
-		"\0\s[0]Keep thinking that any of this matters.\e"
+		"\0\s[8]Whatever.\e"
+		"\0\s[1]Go bother someone else.\e"
+		"\0\s[8]Keep thinking that any of this matters.\e"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -872,9 +872,9 @@ Select.dosomething
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[0]Hell is it you want?\n\n"
-		"\0\s[6]What do you want?\n\n"
-		"\0\s[6]* (He grumbles.)\n\n"
+		"\0\s[0]\i[102]Hell is it you want?\n\n"
+		"\0\s[0]\i[102]What do you want?\n\n"
+		"\0\s[8]* (He grumbles.)\n\n"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -909,8 +909,8 @@ Select.CALENDAR
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]\i[55]* (Opening the calendar...)\w8"
-		"\0\s[0]Ah,\w5 yes, \w5because you can't just see the date on your computer.\w8"
-		"\0\s[6]You could also just press ctrl + D instead of making me do it.\w8"
+		"\0\s[8]Ah,\w5 yes, \w5because you can't just see the date on your computer.\w8"
+		"\0\s[8]You could also just press ctrl + D instead of making me do it.\w8"
 		--
 		randomfunction
 	}
@@ -931,7 +931,7 @@ Select.sspconfig
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[1]* (Opening the calendar...)%(randomfunction)"
+		"\0\s[2]\i[2]* (Opening the calendar...)%(randomfunction)"
 	}
 	elseif VillageLevel >= 150
 	{
@@ -954,7 +954,7 @@ Select.ChoiceGarbagecan
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!"
+			"\0\s[8]Are you really so lazy you're making me take out your trash??\w8\n\n\s[5]All you need is like, \w5two buttons!\n\n\w8\s[0]\i[102]* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\i[105]\w8\w8\s[-1]\w8\w8\w8\w8\w8\c\0\s[5]There wasn't even anything there you idiot!"
 		}
 		elseif VillageLevel >= 150
 		{
@@ -988,7 +988,7 @@ Select.ChoiceGarbagecan
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[5]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[5]\cThere wasn't even anything there you idiot!"
+			"\0\s[8]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\i[105]\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\c\s[5]There wasn't even anything there you idiot!"
 		}
 		elseif VillageLevel >= 150
 		{
@@ -1050,7 +1050,7 @@ Select.bugreport
 {
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[4]Please, \w4this thing is no doubt riddled with bugs and balancing issues.\w8\0\s[1] Go bug Quonit to fix it if you care that much:\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
+		"\0\s[8]Please, \w4this thing is no doubt riddled with bugs and balancing issues.\w8\0\s[0] Go bug Quonit to fix it if you care that much:\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
 	}
 	elseif nicesadlevel <= -50 && punchout >= 20
 	{
@@ -1902,7 +1902,7 @@ Select.reexplaincrown
 	}
 	elseif nowmode == "Edgybitch"
 	{
-		"\0\s[1]The crowns were really meaningful to anDream, \w2too.\n\n\w8It's why I got rid of it."
+		"\0\s[2]\i[3]\i[107]The crowns were really meaningful to anDream, \w2too.\n\n\w8\s[2]It's why I got rid of it."
 	}
 	elseif blushiemode == "on" || nicesadlevel >= 100
 	{
@@ -1934,7 +1934,7 @@ Select.reexplaintree
 	}
 	elseif nowmode == "Edgybitch"
 	{
-		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]Hah. \w4Dead person.\n\n\w8now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[1] but whatever you think, \w2the tree's still my 'Mom' too.\n\n\w8Technically that'd make anDream and the purple one my half brothers \w3when you think about it."
+		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\s[7]Hah. \w4\s[0]Dead person.\n\n\w8\s[8]now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[0] but whatever you think, \w2the tree's still my 'Mom' too.\n\n\w8\s[1]Technically that'd make anDream and the purple one my half brothers \w3\s[0]when you think about it."
 	}
 	else
 	{
@@ -1949,7 +1949,7 @@ Select.reexplaindream
 {
 	if nowmode == "Edgybitch"
 	{
-		"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]Hah,\0\s[7]\w4 that sap?\n\n\w8''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3whom I love so much and definitely care enough to notice things like cuts on his arm!''\n\n\w8\0\s[1]Hah, \w5bet they wouldn't be happy if they saw me."
+		"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]\s[7]Hah,\w4 that sap?\n\n\w8\s[8]''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3\s[2]\s[2]whom I love so much and definitely care enough to \s[5]notice things like cuts on his arm!''\n\n\w8\0\s[1]Hah, \w5\s[0]bet they wouldn't be happy if they saw me."
 	}
 	else
 	{
@@ -1978,21 +1978,7 @@ Select.reexplaindream
 		}
 	}
 	--
-	"\n\n"
-	--
-	if nowmode != "Edgybitch"
-	{
-		if askaboutdreamcrown != "on"
-		{
-			"\![*]\q[That doesn't seem right...,whatswithdreamscrown]\n"
-		}
-		else
-		{
-			"\![*]\q[Ask about Dream's crown,whatswithdreamscrown]\n"
-		}
-	}
-	--
-	"\![*]\q[ASK another question,youtalk]\n/
+	"\n\n\![*]\q[ASK another question,youtalk]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -2545,6 +2531,7 @@ Select.changeshell
 
 Select.testgoo
 {
+	/*
 	"\![enter,passivemode]\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
 	--
 	if TOLOWER(username) != "user" && username != ""
@@ -2564,4 +2551,7 @@ Select.testgoo
 	}
 	--
 	"\n\n\w8\w8\w8\s[10002]\i[2]\i[3]* (You get the feeling things might go back to normal after Halloween%(lps(5)))\w8\w8\![leave,passivemode]\x\s[10002]\i[2]\i[3]\i[105]\w8\![change,Shell,Nightmare]"
+	*/
+	"\![change,Shell,Nightmare]"
 }
+

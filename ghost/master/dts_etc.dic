@@ -555,7 +555,7 @@ OnShellScaling
 		if nowmode == "Edgybitch"
 		{
 			"\0\s[1]You know\w3.\w3.\w3.\n\n\w8I wonder if I can change my size on my own.\e"
-			"\0\s[1]* (Biggest-sized goop.)\e"
+			"\0\s[2]\i[5]\i[107]* (Biggest-sized goop.)\e"
 		}
 		else
 		{
@@ -569,7 +569,7 @@ OnShellScaling
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[1]Normal-sized. \w8How boring.\e"
+			"\0\s[1]Normal-sized. \w8\s[8]How boring.\e"
 		}
 		else
 		{
@@ -582,8 +582,8 @@ OnShellScaling
 	{
 		if nowmode == "Edgybitch"
 		{
-			"\0\s[5]Trying to get me out of the way so you don't have to think about what you did??\e"
-			"\0\s[1]Either you're trying to get me out of the way or you just have a really shitty screen.\e"
+			"\0\s[2]\i[5]Trying to get me out of the way so you don't have to think about what you did??\e"
+			"\0\s[8]Either you're trying to get me out of the way or you just have a really shitty screen.\e"
 		}
 		else
 		{
