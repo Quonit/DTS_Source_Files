@@ -333,7 +333,7 @@ MouseDoubleClickSakura
 	}
 	elseif reference4 == "Dollie"
 	{
-		"* (You ask him if he likes the doll.)\n\n\w8It's nice and all but\w2.\w2.\w2.\w6 Where did you get this?\e"
+		"\0\s[26]* (You ask him if he likes the doll.)\n\n\w8It's nice and all but\w2.\w2.\w2.\w6 Where did you get this?\e"
 	}
 	elseif reference4 == "Crown" //Double click crown
 	{
