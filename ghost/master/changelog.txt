@@ -23,6 +23,7 @@ Bugfixes:
 -skeleton will no longer fall into the superposition of being both asleep and awake
 -Various ones I forgot
 -Idk. Typos? There's always typo fixes
+-Fixed deleting your relationship level value when updating
 
 
 --- 10th Febuary 2022 ---
