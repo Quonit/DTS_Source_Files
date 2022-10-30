@@ -221,8 +221,7 @@ RandomTalk : nonoverlap_pool
 	{
 		if lasttalked >= 15 //If he doesn't talk for 15 minutes
 		{
-			sittang = "on"
-			"\0\s[1]\i[55]* (He sits down.)\e"
+			"\0\s[1]\i[55]* (He sits down.)\e:eval=sittang='on'"
 		}
 		"\0\s[13]Wonder what this place even is...\e"
 		"\0\s[4]I wonder how things are back at home...\e"
