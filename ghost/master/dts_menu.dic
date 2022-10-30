@@ -1701,7 +1701,7 @@ Select.iwantgoopy
 		}
 		else
 		{
-			"\n\n\0\s[9]..."
+			"\0\s[9]..."
 		}
 	}
 	if nicensadlevel < 0

@@ -21,7 +21,7 @@ MouseMoveSakura
 		{
 			if stroke >= 200
 			{
-				"(Touch fluffy tentacle ^_^)\e"
+				"\s[5](Touch fluffy tentacle ^_^)\e"
 				stroke = 0
 			}
 		}
@@ -107,10 +107,12 @@ MouseMoveSakura
 									"\0\s[32]Feels nice...\e"
 									"\0\s[32]heheh!\e"
 									"\0\s[32]Thanks...\e"
+									"\0\s[31]\i[55]* (Touch-starved...)"
 								}
 								if nicensadlevel >= 50
 								{
-									"\i[55]* (He seems really happy.)\e" //temp dialogue
+									"\s[32]\i[55]* (He seems really happy.)\e" //temp dialogue
+									"\0\s[31]%(lps(5))I don't know if anyone's touched me this gently this anDream...\e"
 								}
 								if nicensadlevel >= 25
 								{

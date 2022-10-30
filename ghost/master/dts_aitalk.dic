@@ -263,6 +263,7 @@ RandomTalk : nonoverlap_pool
 		//Positive Route
 		if nicensadlevel >= 15
 		{
+			"\0\s[4]Hope I don't have to deal with...\w5 \s[0]\i[19]any of \f[italic,1]them\f[italic,0]\w3 when I get back.\e"
 			"\0\s[4]You know,\w5 swimming sounds kinda fun. \w6\0\s[6]Me and anDream do it sometimes!\n\n\w8\0\s[9]Though I had to stop 'cause.\w3\w3.\w3.\w5 later people anDream knows would start inviting themselves along,\w4 and they-\n\n\w8\w4.\w4.\w4.\w5\0\s[12]I don't want to talk about it.\e"
 			//Neither of these things work
 			"\0\s[13]I read poetry sometimes\w2.\w2.\w2.\w6 There's so much really good out there,\w4 and I think maybe I could try writing some at some point? \0\s[8]\w8Not like anybody would read it...\e"
@@ -489,7 +490,7 @@ RandomTalk : nonoverlap_pool
 		if weekday == 6 //Saturday
 		{
 			"\0\s[0]Did you get to stay home today?\n\n\w8\0\s[4]I wonder actually,\w4 am I in your home?\w4 Or did you take me somewhere?\e"
-			"\0\s[8]anDream's always out hanging out with other people on Saturdays,\w4 so even if you let me leave I wouldn't have much to do\w4.\w4.\w4.\n\n\w8\w8\0\s[0]\i[11]Well\w4.\w4.\w4.\w8\i[10]It's more like other people are taking up all their time on Saturday,\w5 and would get back at them for leaving.\e"
+			"\0\s[8]anDream's always out hanging out with other people on Saturdays,\w4 so even if you let me leave I wouldn't have much to do\w4.\w4.\w4.\n\n\w8\w8\0\s[0]\i[11]Well\w4.\w4.\w4.\w8\i[10]It's more like other people are take up all their time on Saturday,\w5 and anDream can't really leave without those people getting back at them.\e"
 		}
 		if weekday == 7 //Sunday
 		{
