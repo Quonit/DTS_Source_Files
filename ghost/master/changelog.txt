@@ -1,7 +1,7 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
 
---- 29th October 2022 ---
+--- 30th October 2022 ---
 Additions:
 -Wormspawn helps with the ghost now!!
 -Completely revamped goopmode for Halloween!

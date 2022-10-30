@@ -181,7 +181,7 @@ MouseMoveSakura
 						"\0\s[6]* (The goop is not happy about being pet.)\e"
 						"\0\s[8]* (Your hand gets all sticky\w2.\w2.\w2.)\e"
 						"\0\s[6]Why did Quonit even allow this...\e"
-						"\0\s[6]* (He begrudgingly put up with it,\w3 though he doesn't have much of a choice,\w2 though.)\e"
+						"\0\s[6]* (He begrudgingly put up with it.\w3 He doesn't have much of a choice,\w2 though.)\e"
 						"\0\s[2]* (He is very grumpy.)\e"
 						"\0\s[2]You know,\w3 there's better things you could be doing right about now.\e"
 						"\0\s[8]Usually,\w3 humans are too busy bleeding out to try to touch me.\e"

@@ -163,7 +163,7 @@ MenuRun
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
 	\![*]\q[Use some functions,dosomething]\n\n/
-	\![*]\q[Testvariable,testvariable]\n\n/
+	//\![*]\q[Testvariable,testvariable]\n\n/
 	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 
