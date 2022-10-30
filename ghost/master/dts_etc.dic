@@ -412,6 +412,7 @@ UpdateVars
 	if !ISVAR('askaboutnamee'); {askaboutnamee='off'}
 	if !ISVAR('starcrownexpo'); {starcrownexpo='off'}
 	if !ISVAR('hasdreamplush'); {hasdreamplush='off'}
+	if !ISVAR('hasmareplush'); {hasmareplush='off'}
 	if !ISVAR('hastea'); {hastea='off'}
 	if !ISVAR('hasblankie'); {hasblankie='off'}
 	if !ISVAR('hasviolin'); {hasviolin='off'}

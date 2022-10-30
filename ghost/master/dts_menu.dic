@@ -163,7 +163,7 @@ MenuRun
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
 	\![*]\q[Use some functions,dosomething]\n\n/
-	//\![*]\q[Testvariable,testvariable]\n\n/
+	\![*]\q[Testvariable,testvariable]\n\n/
 	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 
@@ -2531,7 +2531,8 @@ Select.changeshell
 
 Select.testgoo
 {
-	/*
+	nowmode = "Edgybitch"
+	dontmovestatsitshalloween = "on"
 	"\![enter,passivemode]\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
 	--
 	if TOLOWER(username) != "user" && username != ""
@@ -2551,7 +2552,6 @@ Select.testgoo
 	}
 	--
 	"\n\n\w8\w8\w8\s[10002]\i[2]\i[3]* (You get the feeling things might go back to normal after Halloween%(lps(5)))\w8\w8\![leave,passivemode]\x\s[10002]\i[2]\i[3]\i[105]\w8\![change,Shell,Nightmare]"
-	*/
 	"\![change,Shell,Nightmare]"
 }
 

@@ -287,7 +287,17 @@ RandomTalk : nonoverlap_pool
 		//Misc
 		if hasdreamplush == "on"
 		{
-			"\0\s[26]* (He takes out the plush doll of anDream you gave him to hold.)\e"
+			"\0\s[26]"
+			"\0\s[0]\i[22]"
+			--
+			"* (He takes out the plush doll of anDream you gave him to hold.)\e"
+		}
+		if hasmareplush == "on"
+		{
+			"\0\s[26]\i[6]"
+			"\0\s[0]\i[21]"
+			--
+			"* (He takes out the plush doll of Mare you gave him to hold.)\e"
 		}
 		if hastea == "on"
 		{
@@ -998,6 +1008,11 @@ OnSurfaceRestore
 		{
 			"\0\s[26]\e"
 			"\0\s[0]\i[22]"
+		}
+		if hasmareplush == "on"
+		{
+			"\0\s[0]\i[21]"
+			"\0\s[26]\i[6]"
 		}
 	}
 }

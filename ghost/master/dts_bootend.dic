@@ -40,6 +40,7 @@
 	sittang = "off" //if he is sitting
 	//Items
 	hasdreamplush = "off" //If you've given him the Dream plush
+	hasmareplush = "off" //If you've given him the Mare plush
 	hastea = "off" //If you've given him a mug
 	hasblankie = "off" //If you've given him the blanket
 	hasviolin = "off" //If you've given him a violin?
