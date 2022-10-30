@@ -344,7 +344,7 @@ Select.removegoo
 	{
 		sodreamy = "on"
 		nowmode = "purpleman"
-		"\![enter,passivemode]\0\s[1]Suppose it's time to leave now, \w4huh?\w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\n\n\0\s[3]\i[103]Huh- \w8\1\s[20]\![move,--X=100]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[22]\w5\i[2]\w6\s[22]\w6\i[2]\w6\s[22]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[23]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1618]\w8\w8\w8\w8\s[24]\i[1]\i[8]\w8\0\s[24]\i[22]\i[8]\w8.\w5.\w5.\w8Sorry you had to deal with them, %(username)\w2.\w2.\w2.\n\n\w8Hopefully things go back to normal now.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
+		"\![enter,passivemode]\0\s[1]Suppose it's time to leave now, \w4huh?\w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\n\n\0\s[3]\i[103]Huh- \w8\1\s[20]\![move,--X=100]\![move,--base=0,--Y=50]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[22]\w5\i[2]\w6\s[22]\w6\i[2]\w6\s[22]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[23]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1618]\w8\w8\w8\w8\s[24]\i[1]\i[8]\w8\0\s[24]\i[22]\i[8]\w8.\w5.\w5.\w8Sorry you had to deal with them, %(username)\w2.\w2.\w2.\n\n\w8Hopefully things go back to normal now.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
 	}
 	else
 	{
@@ -374,7 +374,7 @@ Select.removegoo
 		brotherexpo = "off"
 		askaboutnamee = "off"
 		dontmovestatsitshalloween = "off"
-		"\![enter,passivemode]\0\s[2]\i[2]\i[5]Hah, \w5\s[2]\i[2]I honestly suspected you to be smarter than to think you could just- \w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\0\s[3]\i[103]Huh- \w8\1\s[20]\![move,--X=100]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[22]\w5\i[2]\w6\s[22]\w6\i[2]\w6\s[22]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[23]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1618]\w8\w8\w8\w8\s[24]\i[1]\i[8]\w8\0\s[24]\i[22]\i[8]\w8.\w5.\w5.\w8Sorry about all of that.\w8 I think it'd be best if I just um\w4.\w4.\w4. \w8Reset the ghost now\w4.\w4.\w4. \w8Some things might be kinda different now that you've seen them\w4.\w4.\w4. \w5ugh, this is so disappointing.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
+		"\![enter,passivemode]\0\s[2]\i[2]\i[5]Hah, \w5\s[2]\i[2]I honestly suspected you to be smarter than to think you could just- \w8\w8\w8\w6\_v[Extras\\bell ring sound.mp3]\0\s[3]\i[103]Huh- \w8\1\s[20]\![move,--X=100]\![move,--base=0,--Y=50]\w8\w8\w8\w8\w5\0\s[21]\w8\w8\0\s[1614]\w3\1\s[1608]\w4\0\s[22]\w5\i[2]\w6\s[22]\w6\i[2]\w6\s[22]\1\w5*\w5 (\w5. \w5. \w5.\w5)\0\s[23]\n\n\w8anDream you're not supposed to be here!!\1\s[1609]\0\w6This was supposed to be my ghost because of the whole Dreamtale sa-\w7 Stop stealing all the attention!!!\1\s[1610]\w4\s[7876]\w4\w8\0\n\n\w8\w8\0\s[1618]\w8\w8\w8\w8\s[24]\i[1]\i[8]\w8\0\s[24]\i[22]\i[8]\w8.\w5.\w5.\w8Sorry about all of that.\w8 I think it'd be best if I just um\w4.\w4.\w4. \w8Reset the ghost now\w4.\w4.\w4. \w8Some things might be kinda different now that you've seen them\w4.\w4.\w4. \w5ugh, this is so disappointing.\![leave,passivemode]\x\![change,Shell,Dreamtale Sans]\0\s[0]"
 	}
 }
 
@@ -1637,18 +1637,22 @@ Select.ilynighty
 
 Select.storytime
 {
-	"\i[55]* (You tell him about a creature that would spin off its skin every night to do mischief,\w4 and was only stopped by a clever dosing of salt.)\w8\n\n* (He's less grossed out than you expected.\w8 One of the benefits of not having skin,\w4 you suppose.)"
-	"\i[55]* (You tell him a spooky story about a creature demanding the return of its tailypo.\w8 You make your voice especially creaky for the critter's lines.)\n\nYeah, that's why you never eat anything that can talk."
+	posact += 1
+	
+	"\s[0]\i[55]* (You tell him about a creature that would spin off its skin every night to do mischief,\w4 and was only stopped by a clever dosing of salt.)\w8\n\n*\s[8]\i[55] (He's less grossed out than you expected.\w8 One of the benefits of not having skin,\w4 you suppose.)"
+	"\s[0]\i[55]* (You tell him a spooky story about a creature demanding the return of its tailypo.\w8 You make your voice especially creaky for the critter's lines.)\n\n\s[4]Yeah, that's why you never eat anything that can talk."
 	{
-		"\i[55]* (You tell him about a child forced to complete impossible tasks for a witch,\w6 who only succeeds through the help of an enchanted doll from her dead mother.)\n\n\w8* (He keeps very attentive to the parts where she entreats her mother's spirit.)\n\n"
+		"\i[55]* (You tell him about a child forced to complete impossible tasks for a witch,\w6 who only succeeds through the help of an enchanted doll from her dead mother.)\n\n\w8*\s[4]\i[55] (He keeps very attentive to the parts where she entreats her mother's spirit.)\n\n"
 		--
 		if nicesadlevel >= 25
 		{
-			"When I was younger,\w4 I sometimes thought I could hear my mom talking to me from anTree...\n\n\w8\w8* (He seems like he's going to elaborate,\w5 but doesn't.)"
+			"\s[4]When I was younger,\w4 I sometimes thought I could hear my mom talking to me from anTree...\n\n\w8\w8\s[8]\i[55]* (He seems like he's going to elaborate,\w5 but doesn't.)"
 		}
 	}
-	"\i[55]* (You sing him a little ballad you learned when you were a kid - a song that tells a story.)\n\n* (He appreciates it.)"
-	"\i[55]* (You tell him about a silly little thing that happened to you in the past couple weeks.)"
+	"\s[0]\i[55]* (You sing him a little ballad you learned when you were a kid - a song that tells a story.)\n\n\s[15]\i[55]* (He appreciates it.)"
+	"\s[0]\i[55]* (You tell him about a \s[6]\i[55]silly little thing that happened to you in the past couple weeks.)"
+	"\s[0]\i[55]* (You tell him about a hitchhiker who vanishes from the passenger seat as the motorist pulls up to their destination.\w8 And when the motorist asks around,\w6 they discover the hitchhiker had died in a car crash on that spot several years earlier.)\w8\n\n\s[4]\w8\w8I've heard about cars.\w6 They're like wagons,\w4 but faster, right?\w5\s[13] I never know how dangerous they actually are or if all the books are exaggerating."
+	"\s[0]\i[55]* (You tell him a story about man door hand hook car door.)\w8\w8\n\n\s[11]%(lps(7))What?"
 	--
 	"%(actigon)"
 	
@@ -1668,35 +1672,43 @@ Select.iwantgoopy
 	else; {negact += 1}
 	"%(attn)"
 	--
-	"\i[55]* (You tell\s[0]\i[12]\i[55] him he'd be cooler if he killed people.)"
-	"\i[55]* (You tell\s[0]\i[12]\i[55] %(nightname) that he should just turn into the more interesting character already.)\n\n"
-	"\i[55]* (You tell\s[0]\i[12]\i[55] him the people who hurt him don't deserve to live.)\n\nE-everyone deserves to...\n\n\i[55]You ask him if he really believes that.)\n\n\w8\w8...\w8"
-	"\i[55]* (You tell him everyone hates him anyway,\s[0]\i[12]\i[55] so why not become the 'nightmare' they always said he was?)"
-	"\i[55]* (You tell him his\s[0]\i[12]\i[55] pacifism is dumb.)"
-	"\i[55]* (You tell him he's\s[11]\i[55] boring like this.)\n\n\s[12]Why'd you bring me here, then?\n\n\i[55]* (You tell him\s[11]\i[55] you have a hunch he knows exactly\s[3]\i[55] how to become more interesting.)\s[9]..."
-	"\i[55]* (You tell him\s[0]\i[12]\i[55] to stop hiding behind Dream.)"
-	"\i[55]* (You tell him\s[0]\i[12]\i[55] you wouldn't put up with this,\w4 so why does he?)"
-	"\i[55]* (You tell him\s[0]\i[12]\i[55] it's ''kill or be killed'',\w4 and the sooner he realizes that,\w4 the better.)"
-	"\i[55]* (You tell him\s[0]\i[12]\i[55] to stop being so emotional all the time.)"
-	"\i[55]* (You tell him\s[0]\i[12]\i[55] he's just delaying the inevitable.)"
-	"\i[55]* (You tell him\s[0]\i[12]\i[55] his options are to be a corpse or a killer.)"
-	if punchout > 1
 	{
-		"\i[55]* (You tell him if he doesn't want to get hit,\w3 he should start fighting back.)"
-	}
-	
-	//his responses?
-	--
-	if nicesadlevel > 0
-	{
-		"\n\n\0\s[7]What?\w8\s[0]\i[12] What are you-?\w5 Where did this come from?"
-		"\n\n\0\s[3]...This isn't like you,\w5 %(username)."
-		"\n\n\0\s[0]\i[19]...That's not a funny joke?"
+		"\i[55]* (You tell\s[0]\i[12]\i[55] him he'd be cooler if he killed people.)"
+		"\i[55]* (You tell\s[0]\i[12]\i[55] %(nightname) that he should just turn into the more interesting character already.)\n\n"
+		"\i[55]* (You tell him everyone\s[0]\i[12]\i[55]  hates him anyway, so why not become the 'nightmare' they always said he was?)"
+		"\i[55]* (You tell him his\s[0]\i[12]\i[55] pacifism is dumb.)"
+		"\i[55]* (You tell him\s[0]\i[12]\i[55] to stop hiding behind Dream.)"
+		"\i[55]* (You tell him\s[0]\i[12]\i[55] you wouldn't put up with this,\w4 so why does he?)"
+		"\i[55]* (You tell him\s[0]\i[12]\i[55] it's ''kill or be killed'',\w4 and the sooner he realizes that,\w4 the better.)"
+		"\i[55]* (You tell him\s[0]\i[12]\i[55] to stop being so emotional all the time.)"
+		"\i[55]* (You tell him\s[0]\i[12]\i[55] he's just delaying the inevitable.)"
+		"\i[55]* (You tell him\s[0]\i[12]\i[55] his options are to be a corpse or a killer.)"
+		if punchout > 1
+		{
+			"\i[55]* (You tell him if he doesn't want to get hit,\w3 he should start fighting back.)"
+		}
 		
+		//his responses?
+		--
+		"\w8\w8\n\n"
+		--
+		if nicesadlevel > 0
+		{
+			"\0\s[7]What?\w8\s[0]\i[12] What are you-?\w5 Where did this come from?"
+			"\0\s[3]...This isn't like you,\w5 %(username)."
+			"\0\s[0]\i[19]...That's not a funny joke?"
+			"\0\s[9]You don't...\w3 actually think that,\w5 do you?"
+			
+		}
+		else
+		{
+			"\n\n\0\s[9]..."
+		}
 	}
-	else
+	if nicesadlevel < 0
 	{
-		"\n\n\0\s[9]..."
+		"\i[55]* (You tell\s[0]\i[12]\i[55] him the people who hurt him don't deserve to live.)\w8\n\n\s[3]E-everyone deserves to...\w8\n\n\i[55]* (You ask him if he really\s[0]\i[12]\i[55] believes that.)\n\n\w8\w8\s[3]\i[55]...\w8"
+		"\i[55]* (You tell him he's\s[11]\i[55] boring like this.)\n\n\s[12]Why'd you bring me here, then?\n\n\i[55]* (You tell him\s[11]\i[55] you have a hunch he knows exactly\s[3]\i[55] how to become more interesting.)\s[9]...\w8"
 	}
 	--
 	"%(actigon)"
@@ -2292,15 +2304,14 @@ Select.toybox
 
 Select.nightyneedstoeat
 {
-	
-	if sittang == "on"
-	{
-		sittang = "off"
-		"\0\s[16]"
-	}
-	--
 	if privacyrespecter == "on" && punchout <= 3
 	{
+		if sittang == "on"
+		{
+			sittang = "off"
+			"\0\s[16]"
+		}
+		--
 		"\0\s[12]No offense,\w4 but I don't take food from strangers.\e"
 		"\0\s[12]No, \w4thank you.\e"
 		"\0\s[12]I'm not interested.\e"
@@ -2312,6 +2323,12 @@ Select.nightyneedstoeat
 	}
 	elseif nicesadlevel <= -50 && punchout >= 20
 	{
+		if sittang == "on"
+		{
+			sittang = "off"
+			"\0\s[16]"
+		}
+		--
 		if passhour > 8
 		{
 			"\0\s[19]* (He's shaking, he's so desperate for food. \w7Would you rather be nice or mean to him?)"
@@ -2340,50 +2357,74 @@ Select.nightyneedstoeat
 		//"\0\s[0]\i[55]* (You slide him a bowl with six pomegranate seeds.)\w8\n\n\0\s[13]\i[55]* (He seems\w2.\w2.\w2. \w4suspicious?)\n\n\w8\0\s[4]What for?\n\n\w8\i[55]* (You tell him it's seasonal.)\n\n\w8* (He seems content with that explanation.)"
 			//}
 		//}
+		_norm = "\s[0]"
+		_attn = "\s[0]"
+		_eat = "\s[25]"
+		_happy = "\s[20]"
+		_huh = "\s[4]"
+		_ew = "\s[11]"
+		
+		if sittang == "on"
+		{
+			_norm = "\s[1]"
+			_attn = "\s[1]\i[7]"
+			_eat = "\s[1]\i[39]"
+			_happy = "\s[1]\i[14]"
+			_huh = "\s[1]\i[8]"
+			_ew = "\s[1]\i[9]"
+		}
+		
 		if timeslot == "morning" //Morning (it's breakfast).
 		{
-			"\0\s[0]\i[55]* (You give him a plate full of waffles for breakfast.)\n\n\w8\0\s[6]Thank you %(username)!!!\0\s[25]\i[55]\w8\n\n"
-			"\0\s[0]\i[55]* (You pour him a bowl of cereal.)\n\n\w8\0\s[8]\i[55]* (He looks at it curiously.)\n\n\w8Is this a kind of soup?\n\n\w8* (You tell him you have no idea.)\w8\n\n"
-			"\0\s[0]\i[55]* (You give him a box full of cookies.)\n\n\w8\0\s[25]\i[55]* (He gets excited and eats them all.)\n\n\w8\0\s[8]Thank you a lot %(username)!\w8\n\n"
+			"%(_norm)\i[55]* (You give him a plate full of waffles for breakfast.)\n\n\w8\0\s[6]Thank you %(username)!!!%(_eat)\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You pour him a bowl of cereal.)\n\n\w8%(_huh)\i[55]* (He looks at it curiously.)\n\n\w8Is this a kind of soup?\n\n\w8* (You tell him you have no idea.)\w8\n\n"
+			"%(_norm)\i[55]* (You give him a box full of cookies.)\n\n\w8%(_eat)\i[55]* (He gets excited and eats them all.)\n\n\w8\0\s[8]Thank you a lot %(username)!\w8\n\n"
 		}
 		if timeslot == "lunch" //Lunch (Lunch food).
 		{
-			"\0\s[0]\i[55]* (You ask him if he wants a sandwich!)\n\n\w8\0\s[6]Aw, \w4thank you!!\0\s[25]\i[55]\w8\n\n"
-			"\0\s[0]\i[55]* (You hand him a burger.)\w8\n\n* (He looks it over a second \0\s[25]\i[55]and ends up eating it.)\n\n\w8\0\s[0]Thanks for the food!\w8\n\n"
-			"\0\s[0]\i[55]* (You ask him if he feels like eating fish.)\w8\n\nHuh?\w6 Oh- \w5sure.\w5 That doesn't sound bad.\n\n\w8* (You give him the fish to eat.)\0\s[25]\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You ask him if he wants a sandwich!)\n\n\w8\0\s[6]Aw, \w4thank you!!%(_eat)\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You hand him a burger.)\w8\n\n* (He looks it over a second %(_eat)\i[55]and ends up eating it.)\n\n\w8%(_attn)Thanks for the food!\w8\n\n"
+			"%(_norm)\i[55]* (You ask him if he feels like eating fish.)\w8\n\n%(_huh)Huh?\w6 Oh- \w5sure.\w5 That doesn't sound bad.\n\n\w8* (You give him the fish to eat.)%(_eat)\i[55]\w8\n\n"
 		}
 		if timeslot == "afternoon" //snacc
 		{
-			"\0\s[0]\i[55]* (You offer him a bowl of soup.)\n\n\w8* (He looks it over.)\n\n\w8What's in it?\n\n\w8* (You ask him if he wants any.)\w8\n\n\0\s[11]Uhm\w4.\w4.\w4. \w7no thank you?\w8\i[55]\n\n"
-			"\0\s[0]\i[55]* (You offer a salad to him.)\n\n\w8* (He takes the bowl \0\s[25]\i[55]and uses his hands to eat the leaves first.)\w8\n\n* (He doesn't say thank you but you know he's happy.)\w8\n\n"
-			"\0\s[1]\i[55]* (You slice a tangerine for him.)\n\n\w8\0\s[1]\i[7]\i[55]* (He picks at it.)\0\s[1]\i[39]\i[55]\n\n"
+			"%(_norm)\i[55]* (You offer him a bowl of soup.)\n\n\w8%(_huh)\i[55]* (He looks it over.)\n\n\w8What's in it?\n\n\w8* (You ask him if he wants any.)\w8\n\n%(_ew)Uhm\w4.\w4.\w4. \w7no thank you?\w8\i[55]\n\n"
+			"%(_norm)\i[55]* (You offer a salad to him.)\n\n\w8* (He takes the bowl %(_eat)\i[55]and uses his hands to eat the leaves first.)\w8\n\n* (He doesn't say thank you but you know he's happy.)\w8\n\n"
+			"%(_norm)\i[55]* (You slice a tangerine for him.)\n\n\w8%(_attn)\i[55]* (He picks at it.)%(_eat)\i[55]\n\n"
 			if blushiemode == "on"
 			{
-				"\0\s[0]\i[55]* (You hand him a box full of cookies decorated with heart shapes.)\w8\n\n\0\s[20]\i[55](He smiles.)\n\n\w8\0\s[20]Aww\w3.\w3.\w3. \w6Thank you, %(username). \w6It means a lot to me.\0\s[25]\i[55]\w8\n\n"
+				"%(_norm)\i[55]* (You hand him a box full of cookies decorated with heart shapes.)\w8\n\n%(_happy)\i[55](He smiles.)\n\n\w8%(_happy)Aww\w3.\w3.\w3. \w6Thank you, %(username). \w6It means a lot to me.%(_eat)\i[55]\w8\n\n"
 			}
 		}
 		if timeslot == "evening" //Late (Dinner)
 		{
-			"\0\s[0]\i[55]* (You hand him a grilled cheese sandwich.)\0\s[6]\w8\n\nThank you!\w8\0\s[25]\i[55]\w8\n\n"
-			"\0\s[0]\i[55]* (You ask him if he wants this pasta you made.)\n\n\w8* (He's a bit reluctant.)\w8\n\n\0\s[13]Well\w3.\w3.\w3. \w6It's not a good idea to take food from people you don't know\w3.\w3.\w3. \w8\0\s[20]but okay, \w6sure.\0\s[25]\i[55]\w8\n\n"
-			"\0\s[0]\i[55]* (You make a bowl of macaroni and cheese for him.)\n\n\w8\0\s[4]\i[55]* (He looks at it curiously, like he doesn't recognize it.)\n\n\w8Is this a kind of pasta?\n\n\w8* (You tell him it is.\w6 It's called elbow macaroni.)\w8\0\s[25]\i[55]\w8\n\n"
-			"\0\s[1]\i[55]* (You give him a few potstickers.)\n\n\w8\0\s[1]\i[7]Uhm,\w4 thank you.\w8\0\s[25]\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You hand him a grilled cheese sandwich.)\0\s[6]\w8\n\nThank you!\w8%(_eat)\i[55]\w8\n\n"
+			"%(_norm)i[55]* (You ask him if he wants this pasta you made.)\n\n\w8* (He's a bit reluctant.)\w8\n\n\0\s[13]Well\w3.\w3.\w3. \w6It's not a good idea to take food from people you don't know\w3.\w3.\w3. \w8%(_happy)but okay, \w6sure.%(_eat)\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You make a bowl of macaroni and cheese for him.)\n\n\w8\0\s[4]\i[55]* (He looks at it curiously, like he doesn't recognize it.)\n\n\w8Is this a kind of pasta?\n\n\w8* (You tell him it is.\w6 It's called elbow macaroni.)\w8%(_eat)\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You give him a few potstickers.)\n\n\w8%(_attn)Uhm,\w4 thank you.\w8%(_eat)\i[55]\w8\n\n"
 		}
 		if timeslot == "latenight" //Midnight snack
 		{
-			"\0\s[1]\i[55]* (You hand him some chips as a midnight snack.)\n\n\w8\0\s[1]\i[39]\i[55]* (He starts eating at them without asking any questions.)\w8\n\n"
-			"\0\s[1]\i[55]* (You slide some chocolate milk to him.)\n\n\w8* (He picks it up to study it,\w5\0\s[1]\i[39]\i[55] then starts drinking it.)\n\n"
-			"\0\s[1]\i[55]* (You give him some carrots and dip.)\n\n\w8* \0\s[1]\i[39]\i[55](He starts eating at them.)\n\n\w8Thank you,\w5 %(username).\n\n"
-			"\0\s[1]\i[55]* (You slice up a banana for him.)\n\n\w8...Thank you.\n\n\w8\0\s[1]\i[39]\i[55]* (He nibbles at it while reading.)\n\n"
-			"\0\s[1]\i[55]* (You pull some day-old brownies out of the fridge for him.)\n\n\0\s[1]\i[39]\i[55]* (He ends up really liking them.)\w8\0\s[1]\i[14]\i[55]\n\n"
+			"%(_norm)\i[55]* (You hand him some chips as a midnight snack.)\n\n\w8%(_eat)\i[55]* (He starts eating at them without asking any questions.)\w8\n\n"
+			"%(_norm)\i[55]* (You slide some chocolate milk to him.)\n\n\w8* (He picks it up to study it,\w5%(_eat)\i[55] then starts drinking it.)\n\n"
+			"%(_norm)\i[55]* (You give him some carrots and dip.)\n\n\w8* %(_eat)\i[55](He starts eating at them.)\n\n\w8Thank you,\w5 %(username).\n\n"
+			"%(_norm)\i[55]* (You pull some day-old brownies out of the fridge for him.)\n\n%(_eat)\i[55]* (He ends up really liking them.)\w8%(_happy)\i[55]\n\n"
+			if sittang == "on"
+			{
+				"%(_norm)\i[55]* (You slice up a banana for him.)\n\n\w8...Thank you.\n\n\w8%(_eat)\i[55]* (He nibbles at it while reading.)\n\n"
+			}
+			
 		}
 		if timeslot == "midnight" //Middernight snack
 		{
-			"\0\s[1]\i[55]* (You tell him you have some leftover pasta if he wants any.)\n\n\w8\i[7]Ah, sure.\w5 Much appreciated.\0\s[1]\i[39]\i[55]\w8\n\n"
-			"\0\s[1]\i[55]* (You toss him a bag of saltine crackers.)\n\n\w8* (He doesn't notice it for a while,\w5 but when he does,\w5\0\s[1]\i[39]\i[55] he starts eating them.)\w8\n\n"
-			"\0\s[1]\i[55]* (You give him a plate of mini pizza rolls.)\n\n\w8\0\s[1]\i[39]\i[55]* (He picks at them while reading his book.)\w8\n\n"
-			"\0\s[1]\i[55]* (You pop a bag of midnight popcorn for him.)\n\n\w8* (He takes the bag and gets confused with it.\w6 Obviously he has nothing like this at home.)\n\n\w8* (Eventually, he gets it open and\0\s[1]\i[39]\i[55] munches on it.)\n\n\w8Thank you...\w8\n\n"
-			"\0\s[1]\i[55]* (You pour him a different brand of cereal then normal.)\n\n\w8* (He takes it in his hands and\0\s[1]\i[39]\i[55] eats it, being careful not to spill anything on the book while eating.)\w8\n\n"
+			"%(_norm)\i[55]* (You tell him you have some leftover pasta if he wants any.)\n\n\w8%(_attn)Ah, sure.\w5 Much appreciated.%(_eat)\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You toss him a bag of saltine crackers.)\n\n\w8* (He doesn't notice it for a while,\w5 but when he does,\w5%(_eat)\i[55] he starts eating them.)\w8\n\n"
+			"%(_norm)\i[55]* (You pop a bag of midnight popcorn for him.)\n\n\w8* (He takes the bag and gets confused with it.\w6 Obviously he has nothing like this at home.)\n\n\w8* (Eventually, he gets it open and%(_eat)\i[55] munches on it.)\n\n\w8Thank you...\w8\n\n"
+			if sittang == "on"
+			{
+				"\0\s[1]\i[55]* (You pour him a different brand of cereal then normal.)\n\n\w8* (He takes it in his hands and%(_eat)\i[55] eats it, being careful not to spill anything on the book while eating.)\w8\n\n"
+				"\0\s[1]\i[55]* (You give him a plate of mini pizza rolls.)\n\n\w8\0\s[1]\i[39]\i[55]* (He picks at them while reading his book.)\w8\n\n"
+			}
 		}
 		--
 		"\![*]\q[Again,nightyneedstoeat]\n/
@@ -2454,12 +2495,23 @@ Select.givesleepblankie
 
 Select.nicewords
 {
-	"* (You tell him he's a wonderful brother.)"
-	"* (You tell him he doesn't deserve anything that happened to him.)"
-	"* (You tell him that anDream is lucky to have him as a brother.)"
-	"* (You tell him anDream will believe and accept him, no matter what he's done.)"
-	"* (You say that things will get better for him.)"
-	"* (You tell him he deserves to be happy.)"
+	posact +=1
+	
+	//what you tell him
+	"* (You tell him he's a wonderful brother.)\w8\w8\n\n"
+	"* (You tell him he doesn't deserve anything that happened to him.)\w8\w8\n\n"
+	"* (You tell him that anDream is lucky to have him as a brother.)\w8\w8\n\n"
+	"* (You tell him anDream will believe and accept him, no matter what he's done.)\w8\w8\n\n"
+	"* (You say that things will get better for him.)\w8\w8\n\n"
+	"* (You tell him he deserves to be happy.)\w8\w8\n\n"
+	--
+	//his response
+	"* (You think he mumbles his brother's name.)\e"
+	"* (His breathing seems to ease.)\e"
+	"%(lps(4))\s[37]mhm%(lps(4))?\s[5]\e"
+	"* \s[37](He stirs a little, \s[5]then goes back to sleep)\e"
+	"* (Is he smiling a little?)\e"
+	"* (You hope his dreams are more pleasant now.)\e"
 }
 
 //     _____ ____  __  ____ 

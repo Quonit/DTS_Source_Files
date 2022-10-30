@@ -98,7 +98,7 @@ GetTimeSlot
 		"midnight"
 	}
 }
-
+/*
 season
 {
     if month > 2 && month < 6
@@ -122,7 +122,7 @@ season
         else; "Summer"
     }
 }
-
+*/
 GetDaySlot
 {
 	"%(month)month %(day)day"

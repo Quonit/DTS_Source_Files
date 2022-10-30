@@ -146,23 +146,27 @@ nicesadlevel
 
 VillageLevel //Negative variable that also catches if you've hit him or not. Used so that you can't unlock goopmare without hurting him
 {
-	punchout - nicesadlevel
-	/*
+	//punchout - nicesadlevel
+	
 	if apologized == 0
+	//if you haven't apologized
 	{
-		if punchout < 1; {0}
-		else; {betrayalvar + (punchout-1)*constant + negact}
+		if punchout < 1; {0} //if you haven't apologized because you haven't punched him, VillageLevel is 0
+		else; {betrayalvar + punchout + negact} //if you've punched him and haven't apologized, it's the betrayalvar (how high his friendship was when you first punched him) + number of punches + how mean you've been to him verbally
 	}
 	else
+	//if you have apologized to him
 	{
 		if punchout == 0
+		//if you've apologized for punching him, punches might get reset to 0
 		{
-			if apologized >= 2; {betrayalvar + (punchout-1)*constant + negact}
-			else; {punchout*constant + negact}
+			if apologized >= 2; {betrayalvar + apologized*negact} //if you've punched then apologized repeatedly
+			else; {apologized*negact} 
 		}
-		else; {betrayalvar + (punchout-1)*constant + negact}
+		//if you've apologized to him, but have punched him far too much
+		else; {betrayalvar + punchout + negact}
 	}
-	*/
+	
 }
 
 ItemMOO //Put this at the end of the item menu instead of typing this out 30 times
@@ -443,7 +447,6 @@ speed
 }
 
 //if you want my get season function, it's here:
-/*
 
 OnES
 //you'll need my srievents.cgi file for this if you wanna use it
@@ -516,7 +519,7 @@ OnES
 }
 
 
-seasonis
+season
 {
 	_month = GETTIME[1]
 	_day = GETTIME[2]
@@ -531,18 +534,18 @@ seasonis
 	}
 	
 	
-	_winter = "winter"
-	_spring = "spring"
-	_summer = "summer"
-	_autumn = "autumn"
+	_winter = "Winter"
+	_spring = "Spring"
+	_summer = "Summer"
+	_autumn = "Autumn"
 	
 	if hemisphere == 's'
 	{
 		LOGGING("it is the southern hemisphere")
-		_winter = "summer"
-		_spring = "autumn"
-		_summer = "winter"
-		_autumn = "spring"
+		_winter = "Summer"
+		_spring = "Autumn"
+		_summer = "Winter"
+		_autumn = "Spring"
 	}
 	
 	_dspr = 21
@@ -623,4 +626,3 @@ seasonis
 		}
 	}
 }
-*/
