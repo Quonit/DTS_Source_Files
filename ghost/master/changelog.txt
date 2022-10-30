@@ -11,6 +11,7 @@ Additions:
 -Replaced *many* pieces of dialogue to fit with the Black Apple Blues lore, fanfic series... about him: https://archiveofourown.org/series/2690965
 -Added more references to Night's books
 -Rewrote the readme.txt
+-Added icon!
 
 Tweaks:
 -Touched up the right click menu because it was fuzzy
