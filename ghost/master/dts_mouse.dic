@@ -21,7 +21,7 @@ MouseMoveSakura
 		{
 			if stroke >= 200
 			{
-				"\s[5](Touch fluffy tentacle ^_^)\e"
+				"\s[5]* (Touch fluffy tentacle ^_^)\e"
 				stroke = 0
 			}
 		}
