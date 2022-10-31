@@ -237,7 +237,7 @@ RandomTalk : nonoverlap_pool
 		"\0\s[4]I wonder when I'll get to go back home.\w8 Not that I was really gonna do anything... \w4But...\e"
 		"\0\s[13]\i[55]* (He's fiddling with his hands.)\e"
 		"\0\s[4]Would having wings even be all that fun?\w8\n\nI feel like they'd just get in the way of everything.\e"
-		"\0\s[4]Maybe I should go out and get more outfits at some point.\w8 This ones gettin' kinda old.\e"
+		"\0\s[4]Maybe I should go out and get more outfits at some point.\w8 This one's gettin' kinda old.\e"
 		"\0\s[4]I hope nobody sneaks up on Mom's tree while I'm not there\w2.\w2.\w2.\e"
 		"\0\s[0]\i[11]Been thinking about cuckoos a lot lately...\w5\s[4]Not sure why.\w8"
 		"\0\s[0]\i[11]\i[55]* (He's pretty quiet today.)\e"
