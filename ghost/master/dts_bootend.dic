@@ -612,7 +612,11 @@ OnClose
  	}
  	else //Five Minute dialogue
  	{
-		if sleepingmode == "on"
+		if nowmode == "Edgybitch"
+		{
+			OnGoopSleep
+		}
+		elseif sleepingmode == "on"
 		{
 			"z\w4z\w4z\w4.\w4.\w4.\w8\w8"
 			"* (He must've been real tired to go down that quick.)\w8\w8"
