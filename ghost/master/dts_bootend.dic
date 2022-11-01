@@ -676,6 +676,7 @@ OnWindowStateRestore
 
 OnGhostChanging
 {
+	"%(OnClose)"
 	if reference0 == "Dreamtale Sans"
 	{
 		"\0\s[0]Reloading...\w8\w8\e"

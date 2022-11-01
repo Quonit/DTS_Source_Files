@@ -2164,7 +2164,8 @@ Select.itemsmenu
 	}
 	--
 	" \![*]\q[A rock,rude]	 \![*]\q[Some food,nightyneedstoeat]\n/
-	\![*]\q[A book,givebook] 	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
+	\![*]\q[A book,givebook] 	\![*]\q[A toy,givetoy]\n/
+	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
 }
 
 Select.giveoutfit
@@ -2193,7 +2194,12 @@ Select.givegift
 	"\0\s[0]\i[55]* (You gift him with a color cube.)\n\n\w8\0\s[4]What is it?\n\n\w8\i[55]* (You tell him that it's a puzzle where you have to get each of the sides to be the same color.)\n\n\w8\0\s[13]\i[55]* (He attempts solving it,\w4 but he starts looking frustrated quickly.)\n\n\w8\0\s[3]Um, \w4thanks.\w6 I'll work at it."
 	"\0\s[0]\i[55]* (You give him a tiny,\w4 cute-looking music box.)\n\n\w8\0\s[4]Aw\w2.\w2.\w2.\w4 It's so adorable.\n\n\w8* (You tell him to turn the key in it.)\n\n\w8\0\s[13]\i[55]* (He does so, and soon enough it starts clicking a tune.\w6 He smiles.)\n\n\w8\0\s[6]Thank you %(username)!!"
 	"\0\s[0]\i[55]* (You gift him with some scented candles.)\0\s[4]\n\n\w8Aw,\w3 that's nice of you.\w6 I could put them around the treehouse."
-	"\0\s[0]\i[55]* (You hand him a small stack of paper to write on.)\w8\n\n\0\s[4]Huh...?\n\n\w8\i[55]* (He takes it in his hands.)\w8\n\n\s[4]This is really high quality for paper...\w6 I'll try not to use it up too fast."
+	"\0\s[0]\i[55]* (You hand him a small stack of paper to write on.)\w8\n\n\0\s[4]Huh...?\n\n\w8\i[55]* (He takes it in his hands.)\w8\n\n\s[4]This is really high quality for paper...\w6\0\s[0]\i[14] I'll try not to use it up too fast."
+	if hasviolin == "off"
+	{
+		hasviolin = "on"
+		"\0\s[0]\i[55]* (You hand him a violin.)\0\s[6]\n\n\w8Oh-\w3 Thank you,\w3 I'd play you something but I don't know how to use it.\n\n\w8\0\s[6]That was still very nice of you though!\n\n"
+	}
 	--
 	"%(ItemMOO)"
 }
@@ -2247,7 +2253,7 @@ Select.givhimdrank
 	"\s[4]\i[55]* (You give him some hot chocolate)\w8\n\n\s[32]Aww,\w4 Dream likes hot chocolate too!\w8\w8\s[41]"
 	"\s[4]\i[55]* (You hand him a soda.)\w8\n\n\s[4]What's this?\n\n\w8\i[55]* (You tell him it's a soda.\n\n\w8\s[8]Erm...\w6 I don't know what that is.\n\n\w8\s[0]\i[13]\i[55]* (He eyes you suspiciously a moment,\w3 before taking a sip.)\n\n\w8\s[4]Hmm\w2.\w2.\w2.\w8\w7\s[8] It's kind of weird,\w5 but okay I guess.\w8\w8\s[41]"
 	"\s[4]\i[55]* (You pour him a mug of hot tea.)\n\n\w8\s[7]Oh!\w8\s[0]\i[14] Thank you,\w6 what kind is it?\n\n\w8* (You tell him it's %(tea).)\n\n\w8* (He seems happy.)\w8\w8\s[41]"
-	//"* (You give him an iced tea.)\n\n\w8Oh... Something colder?\n\n\w8* (He takes a drink.)"
+	"\s[4]\i[55]* (You give him an iced tea.)\n\n\w8\i[20]Oh%(lps(5))\w8 Something colder?\n\n\w8\s[41]* (He takes a drink.)"
 	--
 	"%(ItemMOO)"
 }
@@ -2274,17 +2280,22 @@ Select.rude
 	--
 	"%(ItemMOO)"
 }
-/*
-Select.toybox
+
+Select.givetoy
 {
-	if hasviolin == "off"
-	{
-		hasviolin = "on"
-		"\0\s[0]\i[55]* (You hand him a violin.)\0\s[6]\n\n\w8Oh-\w3 Thank you,\w3 I'd play you something but I don't know how to use it.\n\n\w8\0\s[6]That was still very nice of you though!\n\n"
-	}
-	}
+	posact += 1
+	"\0\s[0]\i[55]* (You set down a small,\w2 plastic dinosoar toy.)\n\n\w8\s[4]\i[55]* (He picks it up and studies it.)\n\n\w8\i[23]It's got a weird texture%(lps(3))\w8 Does it do anything?\n\n\w8\i[55]* (You tell him it's just plastic. \w5Nothing special.)\n\n\w8\i[23]What's plastic?"
+	/*
+	//I'm not sure how to get this all to work ??? mmmm
+	"* (You bounce a rubber ball at him.)\w8\s[4]Ah!\w8\n\n\w8"
+	--
+	"* (Impressively,\w6 he manages to catch it."
+	"* (He doesn't catch it, and ends up running after it.)\n\n\w8"
+	--
+	"What's the point of this thing??\w8\n\n* (You tell him it's to bounce, and usually to try and catch when it goes back up.)\n\n\w8* (He tries this, \w5but he's going to need more practice%(lps(3)))"
+	*/
+	"%(ItemMOO)"
 }
-*/
 
 
 //    .-.                            ___  
