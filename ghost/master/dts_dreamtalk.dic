@@ -1,21 +1,65 @@
+//Intro / notonfirstboot
+	//var distracted = "on"
+	//niceact, sadact, sadnicelevel
+	//You say hi.) * (They are not paying attention.) *[put some options here] * (you try talking to them. ...no responce.) [put some options here] * (you try giving them stuff.) no response!) [more item options] * (You bury them in a pile of stuff) "!" "Oh- oh, I didn't- I didn't notice you there!" * (they seem scared)
+
 //AITalk
 DreamTalk : nonoverlap_pool
 {
-	""
+	/*
+	if distracted == "on"
+	{
+	//"They keep glancing around..."
+	//"They seem scared."
+	}
+	else
+	{
+		
+		if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
+		{
+		"You're hard to look at... I feel like I can see you, but when I look away I can't... Remember what you look like? It's weird."
+		}
+	}
+	*/
 }
 
 //Menu
 DreamMenu
 {
+	//Act
+		//CHECK
+			//The INTENDED Dreamtale Sans
+			//They, not he
+		//Apologize if you've hit them
+			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
+		//Flirt
+			//Yeah this'll go well
+			//o((⊙﹏⊙;))o.
+		//Compliment
+		//Joke
+			//they act like ur funnier than u are. rly.
+		//Story
+			//Chance they might fall asleep but it's cute
+		//Tease
+		//Goad
+		//Mock
 	//Ask...
-	//Yourself
-	//Oh... Well, I suppose I should... (sigh) I'm so sorry! I'm normally not so anxious to be talking to others. It's just been busy as of late. I promise I'm fine though.
-	//Who you're looking for
-	//Well, it's my brother you see... I was just looking for him because we had something scedualed, and somehow I somehow ended up hear.
-	//Scedualed?
-	//Well it's me and my brother's birthday- we're twins, so we share the same one. I wasn't able to find him, and usually when that happens it means he's out in the forest- or... that is how I think it used to be. Some days I looked through and... Oh, sorry, I'm talking too much, aren't I?
-	//Brother
-	//My brother, Nightmare. I... He hasn't been doing well, so I'm just trying to look for him.
-	//My Name
-	//Didn't you tell me your name?
+		//Yourself
+			//Oh... Well, I suppose I should... (sigh) I'm so sorry! I'm normally not so anxious to be talking to others. It's just been busy as of late. I promise I'm fine though.
+			//Who you're looking for
+			//Well, it's my brother you see... I was just looking for him because we had something scedualed, and somehow I somehow ended up hear.
+		//Scedualed?
+			//Well it's me and my brother's birthday- we're twins, so we share the same one. I wasn't able to find him, and usually when that happens it means he's out in the forest- or... that is how I think it used to be. Some days I looked through and... Oh, sorry, I'm talking too much, aren't I?
+		//Brother
+			//My brother, Nightmare. I... He hasn't been doing well, so I'm just trying to look for him.
+			//My Name
+			//Didn't you tell me your name?
+	//Items
+		//Food
+			//there are many foods which exist. Dream is probably a bit more hesitent than Night to accept.
+		//Gift
+			//* (You hand them a boquet of flowers.) Oh, these are nice. I could probably get my brother to tell them apart... I'm not very good at remembering the names. But I like them!
+			//* (
+		//Plush
+			//You hand them a plush of %(nightname).) Ah- That's... This is my brother? (they look very concerned.) You know him... This is... * (They trail off and just look around more, like at the edges of the screen.)
 }
