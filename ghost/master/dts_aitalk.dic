@@ -590,9 +590,9 @@ RandomTalk : nonoverlap_pool
 		if passhour == 4
 		{
 			//temp dialogue
-			"...Hey %(username)? Is it okay if I can leave for... A couple of seconds to check on some things? It's just that I've been out here a while and I just wanna see if things are okay.\[*]\q[Let him go,nightgolookstuff]\n/
+			/*"...Hey %(username)? Is it okay if I can leave for... A couple of seconds to check on some things? It's just that I've been out here a while and I just wanna see if things are okay.\[*]\q[Let him go,nightgolookstuff]\n/
 			\[*]\q[Let him go,nightgolookstuff]
-			\[*]\q[Keep here,keepashostage]"
+			\[*]\q[Keep here,keepashostage]"*/
 		}
 	}
 }
@@ -603,7 +603,7 @@ Select.nightgolookstuff
 Select.keepashostage
 {
 	"D: oh no!"
-	//if specific circumstances for Mare, he grabs him and leaves. lol
+	//if specific circumstances for Mare, he grabs him and leaves. lolI did 
 }
 
 //Selects
