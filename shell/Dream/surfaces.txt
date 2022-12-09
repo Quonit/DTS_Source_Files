@@ -20,25 +20,97 @@ surface0
 	animation1.pattern0,overlay,1201,0,0,0
 	animation1.pattern1,overlay,-0,100,0,0
 	
+	//Cape
+	//Cape top
+	1000interval,bind
+	1000pattern0,1000,0,add,0,0
+	//Cape bottom
+	1001interval,bind
+	1001pattern0,1001,0,interpolate,0,0
+	
 	//Arms
 	//Polite Behind Back
 	animation2.interval,always
 	animation2.pattern0,interpolate,1300,0,0,0
 }
 
-//Side non look
+//It's just a prank breh
 surface1
 {
 	//Collision
+	collision0,157,92,214,132,StarCrown
+	element0,overlay,surface1.png,0,0
+}
+
+//Null
+surface2
+{
+	element0,overlay,surface1002.png,0,0
+}
+
+//Worried Side Look
+surface3
+{
+	//Collision
+	collision0,160,87,221,128,StarCrown
+	element0,overlay,surface3.png,0,0
+	
+	//Eyes
+	animation0.interval,always
+	animation0.pattern0,overlay,1203,0,0,0
+	//Spaced out
+	animation1.interval,never
+	animation1.pattern0,stop,0
+	animation1.pattern1,overlay,1204,0,0,0
+	//Curious
+	animation4.interval,never
+	animation4.pattern0,stop,0
+	animation4.pattern1,overlay,1205,0,0,0
+	
+	//Cape top
+	1000interval,bind
+	1000pattern0,1004,0,add,0,0
+	
+	//Arms
+	//Fiddling
+	animation2.interval,always
+	animation2.pattern0,overlay,1303,0,0,0
+	animation2.pattern1,overlay,1304,1000,0,0
+	animation2.pattern2,overlay,1303,1000,0,0
+	//Behind Back
+	animation3.interval,never
+	animation3.pattern0,stop,2
+	animation3.pattern1,interpolate,1305,0,0,0
+	
+	//Cape bottom
+	1001interval,bind
+	1001pattern0,1005,0,interpolate,0,0
+}
+
+//Looks down a little thoughtful
+surface4
+{
+	//Collision
 	collision0,164,88,219,129,StarCrown
-	element0,overlay,surface1001.png,0,0
+	element0,overlay,surface4.png,0,0
 	
 	//Eyes
 	animation0.interval,always
 	animation0.pattern0,overlay,1202,0,0,0
+	//Suspicious
+	animation1.interval,never
+	animation1.pattern0,stop,0
+	animation1.pattern1,overlay,1206,0,0,0
+	
 	//Arms
-	animation9000.interval,always
-	animation9000.pattern0,overlay,1302,0,0,0
+	animation2000.interval,always
+	animation2000.pattern0,overlay,1302,0,0,0
+	//behind back
+	animation3.interval,never
+	animation3.pattern0,stop,2000
+	animation3.pattern1,stop,2
+	animation3.pattern2,interpolate,1306,0,0,0
+	
 	//Cape top
 	1000interval,bind
 	1000pattern0,1002,0,add,0,0
@@ -48,28 +120,6 @@ surface1
 	//Cape bottom
 	1001interval,bind
 	1001pattern0,1003,0,interpolate,0,0
-}
-
-//Cross arms
-surface2
-{
-	//Collision
-	collision0,160,87,221,128,StarCrown
-	element0,overlay,surface1002.png,0,0
-}
-
-//Null
-surface3
-{
-	element0,overlay,surface1003.png,0,0
-}
-
-//It's just a prank breh
-surface4
-{
-	//Collision
-	collision0,157,92,214,132,StarCrown
-	element0,overlay,surface1004.png,0,0
 }
 
 //Mad!
@@ -88,11 +138,17 @@ surface6
 	element0,overlay,surface1006.png,0,0
 }
 
-//Laugh
+//Surprise
 surface7
 {
-	collision0,166,85,220,115,StarCrown
-	element1,overlay,surface1007.png,0,0
+	element1,overlay,surface7.png,0,0
+	
+	//Cape top
+	1000interval,bind
+	1000pattern0,1006,0,add,0,0
+	//Cape bottom
+	1001interval,bind
+	1001pattern0,1007,0,interpolate,0,0
 }
 
 //scawy
@@ -161,6 +217,19 @@ surface17
 surface18
 {
 	element1,overlay,surface1018.png,0,0
+}
+
+//tired
+surface38
+{
+	element1,overlay,surface38.png,0,0
+	
+	//Cape top
+	1000interval,bind
+	1000pattern0,1008,0,add,0,0
+	//Cape bottom
+	1001interval,bind
+	1001pattern0,1009,0,interpolate,0,0
 }
 
 //tired

@@ -8,9 +8,9 @@ scope,0
 
 0,Default
 1,Null
-2,Surprise!
-3,Shy
-4,Wave
+2,Null
+3,Side Look
+4,Slight Down
 5,Scared
 6,Cute Sit
 7,Happy
