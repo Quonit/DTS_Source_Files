@@ -799,7 +799,16 @@ Select.TEACHNAME
 
 Select.CANCEL
 {
-	if nowmode == "Edgybitch"
+	if nowmode == "intodreams"
+	{
+		//temp dialogue
+		"Alright."
+		"Click? * (It sounds like they heard your computer mouse!)"
+		"Tell me if you need anything.\e"
+		--
+		"\e"
+	}
+	elseif nowmode == "Edgybitch"
 	{
 		"\0\s[8]Whatever.\e"
 		"\0\s[1]Go bother someone else.\e"

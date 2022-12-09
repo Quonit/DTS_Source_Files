@@ -113,7 +113,8 @@ OnInstallComplete
 
 OnInstallFailure
 {
-	"%(surface0)\i[55]* (The installation has failed.)"
+	"%(surface0)\i[55]* (The installation has failed.)\n\n\w8"
+	--
 	if nowmode == "Edgybitch"
 	{
 		"\0\s[0]How sad.\w5 It didn't work.\w8 Tch."
@@ -250,7 +251,8 @@ OnBIFFFailure
 
 OnUpdateBegin
 {
-	"%(surface0)\i[55]* (Starting the update process.)\w8\e"
+	"%(surface0)\i[55]* (Starting the update process.)\w8\n\n"
+	--
 	if nowmode == "Edgybitch"
 	{
 		//temp dialogue 4 dis & dreamy
