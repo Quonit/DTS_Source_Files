@@ -209,6 +209,7 @@ MouseMoveSakura
 				}
 				elseif reference4 == "StarCrown" //Pet Dream
 				{
+					//temp dialogue
 					//* (Dream seems a bit confused.) Oh- I mean, if you want to I suppose you can...
 					//^^
 				}

@@ -195,11 +195,11 @@ OnBoot
 		{
 			//guess what it's Not Hanahaki time
 		}
-		
+		*/
 		elseif dayslot == "12month 21day" //If sodreamy == "on" Dream appears
 		{
-			intodreams == "on"
-			"Aah! Where...! I'm looking for someone... Do you- maybe know... (hand on head) sorry! :looks around: I- I'm sorry... My name is Dream, yours is...? (something clicks). %(username)? Okay..."
+			"\![raise,Onnotonfirstboot]"
+				/*
 				"\0\s[1]\i[14]\i[55]\w8\w8\w8*\w4 ( \w4. \w4. \w4.\w4)\w8\w8\n\n* (He looks to be enjoying his book.)\w8\w8\w8\n\n* (Disturb him?)\e"
 				--
 				"\n\n/
@@ -226,8 +226,8 @@ OnBoot
 					}
 					}
 				}
+				*/
 		}
-		*/
 		elseif dayslot == "10month 31day"
 		{
 			nowmode = "Edgybitch"

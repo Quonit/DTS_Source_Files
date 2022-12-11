@@ -212,7 +212,11 @@ funmenu //Put at the end of functions
 
 pickup //why is this here instead of mouse.dic
 {	
-	if nowmode == "Edgybitch"
+	if nowmode == "intodreams"
+	{
+		"\0\s[38]"
+	}
+	elseif nowmode == "Edgybitch"
 	{
 		"\0\s[12]"
 	}
@@ -250,7 +254,18 @@ pickup //why is this here instead of mouse.dic
 
 surface0
 {
-	if nowmode == "Edgybitch"
+	if nowmode == "intodreams"
+	{
+		if sadnicelevel >= 25
+		{
+			"\0\s[0]"
+		}
+		else
+		{
+			"\0\s[0]\i[1]"
+		}
+	}
+	elseif nowmode == "Edgybitch"
 	{
 		"\0\s[0]"
 	}

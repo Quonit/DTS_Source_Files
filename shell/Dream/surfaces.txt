@@ -17,8 +17,8 @@ surface0
 	animation0.pattern0,overlay,1200,0,0,0
 	//Scared
 	animation1.interval,never
-	animation1.pattern0,overlay,1201,0,0,0
-	animation1.pattern1,overlay,-0,100,0,0
+	animation1.pattern0,stop,0
+	animation1.pattern1,overlay,1201,0,0,0
 	
 	//Cape
 	//Cape top
@@ -42,10 +42,18 @@ surface1
 	element0,overlay,surface1.png,0,0
 }
 
-//Null
+//Sigh
 surface2
 {
-	element0,overlay,surface1002.png,0,0
+	element0,overlay,surface2.png,0,0
+	animation0.interval,runonce
+	animation0.pattern0,base,1622,650,0,0
+	//Cape top
+	1000interval,bind
+	1000pattern0,1010,0,add,0,0
+	//Cape bottom
+	1001interval,bind
+	1001pattern0,1011,0,interpolate,0,0
 }
 
 //Worried Side Look
