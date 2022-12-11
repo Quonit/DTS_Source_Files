@@ -61,14 +61,14 @@ DreamMenu
 	"\![*]\q[Say something,altalk]\n"
 	"\![*]\q[Speak,altalk]\n"
 	"\![*]\q[Talk,altalk]\n"
-	"\![*]\q[Ask him to say something,altalk]\n"
+	"\![*]\q[Ask them to say something,altalk]\n"
 	--
 	if lastTalk != ""
 	{
 		"\![*]\q[Repeat,OnLastTalk]\n\n"
-		"\![*]\q[Ask him to repeat himself,OnLastTalk]\n\n"
-		"\![*]\q[Ask him to repeat what he last said,OnLastTalk]\n\n"
-		"\![*]\q[Ask him to say what he just said,OnLastTalk]\n\n"
+		"\![*]\q[Ask them to repeat themself,OnLastTalk]\n\n"
+		"\![*]\q[Ask them to repeat what he last said,OnLastTalk]\n\n"
+		"\![*]\q[Ask them to say what he just said,OnLastTalk]\n\n"
 	}
 	"\![*]\q[ACT,Onyouact] or ask some \![*]\q[QUESTIONS,youtalk]\n/
 	\![*]\q[Use some items,itemsmenu]\n/
