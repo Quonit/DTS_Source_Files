@@ -2592,7 +2592,9 @@ Select.nomoresits
 Select.testvariable
 {
 	nowmode = "intodreams"
-	"\S[7]AAAAAA"
+	"\![change,Shell,Dream]"
+	--
+	"\s[7]AAAAAA"
 }
 
 

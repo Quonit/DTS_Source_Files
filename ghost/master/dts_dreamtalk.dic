@@ -9,35 +9,37 @@ Onnotonfirstboot
 	sadact = 0
 	sadnicelevel = 0
 	
-	"%(lps(8))\n\n\w8\w8* (You say hi.)\w8\w8\w8\n\n* (%(lps(3))They are not paying attention.)\w8\w8\n/
-	\q[Say hello again,dreamintronext1]\n/
-	\q[Call their name,dreamintronext1]\e"
+	"%(lps(8))\n\n\w8\w8* (You say hi.)\w8\w8\w8\n\n* (%(lps(3))They are not paying attention.)\w8\w8\n\n/
+	\![*]\q[Say hello again,dreamintronext1]\n/
+	\![*]\q[Call their name,dreamintronext1]"
 }
-		dreamintronext1
-		{
-			"* (You try talking to them.)\w8\w8\n\n* (%(lps(2))No response.)\w8\w8\n\n\n/
-			\q[Give them a toy,dreamintronext2]\n/
-			\q[Give them a blanket,dreamintronext2]\e"
-		}
-		dreamintronext2
-		{
-			"* (You try giving them stuff.)\w8\w8\n\n* (No response!)\n/
-			\q[Drastic measures,dreamintronext3]\e"
-		}
-		dreamintronext3
-		{
-			"* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5 Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
-		}
-	OnDreamBoot
-	{
-	}
-	OnDreamClose
-	{
-	}
+
+Select.dreamintronext1
+{
+	"* (You try talking to them.)\w8\w8\n\n* (%(lps(2))No response.)\w8\w8\n\n/
+	\![*]\q[Give them a toy,dreamintronext2]\n/
+	\![*]\q[Give them a blanket,dreamintronext2]"
+}
+Select.dreamintronext2
+{
+	"* (You try giving them stuff.)\w8\w8\n\n* (No response!)\n\n/
+	\![*]\q[Drastic measures,dreamintronext3]"
+}
+Select.dreamintronext3
+{
+	"* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5 Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
+}
+OnDreamBoot
+{
+}
+OnDreamClose
+{
+}
 
 //AITalk
 DreamTalk : nonoverlap_pool
 {
+	"Hoi"
 	/*
 	if distracted == "on"
 	{
@@ -148,7 +150,7 @@ DreamMenu
 			//Only use it if they like you. Discuss how they and Nightmare (Nightmare!) use costumes for ceremonies a lot.
 	}		
 
-dreamtestvariable
+Select.dreamtestvariable
 {
 	"\![raise,Onnotonfirstboot]"
 }

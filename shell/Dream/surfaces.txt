@@ -5,6 +5,9 @@
 //  +#+    +#+ +#+    +#+ +#+        +#+     +#+ +#+       +#+
 // #+#    #+# #+#    #+# #+#        #+#     #+# #+#       #+#
 //#########  ###    ### ########## ###     ### ###       ###
+
+version,1
+
 surface0
 {
 	//Collision
@@ -22,11 +25,11 @@ surface0
 	
 	//Cape
 	//Cape top
-	1000interval,bind
-	1000pattern0,1000,0,add,0,0
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1000,0,0,0
 	//Cape bottom
-	1001interval,bind
-	1001pattern0,1001,0,interpolate,0,0
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1001,0,0,0
 	
 	//Arms
 	//Polite Behind Back
@@ -46,14 +49,17 @@ surface1
 surface2
 {
 	element0,overlay,surface2.png,0,0
+	
 	animation0.interval,runonce
 	animation0.pattern0,base,1622,650,0,0
+	
+	//Cape
 	//Cape top
-	1000interval,bind
-	1000pattern0,1010,0,add,0,0
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1010,0,0,0
 	//Cape bottom
-	1001interval,bind
-	1001pattern0,1011,0,interpolate,0,0
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1011,0,0,0
 }
 
 //Worried Side Look
@@ -76,8 +82,9 @@ surface3
 	animation4.pattern1,overlay,1205,0,0,0
 	
 	//Cape top
-	1000interval,bind
-	1000pattern0,1004,0,add,0,0
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1004,0,0,0
+	
 	
 	//Arms
 	//Fiddling
@@ -91,8 +98,8 @@ surface3
 	animation3.pattern1,interpolate,1305,0,0,0
 	
 	//Cape bottom
-	1001interval,bind
-	1001pattern0,1005,0,interpolate,0,0
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1005,0,0,0
 }
 
 //Looks down a little thoughtful
@@ -118,29 +125,45 @@ surface4
 	animation3.pattern0,stop,2000
 	animation3.pattern1,stop,2
 	animation3.pattern2,interpolate,1306,0,0,0
-	//anxious fiddling
+	
+	
 	animation4.interval,never
-	animation4.pattern0,stop,2000
-	animation4.pattern1,stop,2
-	animation4.pattern2,overlay,1307,0,0,0
-	animation4.pattern3,interpolate,1310,0,0,0
-	animation4.pattern4,start,5
+	animation4.pattern0,parallelstop,(2,2000)
+	animation4.pattern1,parallelstart,(5,6,7)
+	
+	animation5.interval,never
+	animation5.pattern0,overlay,1307,0,0,0
+	
+	animation6.interval,never
+	animation6.pattern0,interpolate,1310,0,0,0
+	
 	//rub
-	animation5.interval,never,4
-	animation5.pattern0,stop,1
-	animation5.pattern2,overlay,1309,0,0,0
-	animation5.pattern3,overlay,1308,1000,0,0
-	animation5.pattern4,overlay,1309,1000,0,0
+	animation7.interval,never,4
+	animation7.pattern0,overlay,1309,0,0,0
+	animation7.pattern1,overlay,1308,1000,0,0
+	animation7.pattern2,overlay,1309,1000,0,0
+	animation7.pattern3,overlay,-1,1000,0,0
+	animation7.pattern4,start,8
+	
+	animation8.interval,never,4
+	animation8.pattern0,overlay,1309,0,0,0
+	animation8.pattern1,overlay,1308,1000,0,0
+	animation8.pattern2,overlay,1309,1000,0,0
+	animation8.pattern3,overlay,-1,1000,0,0
+	animation8.pattern4,start,7
 	
 	//Cape top
-	1000interval,bind
-	1000pattern0,1002,0,add,0,0
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1002,0,0,0
+	
 	//Sleeve
 	animation2.interval,always
 	animation2.pattern0,overlay,1301,0,0,0
+
 	//Cape bottom
-	1001interval,bind
-	1001pattern0,1003,0,interpolate,0,0
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1003,0,0,0
+
 }
 
 //Mad!
@@ -165,11 +188,12 @@ surface7
 	element1,overlay,surface7.png,0,0
 	
 	//Cape top
-	1000interval,bind
-	1000pattern0,1006,0,add,0,0
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1006,0,0,0
 	//Cape bottom
-	1001interval,bind
-	1001pattern0,1007,0,interpolate,0,0
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1007,0,0,0
+
 }
 
 //scawy
@@ -246,11 +270,12 @@ surface38
 	element1,overlay,surface38.png,0,0
 	
 	//Cape top
-	1000interval,bind
-	1000pattern0,1008,0,add,0,0
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1008,0,0,0
 	//Cape bottom
-	1001interval,bind
-	1001pattern0,1009,0,interpolate,0,0
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1009,0,0,0
+
 }
 
 //tired

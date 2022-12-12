@@ -26,7 +26,7 @@ surface.append0-400
 	animation500.pattern1,interpolate,1305,660,0,0
 	animation500.pattern2,interpolate,1304,500,0,0
 	animation500.pattern3,interpolate,1305,500,0,0
-	animation500.pattern4,start,16
+	animation500.pattern4,start,500
 
 	//Pull In
 	animation501.interval,never
