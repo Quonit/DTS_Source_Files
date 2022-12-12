@@ -118,6 +118,19 @@ surface4
 	animation3.pattern0,stop,2000
 	animation3.pattern1,stop,2
 	animation3.pattern2,interpolate,1306,0,0,0
+	//anxious fiddling
+	animation4.interval,never
+	animation4.pattern0,stop,2000
+	animation4.pattern1,stop,2
+	animation4.pattern2,overlay,1307,0,0,0
+	animation4.pattern3,interpolate,1310,0,0,0
+	animation4.pattern4,start,5
+	//rub
+	animation5.interval,never,4
+	animation5.pattern0,stop,1
+	animation5.pattern2,overlay,1309,0,0,0
+	animation5.pattern3,overlay,1308,1000,0,0
+	animation5.pattern4,overlay,1309,1000,0,0
 	
 	//Cape top
 	1000interval,bind

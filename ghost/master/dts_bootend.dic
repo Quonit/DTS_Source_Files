@@ -262,7 +262,11 @@ OnBoot
 
 normalboottalk //All temp dialogue
 {
-	if nowmode == "Edgybitch"
+	if nowmode = "intodreams"
+	{
+		OnDreamBoot
+	}
+	elseif nowmode == "Edgybitch"
 	{
 		GoopWake
 	}
@@ -407,7 +411,11 @@ OnClose
 	--
 	if passmin >= 5
 	{
-		if nowmode == "Edgybitch"
+		if nowmode == "intodreams"
+		{
+			OnDreamClose
+		}
+		elseif nowmode == "Edgybitch"
 		{
 			OnGoopSleep
 		}
