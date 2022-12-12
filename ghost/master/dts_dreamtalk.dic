@@ -86,8 +86,30 @@ DreamMenu
 }
 	Ondreamyact //Act
 	{
-		"* (ACTing in progress.)\e"
-		//CHECK
+		"* (ACTing in progress.)\n"
+		--
+		"\_q\![*]\q[Check,isitrealdream]\n"
+		--
+		if starpunch >= 1
+		{
+			"\![*]\q[Apologize,dreamforgiveness] "
+		}
+		--
+		if sadnicelevel >= 69
+		{
+			"\![*]\q[Flirt,dreamsacebutyoucantry] "
+		}
+		--
+		"\![*]\q[Reassure,dreamhasanxiety]\n/
+		\![*]\q[Compliment,bnice2them]\n/
+		\![*]\q[Story,dreamlikesstories]\n/
+		\![*]\q[Tease,scarethem]\n/
+		\![*]\q[Mock,nowurjustmean2dream]\n/
+		\![*]\q[Back to menu,DreamMenu]\n"
+		\![*]\q[Nevermind,CANCEL]\e"
+	}
+		Select.isitrealdream //CHECK
+		{
 			//The INTENDED Dreamtale Sans
 			//They, not he
 			//Stealing all the attention
@@ -95,20 +117,37 @@ DreamMenu
 			//Knows more than they act
 			//Their outfit matches %(nightname)'s
 			//More suspicious of you than %(nightname)
+		}
+		Select.dreamforgiveness //Apologize
+		{
 		//Apologize if you've hit them
 			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
-		//Flirt
+		}
+		Select.dreamsacebutyoucantry //Flirt
+		{
 			//Yeah this'll go well
 			//o((⊙﹏⊙;))o.
-		//Compliment
+		}
+		Select.dreamhasanxiety //Reassure
+		{
+		}
+		Select.bnice2them //Compliment
+		{
+		}
+		Select.dreamlikesstories //Story
+		{
+			//Chance they might fall asleep but it's cute
+		}
+		Select.scarethem //Tease
+		{
+			//u jump at them bc u know they have anxiety and doing that will startle them which is MEAN
+		}
+		Select.nowurjustmean2dream //Mock
+		{
+		}
 		//Joke
 			//they act like ur funnier than u are. rly.
-		//Story
-			//Chance they might fall asleep but it's cute
-		//Tease
-		//Goad
-		//Mock
-	}
+			//Skipping this one (for now) because they're difficult to write
 	
 	Oninterrogatedream//Ask...
 	{

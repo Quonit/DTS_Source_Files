@@ -109,6 +109,10 @@ surface4
 	animation1.interval,never
 	animation1.pattern0,stop,0
 	animation1.pattern1,overlay,1206,0,0,0
+	//eeeeep
+	animation1.interval,never
+	animation1.pattern0,stop,0
+	animation1.pattern1,overlay,1207,0,0,0
 	
 	//Arms
 	animation2000.interval,always
