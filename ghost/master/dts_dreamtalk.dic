@@ -2,6 +2,31 @@
 	//var distracted = "on"
 	//niceact, sadact, sadnicelevel
 	//You say hi.) * (They are not paying attention.) *[put some options here] * (you try talking to them. ...no responce.) [put some options here] * (you try giving them stuff.) no response!) [more item options] * (You bury them in a pile of stuff) "!" "Oh- oh, I didn't- I didn't notice you there!" * (they seem scared)
+Onnotonfirstboot
+{
+	niceact = 0
+	sadact = 0
+	sadnicelevel = 0
+	
+	"%(lps(8))\n\n\w8\w8* (You say hi.)\w8\w8\w8\n\n* (%(lps(3))They are not paying attention.)\w8\w8\n/
+	\q[Say hello again,dreamintronext1]\n/
+	\q[Call their name,dreamintronext1]\e"
+}
+	dreamintronext1
+	{
+		"* (You try talking to them.)\w8\w8\n\n* (%(lps(2))No response.)\w8\w8\n\n\n/
+		\q[Give them a toy,dreamintronext2]\n/
+		\q[Give them a blanket,dreamintronext2]\e"
+	}
+	dreamintronext2
+	{
+		"* (You try giving them stuff.)\w8\w8\n\n* (No response!)\n/
+		\q[Drastic measures,dreamintronext3]\e"
+	}
+	dreamintronext3
+	{
+		"* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5 Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
+	}
 
 //AITalk
 DreamTalk : nonoverlap_pool
@@ -26,7 +51,35 @@ DreamTalk : nonoverlap_pool
 //Menu
 DreamMenu
 {
-	//Act
+	wd = GetWeekDay
+	ap = GetAP
+	nowmin = Getnowmin
+	nowhour = Getnowhour
+	--
+	"\n\n\_q"
+	--
+	"\![*]\q[Say something,altalk]\n"
+	"\![*]\q[Speak,altalk]\n"
+	"\![*]\q[Talk,altalk]\n"
+	"\![*]\q[Ask them to say something,altalk]\n"
+	--
+	if lastTalk != ""
+	{
+		"\![*]\q[Repeat,OnLastTalk]\n\n"
+		"\![*]\q[Ask them to repeat themself,OnLastTalk]\n\n"
+		"\![*]\q[Ask them to repeat what he last said,OnLastTalk]\n\n"
+		"\![*]\q[Ask them to say what he just said,OnLastTalk]\n\n"
+	}
+	"\![*]\q[ACT,Ondreamyact] or ask some \![*]\q[QUESTIONS,Oninterrogatedream]\n/
+	\![*]\q[Use some items,Ondreambox]\n/
+	\![*]\q[Stats,configmenu]\n/
+	\![*]\q[Use some functions,dosomething]\n\n/
+	\![*]\q[Testvariable,dreamtestvariable]\n\n/
+	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
+}
+	Ondreamyact //Act
+	{
+		"* (ACTing in progress.)\e"
 		//CHECK
 			//The INTENDED Dreamtale Sans
 			//They, not he
@@ -48,7 +101,11 @@ DreamMenu
 		//Tease
 		//Goad
 		//Mock
-	//Ask...
+	}
+	
+	Oninterrogatedream//Ask...
+	{
+		"* (ASKing in progress.)\e"
 		//Yourself
 			//Oh... Well, I suppose I should... (sigh) I'm so sorry! I'm normally not so anxious to be talking to others. It's just been busy as of late. I promise I'm fine though.
 			//Who you're looking for
@@ -68,7 +125,11 @@ DreamMenu
 			//Recited thing. * (Ask to take it off) (y/n) y: ...No ^^;;
 		//Their eyes
 			//Would they even mention the emotions part? I think they'd be like yes blue and yellow. like the days sky. and hope the user just nods.
-	//Items
+	}
+	
+	Ondreambox //Items
+	{
+		"* (GIFTing in progress.)\e"
 		//Food
 			//there are many foods which exist. Dream is probably a bit more hesitent than Night to accept.
 		//Gift
@@ -76,4 +137,11 @@ DreamMenu
 			//* (
 		//Plush
 			//You hand them a plush of %(nightname).) Ah- That's... This is my brother? (they look very concerned.) You know him... This is... * (They trail off and just look around more, like at the edges of the screen.)
+		//Outfit
+			//Only use it if they like you. Discuss how they and Nightmare (Nightmare!) use costumes for ceremonies a lot.
+	}		
+
+dreamtestvariable
+{
+	"\![raise,Onnotonfirstboot]"
 }

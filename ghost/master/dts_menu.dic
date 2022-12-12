@@ -163,7 +163,7 @@ MenuRun
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
 	\![*]\q[Use some functions,dosomething]\n\n/
-	//\![*]\q[Testvariable,testvariable]\n\n/
+	\![*]\q[Testvariable,testvariable]\n\n/
 	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 
@@ -799,7 +799,16 @@ Select.TEACHNAME
 
 Select.CANCEL
 {
-	if nowmode == "Edgybitch"
+	if nowmode == "intodreams"
+	{
+		//temp dialogue
+		"Alright."
+		"Click? * (It sounds like they heard your computer mouse!)"
+		"Tell me if you need anything.\e"
+		--
+		"\e"
+	}
+	elseif nowmode == "Edgybitch"
 	{
 		"\0\s[8]Whatever.\e"
 		"\0\s[1]Go bother someone else.\e"
@@ -1935,7 +1944,15 @@ Select.reexplaincrown
 
 Select.reexplaintree
 {
-	if privacyrespecter == "on"
+	if nowmode == "intodreams" //temp dialogue
+	{
+		"It's been stable. There was one fallen apple discovered I burried this week, but that is all."
+	}
+	elseif nowmode == "Edgybitch"
+	{
+		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\s[7]Hah. \w4\s[0]Dead person.\n\n\w8\s[8]now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[0] but whatever you think, \w2the tree's still my 'Mom' too.\n\n\w8\s[1]Technically that'd make anDream and the purple one my half brothers \w3\s[0]when you think about it."
+	}
+	elseif privacyrespecter == "on"
 	{
 		"\0\s[12]...It's a magic tree."
 	}
@@ -1943,10 +1960,6 @@ Select.reexplaintree
 	{
 		momstreeexpo = "on"
 		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\0\s[9]Mommy\w4.\w4.\w4. \w6I wish I knew her sometimes.\n\n\w8I\w3.\w3.\w3. \w4I think it's just my head,\w3 but I think she'd've helped me a lot on stuff.\w6If I also had her to talk to instead of just the villagers.\w6 But\w3.\w3.\w3.\n\n\w8Some of the villagers say she wouldn't have liked me, \w5but I don't know if I should just trust what they're saying or not. \w6Because I didn't know her, \w3but they did.\w5So I dunno what to think\w3.\w3.\w3."
-	}
-	elseif nowmode == "Edgybitch"
-	{
-		"\_b[Extras\mydeadmom.png,125,10]\_l[0,60]\s[7]Hah. \w4\s[0]Dead person.\n\n\w8\s[8]now, \w2I know you think I'm nothin' to do with Nighty and just possessed him or whatever,\w3\0\s[0] but whatever you think, \w2the tree's still my 'Mom' too.\n\n\w8\s[1]Technically that'd make anDream and the purple one my half brothers \w3\s[0]when you think about it."
 	}
 	else
 	{
@@ -2578,13 +2591,8 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	/*
-	"\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\w8\n\n.\w8.\w8.\s[1512]\i[35]\w5\i[36]\i[37]\w8\w8\w8\w8\s[1517]\w8\w8\w5\s[1513]\w8\w8\w8\s[1514]Looks like you found me.\w4.\w4.\w5I'd say it's almost impressive.\w4 Especially if you didn't even know I was here, \w4the lengths you went through to torture him.\w8\n\nBut, here you are. \w5Doesn't much matter what you said to him before.\w8\s[1513] You get to talk to me now."
-	*/
-	"\n\n\q[Test again?,testvariable]/
-	\n\q[Test goo?,testgoo]/
-	\n\q[Put him back?,changeshell]/
-	\n\q[Close,CANCEL]"
+	nowmode = "intodreams"
+	"\S[7]AAAAAA"
 }
 
 
