@@ -107,18 +107,26 @@ DreamMenu
 		\![*]\q[Story,dreamlikesstories]\n/
 		\![*]\q[Tease,scarethem]\n/
 		\![*]\q[Mock,nowurjustmean2dream]\n/
-		\![*]\q[Back to menu,DreamMenu]\n"
+		\![*]\q[Back to menu,DreamMenu]\n
 		\![*]\q[Nevermind,CANCEL]\e"
 	}
 		Select.isitrealdream //CHECK
 		{
-			//The INTENDED Dreamtale Sans
-			//They, not he
-			//Stealing all the attention
-			//Still not even a Sans?
-			//Knows more than they act
-			//Their outfit matches %(nightname)'s
-			//More suspicious of you than %(nightname)
+			"* (The REAL Dreamtale Sans.)"
+			"* (They, not he.)"
+			"* (Stealing all the attention.)"
+			"* (Still not even a Sans?)"
+			"* (Knows more than they're letting on.)"
+			"* (Their outfit matches %(nightname)'s)"
+			if sadnicelevel >= 25
+			{
+				"* (More suspicious of you than %(nightname).)"
+			}
+			--
+			"\n\n\![*]\q[Choose another ACTion,Onyouact]\n/
+			\![*]\q[ASK another question,youtalk]\n/
+			\![*]\q[Again,checkinguout]\n/
+			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		Select.dreamforgiveness //Apologize
 		{
@@ -132,6 +140,13 @@ DreamMenu
 		}
 		Select.dreamhasanxiety //Reassure
 		{
+			if sadnicelevel >= 25
+			{
+			}
+			else
+			{
+				"* (You tell Dream you're not going to hurt them."
+			}
 		}
 		Select.bnice2them //Compliment
 		{

@@ -411,6 +411,16 @@ MouseDoubleClickSakura
 			}
 		}
 	}
+	esleif reference4 == "dremFace"
+	{
+		if starpunch == 0
+		{
+			"\i[55]* (Are you sure you want to hit them?)\n\n"
+			--
+			"\![*]\q[Yes,punchdreamy]\n/
+			\![*]\q[No!!,dontpunchdreamy]\e"
+		}
+	}
 	elseif reference4 == "Face" //Punching animations get worse as there are more.
 	{
 		if punchout >= 30
@@ -498,6 +508,11 @@ Select.dontpunchnighty
 	"\i[55]* (Your relationship with %(nightname) has been preserved.)\e"
 	"\i[55]* (Are you a coward or did you misclick?)\e"
 	"\i[55]* (Peace has been restored.)\e"
+}
+
+Select.punchdreamy
+{
+	//if ur relationship is over 25 it goes back to 0
 }
 
 Select.readfunnyblurbsleepmode
