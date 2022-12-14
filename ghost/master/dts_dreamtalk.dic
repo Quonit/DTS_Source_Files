@@ -107,7 +107,7 @@ DreamMenu
 		\![*]\q[Story,dreamlikesstories]\n/
 		\![*]\q[Tease,scarethem]\n/
 		\![*]\q[Mock,nowurjustmean2dream]\n/
-		\![*]\q[Back to menu,DreamMenu]\n
+		\![*]\q[Back to menu,DreamMenu]\n/
 		\![*]\q[Nevermind,CANCEL]\e"
 	}
 		Select.isitrealdream //CHECK
@@ -145,7 +145,7 @@ DreamMenu
 			}
 			else
 			{
-				"* (You tell Dream you're not going to hurt them."
+				"* (You tell Dream you're not going to hurt them.)\n\n\w8* (They still seem suspicious, \w4but relax a little.)"
 			}
 		}
 		Select.bnice2them //Compliment

@@ -37,12 +37,20 @@ surface0
 	animation2.pattern0,interpolate,1300,0,0,0
 }
 
-//It's just a prank breh
+//meditative sitting
 surface1
 {
 	//Collision
 	collision0,157,92,214,132,StarCrown
 	element0,overlay,surface1.png,0,0
+	
+	//Cape
+	//Cape top
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1012,0,0,0
+	//Cape bottom
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1013,0,0,0
 }
 
 //Sigh
@@ -67,6 +75,7 @@ surface3
 {
 	//Collision
 	collision0,160,87,221,128,StarCrown
+	collision1,160,87,221,128,dremFace
 	element0,overlay,surface3.png,0,0
 	
 	//Eyes
@@ -315,15 +324,19 @@ surface1604
 {
 	element0,overlay,surface1604.png,0,0
 }
-surface1605
+
+//meditative sitting
+surface1621
 {
-	element0,overlay,surface1605.png,0,0
-}
-surface1606
-{
-	element0,overlay,surface1606.png,0,0
-}
-surface1607
-{
-	element0,overlay,surface1607.png,0,0
+	//Collision
+	collision0,157,92,214,132,StarCrown
+	element0,overlay,surface1621.png,0,0
+	
+	//Cape
+	//Cape top
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1014,0,0,0
+	//Cape bottom
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1015,0,0,0
 }

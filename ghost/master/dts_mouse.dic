@@ -411,7 +411,7 @@ MouseDoubleClickSakura
 			}
 		}
 	}
-	esleif reference4 == "dremFace"
+	elseif reference4 == "dremFace"
 	{
 		if starpunch == 0
 		{
