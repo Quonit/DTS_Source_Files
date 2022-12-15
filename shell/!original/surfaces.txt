@@ -433,7 +433,8 @@ surface7
 	animation2.pattern1,interpolate,1301,666,0,0
 	animation2.pattern2,interpolate,1300,500,0,0
 	animation2.pattern3,interpolate,1301,500,0,0
-	animation2.pattern4,start,2
+	animation2.pattern4,interpolate,1300,500,0,0
+	animation2.pattern5,start,2
 
 	//Pull In
 	animation3.interval,never
@@ -441,6 +442,14 @@ surface7
 	animation3.pattern1,interpolate,1302,80,0,0
 	animation3.pattern2,interpolate,1303,80,0,0
 	animation3.pattern3,interpolate,7,80,0,0
+
+	//Pull Out
+	animation4.interval,never
+	animation4.pattern0,interpolate,1303,0,0,0
+	animation4.pattern1,interpolate,1302,80,0,0
+	animation4.pattern2,interpolate,1301,80,0,0
+	animation4.pattern4,interpolate,-1,80,0,0
+	animation4.pattern5,start,2
 
 	//Blushies
 	animation100.interval,bind

@@ -3,9 +3,10 @@ OnTranslate
 	_talk = reference0
 	_talk = REPLACE(_talk, "anDream", "\_a[Dream]Dream\_a")
 	_talk = REPLACE(_talk, "Mom's tree", "\_a[Mom's tree]Mom's tree\_a")
-	_talk = REPLACE(_talk, "anTree", "\_a[Mom's tree]the tree\_a")
+	_talk = REPLACE(_talk, "anTree", "\_a[Mom's tree]tree\_a")
 	_talk = REPLACE(_talk, "Quonit", "\_a[Quonit]Quonit\_a")
 	_talk = REPLACE(_talk, "anNight", "\_a[Nightmare]Nightmare\_a")
+	_talk = REPLACE(_talk, "anseal", "\_a[seal]seal\_a")
 	
 	if reference1 == "" && reference2 == ""
 	{
@@ -154,6 +155,11 @@ OnAnchorSelect
 			{
 				lasttalked = 0
 				"\0\s[0]\i[1]My brother\w2.\w2.\w2. \w8\s[0]\i[3]I don't know where's he's gone to\w2.\w2.\w2.\w8\n\n\s[2]I hope he's alright.\e"
+			}
+			when "seal"
+			{
+				lasttalked = 0
+				"\0\s[0]\i[10]The seal?\w8 \s[4]Well%(lps(3))\w8 Basically the village has a magic spell around it, so anything on the outside can't go in.\w8\w5\n\n\s[2]It was created when the war was still going on,\w6 so I guess it makes sense why they put it there.\w8\n\n\s[4]Sometimes items flow in from outside the village though-\w8 \s[6]Once a camera flowed in and me and Dream took pictures of ourselves with it!\e"
 			}
 		}
 	}

@@ -231,27 +231,54 @@ DreamMenu
 	
 	Oninterrogatedream//Ask...
 	{
-		"* (ASKing in progress.)\e"
-		//Yourself
-			//Oh... Well, I suppose I should... (sigh) I'm so sorry! I'm normally not so anxious to be talking to others. It's just been busy as of late. I promise I'm fine though.
-			//Who you're looking for
-			//Well, it's my brother you see... I was just looking for him because we had something scedualed, and somehow I somehow ended up hear.
-		//Scedualed?
-			//Well it's me and my brother's birthday- we're twins, so we share the same one. I wasn't able to find him, and usually when that happens it means he's out in the forest- or... that is how I think it used to be. Some days I looked through and... Oh, sorry, I'm talking too much, aren't I?
-		//Brother
-			//My brother, Nightmare. I... He hasn't been doing well, so I'm just trying to look for him.
-			//My Name
-			//Didn't you tell me your name?
-		//Unlocks if you've asked Night
-		//Tree
-			//...The... Tree? How did you find out about that...? Nevermind- [some recited basic thing from village]
-		//Their soul
-			//Recited thing. * (Ask to look at it?) (y/n) y: ...No ^^;;
-		//The crown
-			//Recited thing. * (Ask to take it off) (y/n) y: ...No ^^;;
-		//Their eyes
-			//Would they even mention the emotions part? I think they'd be like yes blue and yellow. like the days sky. and hope the user just nods.
+		"\i[55]* (You ask Dream about...)"
+		--
+		"\![*]\q[Themself,askdreamyou]\n"
+		--
+		if askaboutnight == "on"
+		{
+			"\![*]\q[Brother,askbrother]\n"
+			//\![*]\q[Your name,askyourname]\n"
+			"\![*]\q[Tree,askdreamabtree]\n/
+			\![*]\q[Tree,askdreamtheirsoul]\n"
+		}
+		--
+		\![*]\q[Nevermind,CANCEL]\e"
 	}
+		Select.askdreamyou
+		{
+			"Oh... So you don't kn-\w8 You aren't from the village, are you?\w8\s[2]\w8\w8I'm so sorry! I'm normally not so anxious talking to others. It's just been busy as of late. I promise I'm fine, though.\w8\n\n...I just accidentally find myself here because I was looking for someone.\n\n\![*]\q[Ask who they're looking for,dreamlook1]\e"
+		}
+			Select.dreamlook1
+			{
+				"It's my brother, you see... I was just looking for him because we had something scedualed, and I somehow ended up here.\n\n\![*]\q[Ask what they had scedualed,dreamlook2]"
+			}
+			Select.dreamlook2
+			{
+				"Well it's me and my brother's birthday- We're twins, so we share one. Usually when he's missing he's just out in the forest- or... That is how it used to be. Some days I looked through and... Oh, I'm sorry. I'm talking too much, aren't I?"
+			}
+		Select.askbrother
+		{
+			"My brother,\w4 Nightmare.\w8\n\nI... He hasn't been doing well, \w4so I'm just trying to look for him."
+		}
+		/*Select.askyourname
+		{
+			"Didn't you tell me your name? ...It's %(username), right?"
+		}*/
+		Select.askdreamabtree
+		{
+			"...The... anTree? How did you find out about that...? ...It's been doing fine. No irregularities."
+		}
+		Select.askdreamtheirsoul
+		{
+			"Recited thing. * (Ask to look at it?) (y/n) y: ...No ^^;;"
+		}
+		Select.askdreamtheircrown
+		{
+			"Recited thing. * (Ask to take it off?) (y/n) y: ...No ^^;;"
+		}
+	//Their eyes
+		//Would they even mention the emotions part? I think they'd be like yes blue and yellow. like the days sky. and hope the user just nods.
 	
 	Ondreambox //Items
 	{
