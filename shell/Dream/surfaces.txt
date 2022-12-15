@@ -22,6 +22,10 @@ surface0
 	animation1.interval,never
 	animation1.pattern0,stop,0
 	animation1.pattern1,overlay,1201,0,0,0
+	//Pensive emoji
+	animation3.interval,never
+	animation3.pattern0,stop,0
+	animation3.pattern1,overlay,1208,0,0,0
 	
 	//Cape
 	//Cape top

@@ -432,7 +432,7 @@ OnClose
 				"\0\s[1]Hm.\w8"
 			}
 			else
-			{	
+			{
 				"\0\s[3]Bye\w3.\w3.\w3.\w8"
 				"\0\s[4]I wonder when I'm coming back here again.\w8"
 				"\0\s[8]See you\w3.\w3.\w3. \w6Maybe.\w8"

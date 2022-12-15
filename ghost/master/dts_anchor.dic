@@ -92,7 +92,7 @@ OnAnchorSelect
 				
 				if nowmode == "intodreams"
 				{
-					"\0\s[0]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]The Creator%(lps(3))"
+					"\0\s[0]\i[3]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]The Creator%(lps(3))"
 				}
 				elseif sleepingmode == "on"
 				{
@@ -115,7 +115,19 @@ OnAnchorSelect
 			{
 				lasttalked = 0
 				
-				if sleepingmode == "on"
+				if nowmode == "intodreams"
+				{
+					if sadnicelevel >= 25
+					{
+					"\s[4]You wouldn't actually know anything about the tree,\w5 would you?"
+					//temp dialogue. not sure where to take this one
+					}
+					else
+					{
+					"\s[0]\i[1]The tree is fine.\w8 One gold apple fell and Night helped me burry it\w8\n\n ...That is all.\e"
+					}
+				}
+				elseif sleepingmode == "on"
 				{
 					"\0\s[5]\_b[Extras\mydeadmom.png,125,10]\_l[0,60]zzz\w4.\w4.\w4.\w8\w8 Mommy\w4.\w4.\.w4?\w8\w8\w8 Please don't hate me\w4.\w4.\w4.\w8\w8 I din't do anything wrong\w4.\w4.\w4.\e"
 				}
@@ -141,7 +153,7 @@ OnAnchorSelect
 			when "Nightmare"
 			{
 				lasttalked = 0
-				"\0\s[2002]My brother\w2.\w2.\w2. \w8\i[49]I don't know where's he's gone to\w2.\w2.\w2.\w8\n\n\s[2007]I hope he's alright.\e"
+				"\0\s[0]\i[1]My brother\w2.\w2.\w2. \w8\s[0]\i[3]I don't know where's he's gone to\w2.\w2.\w2.\w8\n\n\s[2]I hope he's alright.\e"
 			}
 		}
 	}

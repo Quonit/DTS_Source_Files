@@ -31,17 +31,72 @@ Select.dreamintronext3
 }
 OnDreamBoot
 {
-	"%(surface0)"
-	--
-	if RAND(100) < 50
+	if RAND(2) == 1
 	{
+		"\![bind,Costume,Cape,true]"
 	}
 	else
+	{
+		"\![bind,Costume,Cape,false]"
+	}
+	--
+		if sadnicelevel >= 25
+		{
+			"Oh,\w6 hello again."
+		}
+		else
+		{
+			"%(surface0)"
+			--
+			"Oh... \w8Hello."
+			"...\n\n\w8* (They look at you with quiet regard.)"
+			"...\n\n\w8* (It looks like they're scared of you still.)"
+		}
+	if timeslot == "earlymorning"
+	{
+	}
+	elseif timeslot == "morning"
+	{
+	}
+	elseif timeslot == "lunch"
+	{
+	}
+	elseif timeslot == "afternoon"
+	{
+	}
+	elseif timeslot == "evening"
+	{
+	}
+	elseif timeslot == "latenight"
+	{
+	}
+	else //Midnight
 	{
 	}
 }
 OnDreamClose
 {
+	if timeslot == "earlymorning"
+	{
+	}
+	elseif timeslot == "morning"
+	{
+	}
+	elseif timeslot == "lunch"
+	{
+	}
+	elseif timeslot == "afternoon"
+	{
+	}
+	elseif timeslot == "evening"
+	{
+	}
+	elseif timeslot == "latenight"
+	{
+	}
+	else //Midnight
+	{
+	}
 }
 
 //AITalk
