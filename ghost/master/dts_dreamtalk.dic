@@ -229,7 +229,7 @@ DreamMenu
 			//they act like ur funnier than u are. rly.
 			//Skipping this one (for now) because they're difficult to write
 	
-	Oninterrogatedream//Ask...
+	Oninterrogatedream //Ask...
 	{
 		"\i[55]* (You ask Dream about...)"
 		--
@@ -240,7 +240,8 @@ DreamMenu
 			"\![*]\q[Brother,askbrother]\n"
 			//\![*]\q[Your name,askyourname]\n"
 			"\![*]\q[Tree,askdreamabtree]\n/
-			\![*]\q[Tree,askdreamtheirsoul]\n"
+			\![*]\q[Their soul,askdreamtheirsoul]\n
+			\![*]\q[Their eyes,askdreamtheireyes]\e"
 		}
 		--
 		\![*]\q[Nevermind,CANCEL]\e"
@@ -277,12 +278,19 @@ DreamMenu
 		{
 			"Recited thing. * (Ask to take it off?) (y/n) y: ...No ^^;;"
 		}
-	//Their eyes
-		//Would they even mention the emotions part? I think they'd be like yes blue and yellow. like the days sky. and hope the user just nods.
+		Select.askdreamtheireyes
+		{
+			"Yellow and blue, like the day's sky. (hope the user just nods.)"
+		}
 	
 	Ondreambox //Items
 	{
 		"* (GIFTing in progress.)\e"
+		--
+		"\![*]\q[Food,Ondreamyact]\n/
+		\![*]\q[Gift,Ondreambox]\n/
+		\![*]\q[Plush,configmenu]\n/
+		\![*]\q[Outfit,uhgfinallyoutfit]\e"
 		//Food
 			//there are many foods which exist. Dream is probably a bit more hesitent than Night to accept.
 		//Gift
@@ -292,7 +300,11 @@ DreamMenu
 			//You hand them a plush of %(nightname).) Ah- That's... This is my brother? (they look very concerned.) You know him... This is... * (They trail off and just look around more, like at the edges of the screen.)
 		//Outfit
 			//Only use it if they like you. Discuss how they and Nightmare (Nightmare!) use costumes for ceremonies a lot.
-	}		
+	}
+		Select.uhgfinallyoutfit
+		{
+			"I don't really do that..."
+		}
 
 Select.dreamtestvariable
 {
