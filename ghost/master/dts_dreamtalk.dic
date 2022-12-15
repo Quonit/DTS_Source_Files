@@ -16,7 +16,7 @@ Onnotonfirstboot
 
 Select.dreamintronext1
 {
-	"* (You try talking to them.)\w8\w8\n\n* (%(lps(2))No response.)\w8\w8\n\n/
+	"\s[3]\i[1]* (You try talking to them.)\w8\w8\n\n* (%(lps(2))No response.)\w8\w8\n\n/
 	\![*]\q[Give them a toy,dreamintronext2]\n/
 	\![*]\q[Give them a blanket,dreamintronext2]"
 }
@@ -31,6 +31,14 @@ Select.dreamintronext3
 }
 OnDreamBoot
 {
+	"%(surface0)"
+	--
+	if RAND(100) < 50
+	{
+	}
+	else
+	{
+	}
 }
 OnDreamClose
 {

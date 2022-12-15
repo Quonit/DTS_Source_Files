@@ -271,7 +271,11 @@ TalkConfig
 	Updated: 30th October 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
 	//temp dialogue
 	--
-	if nowmode == "Edgybitch" && dayslot != "10month 31day"
+	if nowmode == "intodreams" && dayslot != "12month 21day"
+	{
+		"* (Swap back to %(nightname)?)\n\q[Yes,byedream] \q[No,CANCEL]\n\n"
+	}
+	elseif nowmode == "Edgybitch" && dayslot != "10month 31day"
 	{
 		"* (Exit out of Goopmode?)\n\q[Yes,removegoo] \q[No,CANCEL]\n\n"
 	}
@@ -377,6 +381,13 @@ Select.removegoo
 	}
 }
 
+Select.byedream
+{
+	ringringuthere == "on"
+	//nowmode == not dream???? like it could be nm idk
+	//temp dialogue
+	"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]\w8\n\n* (\w3.\w3.\w3.\w4There's a small bell left behind!)\n\n\w8* (You add it to your inventory.)"
+}
 
 
 //    ___ ___ ___ _____ _  _ ___   ___   __  _____   ___   _   _   _  _ _____ ___ ___  _  _ 

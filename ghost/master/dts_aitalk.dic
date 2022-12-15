@@ -99,6 +99,10 @@ RandomTalk : nonoverlap_pool
 				"\0\s[1]\i[14]\i[55]* (He seems pretty happy here.)"
 				"\0\s[1]\i[14]\i[7]\i[55]* (He smiles at you a bit.)"
 				"\0\s[1]\i[14]\i[7]You know,\w5 I think you've been pretty nice."
+				if maremare == "on"
+				{
+				"\i[55]* (You ask Night about his tongue.)\n\n\w8\s[11]Ew, what?\n\n\w8* (You offer some theories, \w4such as if it's real, \w4a mirage, \w7or maybe possibly one of Mare's tendrils sticking out?)\n\n\w8\w3\s[4].\w3.\w3.\w8You know what,\w8\s[12] I'm not answering.\e"
+				}
 				--
 				"\e"
 			}

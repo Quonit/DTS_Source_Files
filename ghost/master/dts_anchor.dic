@@ -52,13 +52,13 @@ OnAnchorSelect
 					}
 					else
 					{
-						if privacyrespecter == "on"
-						{
-							"\0\s[12]They're somebody.\e"
-						}
-						elseif nowmode == "Edgybitch"
+						if nowmode == "Edgybitch"
 						{
 							"\_b[Extras\hessodreamy.png,125,10]\_l[0,50]\s[7]Hah,\w4 that sap?\n\n\w8''Oh boo hoo, \w3I'm too stupid to think that people are being mean to my brother dearest, \w3\s[8]whom I love so much and definitely care enough to notice things like\s[2]\i[2]\i[5]\i[103] cuts on his arm!''\n\n\w8\0\s[7]Hah, \w5\s[0]bet they wouldn't be happy if they saw me.\e"
+						}
+						elseif privacyrespecter == "on"
+						{
+							"\0\s[12]They're somebody.\e"
 						}
 						elseif blushiemode == "on"
 						{
@@ -90,7 +90,11 @@ OnAnchorSelect
 			{
 				lasttalked = 0
 				
-				if sleepingmode == "on"
+				if nowmode == "intodreams"
+				{
+					"\0\s[0]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]The Creator%(lps(3))"
+				}
+				elseif sleepingmode == "on"
 				{
 					"\0\s[5]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]\_l[0,60]zzz\w4.\w4.\w4.\w8\w8 Fox person\w4.\w4.\w4.\w8\w8 thing\w4.\w4.\w4\e"
 				}

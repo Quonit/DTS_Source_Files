@@ -4,10 +4,10 @@ char0.bind.savearray,1000=0
 Char1.balloon.isleft,1
 balloon0.offset,157.129
 scriptbox.left,407
-Char0.centery,1070
+Char0.centery,1067
 Char0.balloon.isleft,1
 Char.VirtualDesktop,2d3c179c-31be-468f-9c65-d2f8877a19fc
-Char0.center,1779
+Char0.center,1668
 scriptbox.top,647
 Char1.centery,1040
 Char1.center,1521
