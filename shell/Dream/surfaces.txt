@@ -267,15 +267,44 @@ surface15
 }
 
 //protect the crown
-surface17
+surface16
 {
 	element1,overlay,surface1016.png,0,0
 }
 
-//Grab Crown
+//Up Look
 surface17
 {
-	element1,overlay,surface1017.png,0,0
+	element1,overlay,surface17.png,0,0
+	//Cape top
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1016,0,0,0
+	//Cape bottom
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1017,0,0,0
+	//HEADS
+	//Side
+	animation2.interval,always
+	animation2.pattern0,interpolate,1313,0,0,0
+	//Forward
+	animation4.interval,never
+	animation4.pattern1,stop,2
+	animation4.pattern0,interpolate,1314,0,0,0
+	
+	//Side
+	animation0.interval,always
+	animation0.pattern0,overlay,1209,0,0,0
+	//Forward
+	animation3.interval,never
+	animation3.pattern1,stop,0
+	animation3.pattern0,interpolate,1210,0,0,0
+	
+	//Arms
+	animation1.interval,always
+	animation1.pattern0,interpolate,1312,0,0,0
+	//Blanket Burry
+	animation2000.interval,never
+	animation2000.pattern1,overlay,1400,0,0,0
 }
 
 //Dont hit me
