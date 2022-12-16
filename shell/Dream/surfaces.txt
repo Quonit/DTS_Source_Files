@@ -39,6 +39,9 @@ surface0
 	//Polite Behind Back
 	animation2.interval,always
 	animation2.pattern0,interpolate,1300,0,0,0
+	//clasped
+	animation4.interval,always
+	animation4.pattern0,interpolate,1311,0,0,0
 }
 
 //meditative sitting

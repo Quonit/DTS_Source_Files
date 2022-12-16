@@ -596,8 +596,8 @@ RandomTalk : nonoverlap_pool
 		{
 			//temp dialogue
 			"\s[3]%(lps(3))Hey %(username)?\w8\n\nIs it okay if I can leave for%(lps(3))\w6 A couple of seconds to check on some things?\w8\n\n\s[9]It's just that I've been out here a while and I just wanna see if things are okay.\n/
-			\[*]\q[Let him go,nightgolookstuff]
-			\[*]\q[Keep here,keepashostage]"
+			\[*]\q[Let him go,nightgolookstuff]\n/
+			\[*]\q[Keep here,keepashostage]\e"
 		}
 	}
 }
@@ -608,8 +608,8 @@ Select.nightgolookstuff
 	"\0\s[8]Okay,\w5 I got it.\e"
 	"\0\s[1]Everything was fine.\e"
 	"\0\s[7]Ack-\w8 %(lps(4))I need to go check on anDream. They're getting worried since I've disappeared too long.\n/
-	\[*]\q[Let him go,OnClose]
-	\[*]\q[Keep here,keepashostage]"
+	\[*]\q[Let him go,OnClose]\n/
+	\[*]\q[Keep here,keepashostage]\e"
 }
 Select.keepashostage
 {

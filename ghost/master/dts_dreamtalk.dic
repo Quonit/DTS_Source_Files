@@ -240,11 +240,11 @@ DreamMenu
 			"\![*]\q[Brother,askbrother]\n"
 			//\![*]\q[Your name,askyourname]\n"
 			"\![*]\q[Tree,askdreamabtree]\n/
-			\![*]\q[Their soul,askdreamtheirsoul]\n
+			\![*]\q[Their soul,askdreamtheirsoul]\n/
 			\![*]\q[Their eyes,askdreamtheireyes]\e"
 		}
 		--
-		\![*]\q[Nevermind,CANCEL]\e"
+		"\![*]\q[Nevermind,CANCEL]\e"
 	}
 		Select.askdreamyou
 		{
