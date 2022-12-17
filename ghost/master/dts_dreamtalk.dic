@@ -7,6 +7,7 @@ Onnotonfirstboot
 	whorupanic = "on"
 	nightplush = "off"
 	quodreamplush = "off"
+	sodreamy = "on"
 	
 	"\0\s[17]%(lps(8))\n\n\w8\w8* (You say hi.)\w8\w8\n\n* (%(lps(3))They are not paying attention.)\w8\w8\n\n/
 	\![*]\q[Say hello again,dreamintronext1]\n/
@@ -203,6 +204,7 @@ DreamMenu
 		}
 		Select.dreamhasanxiety //Reassure
 		{
+			niceact += 1
 			if sadnicelevel >= 25
 			{
 			}
@@ -213,18 +215,33 @@ DreamMenu
 		}
 		Select.bnice2them //Compliment
 		{
+			niceact += 1
+			if sadnicelevel >= 25
+			{
+				"* (You tell Dream you admire how they always try their best.)\n\n\w8 ^^"
+			}
+			else
+			{
 			"* (You tell Dream they're cute as a button.)\n\n\w8Thanks ^^\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
+			}
 		}
 		Select.dreamlikesstories //Story
 		{
+			niceact += 1
 			//Chance they might fall asleep but it's cute
+			"* (You read Dream %(bookstoread).)\n\n\w8"
+			--
+			""
 		}
 		Select.scarethem //Tease
 		{
+			sadact += 1
 			//u jump at them bc u know they have anxiety and doing that will startle them which is MEAN
+			//spooky computer bugs
 		}
 		Select.nowurjustmean2dream //Mock
 		{
+			sadact += 1
 		}
 		//Joke
 			//they act like ur funnier than u are. rly.
