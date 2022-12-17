@@ -51,7 +51,7 @@ OnDreamBoot
 			--
 			"Oh... \w8Hello."
 			"...\n\n\w8* (They look at you with quiet regard.)"
-			"...\n\n\w8* (It looks like they're scared of you still.)"
+			"...\n\n\w8* (It looks like they're still scared of you.)"
 		}
 	if timeslot == "earlymorning"
 	{
@@ -114,7 +114,7 @@ DreamTalk : nonoverlap_pool
 	{
 		if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
 		{
-		"You're hard to look at... I feel like I can see you, but when I look away I can't... Remember what you look like? It's weird."
+		"You're hard to look at... I feel like I can see you, but when I look away I can't... remember what you look like? It's weird."
 		}
 	}
 }
@@ -242,6 +242,7 @@ DreamMenu
 		Select.nowurjustmean2dream //Mock
 		{
 			sadact += 1
+			//you comment that no wonder people treat %(nightname) as a punching bag. He's way less cautious than Dream is
 		}
 		//Joke
 			//they act like ur funnier than u are. rly.
@@ -270,7 +271,7 @@ DreamMenu
 		}
 			Select.dreamlook1
 			{
-				"It's my brother, you see... I was just looking for him because we had something scedualed, and I somehow ended up here.\n\n\![*]\q[Ask what they had scedualed,dreamlook2]"
+				"It's my brother, you see... I was just looking for him because we had something scheduled, and I somehow ended up here.\n\n\![*]\q[Ask what they had scheduled,dreamlook2]"
 			}
 			Select.dreamlook2
 			{
@@ -315,7 +316,7 @@ DreamMenu
 			Select.givedreamgift
 			{
 				"* (You place a blanket on them.)\n\n\w8Oh, this is the same one from earlier. It is quite soft... I can keep it."
-				"* (You hand them a boquet of flowers.)These are nice. I could probably get my brother to tell them apart... I'm not very good at remembering the names. But I like them!"
+				"* (You hand them a bouquet of flowers.)\n\nThese are nice. I could probably get my brother to tell them apart... I'm not very good at remembering the names. But I like them!"
 				--
 				"%(itemmeow)\e"
 			}

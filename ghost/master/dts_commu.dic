@@ -25,7 +25,7 @@ ReplyToGhost
 		}
 		elseif nowmode == "intodreams"
 		{
-			"\0\i[55]* (They don't seem to notice...\w8 Maybe they're invisable to them?)"
+			"\0\i[55]* (They don't seem to notice...\w8 Maybe they're invisible to them?)"
 		}
 		else
 		{

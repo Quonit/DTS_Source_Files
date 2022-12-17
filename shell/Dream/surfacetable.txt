@@ -10,7 +10,7 @@ scope,0
 1,Sit
 2,Sigh
 3,Side Look
-4,Contimplative
+4,Contemplative
 5,Scared
 6,Cute Sit
 7,Surprise
