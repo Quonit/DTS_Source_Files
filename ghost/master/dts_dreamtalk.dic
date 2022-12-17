@@ -1,22 +1,21 @@
-//Intro / notonfirstboot
-	//var distracted = "on"
-	//niceact, sadact, sadnicelevel
-	//You say hi.) * (They are not paying attention.) *[put some options here] * (you try talking to them. ...no responce.) [put some options here] * (you try giving them stuff.) no response!) [more item options] * (You bury them in a pile of stuff) "!" "Oh- oh, I didn't- I didn't notice you there!" * (they seem scared)
 //Bootend
 Onnotonfirstboot
 {
 	niceact = 0
 	sadact = 0
 	sadnicelevel = 0
+	whorupanic = "on"
+	nightplush = "off"
+	quodreamplush = "off"
 	
-	"\1\s[17]%(lps(8))\n\n\w8\w8* (You say hi.)\w8\w8\w8\n\n* (%(lps(3))They are not paying attention.)\w8\w8\n\n/
+	"\0\s[17]%(lps(8))\n\n\w8\w8* (You say hi.)\w8\w8\n\n* (%(lps(3))They are not paying attention.)\w8\w8\n\n/
 	\![*]\q[Say hello again,dreamintronext1]\n/
 	\![*]\q[Call their name,dreamintronext1]"
 }
 
 Select.dreamintronext1
 {
-	"\s[3]\i[1]* (You try talking to them.)\w8\w8\n\n* (%(lps(2))No response.)\w8\w8\n\n/
+	"\s[3]\i[1]* (You try talking to them.)\w8\w8\n\n* (No response.)\w8\w8\n\n/
 	\![*]\q[Give them a toy,dreamintronext2]\n/
 	\![*]\q[Give them a blanket,dreamintronext2]"
 }
@@ -27,9 +26,10 @@ Select.dreamintronext2
 }
 Select.dreamintronext3
 {
-	"\s[17]\i[2000]* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5 Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
+	"\s[17]\i[2000]* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5\s[17]\i[4]\i[3]Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\w8\w8\w8%(surface0)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
 }
 OnDreamBoot
+//{
 {
 	if RAND(2) == 1
 	{
@@ -42,7 +42,7 @@ OnDreamBoot
 	--
 		if sadnicelevel >= 25
 		{
-			"Oh,\w6 hello again."
+			"%(surface0)Oh,\w6 hello again."
 		}
 		else
 		{
@@ -74,6 +74,7 @@ OnDreamBoot
 	{
 	}
 }
+//}
 OnDreamClose
 {
 	if timeslot == "earlymorning"
@@ -103,21 +104,18 @@ OnDreamClose
 DreamTalk : nonoverlap_pool
 {
 	"Hoi"
-	/*
-	if distracted == "on"
+	if whorupanic == "on"
 	{
-	//"They keep glancing around..."
-	//"They seem scared."
+		"* (They keep glancing around.)"
+		"* (They seem scared.)"
 	}
 	else
 	{
-		
 		if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
 		{
 		"You're hard to look at... I feel like I can see you, but when I look away I can't... Remember what you look like? It's weird."
 		}
 	}
-	*/
 }
 
 //Menu
@@ -142,6 +140,7 @@ DreamMenu
 		"\![*]\q[Ask them to repeat what he last said,OnLastTalk]\n\n"
 		"\![*]\q[Ask them to say what he just said,OnLastTalk]\n\n"
 	}
+	--
 	"\![*]\q[ACT,Ondreamyact] or ask some \![*]\q[QUESTIONS,Oninterrogatedream]\n/
 	\![*]\q[Use some items,Ondreambox]\n/
 	\![*]\q[Stats,configmenu]\n/
@@ -180,7 +179,7 @@ DreamMenu
 			"* (Stealing all the attention.)"
 			"* (Still not even a Sans?)"
 			"* (Knows more than they're letting on.)"
-			"* (Their outfit matches %(nightname)'s)"
+			"* (Their outfit matches %(nightname)'s.)"
 			if sadnicelevel >= 25
 			{
 				"* (More suspicious of you than %(nightname).)"
@@ -193,6 +192,7 @@ DreamMenu
 		}
 		Select.dreamforgiveness //Apologize
 		{
+				"... * (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
 		//Apologize if you've hit them
 			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
 		}
@@ -213,6 +213,7 @@ DreamMenu
 		}
 		Select.bnice2them //Compliment
 		{
+			"* (You tell Dream they're cute as a button.)\n\n\w8Thanks ^^\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
 		}
 		Select.dreamlikesstories //Story
 		{
@@ -289,15 +290,40 @@ DreamMenu
 		--
 		"\![*]\q[Food,Ondreamyact]\n/
 		\![*]\q[Gift,Ondreambox]\n/
-		\![*]\q[Plush,configmenu]\n/
+		\![*]\q[Plushie,lilpushietoy]\n/
 		\![*]\q[Outfit,uhgfinallyoutfit]\e"
 		//Food
 			//there are many foods which exist. Dream is probably a bit more hesitent than Night to accept.
 		//Gift
-			//* (You hand them a boquet of flowers.) Oh, these are nice. I could probably get my brother to tell them apart... I'm not very good at remembering the names. But I like them!
-			//* (
+			Select.givedreamgift
+			{
+				"* (You place a blanket on them.)\n\n\w8Oh, this is the same one from earlier. It is quite soft... I can keep it."
+				"* (You hand them a boquet of flowers.)These are nice. I could probably get my brother to tell them apart... I'm not very good at remembering the names. But I like them!"
+				--
+				"%(itemmeow)\e"
+			}
 		//Plush
+			Select.lilpushietoy
+			{
+				if whorupanic == "on"
+				{
+					whorupanic = "off"
+					nightplush = "on"
+				"* (You hand them a plush of %(nightname).)\n\n\w8Ah- That's... This is my brother?\n\n\w8* (They look concerned, then contemplative.)\n\n\w8So that means you know him...\n\n\w8"
+					if nicensadlevel >= 25
+					{
+						sadnicelevel += 25
+					}
+					if nicensadlevel <= -5
+					{
+						sadnicelevel -= 25
+					}
+				}
+				else
+				{
+				}
 			//You hand them a plush of %(nightname).) Ah- That's... This is my brother? (they look very concerned.) You know him... This is... * (They trail off and just look around more, like at the edges of the screen.)
+			}
 		//Outfit
 			//Only use it if they like you. Discuss how they and Nightmare (Nightmare!) use costumes for ceremonies a lot.
 	}
@@ -309,4 +335,13 @@ DreamMenu
 Select.dreamtestvariable
 {
 	"\![raise,Onnotonfirstboot]"
+}
+
+//Word.dic
+itemmeow
+{
+	"\![*]\q[Again,givedreamgift]\n/
+	\![*]\q[Choose a different item,Ondreambox]\n/
+	\![*]\q[Back to menu,DreamMenu]\n/
+	\![*]\q[I'm done,CANCEL]\e"
 }
