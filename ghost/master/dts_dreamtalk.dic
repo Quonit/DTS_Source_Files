@@ -186,9 +186,8 @@ DreamMenu
 				"* (More suspicious of you than %(nightname).)"
 			}
 			--
-			"\n\n\![*]\q[Choose another ACTion,Onyouact]\n/
-			\![*]\q[ASK another question,youtalk]\n/
-			\![*]\q[Again,checkinguout]\n/
+			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+			\![*]\q[Again,isitrealdream]\n/
 			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		Select.dreamforgiveness //Apologize
@@ -201,6 +200,10 @@ DreamMenu
 		{
 			//Yeah this'll go well
 			//o((⊙﹏⊙;))o.
+			--
+			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+			\![*]\q[Again,dreamsacebutyoucantry]\n/
+			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		Select.dreamhasanxiety //Reassure
 		{
@@ -212,6 +215,10 @@ DreamMenu
 			{
 				"* (You tell Dream you're not going to hurt them.)\n\n\w8* (They still seem suspicious, \w4but relax a little.)"
 			}
+			--
+			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+			\![*]\q[Again,dreamhasanxiety]\n/
+			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		Select.bnice2them //Compliment
 		{
@@ -236,17 +243,29 @@ DreamMenu
 			"* (You read Dream %(bookstoread).)\n\n\w8"
 			--
 			""
+			--
+			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+			\![*]\q[Again,dreamlikesstories]\n/
+			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		Select.scarethem //Tease
 		{
 			sadact += 1
 			//u jump at them bc u know they have anxiety and doing that will startle them which is MEAN
 			//spooky computer bugs
+			--
+			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+			\![*]\q[Again,scarethem]\n/
+			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		Select.nowurjustmean2dream //Mock
 		{
 			sadact += 1
 			//you comment that no wonder people treat %(nightname) as a punching bag. He's way less cautious than Dream is
+			--
+			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+			\![*]\q[Again,nowurjustmean2dream]\n/
+			\![*]\q[Nevermind,CANCEL]\e"
 		}
 		//Joke
 			//they act like ur funnier than u are. rly.
@@ -268,11 +287,12 @@ DreamMenu
 		}
 		--
 		"\![*]\q[Nevermind,CANCEL]\e"
-	}
-		Select.askdreamyou
-		{
-			"Oh... So you don't kn-\w8 You aren't from the village, are you?\w8\s[2]\w8\w8I'm so sorry! I'm normally not so anxious talking to others. It's just been busy as of late. I promise I'm fine, though.\w8\n\n...I just accidentally find myself here because I was looking for someone.\n\n\![*]\q[Ask who they're looking for,dreamlook1]\e"
 		}
+		
+		Select.askdreamyou
+			{
+				"Oh... So you don't kn-\w8 You aren't from the village, are you?\w8\s[2]\w8\w8I'm so sorry! I'm normally not so anxious talking to others. It's just been busy as of late. I promise I'm fine, though.\w8\n\n...I just accidentally find myself here because I was looking for someone.\n\n\![*]\q[Ask who they're looking for,dreamlook1]\e"
+			}
 			Select.dreamlook1
 			{
 				"It's my brother, you see... I was just looking for him because we had something scheduled, and I somehow ended up here.\n\n\![*]\q[Ask what they had scheduled,dreamlook2]"
@@ -284,6 +304,8 @@ DreamMenu
 		Select.askbrother
 		{
 			"My brother,\w4 Nightmare.\w8\n\nI... He hasn't been doing well, \w4so I'm just trying to look for him."
+			--
+			repeatDream
 		}
 		/*Select.askyourname
 		{
@@ -292,18 +314,26 @@ DreamMenu
 		Select.askdreamabtree
 		{
 			"...The... anTree? How did you find out about that...? ...It's been doing fine. No irregularities."
+			--
+			repeatDream
 		}
 		Select.askdreamtheirsoul
 		{
 			"Recited thing. * (Ask to look at it?) (y/n) y: ...No ^^;;"
+			--
+			repeatDream
 		}
 		Select.askdreamtheircrown
 		{
 			"Recited thing. * (Ask to take it off?) (y/n) y: ...No ^^;;"
+			--
+			repeatDream
 		}
 		Select.askdreamtheireyes
 		{
 			"Yellow and blue, like the day's sky. (hope the user just nods.)"
+			--
+			repeatDream
 		}
 	
 	Ondreambox //Items
@@ -371,4 +401,11 @@ actmeow
 	"\![*]\q[Say something else,Ondreamyact]\n/
 	\![*]\q[Back to menu,DreamMenu]\n/
 	\![*]\q[I'm done,CANCEL]\e"
+}
+
+repeatDream
+{
+	"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
+	\![*]\q[Ask another question,Oninterrogatedream]\n/
+	\![*]\q[Nevermind,CANCEL]\e"
 }
