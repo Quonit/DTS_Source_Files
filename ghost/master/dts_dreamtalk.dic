@@ -216,14 +216,18 @@ DreamMenu
 		Select.bnice2them //Compliment
 		{
 			niceact += 1
+			"* (You tell Dream they're cute as a button.)\n\n\w8"
+			--
 			if sadnicelevel >= 25
 			{
-				"* (You tell Dream you admire how they always try their best.)\n\n\w8 ^^"
+				"* (You tell Dream you admire how they always try their best.)\n\n\w8\s[0]\i[5]* (They seem thankful.)"
 			}
 			else
 			{
-			"* (You tell Dream they're cute as a button.)\n\n\w8Thanks ^^\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
+			"\s[0]\i[5]Thanks!\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
 			}
+			--
+			"\![*]\q[Again,bnice2them]\n%(actmeow)"
 		}
 		Select.dreamlikesstories //Story
 		{
@@ -358,8 +362,13 @@ Select.dreamtestvariable
 //Word.dic
 itemmeow
 {
-	"\![*]\q[Again,givedreamgift]\n/
-	\![*]\q[Choose a different item,Ondreambox]\n/
+	"\![*]\q[Choose a different item,Ondreambox]\n/
+	\![*]\q[Back to menu,DreamMenu]\n/
+	\![*]\q[I'm done,CANCEL]\e"
+}
+actmeow
+{
+	"\![*]\q[Say something else,Ondreamyact]\n/
 	\![*]\q[Back to menu,DreamMenu]\n/
 	\![*]\q[I'm done,CANCEL]\e"
 }

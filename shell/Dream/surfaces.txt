@@ -26,6 +26,14 @@ surface0
 	animation3.interval,never
 	animation3.pattern0,stop,0
 	animation3.pattern1,overlay,1208,0,0,0
+	//^^
+	animation5.interval,never
+	animation5.pattern0,stop,0
+	animation5.pattern1,overlay,1212,0,0,0
+	//^^;;
+	animation6.interval,never
+	animation6.pattern0,stop,0
+	animation6.pattern1,overlay,1211,0,0,0
 	
 	//Cape
 	//Cape top
