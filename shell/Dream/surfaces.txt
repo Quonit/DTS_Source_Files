@@ -11,7 +11,9 @@ version,1
 surface0
 {
 	//Collision
-	collision0,151,92,215,130,StarCrown
+	collision0,148,73,176,93,StarCrown
+	collisionex1,StarFace,polygon,138,91,160,86,189,96,181,126,154,129,142,117
+	collisionex2,StarSkull,polygon,139,80,155,63,171,57,200,71,205,84,169,94,138,91
 	element0,overlay,surface0.png,0,0
 	
 	//Eyes
@@ -48,7 +50,9 @@ surface0
 surface1
 {
 	//Collision
-	collision0,157,92,214,132,StarCrown
+	collisionex0,StarCrown,polygon,143,159,163,153,171,174,146,177
+	collisionex1,StarFace,polygon,140,174,176,169,183,195,162,207,147,203
+	collisionex2,StarSkull,polygon,137,170,145,148,158,143,179,143,193,153,172,173,151,175
 	element0,overlay,surface1.png,0,0
 	
 	//Cape
@@ -63,6 +67,11 @@ surface1
 //Sigh
 surface2
 {
+	//Collision
+	collision0,151,75,176,91,StarCrown
+	collisionex1,StarFace,polygon,145,90,164,92,190,98,181,127,157,128,143,117,140,96
+	collisionex2,StarSkull,polygon,139,89,151,67,168,62,194,64,206,87,177,92
+	
 	element0,overlay,surface2.png,0,0
 	
 	animation0.interval,runonce
@@ -81,8 +90,10 @@ surface2
 surface3
 {
 	//Collision
-	collision0,160,87,221,128,StarCrown
-	collision1,160,87,221,128,dremFace
+	collisionex0,StarCrown,polygon,137,76,145,75,201,74,198,79,141,96,137,75
+	collisionex1,StarFace,polygon,140,83,174,88,184,96,177,125,147,127,138,114
+	collisionex2,StarSkull,polygon,136,86,151,66,169,59,203,80,168,86
+	
 	element0,overlay,surface3.png,0,0
 	
 	//Eyes
@@ -122,7 +133,10 @@ surface3
 surface4
 {
 	//Collision
-	collision0,164,88,219,129,StarCrown
+	collisionex0,StarCrown,polygon,139,86,172,80,202,83,180,96,138,107
+	collisionex1,StarFace,polygon,137,96,184,92,184,121,170,134,151,128,137,110
+	collisionex2,StarSkull,polygon,133,96,140,76,157,63,184,63,202,81,174,99,151,101
+	
 	element0,overlay,surface4.png,0,0
 	
 	//Eyes
@@ -205,6 +219,11 @@ surface6
 //Surprise
 surface7
 {
+	//Collision
+	collision0,153,75,183,96,StarCrown
+	collisionex1,StarFace,polygon,142,88,187,92,187,123,158,126,147,122,143,97
+	collisionex2,StarSkull,polygon,143,83,157,64,176,60,197,69,209,88,179,88
+	
 	element1,overlay,surface7.png,0,0
 	
 	//Cape top
