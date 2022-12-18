@@ -36,6 +36,10 @@ surface0
 	animation6.interval,never
 	animation6.pattern0,stop,0
 	animation6.pattern1,overlay,1211,0,0,0
+	//grrr
+	animation7.interval,never
+	animation7.pattern0,stop,0
+	animation7.pattern1,overlay,1213,0,0,0
 	
 	//Cape
 	//Cape top
@@ -52,6 +56,9 @@ surface0
 	//clasped
 	animation4.interval,always
 	animation4.pattern0,interpolate,1311,0,0,0
+	//crossed
+	animation8.interval,always
+	animation8.pattern0,interpolate,1315,0,0,0
 }
 
 //meditative sitting

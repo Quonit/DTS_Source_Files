@@ -7,6 +7,7 @@ OnTranslate
 	_talk = REPLACE(_talk, "Quonit", "\_a[Quonit]Quonit\_a")
 	_talk = REPLACE(_talk, "anNight", "\_a[Nightmare]Nightmare\_a")
 	_talk = REPLACE(_talk, "anseal", "\_a[seal]seal\_a")
+	_talk = REPLACE(_talk, "Teasel", "\_a[Teasel]Teasel\_a")
 	
 	if reference1 == "" && reference2 == ""
 	{
@@ -160,6 +161,14 @@ OnAnchorSelect
 			{
 				lasttalked = 0
 				"\0\s[0]\i[10]The seal?\w8 \s[4]Well%(lps(3))\w8 Basically the village has a magic spell around it, so anything on the outside can't go in.\w8\w5\n\n\s[2]It was created when the war was still going on,\w6 so I guess it makes sense why they put it there.\w8\n\n\s[4]Sometimes items flow in from outside the village though-\w8 \s[6]Once a camera came in and me and Dream took pictures of ourselves with it!\e"
+			}
+			when "Teasel"
+			{
+				lasttalked = 0
+				if nowmode == "intodreams"
+				{
+				"\0\s[0]He's...\w8\n\n* (They struggle for words.)\n\n\w8\0\s[0]\i[7]\i[8]He thinks he's my best friend.\w8![*]\q[Ask to elaborate,dreamgrrteasel]\n![*]\q[Let it be,leadstonowhere]\e"
+				}
 			}
 		}
 	}

@@ -115,9 +115,45 @@ DreamTalk : nonoverlap_pool
 		if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
 		{
 		"You're hard to look at... I feel like I can see you, but when I look away I can't... remember what you look like? It's weird."
+		"At the very least gardening isn't that hard. Humans and more fleshy monsters struggle with it due to getting cuts and they need specific tools to avoid injury, like gloves. It's a benifit of being a skeleton, to not have to deal with any of that... Though, I'm not sure if I even want to garden at all. If I really enjoy it or if I'm just trying to make the best out of a poor situation."
 		}
+		"* (They're muttering something under their breath.)\n\n\w8* (Ask them what it is?)\![*]\q[Yes,dreammummblesy]\n\![*]\q[No,dreammummblesn]"
+		"* (You ask Dream if they like to swim.)\n\n\w8I swim sometimes.\n\n\w8* (...That doesn't answer your question.)"
+		"I wonder how Nightmare's writing is going..."
+		"I can't hear any birds here.\e:chain=computersounds"
+		"They're low on apple juice right now... Will I have to make more when I get home?"
+		"* (It smells faintly of apple juice.)"
+		"I hope it rains soon. The rain is nice."
+		"At least I don't have to look after the ceremony outfits... They're kept with the elders."
+		"Hopefully Nightmare is looking after the tree while I'm gone- Though there really shouldn't be that much pressure on him..."
+		"...Did I accidentally leave something at his house-? No... I definitely returned it. I should still check when I get back... [looks at you] Whenever that is."
+		"* (You ask Dream for the time.) Huh?\n\n\w8* (You tell them there's a clock in the bottom left corner for them to see.)\n\n\w8* (They look down to check, but live in a 2D enviornment and can only see a ground)"
+		"* (They seem sad???)\w8\n\nPoor birds..."
 	}
 }
+	computersounds
+	{{CHAIN
+		"\0\s[0]Not only can I not hear birds, I can't hear the people or the wind rustling the leaves of tree. There's a faint hum, but I'm not sure from what.\e:chain=end"
+	}}CHAIN
+	Select.dreammummblesy
+	{
+		"Oh-\w6 it's my list of things I need to do today when I get back.\n\n\w8I need to return some textbooks I left in the treehouse%(lps(2))\w8 I need to check with Kethra on her garden-\w6 she doesn't tolerate lateness. \w8Teasel shouldn't be a bother%(lps(2))\n\n\w8* (They keep going on like that!)"
+	}
+	Select.dreammummblesn
+	{
+		"* (They continue to mumble under their breath.)\n\n\w8\f[italic,1]"
+		--
+		"And then I need to make sure the weeds haven't destroyed her garden yet..."
+		"and I haven't picked up the treehouse in days..."
+		"will it even rain tomorrow...?"
+		--
+		"\f[italic,0]"
+	}
+	Select.dreamgrrteasel
+	{
+		posact += 1
+		"I'm his best friend,\w4 but he's not mine.\w8 I have to pretend like he is though because then he'll get upset and people will start asking questions about \w2''oh why aren't you friends anymore'',\w4 and ''what happened to you and Teasel'',\w2 which isn't worth dealing with.\w8\n\nEven if we stopped being friends I've got to fake relationships with everyone else out here, so it won't actually alleviate that much stress.\n\n\w8\s[2]* (They sigh.)\n\n\w8It's fine, \w5I'll work through it.\n\n\w8Thank you for giving me time to talk."
+	}
 
 //Menu
 DreamMenu
@@ -223,7 +259,6 @@ DreamMenu
 		Select.bnice2them //Compliment
 		{
 			niceact += 1
-			"* (You tell Dream they're cute as a button.)\n\n\w8"
 			--
 			if sadnicelevel >= 25
 			{
@@ -231,7 +266,7 @@ DreamMenu
 			}
 			else
 			{
-			"\s[0]\i[5]Thanks!\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
+			"* (You tell Dream they're cute as a button.)\n\n\w8\s[0]\i[5]Thanks!\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
 			}
 			--
 			"\![*]\q[Again,bnice2them]\n%(actmeow)"
