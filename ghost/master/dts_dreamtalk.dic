@@ -1,4 +1,8 @@
-//Bootend
+// ____         ______       ______                
+//|    ~.     .~      ~.   .~      ~.  `````|````` 
+//|____.'_   |          | |          |      |      
+//|       ~. |          | |          |      |      
+//|_______.'  `.______.'   `.______.'       |      
 Onnotonfirstboot
 {
 	niceact = 0
@@ -14,21 +18,21 @@ Onnotonfirstboot
 	\![*]\q[Call their name,dreamintronext1]"
 }
 
-Select.dreamintronext1
-{
-	"\s[3]\i[1]* (You try talking to them.)\w8\w8\n\n* (No response.)\w8\w8\n\n/
-	\![*]\q[Give them a toy,dreamintronext2]\n/
-	\![*]\q[Give them a blanket,dreamintronext2]"
-}
-Select.dreamintronext2
-{
-	"\s[3]* (You try giving them stuff.)\w8\w8\n\n* (No response!)\n\n/
-	\![*]\q[Drastic measures,dreamintronext3]"
-}
-Select.dreamintronext3
-{
-	"\s[17]\i[2000]* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5\s[17]\i[4]\i[3]Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\w8\w8\w8%(surface0)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
-}
+	Select.dreamintronext1
+	{
+		"\s[3]\i[1]* (You try talking to them.)\w8\w8\n\n* (No response.)\w8\w8\n\n/
+		\![*]\q[Give them a toy,dreamintronext2]\n/
+		\![*]\q[Give them a blanket,dreamintronext2]"
+	}
+	Select.dreamintronext2
+	{
+		"\s[3]* (You try giving them stuff.)\w8\w8\n\n* (No response!)\n\n/
+		\![*]\q[Drastic measures,dreamintronext3]"
+	}
+	Select.dreamintronext3
+	{
+		"\s[17]\i[2000]* (You bury them in a pile of stuff.)\w8\w8\n\n!\n\n\w5\s[17]\i[4]\i[3]Oh-\w5 oh,\w8\w8 I didn't-\w8 I didn't notice you there! \w8\n\n\s[2]* (They seem scared.)\w8\w8\w8%(surface0)\e" //Add sigh at the end where they calm down to act normal. Also main pose stare at you weird.
+	}
 OnDreamBoot
 //{
 {
@@ -101,7 +105,11 @@ OnDreamClose
 	}
 }
 
-//AITalk
+//   _     _____   _____  _      __        
+//  /_\    \_   \ /__   \/_\    / /   /\ /\
+// //_\\    / /\/   / /\//_\\  / /   / //_/
+ //  _  \/\/ /_    / / /  _  \/ /___/ __ \ 
+//\_/ \_/\____/    \/  \_/ \_/\____/\/  \/ 
 DreamTalk : nonoverlap_pool
 {
 	"Hoi"
@@ -116,7 +124,10 @@ DreamTalk : nonoverlap_pool
 		{
 		"You're hard to look at... I feel like I can see you, but when I look away I can't... remember what you look like? It's weird."
 		"At the very least gardening isn't that hard. Humans and more fleshy monsters struggle with it due to getting cuts and they need specific tools to avoid injury, like gloves. It's a benefit of being a skeleton, to not have to deal with any of that... Though, I'm not sure if I even want to garden at all. If I really enjoy it or if I'm just trying to make the best out of a poor situation."
+		"This place is very unlike nature.\w8\n\nI haven't seen any bugs.\n\n\w8...Nightmare likes bugs, and I'm usually fine if he talks about them... But they creep me out.\w8 It's very silly.\n\![*]\q[Make a joke,lolnobugs]\n\![*]\q[No,nololsabbugs]"
 		}
+		if sadnicelevel >= -15
+		{
 		"* (They're muttering something under their breath.)\n\n\w8* (Ask them what it is?)\![*]\q[Yes,dreammummblesy]\n\![*]\q[No,dreammummblesn]"
 		"* (You ask Dream if they like to swim.)\n\n\w8I swim sometimes.\n\n\w8* (...That doesn't answer your question.)"
 		"I wonder how Nightmare's writing is going..."
@@ -129,6 +140,16 @@ DreamTalk : nonoverlap_pool
 		"...Did I accidentally leave something at his house-? No... I definitely returned it. I should still check when I get back... [looks at you] Whenever that is."
 		"* (You ask Dream for the time.) Huh?\n\n\w8* (You tell them there's a clock in the bottom left corner for them to see.)\n\n\w8* (They look down to check, but live in a 2D enviornment and can only see a ground)"
 		"* (They seem sad???)\w8\n\nPoor birds..."
+		}
+		else
+		{
+			"* (They don't seem to be talking anymore...)"
+			"* (It spells burnt.)"
+			if nicensadlevel <= 15 || wasemo == "on"
+			{
+				"* (They aren't as snappy as %(nightname) was about it.)\w8\n\n* (How boring.)"
+			}
+		}
 	}
 }
 	computersounds
@@ -147,15 +168,34 @@ DreamTalk : nonoverlap_pool
 		"and I haven't picked up the treehouse in days..."
 		"will it even rain tomorrow...?"
 		--
-		"\f[italic,0]"
+		"\f[italic,0]\e"
 	}
 	Select.dreamgrrteasel
 	{
 		posact += 1
 		"I'm his best friend,\w4 but he's not mine.\w8 I have to pretend like he is though because then he'll get upset and people will start asking questions about \w2''oh why aren't you friends anymore'',\w4 and ''what happened to you and Teasel'',\w2 which isn't worth dealing with.\w8\n\nEven if we stopped being friends I've got to fake relationships with everyone else out here, so it won't actually alleviate that much stress.\n\n\w8\s[2]* (They sigh.)\n\n\w8It's fine, \w5I'll work through it.\n\n\w8Thank you for giving me time to talk."
 	}
+	Select.lolnobugs
+	{
+		"* (You mention you don't like bugs either.)\n\n\w8* (Computer bugs, that is.)\n\n\w8* (Dream does not appear to know what you mean by that,\w4 nor what fingerguns are.)\e"
+	}
+	Select.nololsabbugs
+	{
+		pasact += 1
+		"* (You refrain from teasing Dream about the bugs.)"
+	}
+	Select.nbheadcanonsomg
+	{
+		"Oh... Well, it's just not very interesting at home. I've never heard anyone insist that ''nonbinary identities are valid'' because most monsters can't... Really be gendered in the first place? Honestly there are more nonbinary people at home than there are binary... So it just sounds odd to me to have to insist that.\n\n\w8Having to fight for that sounds exhausting."
+	}
 
-//Menu
+//ooo        ooooo oooooooooooo ooooo      ooo ooooo     ooo 
+//`88.       .888' `888'     `8 `888b.     `8' `888'     `8' 
+// 888b     d'888   888          8 `88b.    8   888       8  
+// 8 Y88. .P  888   888oooo8     8   `88b.  8   888       8  
+// 8  `888'   888   888    "     8     `88b.8   888       8  
+// 8    Y     888   888       o  8       `888   `88.    .8'  
+//o8o        o888o o888ooooood8 o8o        `8     `YbodP'    
 DreamMenu
 {
 	wd = GetWeekDay
@@ -228,7 +268,7 @@ DreamMenu
 		}
 		Select.dreamforgiveness //Apologize
 		{
-				"... * (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
+			"... * (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
 		//Apologize if you've hit them
 			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
 		}
@@ -246,10 +286,12 @@ DreamMenu
 			niceact += 1
 			if sadnicelevel >= 25
 			{
+				"* (You hum Dream a soft lullaby.)\n\n\w8* (They seem to enjoy it.)"
 			}
 			else
 			{
 				"* (You tell Dream you're not going to hurt them.)\n\n\w8* (They still seem suspicious, \w4but relax a little.)"
+				"* (You tell Dream NONBINARY IDENTITIES ARE VALID!!!)\n\n\w8...I am a little confused why that needs to be said,\w4 but alright.\n\![*]\q[Ask to elaborate,nbheadcanonsomg]\n\w8"
 			}
 			--
 			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
@@ -287,8 +329,8 @@ DreamMenu
 		Select.scarethem //Tease
 		{
 			sadact += 1
-			//u jump at them bc u know they have anxiety and doing that will startle them which is MEAN
-			//spooky computer bugs
+			"* (You warn Dream about the computer bugs.)\n\n\w8...\n\n\w8* (They keep glancing worriedly.)"
+			"* (You jump at them suddenly, they flinch.)\w8\n\n..."
 			--
 			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
 			\![*]\q[Again,scarethem]\n/
@@ -381,7 +423,19 @@ DreamMenu
 		\![*]\q[Plushie,lilpushietoy]\n/
 		\![*]\q[Outfit,uhgfinallyoutfit]\e"
 		//Food
-			//there are many foods which exist. Dream is probably a bit more hesitent than Night to accept.
+			Select.Ondreamyact
+			{
+				if sadnicelevel >= 25
+				{
+				"* (You brew Dream a cup of tea.)\n\n\w8Aw,\w4 I like this kind.\n\n\w8* (They seem to calm down.)"
+				}
+				else
+				{
+				"I'll have to decline.\n\n\w8Apologies.\n\n\w8* (Seems like they don't accept food from strangers.)"
+				}
+				--
+				"%(itemmeow)\e"
+			}
 		//Gift
 			Select.givedreamgift
 			{
