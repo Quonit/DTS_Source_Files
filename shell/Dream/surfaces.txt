@@ -54,11 +54,12 @@ surface0
 	animation2.interval,always
 	animation2.pattern0,interpolate,1300,0,0,0
 	//clasped
-	animation4.interval,always
-	animation4.pattern0,interpolate,1311,0,0,0
+	animation8.interval,never
+	animation8.pattern2,overlay,1311,0,0,0
 	//crossed
-	animation8.interval,always
-	animation8.pattern0,interpolate,1315,0,0,0
+	animation9.interval,never
+	animation9.pattern0,stop,2
+	animation9.pattern1,overlay,1315,0,0,0
 }
 
 //meditative sitting
@@ -122,6 +123,10 @@ surface3
 	animation4.interval,never
 	animation4.pattern0,stop,0
 	animation4.pattern1,overlay,1205,0,0,0
+	//Smile
+	animation5.interval,never
+	animation5.pattern0,stop,0
+	animation5.pattern1,overlay,1215,0,0,0
 	
 	//Cape top
 	animation1000.interval,bind
@@ -162,9 +167,17 @@ surface4
 	animation1.pattern0,stop,0
 	animation1.pattern1,overlay,1206,0,0,0
 	//eeeeep
-	animation1.interval,never
-	animation1.pattern0,stop,0
-	animation1.pattern1,overlay,1207,0,0,0
+	animation9.interval,never
+	animation9.pattern0,stop,0
+	animation9.pattern1,overlay,1207,0,0,0
+	//Sentimental
+	animation10.interval,never
+	animation10.pattern0,stop,0
+	animation10.pattern1,overlay,1214,0,0,0
+	//Sad
+	animation11.interval,never
+	animation11.pattern0,stop,0
+	animation11.pattern1,overlay,1216,0,0,0
 	
 	//Arms
 	animation2000.interval,always
@@ -175,16 +188,16 @@ surface4
 	animation3.pattern1,stop,2
 	animation3.pattern2,interpolate,1306,0,0,0
 	
-	
+	//rub hand
 	animation4.interval,never
 	animation4.pattern0,parallelstop,(2,2000)
 	animation4.pattern1,parallelstart,(5,6,7)
 	
 	animation5.interval,never
-	animation5.pattern0,overlay,1307,0,0,0
+	animation5.pattern1,overlay,1307,0,0,0
 	
 	animation6.interval,never
-	animation6.pattern0,interpolate,1310,0,0,0
+	animation6.pattern1,interpolate,1310,0,0,0
 	
 	//rub
 	animation7.interval,never,4

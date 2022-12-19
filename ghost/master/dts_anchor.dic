@@ -94,7 +94,7 @@ OnAnchorSelect
 				
 				if nowmode == "intodreams"
 				{
-					"\0\s[0]\i[3]\i[4]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]The Creator%(lps(3))"
+					"\0\s[0]\i[3]\i[8]\_b[Extras\aliteralfoxmotheroftwo.png,125,10]The Creator%(lps(3))"
 				}
 				elseif sleepingmode == "on"
 				{
