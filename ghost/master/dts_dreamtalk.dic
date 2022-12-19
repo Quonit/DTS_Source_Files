@@ -115,7 +115,7 @@ DreamTalk : nonoverlap_pool
 		if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
 		{
 		"You're hard to look at... I feel like I can see you, but when I look away I can't... remember what you look like? It's weird."
-		"At the very least gardening isn't that hard. Humans and more fleshy monsters struggle with it due to getting cuts and they need specific tools to avoid injury, like gloves. It's a benifit of being a skeleton, to not have to deal with any of that... Though, I'm not sure if I even want to garden at all. If I really enjoy it or if I'm just trying to make the best out of a poor situation."
+		"At the very least gardening isn't that hard. Humans and more fleshy monsters struggle with it due to getting cuts and they need specific tools to avoid injury, like gloves. It's a benefit of being a skeleton, to not have to deal with any of that... Though, I'm not sure if I even want to garden at all. If I really enjoy it or if I'm just trying to make the best out of a poor situation."
 		}
 		"* (They're muttering something under their breath.)\n\n\w8* (Ask them what it is?)\![*]\q[Yes,dreammummblesy]\n\![*]\q[No,dreammummblesn]"
 		"* (You ask Dream if they like to swim.)\n\n\w8I swim sometimes.\n\n\w8* (...That doesn't answer your question.)"
@@ -267,6 +267,7 @@ DreamMenu
 			else
 			{
 			"* (You tell Dream they're cute as a button.)\n\n\w8\s[0]\i[5]Thanks!\n\n\w8* (...You can't tell if they mean it.)" //suggestion by calibri
+			"* (You gush that everyone should kiss Dream on their goldie little crown.)\n\n* (They smile and nod politely.)"
 			}
 			--
 			"\![*]\q[Again,bnice2them]\n%(actmeow)"
