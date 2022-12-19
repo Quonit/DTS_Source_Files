@@ -210,8 +210,18 @@ MouseMoveSakura
 				elseif reference4 == "StarCrown" //Pet Dream
 				{
 					//temp dialogue
-					//* (Dream seems a bit confused.) Oh- I mean, if you want to I suppose you can...
-					//^^
+				}
+				elseif reference4 == "StarSkull" //Pet Dream
+				{
+					if whorupanic == "on" //If they don't know you
+					{
+						"\s[7]\i[0]* (Dream seems confused.)\w8\n\nOh- I mean,\w4\s[0]\i[3] if you want to I suppose you can."
+					}
+					else
+					{
+						"%(surface0)* (You veeeeery gently pet Dream's head.)\n\n\w8\s[0]\i[5]Thank you."
+						"\s[0]\i[5]* (They seem comfortable.)"
+					}
 				}
 			}
 		}

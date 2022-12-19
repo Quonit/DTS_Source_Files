@@ -260,7 +260,10 @@ surface7
 	//Cape bottom
 	animation1001.interval,bind
 	animation1001.pattern0,interpolate,1007,0,0,0
-
+	
+	//Eyes
+	animation0.interval,never
+	animation0.pattern0,overlay,1217,0,0,0
 }
 
 //scawy
@@ -304,7 +307,21 @@ surface13
 //hahahaha could you believe
 surface14
 {
-	element1,overlay,surface1014.png,0,0
+	element1,overlay,surface14.png,0,0
+	
+	//Cape top
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1006,0,0,0
+	//Cape bottom
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1007,0,0,0
+	
+	//Eyes
+	animation0.interval,always
+	animation0.pattern0,overlay,1218,0,0,0
+	//Arms
+	animation0.interval,always
+	animation0.pattern0,overlay,1316,0,0,0
 }
 
 //hum

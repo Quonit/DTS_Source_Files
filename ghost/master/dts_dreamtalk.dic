@@ -169,11 +169,12 @@ DreamTalk : nonoverlap_pool
 	Select.dreamgrrteasel
 	{
 		posact += 1
+		//temp
 		"\s[0]\i[7]\i[9]I'm his best friend,\w4 but he's not mine.\w8\s[0]\i[3] I have to pretend like he is though,\w4 because then he'll get upset and people will start asking questions about \w2''oh why aren't you friends anymore'',\w4 and ''what happened to you and Teasel'',\w2 which isn't worth dealing with.\w8\n\nEven if we stopped being friends I've got to fake relationships with everyone else out here, so it won't actually alleviate that much stress.\n\n\w8\s[2]* (They sigh.)\n\n\w8It's fine, \w5I'll work through it.\n\n\w8Thank you for giving me time to talk."
 	}
 	Select.lolnobugs
 	{
-		"* (You mention you don't like bugs either.)\n\n\w8* (Computer bugs,\w4 that is!)\n\n\w8* (Dream does not appear to know what you mean by that,\w4 nor what fingerguns are.)\e"
+		"* (You mention you don't like bugs either.)\n\n\w8* (Computer bugs,\w4 that is!)\n\n\w8\s[4]\i[1]* (Dream does not appear to know what you mean by that,\w4 nor what fingerguns are.)\e"
 	}
 	Select.nololsabbugs
 	{
