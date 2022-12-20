@@ -57,7 +57,7 @@
 	
 	if reference0 == 0
  	{
-		"\![enter,passivemode]\0\s[1]\w8\w8\w8*\w4 (\w4. \w4. \w4.\w4)\w8\w8\i[7]\w8\w8\i[55]\s[93]\n\n\w8\n\n\w8\i[55]\s[10]\0\s[1]\i[7]\n\n\0\s[16]\w8\w8\w8\0\s[3]\i[55]* (He views his surroundings uncomfortably.\w8 It's obvious he doesn't know where he is.)\n\n\w8Um\w2.\w2.\w2.\w8 You-\w8 I don't know you,\w5 do I?\n\n\w8Do you... have a name?\![leave,passivemode] \![open,inputbox,OnNameTeach,-1]"
+		"\![enter,passivemode]\0\s[1]\w8\w8\w8*\w4 (\w4. \w4. \w4.\w4)\w8\w8\i[7]\w8\w8\i[55]\s[93]\w8\w8\i[55]\s[10]\0\s[1]\i[7]\n\n\0\s[16]\w8\w8\w8\0\s[3]\i[55]* (He views his surroundings uncomfortably.\w8 It's obvious he doesn't know where he is.)\n\n\w8Um\w2.\w2.\w2.\w8 You-\w8 I don't know you,\w5 do I?\n\n\w8Do you...\w5 have a name?\![leave,passivemode] \![open,inputbox,OnNameTeach,-1]"
  	}
 	else
  	{
@@ -618,9 +618,13 @@ OnClose
 			}
 		}				
  	}
- 	else //Five Minute dialogue
+ 	else // Minute dialogue
  	{
-		if nowmode == "Edgybitch"
+		if nowmode == "intodreams"
+		{
+			OnDreamClose
+		}
+		elseif nowmode == "Edgybitch"
 		{
 			OnGoopSleep
 		}

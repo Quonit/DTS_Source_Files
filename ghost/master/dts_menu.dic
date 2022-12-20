@@ -163,7 +163,7 @@ MenuRun
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
 	\![*]\q[Use some functions,dosomething]\n\n/
-	\![*]\q[Testvariable,testvariable]\n\n/
+	//\![*]\q[Testvariable,testvariable]\n\n/
 	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 
@@ -268,9 +268,12 @@ TalkConfig
 	"Birthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
 	Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
 	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
-	Updated: 30th October 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
-	//temp dialogue
+	Updated: 21st December 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
 	--
+	if ringringuthere == "on"
+	{
+		"* (Ring the bell?)\n\q[Yes,summondream] \q[No,CANCEL]\n\n"
+	}
 	if nowmode == "intodreams" && dayslot != "12month 21day"
 	{
 		"* (Swap back to %(nightname)?)\n\q[Yes,byedream] \q[No,CANCEL]\n\n"
@@ -278,10 +281,6 @@ TalkConfig
 	elseif nowmode == "Edgybitch" && dayslot != "10month 31day"
 	{
 		"* (Exit out of Goopmode?)\n\q[Yes,removegoo] \q[No,CANCEL]\n\n"
-	}
-	elseif nowmode == "purpleman" &&  ringringuthere == "on"
-	{
-		//"* (Ring the bell?)\n\q[Yes,summondream] \q[No,CANCEL]\n\n"
 	}
 	--
 	"\![*]\q[RESET,resettheghost]\n/
@@ -395,11 +394,12 @@ Select.byedream
 
 Select.summondream
 {
-	//any sort of swap animation or cutscene
-	"* (You tell %(nightname) goodbye.)\n\n\w8%(surface0)Oh,\w4 goodbye.\![change,Shell,Dream]\w8\w8%(OnDreamBoot)"
-	"Bye.\n\n\w8*(He doesn't seem to know you're switching him out for Dream.)\w8\s[-1]\![change,Shell,Dream]\w8\w8%(OnDreamBoot)"
-	--
 	changemode("sodreamy")
+	--
+	"* (You tell %(nightname) goodbye.)\n\n\w8%(surface0)Oh,\w4 goodbye."
+	"Bye.\n\n\w8*(He doesn't seem to know you're switching him out for Dream.)"
+	--
+	"\w8\s[-1]\![change,Shell,Dream]\w8\w8%(OnDreamBoot)"
 }
 
 
@@ -407,7 +407,6 @@ Select.summondream
 //   | _ )_ _| _ \_   _| || |   \ /_\ \ / / | __\ \ / /_\ | | | | | |/_\_   _|_ _/ _ \| \| |
 //   | _ \| ||   / | | | __ | |) / _ \ V /  | _| \ V / _ \| |_| |_| / _ \| |  | | (_) | .` |
 //   |___/___|_|_\ |_| |_||_|___/_/ \_\_|   |___| \_/_/ \_\____\___/_/ \_\_| |___\___/|_|\_|
-//                                                                                          
 
 Select.TEACHBDAY
 {
