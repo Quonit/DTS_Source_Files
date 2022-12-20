@@ -258,7 +258,7 @@ DreamMenu
 			"* (Still not even a Sans?)"
 			"* (Knows more than they're letting on.)"
 			"* (Their outfit matches %(nightname)'s.)"
-			if sadnicelevel >= 25
+			if whorupanic == "on"
 			{
 				"* (More suspicious of you than %(nightname).)"
 			}
@@ -269,7 +269,7 @@ DreamMenu
 		}
 		Select.dreamforgiveness //Apologize
 		{
-			"... * (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
+			"\s[0]\i[9]\i[1]...\n\n\w8* (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
 		//Apologize if you've hit them
 			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
 		}
