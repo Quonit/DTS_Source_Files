@@ -279,6 +279,10 @@ TalkConfig
 	{
 		"* (Exit out of Goopmode?)\n\q[Yes,removegoo] \q[No,CANCEL]\n\n"
 	}
+	elseif nowmode == "purpleman" &&  ringringuthere == "on"
+	{
+		//"* (Ring the bell?)\n\q[Yes,summondream] \q[No,CANCEL]\n\n"
+	}
 	--
 	"\![*]\q[RESET,resettheghost]\n/
 	\![*]\q[Go Back,BACKTOMENU]					   \![*]\q[ESCAPE,CANCEL]/
@@ -383,10 +387,18 @@ Select.removegoo
 
 Select.byedream
 {
-	ringringuthere == "on"
+	ringringuthere = "on"
 	//nowmode == not dream???? like it could be nm idk
 	//temp dialogue
 	"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]\w8\n\n* (\w3.\w3.\w3.\w4There's a small bell left behind!)\n\n\w8* (You add it to your inventory.)"
+}
+
+Select.summondream
+{
+	changemode("sodreamy")
+	--
+	//any sort of swap animation or cutscene
+	"\![change,Shell,Dream]"
 }
 
 
@@ -2190,8 +2202,14 @@ Select.itemsmenu
 	}
 	--
 	" \![*]\q[A rock,rude]	 \![*]\q[Some food,nightyneedstoeat]\n/
-	\![*]\q[A book,givebook] 	\![*]\q[A toy,givetoy]\n/
-	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
+	\![*]\q[A book,givebook] 	\![*]\q[A toy,givetoy]\n"
+	--
+	if ringringuthere == "on"
+	{
+		"\![*]\q[A bell,ringbell]\n"
+	}
+	--
+	"\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
 }
 
 Select.giveoutfit
@@ -2320,6 +2338,13 @@ Select.givetoy
 	--
 	"What's the point of this thing??\w8\n\n* (You tell him it's to bounce, and usually to try and catch when it goes back up.)\n\n\w8* (He tries this, \w5but he's going to need more practice%(lps(3)))"
 	*/
+	"%(ItemMOO)"
+}
+
+Select.ringbell
+{
+	"Summon Dream?\n\q[Yes,summondream] \q[No,itemsmenu]"
+	--
 	"%(ItemMOO)"
 }
 
@@ -2602,7 +2627,7 @@ Select.nomoresits
 }
 Select.testvariable
 {
-	nowmode = "intodreams"
+	changemode("intodreams")
 	"\![change,Shell,Dream]"
 	--
 	"\s[7]AAAAAA"
@@ -2616,7 +2641,7 @@ Select.changeshell
 
 Select.testgoo
 {
-	nowmode = "Edgybitch"
+	changemode("Edgybitch")
 	dontmovestatsitshalloween = "on"
 	"\![enter,passivemode]\0\s[23]Ah-!\s[24]\w8\w8\w8\w8\w8\w8\w8\c\w8.\w8.\w8.\s[1512]\i[40]\w8\w8\w5\i[36]\w8\w8\w8\s[1517]\w8\w8\s[1513]\w8\w8\s[1514]\w8\w8Well, well.\w8\w8 "
 	--
