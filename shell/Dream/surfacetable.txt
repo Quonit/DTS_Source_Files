@@ -14,6 +14,7 @@ scope,0
 5,Scared
 6,Cute Sit
 7,Surprise
+14,Loop up
 17,Look Up
 38,Pick Up
 1600,DimDream

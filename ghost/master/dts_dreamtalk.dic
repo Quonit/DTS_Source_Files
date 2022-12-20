@@ -169,8 +169,7 @@ DreamTalk : nonoverlap_pool
 	Select.dreamgrrteasel
 	{
 		posact += 1
-		//temp
-		"\s[0]\i[7]\i[9]I'm his best friend,\w4 but he's not mine.\w8\s[0]\i[3] I have to pretend like he is though,\w4 because then he'll get upset and people will start asking questions about \w2''oh why aren't you friends anymore'',\w4 and ''what happened to you and Teasel'',\w2 which isn't worth dealing with.\w8\n\nEven if we stopped being friends I've got to fake relationships with everyone else out here, so it won't actually alleviate that much stress.\n\n\w8\s[2]* (They sigh.)\n\n\w8It's fine, \w5I'll work through it.\n\n\w8Thank you for giving me time to talk."
+		"\s[0]\i[7]\i[9]I'm his best friend,\w4 but he's not mine.\w8\s[0]\i[3] I have to pretend like he is though,\w8\s[14] because then he'll get upset and people will start asking questions about \w4''oh why aren't you friends anymore'',\w4 and \w4''what happened to you and Teasel'',\w8\s[0]\i[9]\i[3] which isn't worth dealing with.\w8\n\n\s[0]\i[9]\i[7]Even if we stopped being friends I've got to fake relationships with everyone else out here,\w3 so it won't actually alleviate that much stress.\n\n\w8\s[2]* (They sigh.)\n\n\w8It's fine, \w5I'll work through it.\n\n\w8\s[0]Thank you for giving me time to talk."
 	}
 	Select.lolnobugs
 	{
@@ -188,7 +187,7 @@ DreamTalk : nonoverlap_pool
 	}
 	Select.nbheadcanonsomg
 	{
-		"Oh... Well, it's just not very interesting at home. I've never heard anyone insist that ''nonbinary identities are valid'' because most monsters can't... Really be gendered in the first place? Honestly there are more nonbinary people at home than there are binary... So it just sounds odd to me to have to insist that.\n\n\w8Having to fight for that sounds exhausting."
+		"\s[4]Oh%(lps(3)) \w8\i[1]Well, it's just not very interesting at home. \w8\s[0]\i[6]I've never heard anyone insist that ''nonbinary identities are valid'' because most monsters can't%(lps(3))\w5 Really be gendered in the first place?\w8\n\nHonestly there are more nonbinary people at home than there are binary%(lps(3))\w8 So it just sounds odd to me to have to insist that.\n\n\w8\s[0]\i[3]Having to fight for that sounds exhausting."
 	}
 
 //ooo        ooooo oooooooooooo ooooo      ooo ooooo     ooo 

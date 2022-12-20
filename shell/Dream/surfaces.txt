@@ -320,8 +320,8 @@ surface14
 	animation0.interval,always
 	animation0.pattern0,overlay,1218,0,0,0
 	//Arms
-	animation0.interval,always
-	animation0.pattern0,overlay,1316,0,0,0
+	animation1.interval,always
+	animation1.pattern0,overlay,1316,0,0,0
 }
 
 //hum
