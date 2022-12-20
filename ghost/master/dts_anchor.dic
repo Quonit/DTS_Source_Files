@@ -167,7 +167,7 @@ OnAnchorSelect
 				lasttalked = 0
 				if nowmode == "intodreams"
 				{
-				"\0\s[0]He's...\w8\n\n* (They struggle for words.)\n\n\w8\0\s[0]\i[7]\i[8]He thinks he's my best friend.\w8![*]\q[Ask to elaborate,dreamgrrteasel]\n![*]\q[Let it be,leadstonowhere]\e"
+					"\0\s[0]He's...\w8\n\n* (They struggle for words.)\n\n\w8\0\s[0]\i[7]\i[8]He thinks he's my best friend.\w8\n\![*]\q[Ask to elaborate,dreamgrrteasel]\n\![*]\q[Let it be,leadstonowhere]\e"
 				}
 			}
 		}
