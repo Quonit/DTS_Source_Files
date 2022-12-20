@@ -228,7 +228,7 @@ MouseMoveSakura
 				{
 					if whorupanic == "on" //If they don't know you
 					{
-						posact += 1
+						niceact += 1
 						"\s[7]\i[0]* (Dream seems confused.)\w8\n\nOh- I mean,\w4\s[0]\i[3] if you want to I suppose you can."
 						"\s[0]\i[3]* (They quietly accept your petting.)"
 						"\s[0]\i[3]* (They let you keep petting,\w6 but are on-edge.)"
@@ -240,7 +240,7 @@ MouseMoveSakura
 					}
 					else
 					{
-						posact += 1
+						niceact += 1
 						"%(surface0)* (You veeeeery gently pet Dream's head.)\n\n\w8\s[0]\i[5]Thank you."
 						"\s[0]\i[5]* (They seem comfortable.)"
 						"\s[0]\i[3]Hm..."

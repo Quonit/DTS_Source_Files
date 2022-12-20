@@ -168,7 +168,7 @@ DreamTalk : nonoverlap_pool
 	}
 	Select.dreamgrrteasel
 	{
-		posact += 1
+		niceact += 1
 		"\s[0]\i[7]\i[9]I'm his best friend,\w4 but he's not mine.\w8\s[0]\i[3] I have to pretend like he is though,\w8\s[14] because then he'll get upset and people will start asking questions about \w4''oh why aren't you friends anymore'',\w4 and \w4''what happened to you and Teasel'',\w8\s[0]\i[9]\i[3] which isn't worth dealing with.\w8\n\n\s[0]\i[9]\i[7]Even if we stopped being friends I've got to fake relationships with everyone else out here,\w3 so it won't actually alleviate that much stress.\n\n\w8\s[2]* (They sigh.)\n\n\w8It's fine, \w5I'll work through it.\n\n\w8\s[0]Thank you for giving me time to talk."
 	}
 	Select.lolnobugs
@@ -177,12 +177,12 @@ DreamTalk : nonoverlap_pool
 	}
 	Select.nololsabbugs
 	{
-		pasact += 1
+		niceact += 1
 		"* (You refrain from teasing Dream about the bugs.)"
 	}
 	Select.alsonobugs
 	{
-		posact += 1
+		niceact += 1
 		"* (You tell Dream you also don't like bugs,\w4 and understand how they feel.)\n\n\w8\s[0]\i[5]I think they're good,\w8 I just wish they'd mind their business!"
 	}
 	Select.nbheadcanonsomg
@@ -255,14 +255,14 @@ DreamMenu
 		--
 		if sadnicelevel >= 69
 		{
-			"\![*]\q[Flirt,dreamsacebutyoucantry] "
+			//"\![*]\q[Flirt,dreamsacebutyoucantry] " uncomment for now bc i have other things to do!
 		}
 		--
 		"\![*]\q[Reassure,dreamhasanxiety]\n/
 		\![*]\q[Compliment,bnice2them]\n/
 		\![*]\q[Story,dreamlikesstories]\n/
 		\![*]\q[Tease,scarethem]\n/
-		\![*]\q[Mock,nowurjustmean2dream]\n/
+		//\![*]\q[Mock,nowurjustmean2dream]\n/ same with flirt, am busy :sob:
 		\![*]\q[Back to menu,DreamMenu]\n/
 		\![*]\q[Nevermind,CANCEL]\e"
 	}
@@ -276,7 +276,7 @@ DreamMenu
 			"* (Their outfit matches %(nightname)'s.)"
 			if whorupanic == "on"
 			{
-				"* (More suspicious of you than %(nightname).)"
+				"\s[0]\i[1]* (More suspicious of you than %(nightname).)"
 			}
 			--
 			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
@@ -293,7 +293,6 @@ DreamMenu
 			{
 			"\s[0]\i[9]\i[1]...\n\n\w8* (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
 			}
-		//Apologize if you've hit them
 			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
 		}
 		Select.dreamsacebutyoucantry //Flirt
@@ -310,12 +309,13 @@ DreamMenu
 			niceact += 1
 			if sadnicelevel >= 25
 			{
-				"* (You hum Dream a soft lullaby.)\n\n\w8* (They seem to enjoy it.)"
+				"\s[0]\i[3]* (You hum Dream a soft lullaby.)\n\n\w8\s[0]\i[5]* (They seem to enjoy it.)"
 			}
 			else
 			{
-				"* (You tell Dream you're not going to hurt them.)\n\n\w8* (They still seem suspicious, \w4but relax a little.)"
-				"* (You tell Dream NONBINARY IDENTITIES ARE VALID!!!)\n\n\w8...I am a little confused why that needs to be said,\w4 but alright.\n\![*]\q[Ask to elaborate,nbheadcanonsomg]\n\w8"
+				"\s[0]\i[1]* (You tell Dream you're not going to hurt them.)\n\n\w8\s[0]\i[3]* (They still seem suspicious, \w4but relax a little.)"
+				"\s[0]\i[1]* (You tell Dream NONBINARY IDENTITIES ARE VALID!!!)\n\n\w8\s[4]%(lps(3))I am a little confused why that needs to be said,\w6 but alright.\n\![*]\q[Ask to elaborate,nbheadcanonsomg]"
+				"\s[0]\i[1]You tell Dream everything is going to be okay.)\n\n\w8\s[0]\i[3]%(lps(3))...I appreciate the gesture."
 			}
 			--
 			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
@@ -344,30 +344,27 @@ DreamMenu
 			//Chance they might fall asleep but it's cute
 			"* (You read Dream %(bookstoread).)\n\n\w8"
 			--
-			""
+			"\s[4]A little odd, but interesting."
+			"\s[4]I'll have to think on it..."
+			"\s[0]\i[5]Cute!"
+			"\s[3]\i[4]\i[3]I wonder if Nightmare would enjoy it..."
 			--
-			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
-			\![*]\q[Again,dreamlikesstories]\n/
-			\![*]\q[Nevermind,CANCEL]\e"
+			"\![*]\q[Again,dreamlikesstories]\n%(actmeow)"
 		}
 		Select.scarethem //Tease
 		{
 			sadact += 1
-			"* (You warn Dream about the computer bugs.)\n\n\w8...\n\n\w8* (They keep glancing worriedly.)"
-			"* (You jump at them suddenly, they flinch.)\w8\n\n..."
+			"* (You warn Dream about the computer bugs.)\n\n\w8\s[0]\i[1]...\n\n\w8\s[3]* (They keep glancing worriedly.)"
+			"* (You jump at them suddenly,\w8\s[7] they flinch.)\w8\n\n\s[0]\i[1]..."
 			--
-			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
-			\![*]\q[Again,scarethem]\n/
-			\![*]\q[Nevermind,CANCEL]\e"
+			"\![*]\q[Again,scarethem]\n%(actmeow)"
 		}
 		Select.nowurjustmean2dream //Mock
 		{
 			sadact += 1
 			//you comment that no wonder people treat %(nightname) as a punching bag. He's way less cautious than Dream is
 			--
-			"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
-			\![*]\q[Again,nowurjustmean2dream]\n/
-			\![*]\q[Nevermind,CANCEL]\e"
+			"\![*]\q[Again,nowurjustmean2dream]\n%(actmeow)"
 		}
 		//Joke
 			//they act like ur funnier than u are. rly.
@@ -375,7 +372,7 @@ DreamMenu
 	
 	Oninterrogatedream //Ask...
 	{
-		"\i[55]* (You ask Dream about...)"
+		"\i[55]* (You ask Dream about...)\n\n"
 		--
 		"\![*]\q[Themself,askdreamyou]\n"
 		--
@@ -384,7 +381,8 @@ DreamMenu
 			"\![*]\q[Brother,askbrother]\n"
 			//\![*]\q[Your name,askyourname]\n"
 			"\![*]\q[Tree,askdreamabtree]\n/
-			\![*]\q[Their soul,askdreamtheirsoul]\n/
+			//\![*]\q[Their soul,askdreamtheirsoul]\n/
+			\![*]\q[Their crown,specilimportantcrown]\n/
 			\![*]\q[Their eyes,askdreamtheireyes]\e"
 		}
 		--
@@ -393,19 +391,23 @@ DreamMenu
 		
 		Select.askdreamyou
 			{
-				"Oh... So you don't kn-\w8 You aren't from the village, are you?\w8\s[2]\w8\w8I'm so sorry! I'm normally not so anxious talking to others. It's just been busy as of late. I promise I'm fine, though.\w8\n\n...I just accidentally find myself here because I was looking for someone.\n\n\![*]\q[Ask who they're looking for,dreamlook1]\e"
+				"\s[17]\i[4]\i[3]Oh%(lps(2))\w8 So you don't kn-\w8\s[4] You aren't from the village,\w6 are you?\w8\s[2]\w8\w8\n\nI'm so sorry!\w8\n\n\s[0]I'm normally not so anxious talking to others. \w8\i[6]It's just been busy as of late.\w8\s[0] I promise I'm fine,\w4 though.\w8\n\n%(lps(2))I just accidentally found myself here because I was looking for someone.\n\n\![*]\q[Ask who they're looking for,dreamlook1s]"
+				--
+				repeatDream
 			}
 			Select.dreamlook1
 			{
-				"It's my brother, you see... I was just looking for him because we had something scheduled, and I somehow ended up here.\n\n\![*]\q[Ask what they had scheduled,dreamlook2]"
+				"\s[0]\i[1]It's my brother, you see%(lps(2))\w8\n\nI was just looking for him because we had something scheduled,\w5 and I somehow ended up here.\n\n\![*]\q[Ask what they had scheduled,dreamlook2]"
 			}
 			Select.dreamlook2
 			{
-				"Well it's me and my brother's birthday- We're twins, so we share one. Usually when he's missing he's just out in the forest- or... That is how it used to be. Some days I looked through and... Oh, I'm sorry. I'm talking too much, aren't I?"
+				"\s[4]Well it's me and my brother's birthday-\w8\i[11] We're twins,\w4 so we share one.\w8\n\n\s[3]\i[4]Usually when he's missing he's just out in the forest-\w5 or%(lps(2))\w8 That is how it used to be.\w8\n\nSome days I looked through and%(lps(2))\w8\s[0]\i[3]\n\nOh, I'm sorry. \w8I'm talking too much,\w4 aren't I?"
+				--
+				repeatDream
 			}
 		Select.askbrother
 		{
-			"My brother,\w4 Nightmare.\w8\n\nI... He hasn't been doing well, \w4so I'm just trying to look for him."
+			"\s[0]\i[3]My brother,\w4 Nightmare.\w8\n\nI%(lps(2))\w8 He hasn't been doing well, \w4so I'm just trying to look for him."
 			--
 			repeatDream
 		}
@@ -415,7 +417,7 @@ DreamMenu
 		}*/
 		Select.askdreamabtree
 		{
-			"...The... anTree? How did you find out about that...? ...It's been doing fine. No irregularities."
+			"\s[0]\i[1]%(lps(2))The%(lps(2))\w5 anTree?\w8 How did you find out about that%(lps(2))?\w8\n\n\s[0]\i[3] %(lps(2))It's been doing fine.\w8 No irregularities."
 			--
 			repeatDream
 		}
@@ -425,15 +427,27 @@ DreamMenu
 			--
 			repeatDream
 		}
-		Select.askdreamtheircrown
+		Select.specilimportantcrown
 		{
-			"Recited thing. * (Ask to take it off?) (y/n) y: ...No ^^;;"
+			"\s[0]\i[5]It's pretty, isn't it?\n\n\w8* (Ask to take it off?)\n\n\![*]\q[Yes,lolasif]\n\![*]\q[No,crowntoospecil]"
 			--
 			repeatDream
 		}
+			Select.lolasif
+			{
+				"\s[6]...No."
+				--
+				repeatDream
+			}
+			Select.crowntoospecil
+			{
+				"* (They probably weren't going to, anyways.)"
+				--
+				repeatDream
+			}
 		Select.askdreamtheireyes
 		{
-			"Yellow and blue, like the day's sky. (hope the user just nods.)"
+			"\s[0]\i[5]Yellow and blue,\w5 like the day's sky.\n\n\w8* (...They don't seem to want to expand any further.)"
 			--
 			repeatDream
 		}
@@ -444,13 +458,14 @@ DreamMenu
 		--
 		"\![*]\q[Food,Ondreamyact]\n/
 		\![*]\q[Gift,Ondreambox]\n/
-		\![*]\q[Plushie,lilpushietoy]\n/
-		\![*]\q[Outfit,uhgfinallyoutfit]\e"
+		\![*]\q[Plushie,lilpushietoy]\e"
+		//\![*]\q[Outfit,uhgfinallyoutfit]\e"
 		//Food
 			Select.Ondreamyact
 			{
 				if sadnicelevel >= 25
 				{
+				niceact +=1
 				"* (You brew Dream a cup of tea.)\n\n\w8Aw,\w4 I like this kind.\n\n\w8* (They seem to calm down.)"
 				}
 				else
@@ -463,8 +478,8 @@ DreamMenu
 		//Gift
 			Select.givedreamgift
 			{
-				"* (You place a blanket on them.)\n\n\w8Oh, this is the same one from earlier. It is quite soft... I can keep it."
-				"* (You hand them a bouquet of flowers.)\n\nThese are nice. I could probably get my brother to tell them apart... I'm not very good at remembering the names. But I like them!"
+				"\s[17]\i[2000]* (You place a blanket on them.)\n\n\w8Oh,\w4 this is the same one from earlier.\w8 It is quite soft%(lps(2))\w8 I can keep it."
+				"\s[0]* (You hand them a bouquet of flowers.)\n\nThese are nice.\w8 I could probably get my brother to tell them apart%(lps(2))\w8\i[6] I'm not very good at remembering the names.\w8 But I like them!"
 				--
 				"%(itemmeow)\e"
 			}
@@ -475,7 +490,7 @@ DreamMenu
 				{
 					whorupanic = "off"
 					nightplush = "on"
-				"* (You hand them a plush of %(nightname).)\n\n\w8Ah- That's... This is my brother?\n\n\w8* (They look concerned, then contemplative.)\n\n\w8So that means you know him...\n\n\w8"
+				"\s[17\i[4]\i[3]* (You hand them a plush of %(nightname).)\n\n\w8Ah- That's%(lps(2)) This is my brother?\n\n\w8* (They look concerned, then contemplative.)\n\n\w8So that means you know him%(lps(2))\n\n\w8"
 					if nicensadlevel >= 25
 					{
 						sadnicelevel += 25

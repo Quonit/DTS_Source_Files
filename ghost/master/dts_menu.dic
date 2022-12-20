@@ -826,9 +826,9 @@ Select.CANCEL
 	if nowmode == "intodreams"
 	{
 		//temp dialogue
-		"Alright."
-		"Click? * (It sounds like they heard your computer mouse!)"
-		"Tell me if you need anything.\e"
+		"%(surface0)Alright."
+		"\s[17]\i[3]\i[4]Click?\n\n\w8* (It sounds like they heard your computer mouse!)"
+		"\s[4]\i[4]Tell me if you need anything.\e"
 		--
 		"\e"
 	}
