@@ -492,7 +492,7 @@ MouseDoubleClickSakura
  	}
 	elseif reference4 == "StarCrown" //Double click crown
 	{
-		"Ah- Sorry, I don't feel comfortable with you touching that... (ask more?)" //temp dialogue
+		"\s[7]Ah-!\w8\n\n\s[0]\i[1]Sorry,\w8 I don't feel comfortable with you touching that%(lps(2)) \n\![*]\q[Ask More?,dreamcrownwhy]" //temp dialogue
 	}
 	else
  	{
