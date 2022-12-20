@@ -189,6 +189,22 @@ DreamTalk : nonoverlap_pool
 	{
 		"\s[4]Oh%(lps(3)) \w8\i[1]Well, it's just not very interesting at home. \w8\s[0]\i[6]I've never heard anyone insist that ''nonbinary identities are valid'' because most monsters can't%(lps(3))\w5 Really be gendered in the first place?\w8\n\nHonestly there are more nonbinary people at home than there are binary%(lps(3))\w8 So it just sounds odd to me to have to insist that.\n\n\w8\s[0]\i[3]Having to fight for that sounds exhausting."
 	}
+	Select.begforforgiveness
+	{
+		starpunch = 0
+		"I'm not sure how something like that can be tried on accident.\w8\n\n%(lps(3))You seem really sorry,\w5 so I'll let it go for now.\w8 But I won't again."
+	}
+	Select.dreamcrownwhy
+	{
+		if nightplush >= 25
+		{
+			"\s[0]\i[9]\i[3]You know Nightmare.\w8\n\nI like matching with him,\w4 so not having the crown off makes me feel%(lps(3)) \w8disconnected.\n\n\w8It's silly."
+		}
+		else
+		{
+			"\s[0]\i[9]\i[3]The crown is just something I like is all.\w8 I don't know where you'd put it if you had it."
+		}
+	}
 
 //ooo        ooooo oooooooooooo ooooo      ooo ooooo     ooo 
 //`88.       .888' `888'     `8 `888b.     `8' `888'     `8' 
@@ -269,7 +285,14 @@ DreamMenu
 		}
 		Select.dreamforgiveness //Apologize
 		{
+			if starpunch == 1
+			{
+			"\s[0]\i[9]\i[1]...\n\n\w8* (It doesn't look like they're going to listen.)\w8\n\n[*]\q[* (Try again?),begforforgiveness]\n\e"
+			}
+			else
+			{
 			"\s[0]\i[9]\i[1]...\n\n\w8* (It doesn't look like they're going to listen.)\w8\n\n* (They're aparently a lot less forgiving than %(nightname).)\e"
+			}
 		//Apologize if you've hit them
 			//If you hit them once I think they'd be pretty spooked and quiet down fast, so if you apologize then you might need to do it more than once even if you only hit them one time.
 		}
