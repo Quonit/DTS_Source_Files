@@ -388,14 +388,38 @@ Select.removegoo
 
 Select.byedream
 {
-	ringringuthere = "on"
+	if stonemode == "on"
+	{
+		"\s[1621]* (They say nothing as they leave.\s[-1]\w8\w8"
+	}
+	else
+	{
+		if ringringuthere != "on"
+		{
+			ringringuthere = "on"
+			"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]\w8\n\n* (\w3.\w3.\w3.\w4There's a small bell left behind!)\n\n\w8* (You add it to your inventory.)"
+		}
+		else
+		{
+			"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]"
+		}
+	}
+	
 	nowmode = oldmode
-	"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]\w8\n\n* (\w3.\w3.\w3.\w4There's a small bell left behind!)\n\n\w8* (You add it to your inventory.)"
+	
+	if nowmode == "purpleman"
+	{
+		"\![change,Shell,Dreamtale Sans]%(OnBoot)"
+	}
+	elseif nowmode == "Edgybitch"
+	{
+		"\![change,Shell,Nightmare]%(GoopWake)"
+	}
 }
 
 Select.summondream
 {
-	changemode("sodreamy")
+	changemode("intodreams")
 	--
 	"* (You tell %(nightname) goodbye.)\n\n\w8%(surface0)Oh,\w4 goodbye."
 	"Bye.\n\n\w8*(He doesn't seem to know you're switching him out for Dream.)"

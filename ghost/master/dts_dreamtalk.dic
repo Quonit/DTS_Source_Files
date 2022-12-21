@@ -12,6 +12,7 @@ Onnotonfirstboot
 	quodreamplush = "off" //if give quo plush
 	sodreamy = "on" //if you've seen dream
 	sparklepet = 0 //pet counter
+	stonemode = "off"
 	"\![change,Shell,Dream]"
 	--
 	if RAND(2) == 1
@@ -46,72 +47,88 @@ Onnotonfirstboot
 OnDreamBoot
 //{
 {
-	if RAND(2) == 1
+	if stonemode == "on"
 	{
-		"\![bind,Costume,Cape,true]"
+		"\s[1621](* Looks like they're still like that.)"
+		"\s[1621](* They don't say anything\w8 and how could they?)"
 	}
 	else
 	{
-		"\![bind,Costume,Cape,false]"
-	}
-	--
-		if sadnicelevel >= 25
+		if RAND(2) == 1
 		{
-			"%(surface0)Oh,\w6 hello again."
+			"\![bind,Costume,Cape,true]"
 		}
 		else
 		{
-			"%(surface0)"
-			--
-			"Oh... \w8Hello."
-			"...\n\n\w8* (They look at you with quiet regard.)"
-			"...\n\n\w8* (It looks like they're still scared of you.)"
+			"\![bind,Costume,Cape,false]"
 		}
-	if timeslot == "earlymorning"
-	{
-	}
-	elseif timeslot == "morning"
-	{
-	}
-	elseif timeslot == "lunch"
-	{
-	}
-	elseif timeslot == "afternoon"
-	{
-	}
-	elseif timeslot == "evening"
-	{
-	}
-	elseif timeslot == "latenight"
-	{
-	}
-	else //Midnight
-	{
+		--
+			if sadnicelevel >= 25
+			{
+				"%(surface0)Oh,\w6 hello again."
+			}
+			else
+			{
+				"%(surface0)"
+				--
+				"Oh... \w8Hello."
+				"...\n\n\w8* (They look at you with quiet regard.)"
+				"...\n\n\w8* (It looks like they're still scared of you.)"
+			}
+		if timeslot == "earlymorning"
+		{
+		}
+		elseif timeslot == "morning"
+		{
+		}
+		elseif timeslot == "lunch"
+		{
+		}
+		elseif timeslot == "afternoon"
+		{
+		}
+		elseif timeslot == "evening"
+		{
+		}
+		elseif timeslot == "latenight"
+		{
+		}
+		else //Midnight
+		{
+		}
 	}
 }
 //}
 OnDreamClose
 {
-	if timeslot == "earlymorning"
+	if stonemode == "on"
 	{
+		"\s[1621](* Guess they're going home like that.)"
+		"\s[1621](* Won't %(nightname) be surprised?)"
 	}
-	elseif timeslot == "morning"
+	else
 	{
-	}
-	elseif timeslot == "lunch"
-	{
-	}
-	elseif timeslot == "afternoon"
-	{
-	}
-	elseif timeslot == "evening"
-	{
-	}
-	elseif timeslot == "latenight"
-	{
-	}
-	else //Midnight
-	{
+		if timeslot == "earlymorning"
+		{
+		}
+		elseif timeslot == "morning"
+		{
+		}
+		elseif timeslot == "lunch"
+		{
+		}
+		elseif timeslot == "afternoon"
+		{
+		}
+		elseif timeslot == "evening"
+		{
+		}
+		elseif timeslot == "latenight"
+		{
+		}
+		else //Midnight
+		{
+		}
 	}
 }
 
@@ -122,39 +139,50 @@ OnDreamClose
 //\_/ \_/\____/    \/  \_/ \_/\____/\/  \/ 
 DreamTalk : nonoverlap_pool
 {
-	if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
+	if stonemode == "on"
 	{
-		"\0\s[4]\i[1]You're hard to look at%(lps(3))\w8 I feel like I can see you,\w5 but when I look away I can't picture what you look like?\w8\n\nIt's odd."
-		"\0\s[4]At the very least gardening isn't that hard.\w8 Humans and more fleshy monsters struggle with it due to getting cuts and they need specific tools to avoid injury,\w4 like gloves.\w8\n\n\s[0]\i[5]It's a benefit of being a skeleton,\w4 to not have to deal with any of that.\w8 \s[0]\i[3]Though,\w5 I'm not sure if I even want to garden at all%(lps(3))\w5 If I really enjoy it,\w4 or if I'm just trying to make the best out of a poor situation."
-		"\s[3]\i[4]This place is very unlike nature.\w8\w4\n\n\i[3]I haven't seen any bugs.\n\n\w8\w4\s[0]\i[5]Nightmare likes bugs,\w4 and I'm usually fine if he talks about them,\w6 \s[0]\i[6]But they creep me out.\w8\s[0]\i[3] It's very silly.\w8\n\![*]\q[Make a joke,lolnobugs]\n\![*]\q[Don't,nololsabbugs]\n\![*]\q[Sympathize,alsonobugs]\e"
-		"\s[3]\i[5]\i[3]I hope it rains soon.\w8 The rain is nice."
-	}
-	if whorupanic == "on" //If they don't know you
-	{
-		"\s[3]* (They keep glancing around.)"
-		"\s[3]\i[1]* (They seem scared.)"
-	}
-	if sadnicelevel >= 0 //If they don't dislike you that much
-	{
-		"\s[4]\i[9]* (They're muttering something under their breath.)\n\n\w8* (Ask them what it is?)\n\![*]\q[Yes,dreammummblesy]\n\![*]\q[No,dreammummblesn]\e"
-		"%(surface0)* (You ask Dream if they like to swim.)\n\n\w8\s[0]I swim sometimes.\n\n\w8\i[5]* (...That doesn't answer your question.)"
-		"\s[4]\i[10]I wonder how Nightmare's writing is going..."
-		"\s[3]\i[4]I can't hear any birds here.\e:chain=computersounds"
-		"\s[4]They're low on apple juice right now%(lps(3)) \w8Will I have to make more when I get home?"
-		"* (It smells faintly of apple juice.)"
-		"\s[3]At least I don't have to look after the ceremony outfits%(lps(3))\n\n\w8\s[2]They're kept with the elders."
-		"\s[4]Hopefully Nightmare is looking after the tree while I'm gone-\w8\w4\i[11] Though there really shouldn't be that much pressure on him%(lps(3))"
-		"\s[17]\i[3]\i[4]%(lps(3))Did I accidentally leave something at his house-?\w8\w4\s[4]\i[9] No%(lps(3))\w8 I definitely returned it.\w8\n\nI should still check when I get back%(lps(3))\w8\s[4]\i[1]Whenever that is."
-		"* (You ask Dream for the time.)\w8\n\n\s[0]\i[8]\i[1]Huh?\n\n\w8\w4* (You tell them there's a clock in the bottom left corner for them to see.)\n\n\w8\s[4]* (They look down to check,\w5 but live in a 2D enviornment and can only see a ground.)"
-		"\s[4]\i[11]\i[4]* (They seem sad???)\w8\w4\n\nPoor birds%(lps(3))"
+		if RAND(5) == 1
+		{
+			"\S[1621]..."
+		}
 	}
 	else
 	{
-		"* (They don't seem to be talking anymore...)"
-		"* (It spells burnt.)"
-		if nicensadlevel <= 15 || wasemo == "on"
+		
+		if sadnicelevel >= 25 //or something. It'll probably take them a while to be honest.
 		{
-			"* (They aren't as snappy as %(nightname) was about it.)\w8\n\n* (How boring.)"
+			"\0\s[4]\i[1]You're hard to look at%(lps(3))\w8 I feel like I can see you,\w5 but when I look away I can't picture what you look like?\w8\n\nIt's odd."
+			"\0\s[4]At the very least gardening isn't that hard.\w8 Humans and more fleshy monsters struggle with it due to getting cuts and they need specific tools to avoid injury,\w4 like gloves.\w8\n\n\s[0]\i[5]It's a benefit of being a skeleton,\w4 to not have to deal with any of that.\w8 \s[0]\i[3]Though,\w5 I'm not sure if I even want to garden at all%(lps(3))\w5 If I really enjoy it,\w4 or if I'm just trying to make the best out of a poor situation."
+			"\s[3]\i[4]This place is very unlike nature.\w8\w4\n\n\i[3]I haven't seen any bugs.\n\n\w8\w4\s[0]\i[5]Nightmare likes bugs,\w4 and I'm usually fine if he talks about them,\w6 \s[0]\i[6]But they creep me out.\w8\s[0]\i[3] It's very silly.\w8\n\![*]\q[Make a joke,lolnobugs]\n\![*]\q[Don't,nololsabbugs]\n\![*]\q[Sympathize,alsonobugs]\e"
+			"\s[3]\i[5]\i[3]I hope it rains soon.\w8 The rain is nice."
+		}
+		if whorupanic == "on" //If they don't know you
+		{
+			"\s[3]* (They keep glancing around.)"
+			"\s[3]\i[1]* (They seem scared.)"
+		}
+		if sadnicelevel >= 0 //If they don't dislike you that much
+		{
+			"\s[4]\i[9]* (They're muttering something under their breath.)\n\n\w8* (Ask them what it is?)\n\![*]\q[Yes,dreammummblesy]\n\![*]\q[No,dreammummblesn]\e"
+			"%(surface0)* (You ask Dream if they like to swim.)\n\n\w8\s[0]I swim sometimes.\n\n\w8\i[5]* (...That doesn't answer your question.)"
+			"\s[4]\i[10]I wonder how Nightmare's writing is going..."
+			"\s[3]\i[4]I can't hear any birds here.\e:chain=computersounds"
+			"\s[4]They're low on apple juice right now%(lps(3)) \w8Will I have to make more when I get home?"
+			"* (It smells faintly of apple juice.)"
+			"\s[3]At least I don't have to look after the ceremony outfits%(lps(3))\n\n\w8\s[2]They're kept with the elders."
+			"\s[4]Hopefully Nightmare is looking after the tree while I'm gone-\w8\w4\i[11] Though there really shouldn't be that much pressure on him%(lps(3))"
+			"\s[17]\i[3]\i[4]%(lps(3))Did I accidentally leave something at his house-?\w8\w4\s[4]\i[9] No%(lps(3))\w8 I definitely returned it.\w8\n\nI should still check when I get back%(lps(3))\w8\s[4]\i[1]Whenever that is."
+			"* (You ask Dream for the time.)\w8\n\n\s[0]\i[8]\i[1]Huh?\n\n\w8\w4* (You tell them there's a clock in the bottom left corner for them to see.)\n\n\w8\s[4]* (They look down to check,\w5 but live in a 2D enviornment and can only see a ground.)"
+			"\s[4]\i[11]\i[4]* (They seem sad???)\w8\w4\n\nPoor birds%(lps(3))"
+		}
+		else
+		{
+			"* (They don't seem to be talking anymore...)"
+			"* (It sMells burnt.)"
+			if nicensadlevel <= 15 || wasemo == "on"
+			{
+				"* (They aren't as snappy as %(nightname) was about it.)\w8\n\n* (How boring.)"
+			}
 		}
 	}
 }
@@ -232,25 +260,37 @@ DreamMenu
 	--
 	"\n\n\_q"
 	--
-	"\![*]\q[Say something,altalk]\n"
-	"\![*]\q[Speak,altalk]\n"
-	"\![*]\q[Talk,altalk]\n"
-	"\![*]\q[Ask them to say something,altalk]\n"
-	--
-	if lastTalk != ""
+	if stonemode == "on"
 	{
-		"\![*]\q[Repeat,OnLastTalk]\n\n"
-		"\![*]\q[Ask them to repeat themself,OnLastTalk]\n\n"
-		"\![*]\q[Ask them to repeat what he last said,OnLastTalk]\n\n"
-		"\![*]\q[Ask them to say what he just said,OnLastTalk]\n\n"
+		"\![*]\q[Go back to %(nightname),byedream]\n/
+		\![*]\q[Close ghost,goodnightmoon]\n/
+		\![*]\q[Reset relationship with Dream,startfromscratch]\n\n"
+	}
+	else
+	{
+		"\![*]\q[Say something,altalk]\n"
+		"\![*]\q[Speak,altalk]\n"
+		"\![*]\q[Talk,altalk]\n"
+		"\![*]\q[Ask them to say something,altalk]\n"
+		--
+		if lastTalk != ""
+		{
+			"\![*]\q[Repeat,OnLastTalk]\n\n"
+			"\![*]\q[Ask them to repeat themself,OnLastTalk]\n\n"
+			"\![*]\q[Ask them to repeat what he last said,OnLastTalk]\n\n"
+			"\![*]\q[Ask them to say what he just said,OnLastTalk]\n\n"
+		}
+		--
+		"\![*]\q[ACT,Ondreamyact] or ask some \![*]\q[QUESTIONS,Oninterrogatedream]\n/
+		\![*]\q[Use some items,Ondreambox]\n/
+		\![*]\q[Stats,configmenu]\n/
+		\![*]\q[Use some functions,dosomething]\n\n"
+		//--
+		//"\![*]\q[Testvariable,dreamtestvariable]\n\n"
+		
 	}
 	--
-	"\![*]\q[ACT,Ondreamyact] or ask some \![*]\q[QUESTIONS,Oninterrogatedream]\n/
-	\![*]\q[Use some items,Ondreambox]\n/
-	\![*]\q[Stats,configmenu]\n/
-	\![*]\q[Use some functions,dosomething]\n\n/
-	//\![*]\q[Testvariable,dreamtestvariable]\n\n/
-	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
+	"\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 	Ondreamyact //Act
 	{
@@ -547,4 +587,9 @@ repeatDream
 	"\n\n\![*]\q[Choose another ACTion,Ondreamyact]\n/
 	\![*]\q[Ask another question,Oninterrogatedream]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
+}
+
+Select.startfromscratch
+{
+	//resetting Dream stuff goes here
 }

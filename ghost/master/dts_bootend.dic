@@ -134,11 +134,15 @@ OnBoot
 	{
 		OnGoopWake
 	}
-	if nowmode != "Edgybitch"
+	elseif nowmode == "intodreams"
+	{
+		OnDreamBoot
+	}
+	else
 	{
 		if SHIORI3FW.ShellName == "Nightmare"
 		{
-			"\0\s[0]\![change,shell,Dreamtale Sans]\e"
+			"\0\s[0]\![change,Shell,Dreamtale Sans]\e"
 		}
 		--
 		lastTalk = ""
@@ -403,6 +407,11 @@ normalboottalk
 			"Oh! Oh- wait wait!\w8\w7\s[15] ''Well met by moonlight,\w4 proud Titania.''\n\n* (You comment that the quote is ''ill-met''.)\n\nWell yeah,\w5 but I don't think this is a particularly 'ill' meeting,\w5 y'know?\w8\e"
 		}
 	}
+}
+
+Select.goodnightmoon
+{
+	"%(OnClose)"
 }
 
 OnClose
@@ -671,6 +680,11 @@ OnWindowStateRestore
 		"\0\s[5]What the hell was that???\e"
 		"\0\s[5]* (The goop is back on screen.)\e"
 	}
+	elseif nowmode == "intodreams"
+	{
+		//They seem startled?
+		//temp dialogue
+	}
 	else
 	{
 		if sittang == "on"
@@ -691,21 +705,50 @@ OnGhostChanging
 	"%(OnClose)"
 	if reference0 == "Dreamtale Sans"
 	{
-		"\0\s[0]Reloading...\w8\w8\e"
-		"\0\s[0]\i[55]* (You reload %(nightname).)\w8\w8\e"
+		if nowmode == "Edgybitch"
+		{
+			//temp dialogue
+		}
+		elseif nowmode == "intodreams"
+		{
+			if stonemode == "on"
+			{
+				"\0\s[1621]...\w8\w8\e"
+			}
+			else
+			{
+				//temp dialogue
+			}
+		}
+		else
+		{
+			"\0\s[0]Reloading...\w8\w8\e"
+			"\0\s[0]\i[55]* (You reload %(nightname).)\w8\w8\e"
+		}
 	}
  	else
 	{
 		//I would like to put an OnClose here but can't rn
-		if VillageLevel >= 150
-		{
-			"\0\s[19]* (You open %(reference0) instead of this garbage.)"
-			"\0\s[19]* (Maybe %(reference0) will actually talk to you...)"
-		}
-		elseif nowmode == "Edgybitch"
+		if nowmode == "Edgybitch"
 		{
 			"\0\s[4]Go play with your friend,\w4 %(reference0)."
 			"\0\s[1]Scat.\e"
+		}
+		elseif nowmode == "intodreams"
+		{
+			if stonemode == "on"
+			{
+				"\0\s[1621]..."
+			}
+			else
+			{
+				//temp dialogue
+			}
+		}
+		elseif VillageLevel >= 150
+		{
+			"\0\s[19]* (You open %(reference0) instead of this garbage.)"
+			"\0\s[19]* (Maybe %(reference0) will actually talk to you...)"
 		}
 		elseif sittang == "on"
 		{
@@ -736,17 +779,50 @@ OnGhostChanged
 	--
 	if reference0 == "Dreamtale Sans"
 	{
-		"\0\s[7]\i[55]* (He seems kind of confused...)\n\n\w8\s[7]Uhm\w2.\w2.\w2. \w8Hi again?\e"
-		"%(surface0)\i[55]* (He doesn't seem to have noticed he was reloaded.)\n\n\w8\s[0]?\e"
-		if sittang == "on"
+		if nowmode == "Edgybitch"
 		{
-			"\0\s[1]\i[55]* (He doesn't seem to have noticed he was reloaded.)"
+			//temp dialogue
+		}
+		elseif nowmode == "intodreams"
+		{
+			if stonemode == "on"
+			{
+				"\0\s[1621]\w8* (Still like this...)\e"
+			}
+			else
+			{
+				//they don't seem to know what happened
+			}
+		}
+		else
+		{
+			"\0\s[7]\i[55]* (He seems kind of confused...)\n\n\w8\s[7]Uhm\w2.\w2.\w2. \w8Hi again?\e"
+			"%(surface0)\i[55]* (He doesn't seem to have noticed he was reloaded.)\n\n\w8\s[0]?\e"
+			if sittang == "on"
+			{
+				"\0\s[1]\i[55]* (He doesn't seem to have noticed he was reloaded.)"
+			}
 		}
 	}
 	else
 	{
 		"%(normalboottalk)"
-		if blushiemode == "on" && privacyrespecter == "off"
+		if nowmode == "Edgybitch"
+		{
+			"\0\s[4]See?\w5 I'd knew you'd come back to me.\e"
+		}
+		elseif nowmode == "intodreams"
+		{
+			if stonemode == "on"
+			{
+				"\0\s[1621]* (Looks like time away didn't do much to help.)"
+			}
+			else
+			{
+				//temp dialogue
+			}
+		}
+		elseif blushiemode == "on" && privacyrespecter == "off"
 		{
 			"\0\s[20]Did you have fun with %(reference0) %(username)?\e"
 		}
@@ -754,10 +830,6 @@ OnGhostChanged
 		{
 			"\0\s[19]* (Switched from %(reference0) back to this idiot...)"
 			"\0\s[19]* (At least %(reference0) actually talked to you...)"
-		}
-		elseif nowmode == "Edgybitch"
-		{
-			"\0\s[4]See?\w5 I'd knew you'd come back to me.\e"
 		}
 		else
 		{

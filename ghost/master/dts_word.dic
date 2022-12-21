@@ -248,7 +248,10 @@ pickup //why is this here instead of mouse.dic
 {	
 	if nowmode == "intodreams"
 	{
-		"\0\s[38]"
+		if stonemode != "on"
+		{
+			"\0\s[38]"
+		}
 	}
 	elseif nowmode == "Edgybitch"
 	{
@@ -290,7 +293,11 @@ surface0
 {
 	if nowmode == "intodreams"
 	{
-		if sadnicelevel >= 25
+		if stonemode == "on"
+		{
+			"\0\s[1621]"
+		}
+		elseif sadnicelevel >= 25
 		{
 			"\0\s[0]"
 		}

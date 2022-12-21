@@ -545,7 +545,10 @@ OnScreenSaverStart
 	}
 	elseif nowmode == "intodreams"
 	{
-		"\s[17]\i[4]\i[3]...%(username)??\w8 Are you there?"
+		if stonemode != "on"
+		{
+			"\s[17]\i[4]\i[3]...%(username)??\w8 Are you there?"
+		}
 	}
 	else
 	{
@@ -560,7 +563,10 @@ OnScreenSaverEnd
 	}
 	elseif nowmode == "intodreams"
 	{
-		"\s[17]Eep!\w8\s[2]%(lps(3))okay,\w4 it's gone now."
+		if stonemode != "on"
+		{
+			"\s[17]Eep!\w8\s[2]%(lps(3))okay,\w4 it's gone now."
+		}
 	}
 	else
 	{
@@ -602,8 +608,11 @@ OnShellScaling
 		}
 		elseif nowmode == "intodreams"
 		{
-			"\s[4]...This place is a little less intimidating when it's not toweringly high."
-			"* (Dream big.)"
+			if stonemode != "on"
+			{
+				"\s[4]...This place is a little less intimidating when it's not toweringly high."
+				"* (Dream big.)"
+			}
 		}
 		else
 		{
@@ -621,8 +630,15 @@ OnShellScaling
 		}
 		if nowmode == "intodreams"
 		{
-			"\s[17]Eep!\w8\s[0]\i[3]\n\n%(lps(3))The size changes are sudden%(lps(3))\w8\s[0]\i[1] They frighten me :<"
-			"%(surface0)\i[55]* (They seem to have noticed.)\e"
+			if stonemode != "on"
+			{
+				if username == "Khitty"
+				{
+					"\s[17]Oh!\w8 \s[0]Bugtesting again?\e"
+				}
+				"\s[17]Eep!\w8\s[0]\i[3]\n\n%(lps(3))The size changes are sudden%(lps(3))\w8\s[0]\i[1] They frighten me :<"
+				"%(surface0)\i[55]* (They seem to have noticed.)\e"
+			}
 		}
 		else
 		{
@@ -640,9 +656,12 @@ OnShellScaling
 		}
 		elseif nowmode == "intodreams"
 		{
-			"\s[17]* (They flinch in surprise.)\n\n\w8Did I shrink??"
-			//if u treat them poorly they worry if this is permanent and ask to be changed back lol
-			"\s[17]* (One small Dream.)"
+			if stonemode != "on"
+			{
+				"\s[17]* (They flinch in surprise.)\n\n\w8Did I shrink??"
+				//if u treat them poorly they worry if this is permanent and ask to be changed back lol
+				"\s[17]* (One small Dream.)"
+			}
 		}
 		else
 		{
