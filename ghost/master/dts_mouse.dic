@@ -455,6 +455,11 @@ MouseDoubleClickSakura
 			"\![*]\q[Yes,punchdreamy]\n/
 			\![*]\q[No!!,dontpunchdreamy]\e"
 		}
+		else
+		{
+			stonemode = "on"
+			"\s[18]* (You try hitting them again.)\n\n\w8\s[0]\i[1]\s[9]* (They're staring at you now%(lps(4))\w8 and%(lps(4))\w8\s[1] sitting down?\w8\s[1621]\e"
+		}
 	}
 	elseif reference4 == "Face" //Punching animations get worse as there are more.
 	{

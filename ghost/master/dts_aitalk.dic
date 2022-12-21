@@ -1004,11 +1004,7 @@ EndMikireTalk
 
 OnSurfaceRestore
 {
-	if nowmode == "Edgybitch"
-	{
-		"\0\s[0]"
-	}
-	elseif nowmode == "intodreams"
+	if nowmode == "intodreams"
 	{
 		if stonemode == "on"
 		{
@@ -1022,6 +1018,10 @@ OnSurfaceRestore
 			"\s[3]\i[4]"
 			"\s[3]\i[4]\i[3]"
 		}
+	}
+	elseif nowmode == "Edgybitch"
+	{
+		"\0\s[0]"
 	}
 	elseif VillageLevel >= 150 && nowmode != "Edgybitch"
 	{

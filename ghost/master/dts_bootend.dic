@@ -32,6 +32,7 @@
 	negact = 0
 	betrayalvar = 0 //if you got his friendship high then punched him
 	apologized = 0 //how many times you've apologized
+	scratched = "off" //If you've reset stone dream
 	//Neutral
 	sodreamy = "off" //If you've seen Dream or not
 	sleepingmode = "off" //If he's sleeping
