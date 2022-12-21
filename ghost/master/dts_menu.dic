@@ -389,8 +389,7 @@ Select.removegoo
 Select.byedream
 {
 	ringringuthere = "on"
-	nowmode = "nightynight"
-	//nowmode == not dream???? like it could be nm idk
+	nowmode = oldmode
 	"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]\w8\n\n* (\w3.\w3.\w3.\w4There's a small bell left behind!)\n\n\w8* (You add it to your inventory.)"
 }
 

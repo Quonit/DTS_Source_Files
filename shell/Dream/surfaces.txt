@@ -375,6 +375,13 @@ surface17
 surface18
 {
 	element1,overlay,surface1018.png,0,0
+	
+	//Cape top
+	animation1000.interval,bind
+	animation1000.pattern0,overlay,1018,0,0,0
+	//Cape bottom
+	animation1001.interval,bind
+	animation1001.pattern0,interpolate,1019,0,0,0
 }
 
 //tired
