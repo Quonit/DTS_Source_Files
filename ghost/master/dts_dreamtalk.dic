@@ -503,11 +503,11 @@ DreamMenu
 				"\s[17\i[4]\i[3]* (You hand them a plush of %(nightname).)\n\n\w8Ah- That's%(lps(2)) This is my brother?\n\n\w8* (They look concerned, then contemplative.)\n\n\w8So that means you know him%(lps(2))\n\n\w8"
 					if nicensadlevel >= 25
 					{
-						sadnicelevel += 25
+						niceact += 25
 					}
 					if nicensadlevel <= -5
 					{
-						sadnicelevel -= 25
+						sadact += 25
 					}
 				}
 				else

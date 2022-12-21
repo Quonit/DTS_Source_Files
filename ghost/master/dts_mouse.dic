@@ -550,7 +550,7 @@ Select.punchdreamy
 	starpunch += 1
 	if sadnicelevel >= 25
 	{
-		sadnicelevel = -1
+		sadact += 1
 		"\s[18]Eep!\n\n\w8* (They stare at you in disbelief.)\n\n\w8You tried to hit me..."
 	}
 	else
