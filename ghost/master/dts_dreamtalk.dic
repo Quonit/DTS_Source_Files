@@ -103,8 +103,8 @@ OnDreamClose
 {
 	if stonemode == "on"
 	{
-		"\s[1621](* Guess they're going home like that.)"
-		"\s[1621](* Won't %(nightname) be surprised?)"
+		"\s[1621]* (Guess they're going home like that.)"
+		"\s[1621]* (Won't %(nightname) be surprised?)"
 	}
 	else
 	{
