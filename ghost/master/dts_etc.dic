@@ -65,7 +65,7 @@ OnInstallBegin
 	if nowmode == "intodreams"
 	{
 		//temp dialogue
-		"\0\s[4]I... Am not sure what to do with this :)\n\n* (The file seems to install itself anyways.)"
+		"\0\s[4]I%(lps(2))\w5 Am not sure what to do with this.\n\n* (The file seems to install itself anyways.)"
 	}
 	else
 	{
@@ -121,8 +121,7 @@ OnInstallFailure
 	}
 	elseif nowmode == "intodreams"
 	{
-		//temp dialogue
-		"* (Dream stares at you blankly.)\n\n\w8 * (The installation didn't work.)"
+		"\s[0]\i[55]* (Dream stares at you blankly.)\n\n\w8 * (The installation didn't work.)"
 	}
 	else
 	{
@@ -253,18 +252,18 @@ OnUpdateBegin
 {
 	"%(surface0)\i[55]* (Starting the update process.)\w8\n\n"
 	--
-	if nowmode == "Edgybitch"
+	if nowmode == "intodreams"
+	{
+		"\s[0]\i[1]uhm%(lps(3)) \w5You want me to update?\n\n\w8* (clearly they have no idea what that means, but the ghost updates itself anyways.)"
+	}
+	elseif nowmode == "Edgybitch"
 	{
 		//temp dialogue 4 dis & dreamy
-		"Pshh, lets see if the update will actually work. Do you have any clue how many times Quo' has ruined this? I can't even say their full name because you'll click on it and interupt the update. /That's/ how dumb this is. They should really fix it.\n\n\w8* (You tell Mare to just start the update already.)\e"
-	}
-	elseif nowmode == "intodreams"
-	{
-		"uhm... You want me to update? * (clearly they have no idea what that means, but the ghost updates itself anyways.)"
+		"\s[8]Pshh,\w6 lets see if the update will actually work.\w8\w4\n\nDo you have any clue how many times Quo' has ruined this?\w8\n\n\s[7]I can't even say their full name because you'll click on it and interupt the update.\w8 \f[italic,1]That's\f[italic,0] how dumb this is.\w8\n\nThey should really fix it.\n\n\w8\s[8]* (You tell Mare to just start the update already.)"
 	}
 	else
 	{
-		"\0\s[4]I wonder what kind of things could be in the update...\w8\e"
+		"\0\s[4]I wonder what kind of things could be in the update...\w8"
 	}
 	if reference0 == "artificial"
 	{
@@ -546,8 +545,7 @@ OnScreenSaverStart
 	}
 	elseif nowmode == "intodreams"
 	{
-		//temp dialogue
-		"D: ...%(username)?? Are you there?"
+		"\s[17]\i[4]\i[3]...%(username)??\w8 Are you there?"
 	}
 	else
 	{
@@ -562,8 +560,7 @@ OnScreenSaverEnd
 	}
 	elseif nowmode == "intodreams"
 	{
-		//temp dialogue
-		"Eep! ...okay, it's gone now."
+		"\s[17]Eep!\w8\s[2]%(lps(3))okay,\w4 it's gone now."
 	}
 	else
 	{
@@ -605,8 +602,7 @@ OnShellScaling
 		}
 		elseif nowmode == "intodreams"
 		{
-			//temp dialogue
-			":<...This place is a little less intimidating when it's not toweringly high."
+			"\s[4]...This place is a little less intimidating when it's not toweringly high."
 			"* (Dream big.)"
 		}
 		else
@@ -625,8 +621,7 @@ OnShellScaling
 		}
 		if nowmode == "intodreams"
 		{
-			//temp dialogue
-			"\s[frazzled]Eep! ...The size changes are sudden... They frighten me :<"
+			"\s[17]Eep!\w8\s[0]\i[3]\n\n%(lps(3))The size changes are sudden%(lps(3))\w8\s[0]\i[1] They frighten me :<"
 			"%(surface0)\i[55]* (They seem to have noticed.)\e"
 		}
 		else
@@ -645,10 +640,9 @@ OnShellScaling
 		}
 		elseif nowmode == "intodreams"
 		{
-			//temp dialogue
-			"\s[frazzled]* (They flinch in surprise.) Did I shrink??"
+			"\s[17]* (They flinch in surprise.)\n\n\w8Did I shrink??"
 			//if u treat them poorly they worry if this is permanent and ask to be changed back lol
-			"\s[frazzled]* (One small Dream.)"
+			"\s[17]* (One small Dream.)"
 		}
 		else
 		{

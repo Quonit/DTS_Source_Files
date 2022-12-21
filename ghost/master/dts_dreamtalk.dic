@@ -5,13 +5,13 @@
 //|_______.'  `.______.'   `.______.'       |      
 Onnotonfirstboot
 {
-	niceact = 0
-	sadact = 0
-	sadnicelevel = 0
-	whorupanic = "on"
-	nightplush = "off"
-	quodreamplush = "off"
-	sodreamy = "on"
+	niceact = 0 //nice actions. Alternate of posact
+	sadact = 0 //mean actions. Alternate of negact.
+	whorupanic = "on" //if not know you?
+	nightplush = "off" //If give night plush
+	quodreamplush = "off" //if give quo plush
+	sodreamy = "on" //if you've seen dream
+	sparklepet = 0 //pet counter
 	"\![change,Shell,Dream]"
 	--
 	if RAND(2) == 1

@@ -594,7 +594,6 @@ RandomTalk : nonoverlap_pool
 		}
 		if passhour == 4
 		{
-			//temp dialogue
 			"\s[3]%(lps(3))Hey %(username)?\w8\n\nIs it okay if I can leave for%(lps(3))\w6 A couple of seconds to check on some things?\w8\n\n\s[9]It's just that I've been out here a while and I just wanna see if things are okay.\n/
 			\[*]\q[Let him go,nightgolookstuff]\n/
 			\[*]\q[Keep here,keepashostage]\e"
@@ -774,7 +773,6 @@ Select.Novacation
 Select.fiveleave
 {
 	lasttalked = 0
-	//temp dialogue
 	posact += 1
 	"Ah-\w5 Thank you!!\w8\w8\w8\-\e"
 }

@@ -247,7 +247,9 @@ TalkConfig
 	}
 	elseif nowmode == "intodreams"
 	{
-		"erm...\n\n" //Temp dialogue
+		"Relationship Points: %(sadnicelevel)\n/
+		Times Pet: %(sparklepet)\n/
+		Times Hit: %(starpunch)\n\n"
 	}
 	else
 	{
@@ -270,7 +272,7 @@ TalkConfig
 	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
 	Updated: 21st December 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
 	--
-	if ringringuthere == "on"
+	if nowmode != "intodreams" && ringringuthere == "on"
 	{
 		"* (Ring the bell?)\n\q[Yes,summondream] \q[No,CANCEL]\n\n"
 	}
@@ -387,8 +389,8 @@ Select.removegoo
 Select.byedream
 {
 	ringringuthere = "on"
+	nowmode = "nightynight"
 	//nowmode == not dream???? like it could be nm idk
-	//temp dialogue
 	"* (You decide to send Dream home.)\n\n\w8Oh,\w8 goodbye.\w8\s[-1]\w8\n\n* (\w3.\w3.\w3.\w4There's a small bell left behind!)\n\n\w8* (You add it to your inventory.)"
 }
 
@@ -824,7 +826,6 @@ Select.CANCEL
 {
 	if nowmode == "intodreams"
 	{
-		//temp dialogue
 		"%(surface0)Alright."
 		"\s[17]\i[3]\i[4]Click?\n\n\w8* (It sounds like they heard your computer mouse!)"
 		"\s[4]\i[4]Tell me if you need anything.\e"
@@ -1967,9 +1968,9 @@ Select.reexplaincrown
 
 Select.reexplaintree
 {
-	if nowmode == "intodreams" //temp dialogue
+	if nowmode == "intodreams"
 	{
-		"It's been stable. There was one fallen apple discovered I burried this week, but that is all."
+		"\s[0]\i[3]It's been stable. \w8There was one fallen apple discovered I burried this week,\w5 but that is all."
 	}
 	elseif nowmode == "Edgybitch"
 	{

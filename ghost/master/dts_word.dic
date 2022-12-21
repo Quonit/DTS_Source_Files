@@ -144,6 +144,11 @@ nicensadlevel
 	posact - negact
 }
 
+sadnicelevel
+{
+	niceact - sadact
+}
+
 VillageLevel //Negative variable that also catches if you've hit him or not. Used so that you can't unlock goopmare without hurting him
 {
 	//punchout - nicensadlevel

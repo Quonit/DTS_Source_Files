@@ -260,7 +260,7 @@ OnBoot
 	}
 }
 
-normalboottalk //All temp dialogue
+normalboottalk
 {
 	if nowmode = "intodreams"
 	{
