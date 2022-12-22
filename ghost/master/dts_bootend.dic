@@ -267,7 +267,10 @@ OnBoot
 
 normalboottalk
 {
-	if nowmode = "intodreams"
+	LOGGING("=================")
+	LOGGING("=================")
+	LOGGING(nowmode)
+	if nowmode == "intodreams"
 	{
 		OnDreamBoot
 	}
