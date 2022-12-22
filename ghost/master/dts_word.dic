@@ -234,23 +234,13 @@ changemode
 	LOGGING(ASEARCH(_var,_possiblemodes))
 	
 	
-	LOGGING("==========================")
-	LOGGING("==========================")
-	LOGGING("nowmode is %(nowmode), oldmode is %(oldmode), var is %(_var)")
-	
 	if ASEARCH(_var,_possiblemodes) != -1
 	{
-		LOGGING("lets log some stuff")
-		LOGGING(nowmode)
-		LOGGING(_var)
 		if nowmode != _var
 		//if current mode is not the same as the new mode
 		{
 			oldmode = nowmode
 			nowmode = _var
-			LOGGING("mode is changed???")
-			LOGGING(nowmode)
-			LOGGING(_var)
 		}
 		else
 		{
