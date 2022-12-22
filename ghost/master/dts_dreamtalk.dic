@@ -47,6 +47,9 @@ Onnotonfirstboot
 OnDreamBoot
 //{
 {
+	dayslot = GetDaySlot
+	timeslot = GetTimeSlot
+	
 	if stonemode == "on"
 	{
 		"\s[1621](* Looks like they're still like that.)"
