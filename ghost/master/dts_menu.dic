@@ -9,7 +9,7 @@
 	}
 	elseif nowmode == "intodreams"
 	{
-		DreamMenu
+		OnDreamMenu
 	}
 	elseif sleepingmode == "on"
 	{
@@ -215,7 +215,7 @@ Select.BACKTOMENU
 	}
 	elseif nowmode == "intodreams"
 	{
-		DreamMenu
+		OnDreamMenu
 	}
 	else
 	{
