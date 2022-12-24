@@ -1060,38 +1060,24 @@ OnSurfaceRestore
 
 OnShellChanged //I hope this doesn't kill the ghost
 {
-	LOGGING("------------------------------------")
-	LOGGING("------------------------------------")
-	LOGGING("------------------------------------")
-	LOGGING(nowmode)
-	LOGGING("swapthem is %(swapthem)")
 	
 	nowshell = reference0
 	
-	LOGGING(nowshell)
 	
 	if swapthem == "on"
 	{
-		LOGGING("which mode are we")
-		LOGGING(nowmode)
 		swapthem = "off"
 		
 		if nowshell == "Nightmare"
 		{
-			LOGGING("gooey mode?")
-			LOGGING(nowmode)
 			OnGoopWake
 		}
 		elseif nowshell == "Dream"
 		{
-			LOGGING("dream mode?")
-			LOGGING(nowmode)
 			OnDreamBoot
 		}
 		else
 		{
-			LOGGING("purple mode?")
-			LOGGING(nowmode)
 			"%(normalboottalk)"
 		}
 		
