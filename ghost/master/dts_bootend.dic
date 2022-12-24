@@ -297,7 +297,7 @@ normalboottalk
 		}
 		if nicensadlevel >= 75 && maremare == "off"
 		{
-			"\0\s[0]\i[11]\i[10]\i[16]-that's not how it works, \w3Mare-\n\n\w8\w8\s[7]\i[2]!\w8\w5\s[7]\i[3]\n\n\w8\w8\w5\s[3].\w3.\w3.\w4Uhm\w3.\w3.\w3.\w8 Hi %(username).\e:eval=maremare='on'"
+			"\0\s[0]\i[11]\i[10]\i[500]-that's not how it works, \w3Mare-\n\n\w8\w8\s[7]\i[2]!\w8\w5\s[7]\i[3]\n\n\w8\w8\w5\s[3].\w3.\w3.\w4Uhm\w3.\w3.\w3.\w8 Hi %(username).\e:eval=maremare='on'"
 		}
 	}
  	else
