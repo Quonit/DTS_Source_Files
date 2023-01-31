@@ -2356,6 +2356,8 @@ Select.givegift
 	"\0\s[0]\i[55]* (You give him a tiny,\w4 cute-looking music box.)\n\n\w8\0\s[4]Aw\w2.\w2.\w2.\w4 It's so adorable.\n\n\w8* (You tell him to turn the key in it.)\n\n\w8\0\s[13]\i[55]* (He does so, and soon enough it starts clicking a tune.\w6 He smiles.)\n\n\w8\0\s[6]Thank you %(username)!!"
 	"\0\s[0]\i[55]* (You gift him with some scented candles.)\0\s[4]\n\n\w8Aw,\w3 that's nice of you.\w6 I could put them around the treehouse."
 	"\0\s[0]\i[55]* (You hand him a small stack of paper to write on.)\w8\n\n\0\s[4]Huh...?\n\n\w8\i[55]* (He takes it in his hands.)\w8\n\n\s[4]This is really high quality for paper...\w6\0\s[0]\i[14] I'll try not to use it up too fast."
+	"\0\s[0]\i[55]* (You hand him an old MP3 player.)\n\n\w8\s[4]* (He messes around with the buttons cluelessly,\w5\s[7] and he accidentally turns on a song.)\n\n\w8Ah!!-\w8\s[4] Oh,\w5 it's harmless.\w8\n\nIt's got video on it like the camera we had...\w8 This has to be something from outside the village.\0\s[6]* (He definitely seems to enjoy messing with it.)"
+	"\0\s[0]\i[55]* (You give him an instruction book on how to play certain instruments.)\n\n\w8\s[32]Aww-\w6 now I just need to find something I'm allowed to practice on."
 	if hasviolin == "off"
 	{
 		hasviolin = "on"

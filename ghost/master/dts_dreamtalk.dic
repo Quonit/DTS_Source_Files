@@ -657,9 +657,16 @@ Select.uhgfinallyoutfit
 	{
 		niceact += 1
 		//temp dialogue
-		"\s[1604]* (You have Dream put on the outfit.)\n\n\w8...It's-\w8 Hmm,\w6 hard to describe.\n\n\w8Like my normal outfit,\w6 but \f[italic,true]more\f[italic,false].\w8 Extra brightness, \w4extra studs, \w4feels sturdier."
-		//If has cape
-		"\s[1604]Heavy!!!"
+		"\s[1604]* (You have Dream put on the outfit.)\n\n\w8"
+		--
+		if WearingCape == 1
+		{
+		"Well- The jacket's certainly heavy!\w8 Seems really well made and sturdy though%(lps(3))\w8 How much could this have cost?\w8 It gives off a different air than the normal ceremony outfits.\w8\n\nInstead of being just kind of an object of spectical to be fawned over.It feels grand and imporant,\w5 somehow."
+		}
+		else
+		{
+		"...It's-\w8 Hmm,\w6 hard to describe.\n\n\w8Like my normal outfit,\w6 but \f[italic,true]more\f[italic,false].\w8 Extra brightness, \w4extra studs, \w4feels sturdier.\w8\n\nI feel like I'd wear this in a court or something!"
+		}
 		--
 		"\n\n\![*]\q[Choose another outfit,uhgfinallyoutfit] %(Itemmeow)"
 	}
