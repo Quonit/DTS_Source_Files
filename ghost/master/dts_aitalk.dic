@@ -816,6 +816,15 @@ OnMinuteChange
 	--
 	if minute == 0
 	{
+		if hourhitannoying == "off"
+		{
+		}
+		if nicensadlevel >= 0
+		{
+			"\0\i[55]* (It's %(hour12)'o clock.)\e"
+		}
+		else
+		{
 		/*
 		if hour == 1
 		{
@@ -917,6 +926,11 @@ OnMinuteChange
 			"\0\s[0]It's %(hour12)'o clock.\e"
 		}
 		*/
+		}
+		if hourhitannoying == "on"
+		{
+			""
+		}
 	}
 	--
 	if mikireflag == 1

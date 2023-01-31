@@ -277,8 +277,8 @@ surface2
 	animation2.pattern0,overlay,1136,0,0,0
 	//Happy
 	animation4.interval,never
-	animation4.pattern0,overlay,1144,0,0,0
-	animation4.pattern1,overlay,-2,100,0,0
+	animation4.pattern0,stop,2
+	animation4.pattern1,overlay,1144,0,0,0
 	
 	//Arms
 	//shrug
@@ -286,8 +286,8 @@ surface2
 	animation3.pattern0,overlay,1227,0,0,0
 	//Umbrella
 	animation5.interval,never
-	animation5.pattern0,overlay,1231,0,0,0
-	animation5.pattern1,overlay,-3,100,0,0
+	animation5.pattern0,stop,3
+	animation5.pattern1,overlay,1231,0,0,0
 
 	//Blushies
 	animation100.interval,bind
@@ -1175,6 +1175,10 @@ surface1532 //SwapDream
 surface1534 //saffron gold stardust
 {
 	element0,overlay,surface1534.png,0,0
+}
+surface1535 //calibri
+{
+	element0,overlay,surface1535.png,0,0
 }
 
 //      :::::::::  :::::::::  ::::::::::     :::       :::   :::

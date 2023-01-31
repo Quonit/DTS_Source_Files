@@ -4,8 +4,9 @@ Changelog for Dreamtale Sans!
 Additions:
 -More outfits!
 -Outfit menu changed for more presice selection + easier credits
+-You can give Dream outfits now!
 -Added ability to ask about Night's skull mark
--You can give him weather items now! Some have new images!
+-You can give Night weather items
 -New idle pose
 -More closing dialogue
 

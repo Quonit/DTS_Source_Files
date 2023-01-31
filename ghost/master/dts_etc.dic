@@ -452,6 +452,7 @@ UpdateVars
 	if !ISVAR('hasviolin'); {hasviolin='off'}
 	if !ISVAR('seenethicaltattoo'); {seenethicaltattoo='off'}
 	if !ISVAR('hasumbrella'); {hasumbrella='off'}
+	if !ISVAR('hourhitannoying'); {hourhitannoying='off'}
 	//counters
 	
 	if !ISVAR("posact") && !ISVAR("negact")

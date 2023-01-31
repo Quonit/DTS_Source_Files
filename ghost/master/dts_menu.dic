@@ -269,8 +269,9 @@ TalkConfig
 	--
 	"Birthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
 	Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
+	Hourly Hits: %(hourhitannoying) \f[sup,1](\q[Change it?,stopevilhourhit])\f[sup,0]\n/
 	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
-	Updated: 21st December 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"
+	Updated: 21st December 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"	
 	--
 	if nowmode != "intodreams" && ringringuthere == "on"
 	{
@@ -303,6 +304,19 @@ Select.changelovation
 	else
 	{
 		menusphere = "Southern"
+	}
+	--
+	TalkConfig
+}
+Select.stopevilhourhit
+{
+	if hourhitannoying != "off"
+	{
+		hourhitannoying = "off"
+	}
+	else
+	{
+		hourhitannoying = "on"
 	}
 	--
 	TalkConfig
@@ -2266,12 +2280,13 @@ Select.itemsmenu
 
 Select.giveoutfit
 {
-	"\_q\![*]\q[Dreamswap,dreamswapn] - OneBizarrKai\n/
+	"\b2\_q\![*]\q[Dreamswap,dreamswapn] - OneBizarrKai\n/
 	\![*]\q[DawnDream,dawndreamn] - Yume\n/
 	\![*]\q[Swapdream,Swapdreamn] - litemong & Song_A_Song\n/
 	\![*]\q[Flowerverse,flowerversen] - flowerrei\n/
 	\![*]\q[Dulled Formal,myoutfitn] - Quonit\n/
-	\![*]\q[Cygnus,saffronn] - Saffron Gold Stardust"
+	\![*]\q[Cygnus,saffronn] - Saffron Gold Stardust\n/
+	\![*]\q[Reunited,calin] - SFeral-Fanatic & Clover-of-Promise"
 	--
 	"%(ItemMOO)"
 }
@@ -2280,28 +2295,28 @@ Select.giveoutfit
 		posact += 1
 		"\0\s[1528]\i[55]* (He looks it over.)\n\n\w8It feels new%(lps(4))\w8 I don't know where you got this,\w7 but I guess I'll keep it."
 		--
-		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
 	Select.dawndreamn
 	{
 		posact += 1
 		"\0\s[1529]Huh%(lps(4))\\w8\n\nIt's a lot heavier than my normal one.\n\n\w8Why are there so many extras on it?"
 		--
-		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
 	Select.flowerversen
 	{
 		posact += 1
 		"\0\s[1530]* (He lifts his arm looking at it.)\n\n\w8Flowers?\n\n\w8I didn't think they were supposed to bloom until later...!"
 		--
-		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
 	Select.Swapdreamn
 	{
 		posact += 1
 		"\0\s[1532]* (You ask him what he thinks.)\w8\n\nIt looks a little like a Halloween costume. \w8The gloves are ripped all spooky-like and it's got super bright colors."
 		--
-		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
 	Select.myoutfitn
 	{
@@ -2309,14 +2324,21 @@ Select.giveoutfit
 		"\0\s[1531]* (He seems happy!)\n\n\w8Aw,\w3 what a nice color!"
 		"\0\s[1531]* (He seems to like it.)\n\n\w8It's formal,\w5 but not overly fancy like some of the other stuff the elders give me and Dream."
 		--
-		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
 	Select.saffronn
 	{
 		posact += 1
-		"\0\s[1531]* (He seems to like it!)\n\n\w8It's colorful!\n\n\w8I wonder if teal would look nice on my other clothes..."
+		"\0\s[1534]* (He seems to like it!)\n\n\w8It's colorful!\n\n\w8I wonder if teal would look nice on my other clothes..."
 		--
-		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
+	Select.calin
+	{
+		posact += 1
+		"\0\s[1535]* (You ask him his thoughts.)\n\n\w8Well,\w4 I like the tuxedo,\w4 and the eyepatch%(lps(4)) \w8Though I think I prefer seeing out of both eyes."
+		--
+		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
 Select.givebook
 {
@@ -2602,10 +2624,21 @@ Select.plsdontsticknailsinitorsomething
 }
 Select.iiiimsinginintherain
 {
-	posact += 1
-	hasumbrella = 1
+	//tempdialogue
 	//You can give him things related to the weather. He loves weather because he can't have it himself. Winter - Snowglobe, Spring - flowercrown, summer - umbrella, Fall - a leaf, a feather +1 nicelevel
+	posact += 1
+	if hasumbrella == "off"
+	{
+	hasumbrella = "on"
 	"%(surface0)* (You hand him an umbrella.)\n\n\w8\s[2]\i[4]\i[5]Oh,\w4 for the rain.\w8 I just try to get inside quickly when it rains%(lps(4))\w8 It can be pretty hard to get all the water out of my skull,\w3 haha!\e"
+	}
+	else
+	{
+		"* (You ask how his umbrella is.)\n\n\w8It's fine!\w8 Not broken or whatever.\w8 I don't get a lot of chances to use it, though."
+	}
+	//"* (You give him some rubber boots.)\w8...? Oh! This is made out of rubber! We don't have a lot of this at the village- * (He starts pulling at it, aparently more interested in the material than the boots.)"
+	//"* (You hand him a thermometer.) It has numbers on it? * (You tell him it tells the temperature.) Oooh, okay. I'll see if I have a book that'll explain the numbers... We don't have a lot of these because the weather is pretty consistant here so we don't need to know it so exactly.* (He tilts it around a lot.)"
+	//"* (You give him an infobook about clouds.) :OOO ok I will read it!"
 }
 
 
