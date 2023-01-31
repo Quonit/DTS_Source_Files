@@ -1951,6 +1951,11 @@ Select.youtalk
 	"\![*]\q[Check,checkinguout]\n/
 	\![*]\q[His Soul,looksoul]\n/
 	\![*]\q[The Crown,reexplaincrown]\n"
+	--
+	if seenethicaltattoo == "on"
+	{
+		"\![*]\q[Ask about skull mark?,ethicaltattoo]"
+	}
 	//"\![*]\q[Yourself,talkaboutme]\n"
 	//"\![*]\q[Himself,talkaboutyou]\n"
 	--
@@ -1990,6 +1995,7 @@ Select.reexplaincrown
 	}
 	elseif blushiemode == "on" || nicensadlevel >= 100
 	{
+		seenethicaltattoo = "on"
 		"\0\s[0]\i[55]* (You ask if you could see him without his crown.)\n\n\w8\0\s[13]Well\w2.\w2.\w2.\n\n\w8Maybe for just a second.\n\n\w8\s[26]\i[1]* (He takes it off.)\n\n\w8It feels kind of bare without it on\w2.\w2.\w2.\w8\n\n\s[26]\i[2]* (He puts it back on.)"
 	}
 	elseif nicensadlevel >= 25
@@ -2004,6 +2010,11 @@ Select.reexplaincrown
 	--
 	"%(backask)"
 }
+	Select.ethicaltattoo
+	{
+		//temp dialogue
+		"\s[4]Oh,\w5 my moon mark?\n\n\w8\s[26]\i[1]* (He takes it off.)\n\n\w8I-\w6 Well,\w4 me and my brother were born with it.\w8 Dream has a star instead though.\w8\w8 It's just the same mark as our crowns.\w8\w8\n\nWhen mom made our bodies with the anTree she branded our skulls with them,\w5\s[26]\i[2] kind of as a symbol of protection or to tell us apart or something.\n\n\w8\s[0]\i[19]%(lps(4))I guess that might seem a little weird if you live outside of the village or don't-\w8 uh,\w4 know us???\w8\n\n\s[2]Actually I'm not sure how weird you might find it.\n\n\w8\s[13]%(lps(4))I kind of like it though.\w8 Makes me feel like I'm being watched over or something%(lps(4))?\n\n\w8\s[9]I dunno,\w5 probably sounds stupid."
+	}
 
 Select.reexplaintree
 {
@@ -2249,7 +2260,8 @@ Select.itemsmenu
 		"\![*]\q[A bell,ringbell]\n"
 	}
 	--
-	"\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
+	"\![*]\q[Something weather related,iiiimsinginintherain]\n/
+	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
 }
 
 Select.giveoutfit
@@ -2588,13 +2600,13 @@ Select.plsdontsticknailsinitorsomething
 	"\0\s[19]* (You hand him a half eaten poptart.) \w8* (He's too desperate to deny it...)\w8\0\s[25]\e"
 	"\0\s[19]* (You hand him a fruit snack.)\w8\n\n* (He tries opening it, \w4but it was already opened.)\w8\n\n * (All the snacks are gone...)\e"
 }
-/*
 Select.iiiimsinginintherain
 {
+	posact += 1
+	hasumbrella = 1
 	//You can give him things related to the weather. He loves weather because he can't have it himself. Winter - Snowglobe, Spring - flowercrown, summer - umbrella, Fall - a leaf, a feather +1 nicelevel
-	"Doesn't look like you have anything to give him.\e"
+	"%(surface0)* (You hand him an umbrella.)\n\n\w8\s[2]\i[4]\i[5]Oh,\w4 for the rain.\w8 I just try to get inside quickly when it rains%(lps(4))\w8 It can be pretty hard to get all the water out of my skull,\w3 haha!\e"
 }
-*/
 
 
 

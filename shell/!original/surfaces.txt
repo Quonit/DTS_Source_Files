@@ -275,11 +275,19 @@ surface2
 	//Annoyed side look
 	animation2.interval,runonce
 	animation2.pattern0,overlay,1136,0,0,0
+	//Happy
+	animation4.interval,never
+	animation4.pattern0,overlay,1144,0,0,0
+	animation4.pattern1,overlay,-2,100,0,0
 	
 	//Arms
-	//Shrug
+	//shrug
 	animation3.interval,runonce
 	animation3.pattern0,overlay,1227,0,0,0
+	//Umbrella
+	animation5.interval,never
+	animation5.pattern0,overlay,1231,0,0,0
+	animation5.pattern1,overlay,-3,100,0,0
 
 	//Blushies
 	animation100.interval,bind

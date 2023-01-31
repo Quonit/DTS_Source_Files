@@ -55,6 +55,8 @@
 	dontmovestatsitshalloween = "off" //If it's halloween so that your stats won't reset when he gets out of goopmode
 	givesleepyblankie = "off" //If you give him a blanket while he's sleeping
 	starcrownexpo = "off" //Ask Dream about the star crown
+	seenethicaltattoo = "off" //Seen Night without his crown
+	hasumbrella = "off" //If he has umbrella
 	
 	if reference0 == 0
  	{

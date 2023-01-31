@@ -4,6 +4,11 @@ Changelog for Dreamtale Sans!
 Additions:
 -More outfits!
 -Outfit menu changed for more presice selection + easier credits
+-Added ability to ask about Night's skull mark
+-You can give him weather items now! Some have new images!
+-New idle pose
+-More closing dialogue
+
 
 --- 21 December 2022 ---
 Additions:

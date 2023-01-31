@@ -1055,6 +1055,10 @@ OnSurfaceRestore
 			"\0\s[0]\i[21]"
 			"\0\s[26]\i[6]"
 		}
+		if hasumbrella == "on"
+		{
+			"\s[2]\i[4]\i[5]"
+		}
 	}
 }
 			
