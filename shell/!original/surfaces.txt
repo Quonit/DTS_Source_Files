@@ -1163,6 +1163,12 @@ surface1532 //SwapDream
 	element0,overlay,surface1532.png,0,0
 }
 
+
+surface1534 //saffron gold stardust
+{
+	element0,overlay,surface1534.png,0,0
+}
+
 //      :::::::::  :::::::::  ::::::::::     :::       :::   :::
 //     :+:    :+: :+:    :+: :+:          :+: :+:    :+:+: :+:+:
 //    +:+    +:+ +:+    +:+ +:+         +:+   +:+  +:+ +:+:+ +:+

@@ -501,8 +501,8 @@ MouseDoubleClickSakura
 	}
 	else
  	{
-		LOGGING("mode is %(nowmode)")
-		LOGGING("dream boot is %(specildreamboot)")
+		//LOGGING("mode is %(nowmode)")
+		//LOGGING("dream boot is %(specildreamboot)")
 		
 		if nowmode != "intodreams"
 		{

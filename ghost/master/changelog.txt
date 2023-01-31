@@ -1,5 +1,9 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
+--- sometime in the future 2023 ---
+Additions:
+-More outfits!
+-Outfit menu changed for more presice selection + easier credits
 
 --- 21 December 2022 ---
 Additions:

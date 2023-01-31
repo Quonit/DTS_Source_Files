@@ -2254,15 +2254,58 @@ Select.itemsmenu
 
 Select.giveoutfit
 {
-	posact += 1
-	"\0\s[1528]\i[55]* (He looks it over weirdly.)\n\n\w8I guess it's kinda comfy\w2.\w2.\w2.\w5 Though,\w3 I'm sticking to my normal outfit."
-	"\0\s[1529]Huh...\w8\n\nIt's a lot heavier than my normal one.\n\n\w8Why are there so many extras on it?"
-	"\0\s[1530]* (He lifts his arm looking at it.)\n\n\w8Flowers?"
-	"\0\s[1531]* (He seems happy!)\n\n\w8Aw,\w3 what a nice color!"
-	"\0\s[1532]* (You ask him what he thinks.)\w8\n\nWhy are the gloves and shoes all ripped at the ends?"
+	"\_q\![*]\q[Dreamswap,dreamswapn] - OneBizarrKai\n/
+	\![*]\q[DawnDream,dawndreamn] - Yume\n/
+	\![*]\q[Swapdream,Swapdreamn] - litemong & Song_A_Song\n/
+	\![*]\q[Flowerverse,flowerversen] - flowerrei\n/
+	\![*]\q[Dulled Formal,myoutfitn] - Quonit\n/
+	\![*]\q[Cygnus,saffronn] - Saffron Gold Stardust"
 	--
 	"%(ItemMOO)"
 }
+	Select.dreamswapn
+	{
+		posact += 1
+		"\0\s[1528]\i[55]* (He looks it over.)\n\n\w8It feels new%(lps(4))\w8 I don't know where you got this,\w7 but I guess I'll keep it."
+		--
+		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
+	Select.dawndreamn
+	{
+		posact += 1
+		"\0\s[1529]Huh%(lps(4))\\w8\n\nIt's a lot heavier than my normal one.\n\n\w8Why are there so many extras on it?"
+		--
+		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
+	Select.flowerversen
+	{
+		posact += 1
+		"\0\s[1530]* (He lifts his arm looking at it.)\n\n\w8Flowers?\n\n\w8I didn't think they were supposed to bloom until later...!"
+		--
+		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
+	Select.Swapdreamn
+	{
+		posact += 1
+		"\0\s[1532]* (You ask him what he thinks.)\w8\n\nIt looks a little like a Halloween costume. \w8The gloves are ripped all spooky-like and it's got super bright colors."
+		--
+		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
+	Select.myoutfitn
+	{
+		posact += 1
+		"\0\s[1531]* (He seems happy!)\n\n\w8Aw,\w3 what a nice color!"
+		"\0\s[1531]* (He seems to like it.)\n\n\w8It's formal,\w5 but not overly fancy like some of the other stuff the elders give me and Dream."
+		--
+		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
+	Select.saffronn
+	{
+		posact += 1
+		"\0\s[1531]* (He seems to like it!)\n\n\w8It's colorful!\n\n\w8I wonder if teal would look nice on my other clothes..."
+		--
+		"\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
+	}
 Select.givebook
 {
 	posact += 1
