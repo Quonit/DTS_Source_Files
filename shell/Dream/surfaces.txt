@@ -434,9 +434,13 @@ surface1604 //SwapDream
 	animation1000.interval,bind
 	animation1000.pattern0,overlay,1020,0,0,0
 }
-surface1605 //Reunited Cali
+surface1606 //Reunited Cali
 {
-	element0,overlay,surface1605.png,0,0
+	element0,overlay,surface1606.png,0,0
+}
+surface1607 //Empireverse
+{
+	element0,overlay,surface1607.png,0,0
 }
 
 //meditative sitting

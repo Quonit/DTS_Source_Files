@@ -239,6 +239,10 @@ surface1
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1601,0,0,0
+	
+	//Blankie
+	animation48.interval,bind
+	animation48.pattern0,add,1145,0,0,0
 }
 
 //Shrug or something

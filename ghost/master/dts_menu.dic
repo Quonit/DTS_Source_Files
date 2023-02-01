@@ -159,6 +159,15 @@ MenuRun
 		"\![*]\q[Exit Sitmode,nomoresits]\n"
 	}
 	--
+	if hasblankie == "off"
+	{
+		"[*]\q[Give him a blanket,givesitblankie]\n"
+	}
+	if hasblankie == "on"
+	{
+		"[*]\q[Take away blanket,takesitblankie]\n"
+	}
+	--
 	"\![*]\q[ACT,Onyouact] or ask some \![*]\q[QUESTIONS,youtalk]\n/
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
@@ -2344,6 +2353,8 @@ Select.givebook
 {
 	posact += 1
 	"\0\s[0]\i[55]* (You gave him\w2.\w2.\w2.\w4 a book!)\0\s[4]\n\n\w8Oh,\w3 thank you.\w6 What's it about?\n\n\w8\i[55]* (You tell him it's %(bookstoread).)\0\s[13]\n\n\w8Interesting...?"
+	"\0\s[0]\i[55]* (You gave him %(bookstoread).)\0\s[4]\n\n\w8Ooo-\w8 I have a copy of this at home,\w8 though this one is higher quality."
+	"\0\s[0]\i[55]* (You give him an instruction book on how to play certain instruments.)\n\n\w8\s[32]Aww-\w6 now I just need to find something I'm allowed to practice on."
 	--
 	"%(ItemMOO)"
 }
@@ -2357,7 +2368,7 @@ Select.givegift
 	"\0\s[0]\i[55]* (You gift him with some scented candles.)\0\s[4]\n\n\w8Aw,\w3 that's nice of you.\w6 I could put them around the treehouse."
 	"\0\s[0]\i[55]* (You hand him a small stack of paper to write on.)\w8\n\n\0\s[4]Huh...?\n\n\w8\i[55]* (He takes it in his hands.)\w8\n\n\s[4]This is really high quality for paper...\w6\0\s[0]\i[14] I'll try not to use it up too fast."
 	"\0\s[0]\i[55]* (You hand him an old MP3 player.)\n\n\w8\s[4]* (He messes around with the buttons cluelessly,\w5\s[7] and he accidentally turns on a song.)\n\n\w8Ah!!-\w8\s[4] Oh,\w5 it's harmless.\w8\n\nIt's got video on it like the camera we had...\w8 This has to be something from outside the village.\0\s[6]* (He definitely seems to enjoy messing with it.)"
-	"\0\s[0]\i[55]* (You give him an instruction book on how to play certain instruments.)\n\n\w8\s[32]Aww-\w6 now I just need to find something I'm allowed to practice on."
+	"\0\s[0]\i[55]* (You give him a chinese finger trap,\w4 hoping he'll trap his fingers in it.)\w8\n\n\s[4]Oh- I've seen these.\w8 They don't work for me and Dream,\w4 since it kind of relies on you having skin...\w8\n\n\s[2]Maybe I could give this to one of the humans."
 	if hasviolin == "off"
 	{
 		hasviolin = "on"
@@ -2681,7 +2692,18 @@ Select.letsleep
 Select.givesleepblankie
 {
 	givesleepyblankie = "on"
-	"\![bind,Blanket,cape,1] (He looks comfy.)\e"
+	"\![bind,Blanket,cape,1]* (He looks comfy.)\e"
+}
+Select.givesitblankie
+{
+	givesleepyblankie = "on"
+	"\![bind,Blanket,cape,1]Thanks %(username.)\e"
+	"\![bind,Blanket,cape,1]* (He looks comfier this way.)\e"
+}
+Select.takesitblankie
+{
+	givesleepyblankie = "off"
+	"\![bind,Blanket,cape,0]* (You take his blanket away.)\w8\n\nIt was getting a little too warm anyways.\e"
 }
 
 Select.nicewords

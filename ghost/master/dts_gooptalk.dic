@@ -445,12 +445,13 @@ Select.bunchaNPCs
 
 Select.goopitemsmenu
 {
-    "\0\s[8]Heh,\w4 sure.\n\n"
-    "\0\s[0]I'm curious,\w4 fine.\n\n"
-    "\0\s[8]Fine, whatever.\n\n"
+    "\0\s[8]Heh,\w4 sure."
+    "\0\s[0]I'm curious,\w4 fine."
+    "\0\s[8]Fine, whatever."
     --
-    "\![*]\q[Give him a toy,gooptoybox]\n/
+    "\n\n\![*]\q[Give him a toy,gooptoybox]\n/
     \![*]\q[Try to feed him,goopfood]\n/
+    \![*]\q[Attempt to give him some clothes,goopcostume]\n/
     \![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -492,6 +493,11 @@ Select.goopfood
     "\n\n\![*]\q[Give something else??,goopitemsmenu]\n/
     \![*]\q[Again...?,goopfood]\n/
     \![*]\q[Nevermind,CANCEL]\e"
+}
+
+Select.goopcostume
+{
+	"* (You ask Nightmare to try on some clothes for you.)\n\n\w8Oh sure!\n\n\w8* (...He's definitely going to shred them.\w8 You decide not to.)"
 }
 
 Select.testvariable2
