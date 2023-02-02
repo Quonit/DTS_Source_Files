@@ -158,13 +158,13 @@ MenuRun
 	{
 		"\![*]\q[Exit Sitmode,nomoresits]\n"
 		--
-		if hasblankie == "off"
-		{
-		"[*]\q[Give him a blanket,givesitblankie]\n"
-		}
 		if hasblankie == "on"
 		{
-		"[*]\q[Take away blanket,takesitblankie]\n"
+		"\![*]\q[Take away blanket,takesitblankie]\n"
+		}
+		else
+		{
+			"\![*]\q[Give him a blanket,givesleepblankie]\n\n"
 		}
 	}
 	--
@@ -2671,6 +2671,14 @@ Select.iiiimsinginintherain
 	//"* (You give him some rubber boots.)\w8...? Oh! This is made out of rubber! We don't have a lot of this at the village- * (He starts pulling at it, aparently more interested in the material than the boots.)"
 	//"* (You hand him a thermometer.) It has numbers on it? * (You tell him it tells the temperature.) Oooh, okay. I'll see if I have a book that'll explain the numbers... We don't have a lot of these because the weather is pretty consistant here so we don't need to know it so exactly.* (He tilts it around a lot.)"
 	//"* (You give him an infobook about clouds.) :OOO ok I will read it!"
+	if season == "Winter"
+	{
+		"* (You give %(nightname) a snowglobe!)\n\n\w8Oh, there's a mini house in there!\n\n\w8* (He seems a little too focused on the scene to think of shaking it.)"
+	}
+	elseif season == "Spring"
+	{
+		""
+	}
 }
 
 
@@ -2721,8 +2729,8 @@ Select.givesitblankie
 }
 Select.takesitblankie
 {
-	givesleepyblankie = "off"
-	"\![bind,Blanket,cape,0]* (You take his blanket away.)\w8\n\nIt was getting a little too warm anyways.\e"
+	hasblankie = "off"
+	"\![bind,Blanket,cape,0]\i[55]* (You take his blanket away.)\w8\n\n\s[1]It was getting a little too warm anyways.\e"
 }
 
 Select.nicewords

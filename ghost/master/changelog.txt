@@ -1,6 +1,6 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
---- 14 Febuary 2023 ---
+--- 14 February 2023 ---
 Additions:
 -Now you can friendzone Nighty if you're in blushiemode!
 -Many pieces of dialogue were added relating to friendzoning him
@@ -8,7 +8,7 @@ Additions:
 -You can give Dream outfits now!
 -You can *try* to give Nightmare outfits?
 -Outfit menu changed for more precise selection + easier credits
--You can give Night weather items
+-You can give Night weather items which change depending on the season!
 -There are more gifts you can give both Night and Dream
 -Added ability to ask about Night's skull mark
 -New idle pose
