@@ -292,6 +292,11 @@ RandomTalk : nonoverlap_pool
 				{
 				"\i[55]* (You ask Night about his tongue.)\n\n\w8\s[11]Ew, what?\n\n\w8* (You offer some theories, \w4such as if it's real, \w4a mirage, \w7or maybe possibly one of Mare's tendrils sticking out?)\n\n\w8\w3\s[4].\w3.\w3.\w8You know what,\w8\s[12] I'm not answering.\e"
 				}
+			if friendzoned == "on"
+			{
+				//temp dialogue
+			"Sigh...\n\n\w8* (You ask %(nightname) what he's sighing about.)\n\n\w8I am thinking about how confusing you are."
+			}
 		}
 		if blushiemode == "on" && privacyrespecter == "off"
 		{

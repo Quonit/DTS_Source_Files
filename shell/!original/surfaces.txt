@@ -930,6 +930,10 @@ surface43
 	animation8.interval,never
 	animation8.pattern1,stop,7
 	animation8.pattern0,overlay,1126,0,0,0
+	//Smile
+	animation12.interval,never
+	animation12.pattern1,stop,7
+	animation12.pattern0,overlay,1146,0,0,0
 
 	//Right Arms
 	//At Side

@@ -157,15 +157,15 @@ MenuRun
 	if sittang == "on"
 	{
 		"\![*]\q[Exit Sitmode,nomoresits]\n"
-	}
-	--
-	if hasblankie == "off"
-	{
+		--
+		if hasblankie == "off"
+		{
 		"[*]\q[Give him a blanket,givesitblankie]\n"
-	}
-	if hasblankie == "on"
-	{
+		}
+		if hasblankie == "on"
+		{
 		"[*]\q[Take away blanket,takesitblankie]\n"
+		}
 	}
 	--
 	"\![*]\q[ACT,Onyouact] or ask some \![*]\q[QUESTIONS,youtalk]\n/
@@ -1255,13 +1255,19 @@ Onyouact
 		"\![*]\q[Tell something??,ilynighty]\n"
 		"\![*]\q[Say???,ilynighty]\n"
 	}
-	--
 	"\![*]\q[Compliment,Oncomplementee] /
 	\![*]\q[Joke,sayafunny]\n/
 	\![*]\q[Story,storytime] /
-	\![*]\q[Tease,bemean]\n/
-	\![*]\q[Goad,iwantgoopy] /
+	\![*]\q[Tease,bemean]\n"
+	--
+	if blushiemode == "on"
+	{
+		"\![*]\q[Friendzone,confusinguser] "
+	}
+	--
+	"\![*]\q[Goad,iwantgoopy] /
 	\![*]\q[Mock,nitpicktheboy]\n\n/
+	\![*]\q[Back to main menu,BACKTOMENU]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -1730,6 +1736,14 @@ Select.ilynighty
 	}
 }
 
+Select.confusinguser //Friendzone, perfect for a Valentines Day update
+{
+	//temp dialogue
+	blushiemode = "off"
+	friendzoned = "on"
+	"\s[0]\i[55]* (You tell Night that you like him,\w6 but only platonically.)\n\n\w8\s[7]....But you said-?\w8\s[13] Um%(lps(2))\w8\s[2] Okay,\w8\s[0]\i[18] I mean,\w8\s[4] I guess if you changed your mind thats fine.\w8\n\n\s[9]%(lps(2))Or I somehow misunderstood%(lps(2))?\n\n\w8\s[8]\i[55]* (He's definitely confused now.\w8 Poor boy.)\![bind,Costume,Blushies,false]"
+}
+
 Select.storytime
 {
 	posact += 1
@@ -2003,6 +2017,7 @@ Select.youtalk
 	}
 	--
 	"\![*]\q[Your eyes?,waxingandwaining]\n\n/
+	\![*]\q[Back to main menu,BACKTOMENU]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -2010,7 +2025,7 @@ Select.reexplaincrown
 {
 	if privacyrespecter == "on"
 	{
-		"\0\s[12]...It's my crown, obviously."
+		"\0\s[12]...It's my crown,\w5 obviously."
 	}
 	elseif nowmode == "Edgybitch"
 	{
@@ -2276,14 +2291,14 @@ Select.itemsmenu
 	}
 	--
 	" \![*]\q[A rock,rude]	 \![*]\q[Some food,nightyneedstoeat]\n/
-	\![*]\q[A book,givebook] 	\![*]\q[A toy,givetoy]\n"
+	\![*]\q[A book,givebook] 	\![*]\q[A toy,givetoy]   	"
 	--
 	if ringringuthere == "on"
 	{
-		"\![*]\q[A bell,ringbell]\n"
+		"\![*]\q[A bell,ringbell]"
 	}
 	--
-	"\![*]\q[Something weather related,iiiimsinginintherain]\n/
+	"\n\![*]\q[Something weather related,iiiimsinginintherain]\n/
 	\![*]\q[NOTHING,CANCEL]  \![*]\q[Go back,BACKTOMENU]\e"
 }
 
@@ -2458,16 +2473,22 @@ Select.rude
 Select.givetoy
 {
 	posact += 1
+	if RAND(100) < 25
+	{
+		"\0\s[0]\i[55]* (You bounce a rubber ball at him.)\w8\s[7]Ah!\w8\n\n\w8"
+		--
+		"* (Impressively,\w6 he manages to catch it.)"
+		"* (He doesn't catch it,\w8\s[-1] and ends up running after it.)"
+		--
+		"\n\n\w8\s[8]What's the point of this thing??\w8\n\n* (You tell him it's to bounce,\w8 and usually to try and catch when it goes back up.)\n\n\w8\s[4]* (He tries this, \w5but he's going to need more practice%(lps(3)))"
+	}
+	else
+	{
 	"\0\s[0]\i[55]* (You set down a small,\w2 plastic dinosoar toy.)\n\n\w8\s[4]\i[55]* (He picks it up and studies it.)\n\n\w8\i[23]It's got a weird texture%(lps(3))\w8 Does it do anything?\n\n\w8\i[55]* (You tell him it's just plastic. \w5Nothing special.)\n\n\w8\i[23]What's plastic?"
-	/*
-	//I'm not sure how to get this all to work ??? mmmm
-	"* (You bounce a rubber ball at him.)\w8\s[4]Ah!\w8\n\n\w8"
+	"\0\s[0]\i[55]* (You give him a small,\w4 posable action figure.)\n\n\w8\s[4]\i[55]* (He's not sure what to do with it,\w8\s[6]\i[55] then starts messing with the joints,\w8 spinning them around into circles.)\n\n\w8\s[6]I'm pretty sure humans aren't supposed to move like that.\n\n\w8\s[4]\i[55]* (The arm pops off.)\n\n\w8\s[7]Ah!\w8 I broke it!\n\n\w8* (You easily insert the arm back into it's socket.)\n\n\w8\s[4]Oh%(lps(3)) \w8I see."
+	"\0\s[0]\i[55]* (You set down one of those kids bead maze toys they have at doctor's offices on the ground for him.)\n\n\w8\s[43]* (He sits down to mess with it.)\n\n\w8So all your supposed to do is move the beads around? \w6Why?\n\n\w8* (You tell him it's a kids toy,\w4 so it doesn't really have a why.)\n\n\w8Hmm....\n\n\w8\i[12]* (He keeps messing with it, aparently enamored.)"
+	}
 	--
-	"* (Impressively,\w6 he manages to catch it."
-	"* (He doesn't catch it, and ends up running after it.)\n\n\w8"
-	--
-	"What's the point of this thing??\w8\n\n* (You tell him it's to bounce, and usually to try and catch when it goes back up.)\n\n\w8* (He tries this, \w5but he's going to need more practice%(lps(3)))"
-	*/
 	"%(ItemMOO)"
 }
 
@@ -2539,15 +2560,6 @@ Select.nightyneedstoeat
 	}
 	else //THANK YOU DREAM TEAM
 	{
-		posact += 1
-		//No modifiers, can be gotten any time of day.
-		//if it is winter
-		//{
-			//if nicensadlevel >= 50
-			//{
-		//"\0\s[0]\i[55]* (You slide him a bowl with six pomegranate seeds.)\w8\n\n\0\s[13]\i[55]* (He seems\w2.\w2.\w2. \w4suspicious?)\n\n\w8\0\s[4]What for?\n\n\w8\i[55]* (You tell him it's seasonal.)\n\n\w8* (He seems content with that explanation.)"
-			//}
-		//}
 		_norm = "\s[0]"
 		_attn = "\s[0]"
 		_eat = "\s[25]"
@@ -2564,7 +2576,14 @@ Select.nightyneedstoeat
 			_huh = "\s[1]\i[8]"
 			_ew = "\s[1]\i[9]"
 		}
-		
+		posact += 1
+		if season == "Winter"
+		{
+			if nicensadlevel >= 50
+			{
+			"\0\s[0]\i[55]* (You slide him a bowl with six pomegranate seeds.)\w8\n\n\0\s[13]\i[55]* (He seems\w2.\w2.\w2. \w4suspicious?)\n\n\w8\0\s[4]What for?\n\n\w8\i[55]* (You tell him it's seasonal.)\n\n\w8* (He seems content with that explanation.)"
+			}
+		}
 		if timeslot == "morning" //Morning (it's breakfast).
 		{
 			"%(_norm)\i[55]* (You give him a plate full of waffles for breakfast.)\n\n\w8\0\s[6]Thank you %(username)!!!%(_eat)\i[55]\w8\n\n"

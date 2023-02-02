@@ -453,6 +453,7 @@ UpdateVars
 	if !ISVAR('seenethicaltattoo'); {seenethicaltattoo='off'}
 	if !ISVAR('hasumbrella'); {hasumbrella='off'}
 	if !ISVAR('hourhitannoying'); {hourhitannoying='off'}
+	if !ISVAR('friendzoned'); {friendzoned='off'}
 	//counters
 	
 	if !ISVAR("posact") && !ISVAR("negact")
