@@ -497,7 +497,35 @@ Select.goopfood
 
 Select.goopcostume
 {
+	if maremare == "on" && nicensadlevel >= 25
+	{
+    "\![*]\q[Empireverse,empireversen] - Lunnar-chan\n/
+    \![*]\q[Suave Furry,suavefurry] - Jakei95\n/
+    \![*]\q[King Castle Fic,castleficreal] - Quonit\n/
+    \![*]\q[Mal Evil Timeline,evilevilevil] - Quonit\n/
+    \![*]\q[Nevermind,CANCEL]\e" 
+	}
+	else
+	{
 	"* (You ask Nightmare to try on some clothes for you.)\n\n\w8Oh sure!\n\n\w8* (...He's definitely going to shred them.\w8 You decide not to.)"
+	}
+}
+
+Select.empireversen
+{
+	
+}
+Select.suavefurry
+{
+	"\s[1620]* (He morphs his goo to appear more cat-like.)\n\n\w8>:3"
+}
+Select.castleficreal
+{
+	"\s[1621]* ()"
+}
+Select.evilevilevil
+{
+	
 }
 
 Select.testvariable2

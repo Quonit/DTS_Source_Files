@@ -42,4 +42,6 @@ scope,0
 1617,CutsceneNight
 1618,CutsceneNight5
 1619,Empireverse
+1620,Furry
+1621,King
 }
