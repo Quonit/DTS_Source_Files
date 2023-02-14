@@ -280,7 +280,7 @@ TalkConfig
 	Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
 	Hourly Hits: %(hourhitannoying) \f[sup,1](\q[Change it?,stopevilhourhit])\f[sup,0]\n/
 	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
-	Updated: 21st December 2022 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"	
+	Updated: 14th February, 2023 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"	
 	--
 	if nowmode != "intodreams" && ringringuthere == "on"
 	{
@@ -2658,6 +2658,10 @@ Select.iiiimsinginintherain
 {
 	//tempdialogue
 	//You can give him things related to the weather. He loves weather because he can't have it himself. Winter - Snowglobe, Spring - flowercrown, summer - umbrella, Fall - a leaf, a feather +1 nicelevel
+	
+	"* (You give him some rubber boots.)\w8\s[4]...?\w8 \w4\s[6]Oh!\w8 This is made out of rubber!\w8 We don't have a lot of this at the village- * (He starts pulling at it, aparently more interested in the material than the boots.)"
+	"* (You hand him a thermometer.)\w8\n\n\s[4]It has numbers on it?\w8\n\n\i[55]* (You tell him it tells the temperature.)\n\n\w8\s[4]Oooh,\w8 okay.\w8 I'll see if I have a book that'll explain the numbers... \s[4]We don't have a lot of these because the weather is pretty consistant here so we don't need to know it so exactly.\n\n\w8* (He tilts it around a lot.)"
+	"* (You give him an infobook about different types of clouds.)\n\n\w8\s[32]Ok I will read it!"
 	posact += 1
 	if hasumbrella == "off"
 	{
@@ -2666,19 +2670,20 @@ Select.iiiimsinginintherain
 	}
 	else
 	{
-		"* (You ask how his umbrella is.)\n\n\w8It's fine!\w8 Not broken or whatever.\w8 I don't get a lot of chances to use it, though."
+		"* (You ask how his umbrella is.)\n\n\w8It's fine!\w8 Not broken or whatever.\w8 I don't get a lot of chances to use it,\w4 though."
 	}
-	//"* (You give him some rubber boots.)\w8...? Oh! This is made out of rubber! We don't have a lot of this at the village- * (He starts pulling at it, aparently more interested in the material than the boots.)"
-	//"* (You hand him a thermometer.) It has numbers on it? * (You tell him it tells the temperature.) Oooh, okay. I'll see if I have a book that'll explain the numbers... We don't have a lot of these because the weather is pretty consistant here so we don't need to know it so exactly.* (He tilts it around a lot.)"
-	//"* (You give him an infobook about clouds.) :OOO ok I will read it!"
 	if season == "Winter"
 	{
 		"* (You give %(nightname) a snowglobe!)\n\n\w8Oh, there's a mini house in there!\n\n\w8* (He seems a little too focused on the scene to think of shaking it.)"
 	}
-	elseif season == "Spring"
-	{
-		""
-	}
+	//elseif season == "Spring"
+	//{
+	//	""
+	//}
+	--
+	"\![*]\q[Again,iiiimsinginintherain]\n/
+	\![*]\q[Give him something different,itemsmenu]\n/
+	\![*]\q[Nevermind,CANCEL]\e"
 }
 
 
