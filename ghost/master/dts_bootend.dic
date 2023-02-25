@@ -39,6 +39,7 @@
 	maremare = "off" //If you've seen Mare before. Under friendly circumstances.
 	wasemo = "off" //If you've seen goopmare before under bad circumstances.
 	sittang = "off" //if he is sitting
+	hourhitannoying = "off" //If the ghost will announce the hour
 	//Items
 	hasdreamplush = "off" //If you've given him the Dream plush
 	hasmareplush = "off" //If you've given him the Mare plush
@@ -55,6 +56,8 @@
 	dontmovestatsitshalloween = "off" //If it's halloween so that your stats won't reset when he gets out of goopmode
 	givesleepyblankie = "off" //If you give him a blanket while he's sleeping
 	starcrownexpo = "off" //Ask Dream about the star crown
+	seenethicaltattoo = "off" //Seen Night without his crown
+	hasumbrella = "off" //If he has umbrella
 	
 	if reference0 == 0
  	{
