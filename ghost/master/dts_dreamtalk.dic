@@ -628,7 +628,9 @@ Select.uhgfinallyoutfit
 		"%(Itemmeow)"
 	}
 }
-	Select.dawndreamd
+
+
+Select.dawndreamd
 	{
 		niceact += 1
 		"\s[1600]* (You hand Dream a dress.)\n\n\w8It's got quite a lot on it, yet it feels light!\w8 I wonder who would design an outfit like this...\w8I'd definitely call it ceremonial."
@@ -680,7 +682,7 @@ Select.uhgfinallyoutfit
 	Select.calid
 	{
 		niceact += 1
-		"\s[1606]* (You hand Dream some clothes.)\n\n\w8Aw,\w6 it's soft!\w8It's more casual than what I usually wear.\w7 How nice!"
+		"\s[1606]* (You hand Dream some clothes.)\n\n\w8Aw,\w6 it's soft!\w8 It's more casual than what I usually wear.\w7 How nice!"
 	--
 	"\n\n\![*]\q[Choose another outfit,uhgfinallyoutfit] %(Itemmeow)"
 	}
@@ -694,7 +696,7 @@ Select.uhgfinallyoutfit
 	Select.xdreamd
 	{
 		niceact += 1
-		"\s[1607]* (You give Dream an outfit.)\n\n\w8Black white and purple?\n\n\w8I feel like this would look nice on Nightmare..."
+		"\s[1608]* (You give Dream an outfit.)\n\n\w8Black white and purple?\n\n\w8I feel like this would look nice on Nightmare..."
 	--
 	"\n\n\![*]\q[Choose another outfit,uhgfinallyoutfit] %(Itemmeow)"
 	}
