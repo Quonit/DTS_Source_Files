@@ -694,7 +694,7 @@ Select.uhgfinallyoutfit
 	Select.xdreamd
 	{
 		niceact += 1
-		"\s[1607]* (You give Dream an outfit.)\n\n\w8Black white and purple?\n\n\w8I feel like this would look nice on Nightmare..."
+		"\s[1608]* (You give Dream an outfit.)\n\n\w8Black white and purple?\n\n\w8I feel like this would look nice on Nightmare..."
 	--
 	"\n\n\![*]\q[Choose another outfit,uhgfinallyoutfit] %(Itemmeow)"
 	}
