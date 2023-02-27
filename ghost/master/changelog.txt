@@ -1,11 +1,30 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
+--- 1st April 2023 ---
+Additions:
+-New Joke
+
+Tweaks:
+-Cleaned up some ACTions
+-Dream's item menu links back to their main menu now
+-Merged surface 26 and 44
+-Adjusted blushies on surface 26
+
+Bugfixes:
+-Clicking the Nightmare Plush no longer switches it to the Dream plush
+
+
 --- 24th February 2023 ---
 Additions:
--New Dream outfit early, lol
+-New Dream outfit early
+
+Tweaks:
+-Fixed some shortcuts in the outfit menu
 
 Bugfixes:
 -Negative route works again!
+-Fixed typos
+
 
 --- 14 February 2023 ---
 Additions:

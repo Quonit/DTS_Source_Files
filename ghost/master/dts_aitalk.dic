@@ -282,7 +282,7 @@ RandomTalk : nonoverlap_pool
 				\![*]\q[Yes,whatswronglilbb]\n/
 				\![*]\q[No,lethimbeplsfortheloveofgod]\e"
 			}
-			"\0\s[4]Sometimes I wonder about birds in the village.\w8 There's a lot of land in there,\w4 but birds can fly pretty far.\w8\n\nIf they fly past the anseal,\w5 then they can't come back. \w8So all the birds are decendents of birds that were inside when it was created,\w3 and none of their ancestors flew away.\n\n\w8\s[44]\i[8]%(lps(3))I guess it's kind of dumb since *everything* inside the seal is decended from something or someone that didn't leave,\w6 \s[2]but birds don't really know what they're doing and would've done it on accident while people know not to.\e"
+			"\0\s[4]Sometimes I wonder about birds in the village.\w8 There's a lot of land in there,\w4 but birds can fly pretty far.\w8\n\nIf they fly past the anseal,\w5 then they can't come back. \w8So all the birds are decendents of birds that were inside when it was created,\w3 and none of their ancestors flew away.\n\n\w8\s[26]\i[8]%(lps(3))I guess it's kind of dumb since *everything* inside the seal is decended from something or someone that didn't leave,\w6 \s[2]but birds don't really know what they're doing and would've done it on accident while people know not to.\e"
 		}
 		if nicensadlevel >= 50
 		{

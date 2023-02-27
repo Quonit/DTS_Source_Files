@@ -744,9 +744,14 @@ surface26
 	animation6.interval,never
 	animation6.pattern0,stop,5
 	animation6.pattern1,overlay,1224,0,0,0
+	
+	//Eyes
 	//Look up eyes
 	animation7.interval,never
 	animation7.pattern0,overlay,1135,0,0,0
+	//Closed eyes
+	animation8.interval,never
+	animation8.pattern0,overlay,1143,0,0,0
 
 	//Blushies
 	animation100.interval,bind
@@ -948,45 +953,6 @@ surface43
 	//At Side
 	animation10.interval,runonce
 	animation10.pattern0,overlay,1212,0,0,0
-}
-
-//Slight Down
-surface44
-{
-	element0,overlay,surface1044.png,0,0
-	
-	//Arms
-	//Holding Crown
-	animation1.interval,never
-	animation1.pattern0,stop,30
-	animation1.pattern1,stop,4
-	animation1.pattern2,overlay,1218,0,0,0
-	//Put on
-	animation2.interval,never
-	animation2.pattern0,stop,30
-	animation2.pattern1,stop,4
-	animation2.pattern2,overlay,1219,0,0,0
-	animation2.pattern3,overlay,1220,500,0,0
-	//Normal Crown
-	animation30.interval,runonce
-	animation30.pattern0,overlay,1221,0,0,0
-	//Crossed arms
-	animation4.interval,runonce
-	animation4.pattern0,overlay,1222,0,0,0
-	//dream plush
-	animation5.interval,never
-	animation5.pattern0,overlay,1223,0,0,0
-	//mare plush
-	animation6.interval,never
-	animation6.pattern0,overlay,1224,0,0,0
-	
-	//Eyes
-	//Look up eyes
-	animation7.interval,never
-	animation7.pattern0,overlay,1135,0,0,0
-	//Closed eyes
-	animation8.interval,never
-	animation8.pattern0,overlay,1143,0,0,0
 }
 
 //Positive Pick-Up

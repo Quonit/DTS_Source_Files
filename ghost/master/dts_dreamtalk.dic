@@ -552,8 +552,11 @@ Ondreambox //Items
 	"\![*]\q[Food,Ongivemunchiestodream]\n/
 	\![*]\q[Gift,givedreamgift]\n/
 	\![*]\q[Plushie,lilpushietoy]\n/
-	\![*]\q[Outfit,uhgfinallyoutfit]\e"
+	\![*]\q[Outfit,uhgfinallyoutfit]"
 	//Food
+	--
+	"\![*]\q[Back to menu,OnDreamMenu]\n/
+	\![*]\q[I'm done,CANCEL]\e"
 }
 
 Ongivemunchiestodream

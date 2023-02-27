@@ -142,6 +142,10 @@ OnBoot
 	{
 		OnDreamBoot
 	}
+	elseif nowmode == "skeleXapple"
+	{
+		OnShipBoot
+	}
 	else
 	{
 		if SHIORI3FW.ShellName == "Nightmare"
