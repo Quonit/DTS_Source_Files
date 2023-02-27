@@ -263,7 +263,14 @@ OnUpdateBegin
 	}
 	else
 	{
+		if nicensadlevel >= 0
+		{
 		"\0\s[4]I wonder what kind of things could be in the update...\w8"
+		}
+		else
+		{
+		"%(surface0)\i[55]* (He sits there quietly for the update.)"
+		}
 	}
 	if reference0 == "artificial"
 	{

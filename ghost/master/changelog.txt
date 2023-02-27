@@ -1,17 +1,20 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
---- 1st April 2023 ---
+--- 31st March 2023 ---
 Additions:
--New Joke
+-Added event for this ghost's birthday! Boot on April 1st to see.
+-Added new item to make him go to sleep
+-New Jokes
+-Some more dialogue for the negative route
 
 Tweaks:
 -Cleaned up some ACTions
 -Dream's item menu links back to their main menu now
--Merged surface 26 and 44
--Adjusted blushies on surface 26
+-Cleaned up shell surface code
 
 Bugfixes:
 -Clicking the Nightmare Plush no longer switches it to the Dream plush
+-Fixed typos (Extra parenthases when updating)
 
 
 --- 24th February 2023 ---

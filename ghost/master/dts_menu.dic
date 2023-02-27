@@ -1610,6 +1610,8 @@ Select.sayafunny
 		"\i[55]* (You tell him an elaborate story that ends with a horrible pun.)\n\n\w8\w5* (He seems at a loss what to make of it until he catches your expression.)\n\n...Huh."
 		"\i[55]* (You get halfway through telling in an in-joke before you realize he won't get it.)"
 		"\i[55]* (You ask %(nightname) what happens every 60 seconds in the Underground.)\n\n\w8\s[4]Um...\w8 where's 'the Underground'?\w8\n\n\i[55]* (A minute.)\s[6]\w8hehehe!"
+		"\i[55]* (You ask %(nightname) how many bones are in a human hand.)\n\n\w8\s[4]Twenty seven?\n\n\w8\w6\i[55]* (A handful.)\n\n\w8\w8\s[8]%(lps(5))\w5.\w5.\w8I guess that's also right."
+		"\i[55]* (You ask him what kind of tree can fit in your hand?)\n\n\w8\s[4]Hmm,\w8 well some bonsai trees can be really small.\n\n\w8\i[44]* (A palm tree.)\n\n\w8\s[4]Do my hands count as palms?"
 		if flirtlevel >= 10
 		{
 			"\0\s[0]\i[55]* (You ask him if he's a chicken.)\n\n\0\s[13]Um\w2.\w2.\w2.\w4 Why do you ask?\n\n\w8\i[55]* (Because he's \f[italic,true]impeccable\f[italic,false].)\n\n\w8\0\s[8]That's not even very funny..."

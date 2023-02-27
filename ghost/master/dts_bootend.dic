@@ -151,6 +151,7 @@ OnBoot
 		if SHIORI3FW.ShellName == "Nightmare"
 		{
 			"\0\s[0]\![change,Shell,Dreamtale Sans]\e"
+		//"\0\s[1].\w2.\w2.\w8\w8\0\s[0]\![change,shell,Passive Nighty]\0\s[7]Ah!\w8\n\n\0\s[13]Um\w2.\w2.\w2.\w6\0\s[4] How's your day?\e"
 		}
 		--
 		lastTalk = ""
@@ -160,16 +161,14 @@ OnBoot
 		passsec = 0
 		sleepingmode = "off"
 		sittang = "off"
-		"\0\s[0]\![bind,Blanket,cape,0]"
-		--	
 		dayslot = GetDaySlot
 		timeslot = GetTimeSlot
-		
-		//if SHIORI3FW.ShellName != "Nightmare"
-		//{
-		//"\0\s[1].\w2.\w2.\w8\w8\0\s[0]\![change,shell,Passive Nighty]\0\s[7]Ah!\w8\n\n\0\s[13]Um\w2.\w2.\w2.\w6\0\s[4] How's your day?\e"
-		//}
-		
+		"\0\s[0]\![bind,Blanket,cape,0]"
+		--
+		if GETTIME[1] != 4 && GETTIME[2] != 1
+		{
+			"\![bind,Costume,Flowers,false]"
+		}
 		--
 		if dayslot == userbirthday
 		{
@@ -197,6 +196,11 @@ OnBoot
 		elseif dayslot == "1month 1day"
 		{
 			"\0\s[9]Another year gone...\e"
+		}
+		elseif dayslot == "4month 1day"
+		{
+			"temp dialogue"
+			//"\0\s[0]\![bind,Costume,Flowers,true]* (He looks different.)\n\n\w8Oh,\w7 Hi %(username).\e"
 		}
 		elseif dayslot == "5month 28day"
 		{
