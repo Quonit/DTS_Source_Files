@@ -145,7 +145,7 @@ RandomTalk : nonoverlap_pool
 			}
 			if timeslot == "midnight"
 			{
-				"\0\s[1]* (It's awfully late,\w4 shouldn't he be getting to bed?)\e"
+				"\0\s[1]\i[55]* (It's awfully late,\w4 shouldn't he be getting to bed?)\e"
 			}
 		}
 	}

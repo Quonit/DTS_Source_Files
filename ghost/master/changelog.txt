@@ -14,7 +14,7 @@ Tweaks:
 
 Bugfixes:
 -Clicking the Nightmare Plush no longer switches it to the Dream plush
--Fixed typos (Extra parenthases when updating)
+-Fixed typos
 
 
 --- 24th February 2023 ---
