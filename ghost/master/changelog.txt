@@ -14,6 +14,7 @@ Tweaks:
 
 Bugfixes:
 -Clicking the Nightmare Plush no longer switches it to the Dream plush
+-Fixed If you obtained the blanket you couldn't give it to him while he's sleeping
 -Fixed typos
 
 

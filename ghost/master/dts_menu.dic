@@ -15,7 +15,7 @@
 	{
 		"zzz\w4.\w4.\w4.\w8\n\n* (Wake him up?)\n\n"
 		--
-		if hasblankie == "off"
+		if hasblankie == "on"
 		{
 			"[*]\q[Give him a blanket,givesleepblankie]\n"
 		}
