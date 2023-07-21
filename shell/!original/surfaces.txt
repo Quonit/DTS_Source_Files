@@ -553,6 +553,14 @@ surface14
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1614,0,0,0
+	//face
+	//Angy
+	animation1.interval,runonce
+	animation1.pattern0,overlay,1147,0,0,0
+	
+	//Arms
+	animation2.interval,runonce
+	animation2.pattern0,overlay,1232,0,0,0
 }
 
 //hum

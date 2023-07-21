@@ -446,7 +446,7 @@ MouseDoubleClickSakura
 			}
 		}
 	}
-	elseif reference4 == "dremFace"
+	elseif reference4 == "StarFace"
 	{
 		if starpunch == 0
 		{
