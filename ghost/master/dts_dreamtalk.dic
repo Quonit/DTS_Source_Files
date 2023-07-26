@@ -272,6 +272,18 @@ OnDreamMenu
 	ap = GetAP
 	nowmin = Getnowmin
 	nowhour = Getnowhour
+	"\b2"
+	--
+		if sadnicelevel >= 25
+		{
+		"\s[14]\i[2]\i[3]You want something from me?"
+		}
+		else
+		{
+		"\_q\s[17]\i[55]* (They're surprised by the menu that pops up!)"
+		}
+	"\_q\i[55]* (You open their menu.)\_q"
+	"\_q\i[55]* (They haven't noticed the menu's appeared.)\_q"
 	--
 	"\n\n\_q"
 	--
@@ -279,7 +291,7 @@ OnDreamMenu
 	{
 		"\![*]\q[Go back to %(nightname),byedream]\n/
 		\![*]\q[Close ghost,goodnightmoon]\n/
-		\![*]\q[Reset relationship with Dream,startfromscratch]\e"
+		\![*]\q[Reset Dream,startfromscratch]\e"
 	}
 	else
 	{

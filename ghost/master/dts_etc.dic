@@ -323,14 +323,80 @@ OnUpdateFailure
 }
 OnUpdate.OnDownloadBegin
 {
+	
+if UpdateText == "on"
+{
 	if "aitalk" _in_ reference0
 	{
 		"\_q\i[55]* (You get the feeling he might have more things to say.)\e"
 	}
+	elseif "anchor" _in_ reference0
+	{
+		"\_q\i[55]* (You get the feeling he may answer differently to questions.)\e"
+	}
+	elseif "bootend" _in_ reference0
+	{
+		"\_q\i[55]* (You get the feeling he may say different things when opening or closing.)\e"
+	}
+	elseif "commu" _in_ reference0
+	{
+		"\_q\i[55]* (You get the feeling he may respond to other ghosts differently.)\e"
+	}
+	elseif "dreamtalk" _in_ reference0
+	{
+		if sodreamy == "on"
+		{
+		"\_q\i[55]* (You get the feeling Dream may have more things to say.)\e"
+		}
+		else
+		{
+		"\_q\i[55]* (You get the feeling that you should change your computer clock to December 21st.)\e"
+		}
+	}
+	elseif "ect" _in_ reference0
+	{
+		"\_q\i[55]* (You get the feeling some boring work was done.)\e"
+	}
+	elseif "gooptalk" _in_ reference0
+	{
+		if wasemo == "on" || maremare == "on"
+		{
+		"\_q\i[55]* (You get the feeling Mare might have more things to say.)\e"
+		}
+		else
+		{
+		"\_q\i[55]* (You get the feeling that you should change your computer clock to October 31st.)\e"
+		}
+	}
+	elseif "marenightmode" _in_ reference0
+	{
+		if skeleXapple == "on"
+		{
+		"\_q\i[55]* (You get the feeling Night and Mare may talk to each other more.)\e"
+		}
+		else
+		{
+		"\_q\i[55]* (You get the feeling that you should change your computer clock to April 1st.)"
+		}
+	}
+	elseif "menu" _in_ reference0
+	{
+		"\_q\i[55]* (You get the feeling his menus may have been tweaked.)\e"
+	}
+	elseif "mouse" _in_ reference0
+	{
+		"\_q\i[55]* (You get the feeling he may respond differently to petting or hitting.)\e"
+	}
+	//Not specifying nameteach or word because updates for them are too broad or minor or backend
 	else //for files not specified above
 	{
 	"\i[55]\_q* (...)\e"
 	}
+}
+else
+{
+}
+	
 }
 
 OnUpdate.OnMD5CompareBegin {}
@@ -465,6 +531,8 @@ UpdateVars
 	if !ISVAR('hasumbrella'); {hasumbrella='off'}
 	if !ISVAR('hourhitannoying'); {hourhitannoying='off'}
 	if !ISVAR('friendzoned'); {friendzoned='off'}
+	if !ISVAR('skeleXapple'); {skeleXapple='off'}
+	if !ISVAR('UpdateText'); {skeleXapple='off'}
 	//counters
 	
 	if !ISVAR("posact") && !ISVAR("negact")

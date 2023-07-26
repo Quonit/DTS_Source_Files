@@ -40,6 +40,8 @@
 	wasemo = "off" //If you've seen goopmare before under bad circumstances.
 	sittang = "off" //if he is sitting
 	hourhitannoying = "off" //If the ghost will announce the hour
+	skeleXapple = "off" //If you've unlocked MareNight mode
+	UpdateText = "off"
 	//Items
 	hasdreamplush = "off" //If you've given him the Dream plush
 	hasmareplush = "off" //If you've given him the Mare plush

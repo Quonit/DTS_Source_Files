@@ -27,7 +27,7 @@
 			"\![*]\q[Tell him something nice,nicewords]\n"
 		}
 		--
-		\![*]\q[Stats,configmenu]\n/
+		"\![*]\q[Stats,configmenu]\n/
 		\![*]\q[Functions,dosomething]\e"
 	}
 	elseif VillageLevel >= 40 && nowmode == "purpleman"
@@ -278,10 +278,7 @@ TalkConfig
 		"Pronouns: %(heshe)/%(himher)/%(hisher) \f[sup,1](\q[Change them?,TEACHPRONOUN])\f[sup,0]\n"
 	}
 	--
-	"Birthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
-	Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
-	Hourly Hits: %(hourhitannoying) \f[sup,1](\q[Change it?,stopevilhourhit])\f[sup,0]\n/
-	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
+	"Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
 	Updated: 24th February, 2023 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"	
 	--
 	if nowmode != "intodreams" && ringringuthere == "on"
@@ -299,11 +296,22 @@ TalkConfig
 		"* (Exit out of Goopmode?)\n\q[Yes,removegoo] \q[No,CANCEL]\n\n"
 	}
 	--
-	"\![*]\q[RESET,resettheghost]\n/
+	"\![*]\q[RESET,resettheghost]					   \![*]\q[Page 2,statspage2]\n/
 	\![*]\q[Go Back,BACKTOMENU]					   \![*]\q[ESCAPE,CANCEL]/
 	\e"
 	//Fix no date temp dialogue
 	//LV: %(userlevel)\n/
+}
+
+Select.statspage2
+{
+	"\_qBirthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
+	Hourly Hits: %(hourhitannoying) \f[sup,1](\q[Change it?,stopevilhourhit])\f[sup,0]\n/
+	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
+	Update Text ([bold][yellow]WARNING: Turning this on will slow down updates significantly!): %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n\n/
+	\![*]\q[Page 1,configmenu]\n/
+	\![*]\q[Go Back,BACKTOMENU]					   \![*]\q[ESCAPE,CANCEL]/
+	\e"
 }
 
 Select.changelovation
@@ -861,7 +869,7 @@ Select.TALKPOOR
 }
 Select.TALKNONE
 {
-	talktime = "\0\s[8]...Guess I won't talk at all."
+	talktime = "Silent"
 	aitalkinterval = 0
 	if nowmode == "Edgybitch"
 	{
@@ -973,16 +981,16 @@ Select.dosomething
 	{
 		"\0\s[0]\i[102]Hell is it you want?\n\n"
 		"\0\s[0]\i[102]What do you want?\n\n"
-		"\0\s[8]* (He grumbles.)\n\n"
+		"\_q\0\s[8]* (He grumbles.)\n\n\_q"
 	}
 	elseif nowmode == "intodreams"
 	{
-		"%(surface0)\i[55]* (You look into your functions...)\n\n"
+		"\_q%(surface0)\i[55]* (You look into your functions...)\n\n\_q"
 	}
 	elseif VillageLevel >= 150
 	{
-		"\0\s[19]* (He faces you reluctantly.)\n\n"
-		"\0\s[19]* (He's not very happy about this...)\n\n"
+		"\_q\0\s[19]* (He faces you reluctantly.)\n\n\_q"
+		"\_q\0\s[19]* (He's not very happy about this...)\n\n\_q"
 	}
 	elseif sleepingmode == "on"
 	{
@@ -990,6 +998,11 @@ Select.dosomething
 	}
 	else
 	{
+		if sittang == "on"
+		{
+			sittang = "off"
+			"\0\s[16]\w8"
+		}
 		"%(surface0)What do you want me to do?\n\n"
 		"%(surface0)Fine, what do you need?\n\n"
 		"%(surface0)What do you want?\n\n"
@@ -1042,8 +1055,7 @@ Select.sspconfig
 	}
 	elseif VillageLevel >= 150
 	{
-		//"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]\w8\w8\w8\n\n/
-		"*(You yell at \0\s[18]him for opening the wrong function.)\w8\n\n\0\s[19]Sorry! Sorry!\![open,configurationdialog] You'll  have to use CTRL+D to close the calendar.\w5 I'm-s- I'm sorry.\w8"
+		"*(You yell at \0\s[18]him for opening the wrong function.)\w8\n\n\0\s[19]Sorry! Sorry!\![open,configurationdialog] You'll have to use CTRL+D to close the calendar.\w5 I'm-s- I'm sorry.\w8"
 	}
 	else
 	{
@@ -1997,13 +2009,11 @@ Select.bemean
 
 Select.youtalk
 {
+	//"\_q"
+	//--
 	if nicensadlevel <= -50 && punchout >= 20
 	{
 		"\0\s[19]...\n\n"
-	}
-	if blushiemode == "on" && privacyrespecter == "off"
-	{
-		"\0\s[6]What do'ya wanna ask?\n\n"
 	}
 	else
 	{
@@ -2012,43 +2022,52 @@ Select.youtalk
 			sittang = "off"
 			"\0\s[16]"
 		}
-		--
+		if blushiemode == "on" && privacyrespecter == "off"
+		{
+		"\0\s[6]What do'ya wanna ask?\n\n"
+		}
+		if nicensadlevel >= 50
+		{
+			"\s[32]What is it?"
+			"\s[20]Yeah?"
+		}
+		"\s[4]What do you want to know?"
 		"\0\s[0]What do you want to ask?\n\n"
+		"\0\s[0]Hm?\n\n"
+
 	}
 	--
-	"\![*]\q[Check,checkinguout]\n/
-	\![*]\q[His Soul,looksoul]\n/
-	\![*]\q[The Crown,reexplaincrown]\n"
+	"\_q\![*]\q[Check,checkinguout]       	\![*]\q[His Soul,looksoul]\n/
+	\![*]\q[The Crown,reexplaincrown]   \![*]\q[His eyes,waxingandwaining]"
 	--
 	if seenethicaltattoo == "on"
 	{
-		"\![*]\q[Ask about skull mark?,ethicaltattoo]"
+		"\n\![*]\q[His skull mark,ethicaltattoo]"
 	}
 	//"\![*]\q[Yourself,talkaboutme]\n"
 	//"\![*]\q[Himself,talkaboutyou]\n"
 	--
 	if momstreeexpo == "on"
 	{
-	   "\![*]\q[Magic tree?,reexplaintree]\n"
+	   "\n\![*]\q[The magic tree,reexplaintree]"
 	}
 	--
 	if brotherexpo == "on"
 	{
-	   "\![*]\q[Your brother?,reexplaindream]\n"
+	   "\n\![*]\q[His brother,reexplaindream]"
 	}
 	--
 	if askaboutnamee == "on"
 	{
-	   "\![*]\q[Your name?,whataboutmyname]\n"
+	   "\n\![*]\q[His name,whataboutmyname]"
 	}
 	--
 	if wasemo == "on" || maremare == "on"
 	{
-	   "\![*]\q[Goopmare?,askboutgoopy]\n"
+	   "\n\![*]\q[Goopmare?,askboutgoopy]"
 	}
 	--
-	"\![*]\q[Your eyes?,waxingandwaining]\n\n/
-	\![*]\q[Back to main menu,BACKTOMENU]\n/
+	"\n\n\![*]\q[Back to main menu,BACKTOMENU]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
 
@@ -2517,7 +2536,7 @@ Select.givetoy
 	{
 	"\0\s[0]\i[55]* (You set down a small,\w2 plastic dinosoar toy.)\n\n\w8\s[4]\i[55]* (He picks it up and studies it.)\n\n\w8\i[23]It's got a weird texture%(lps(3))\w8 Does it do anything?\n\n\w8\i[55]* (You tell him it's just plastic. \w5Nothing special.)\n\n\w8\i[23]What's plastic?"
 	"\0\s[0]\i[55]* (You give him a small,\w4 posable action figure.)\n\n\w8\s[4]\i[55]* (He's not sure what to do with it,\w8\s[6]\i[55] then starts messing with the joints,\w8 spinning them around into circles.)\n\n\w8\s[6]I'm pretty sure humans aren't supposed to move like that.\n\n\w8\s[4]\i[55]* (The arm pops off.)\n\n\w8\s[7]Ah!\w8 I broke it!\n\n\w8* (You easily insert the arm back into it's socket.)\n\n\w8\s[4]Oh%(lps(3)) \w8I see."
-	"\0\s[0]\i[55]* (You set down one of those kids bead maze toys they have at doctor's offices on the ground for him.)\n\n\w8\s[43]* (He sits down to mess with it.)\n\n\w8So all your supposed to do is move the beads around? \w6Why?\n\n\w8* (You tell him it's a kids toy,\w4 so it doesn't really have a why.)\n\n\w8Hmm....\n\n\w8\i[12]* (He keeps messing with it, aparently enamored.)"
+	//temp dialogue "\0\s[0]\i[55]* (You set down one of those kids bead maze toys they have at doctor's offices on the ground for him.)\n\n\w8\s[43]* (He sits down to mess with it.)\n\n\w8So all your supposed to do is move the beads around? \w6Why?\n\n\w8* (You tell him it's a kids toy,\w4 so it doesn't really have a why.)\n\n\w8Hmm....\n\n\w8\i[12]* (He keeps messing with it, aparently enamored.)"
 	}
 	--
 	"%(ItemMOO)"

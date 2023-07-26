@@ -327,7 +327,7 @@ RandomTalk : nonoverlap_pool
 		{
 			"\0\s[41]* (He sips something out of the mug you gave him.)\e"
 			"\0\s[27]\i[55]* (Smells like green tea.)\e"
-			"\0\s[41]* (He dinks some chai tea.)\n\n\w8\w4You know%(lps(3))\w8 saying ''chai tea'' is actually redundant, because ''chai'' just means tea."
+			"\0\s[41]* (He drinks some chai tea.)\n\n\w8\w4You know%(lps(3))\w8 saying ''chai tea'' is actually redundant, because ''chai'' just means tea."
 		}
 		if hasviolin == "off"
 		{
