@@ -13,7 +13,9 @@
 	}
 	elseif sleepingmode == "on"
 	{
-		"zzz\w4.\w4.\w4.\w8\n\n* (Wake him up?)\n\n"
+		"zzz\w4.\w4.\w4.\w8\n\n* (Wake him up?)\n\n/
+		\![*]\q[Yes,wakeup]\n/
+		\![*]\q[No,letsleep]"
 		--
 		if hasblankie == "on"
 		{
@@ -25,8 +27,8 @@
 			"\![*]\q[Tell him something nice,nicewords]\n"
 		}
 		--
-		"\![*]\q[Yes,wakeup]\n/
-		\![*]\q[No,letsleep]\e"
+		\![*]\q[Stats,configmenu]\n/
+		\![*]\q[Functions,dosomething]\e"
 	}
 	elseif VillageLevel >= 40 && nowmode == "purpleman"
 	{
@@ -171,7 +173,7 @@ MenuRun
 	"\![*]\q[ACT,Onyouact] or ask some \![*]\q[QUESTIONS,youtalk]\n/
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
-	\![*]\q[Use some functions,dosomething]\n\n/
+	\![*]\q[Functions,dosomething]\n\n/
 	//\![*]\q[Testvariable,testvariable]\n\n/
 	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
@@ -256,7 +258,7 @@ TalkConfig
 	}
 	elseif nowmode == "intodreams"
 	{
-		"Relationship Points: %(sadnicelevel)\n/
+		"%(surface0)Relationship Points: %(sadnicelevel)\n/
 		Times Pet: %(sparklepet)\n/
 		Times Hit: %(starpunch)\n\n"
 	}
@@ -716,13 +718,20 @@ birthchecked
 
 Select.talkinter
 {
-	"\i[55]* (How often do you want %(nightname) to talk?)\n\n\w8* (Right now it's set to %(talktime).)/
-	\i[55]\n\n/
-	\![*]\q[Every 30 seconds,TALKMAX]\n/
+	if nowmode == "intodreams"
+	{
+		"\i[55]* (How often do you want Dream to talk?)\n\n\w8* (Right now it's set to %(talktime).)	\i[55]\n\n"
+	}
+	else
+	{
+	"\i[55]* (How often do you want %(nightname) to talk?)\n\n\w8* (Right now it's set to %(talktime).)	\i[55]\n\n"
+	}
+	--
+	"\![*]\q[Every 30 seconds,TALKMAX]\n/
 	\![*]\q[Every minute,TALKHIGH]\n/
 	 \![*]\q[Every 3 minutes,TALKNORMAL]\n/
 	\![*]\q[Every 5 minutes,TALKPOOR]\n/
-	 \![*]\q[Don't speak,TALKNONE]\n\n/
+	\![*]\q[Don't speak,TALKNONE]\n\n/
 	\![*]\q[Don't change,TalksTill]\e"
 }
 Select.TalksTill
@@ -975,6 +984,10 @@ Select.dosomething
 		"\0\s[19]* (He faces you reluctantly.)\n\n"
 		"\0\s[19]* (He's not very happy about this...)\n\n"
 	}
+	elseif sleepingmode == "on"
+	{
+		"\i[55]* (He's sleeping now,\w5 so he might not do much,\w5 but you might be able to still access some settings...)"
+	}
 	else
 	{
 		"%(surface0)What do you want me to do?\n\n"
@@ -1029,9 +1042,8 @@ Select.sspconfig
 	}
 	elseif VillageLevel >= 150
 	{
-		"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]\w8\w8\w8\n\n/
-		*(You yell at \0\s[18]him for opening the wrong function.)\w8\n\n/
-		\0\s[19]Sorry! Sorry!\![open,configurationdialog] You'll  have to use CTRL+D to close the calendar.\w5 I'm-s- I'm sorry.\w8"
+		//"\0\s[19]* (Opening the SSP config menu...)\![open,calendar]\w8\w8\w8\n\n/
+		"*(You yell at \0\s[18]him for opening the wrong function.)\w8\n\n\0\s[19]Sorry! Sorry!\![open,configurationdialog] You'll  have to use CTRL+D to close the calendar.\w5 I'm-s- I'm sorry.\w8"
 	}
 	else
 	{
@@ -1050,9 +1062,17 @@ Select.ChoiceGarbagecan
 		{
 			"\0\s[8]Are you really so lazy you're making me take out your trash??\w8\n\n\s[5]All you need is like, \w5two buttons!\n\n\w8\s[0]\i[102]* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\i[105]\w8\w8\s[-1]\w8\w8\w8\w8\w8\c\0\s[5]There wasn't even anything there you idiot!"
 		}
+		if nowmode == "intodreams"
+		{
+			"%(surface0)* (You ask them to take out the trash.)\n\n\w8\s[3]\i[4]\i[3]* (They look around.)\s[14]\i[2]\i[3]\w8\w8\n\n\w8\s[0]\i[1]%(lps(4))I don't see any trash cans,\w8 sorry.\n\n\w8\s[2]* (%(lps(4))You might need to get someone else to do it.)"
+		}
 		elseif VillageLevel >= 150
 		{
 			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cT-\w5There wasn't-\w6 Wasn't anything in there\w4.\w4.\w4."
+		}
+		elseif sleepingmode == "on"
+		{
+			"* (%(lps(4)He is asleep. \w8He is not taking out the Recycling Bin.)"
 		}
 		elseif privacyrespecter == "off" && blushiemode == "on"
 		{
@@ -1084,10 +1104,18 @@ Select.ChoiceGarbagecan
 		{
 			"\0\s[8]Are you really so lazy you're making me take out your trash??\w8\n\nAll you need is like, \w5two buttons!\n\n\w8* (You tell him to do it anyways.)\w8\n\n* (He's not very happy about it...)\i[105]\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\c\s[5]There wasn't even anything there you idiot!"
 		}
+		if nowmode == "intodreams"
+		{
+			"%(surface0)* (You ask them to take out the trash.)\n\n\w8\s[3]\i[4]\i[3]* (They look around.)\s[14]\i[2]\i[3]\w8\w8\n\n\w8\s[0]\i[1]%(lps(4))I don't see any trash cans,\w8 sorry.\n\n\w8\s[2]* (%(lps(4))You might need to get someone else to do it.)"
+		}
 		elseif VillageLevel >= 150
 		{
 			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cI-\w6 I got it\w4.\w4.\w4.\e"
 			"\0\s[19]* (He doesn't even protest.)\w8\w8\s[-1]\w8\w8\w8\w8\w8\0\s[19]\cI-\w6 I-\w8.\w4.\w4.got\w8\n\n* (You tell him to give it up.)"
+		}
+		elseif sleepingmode == "on"
+		{
+			"* (%(lps(4)He is asleep. \w8He is not taking out the Recycling Bin.)"
 		}
 		else
 		{
@@ -1138,7 +1166,7 @@ Select.MailCheck
 }
 Select.HEADLINECANCEL
 {
-	"\0\s[0]Done.\e"
+	"\i[55]* (Done.)\e"
 }	
 Select.bugreport
 {
@@ -1146,9 +1174,9 @@ Select.bugreport
 	{
 		"\0\s[8]Please, \w4this thing is no doubt riddled with bugs and balancing issues.\w8\0\s[0] Go bug Quonit to fix it if you care that much:\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
 	}
-	elseif nicensadlevel <= -50 && punchout >= 20
+	elseif nicensadlevel <= -50 && punchout >= 20 || sleepingmode == "on"
 	{
-		"\0\s[22]\_qDiscord:   Quonit#9934\nTumblr:   @Quonit"
+		"\0\s[22]\_qDiscord:   Quonit\nTumblr:   @Quonit"
 	}
 	if sittang == "on"
 	{
@@ -1202,7 +1230,7 @@ Select.resetgreetingyes //Create more if there is time. It'd be funny.
 }
 Select.resetgreetingno
 {
-	"%(surface0)\i[55]* (You decide not to reset...)"
+	"\i[55]* (You decide not to reset...)"
 }
 Oncheckupdate
 {
@@ -2177,7 +2205,7 @@ Select.waxingandwaining
 	}
 	elseif blushiemode == "on"
 	{
-		"\0\s[6]Oh, my eyes!\w8\0\s[0]i[11] They actually wax and wane like the moon,\w7 which I think is pretty neat!\w8 anDream's eyes get all starry when they're excited,\w5 but mine are more subtle.\w7\w8\0\s[4] Uh, more yellow if I'm happy,\w5 more purple\0\s[13]... otherwise.\w8\0\s[6] But you make me happy, so-!\w8\n\n"
+		"\0\s[6]Oh, my eyes!\w8\0\s[0]\i[11] They actually wax and wane like the moon,\w7 which I think is pretty neat!\w8 anDream's eyes get all starry when they're excited,\w5 but mine are more subtle.\w7\w8\0\s[4] Uh, more yellow if I'm happy,\w5 more purple\0\s[13]... otherwise.\w8\0\s[6] But you make me happy, so-!\w8\n\n"
 	}
 	else
 	{
@@ -2327,7 +2355,7 @@ Select.giveoutfit
 	Select.dawndreamn
 	{
 		posact += 1
-		"\0\s[1529]Huh%(lps(4))\\w8\n\nIt's a lot heavier than my normal one.\n\n\w8Why are there so many extras on it?"
+		"\0\s[1529]Huh%(lps(4))\w8\n\nIt's a lot heavier than my normal one.\n\n\w8Why are there so many extras on it?"
 		--
 		"\n\n\![*]\q[Choose another outfit,giveoutfit] %(ItemMOO)"
 	}
@@ -2673,7 +2701,7 @@ Select.iiiimsinginintherain
 	}
 	else
 	{
-		"* (You ask how his umbrella is.)\n\n\w8It's fine!\w8 Not broken or whatever.\w8 I don't get a lot of chances to use it,\w4 though."
+		"* (You ask how his umbrella is.)\n\n\w8\s[2]\i[4]\i[5]It's fine!\w8 Not broken or whatever.\w8 I don't get a lot of chances to use it,\w4 though."
 	}
 	if season == "Winter"
 	{
@@ -2684,7 +2712,7 @@ Select.iiiimsinginintherain
 	//	""
 	//}
 	--
-	"\![*]\q[Again,iiiimsinginintherain]\n/
+	"\n\![*]\q[Again,iiiimsinginintherain]\n/
 	\![*]\q[Give him something different,itemsmenu]\n/
 	\![*]\q[Nevermind,CANCEL]\e"
 }
@@ -2727,13 +2755,13 @@ Select.letsleep
 Select.givesleepblankie
 {
 	givesleepyblankie = "on"
-	"\![bind,Blanket,cape,1]* (He looks comfy.)\e"
+	"\![bind,Blanket,cape,1]\i[55]* (He looks comfy.)\e"
 }
 Select.givesitblankie
 {
 	givesleepyblankie = "on"
 	"\![bind,Blanket,cape,1]Thanks %(username.)\e"
-	"\![bind,Blanket,cape,1]* (He looks comfier this way.)\e"
+	"\![bind,Blanket,cape,1]\i[55]* (He looks comfier this way.)\e"
 }
 Select.takesitblankie
 {
@@ -2744,7 +2772,8 @@ Select.takesitblankie
 Select.nicewords
 {
 	posact +=1
-	
+	"\i[55]"
+	--
 	//what you tell him
 	"* (You tell him he's a wonderful brother.)\w8\w8\n\n"
 	"* (You tell him he doesn't deserve anything that happened to him.)\w8\w8\n\n"

@@ -552,7 +552,7 @@ Ondreambox //Items
 	"\![*]\q[Food,Ongivemunchiestodream]\n/
 	\![*]\q[Gift,givedreamgift]\n/
 	\![*]\q[Plushie,lilpushietoy]\n/
-	\![*]\q[Outfit,uhgfinallyoutfit]"
+	\![*]\q[Outfit,uhgfinallyoutfit]\n"
 	//Food
 	--
 	"\![*]\q[Back to menu,OnDreamMenu]\n/

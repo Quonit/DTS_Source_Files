@@ -6,20 +6,23 @@ Additions:
 -//Added new item to make him go to sleep
 -//New outfits for Nighty (String Worm/casual)
 -New Jokes
+-Added more options to Night's sleeping menu
 -Some more dialogue for the negative route
+-Dream has more responses to Functions
 -Replaced Surface 14 (silly exahsperated --> other more fitting expressins depending on dialogue)
+-Updated updating dialogue to be faster and more specific. You will see it next update.
 
 Tweaks:
 -Cleaned up some ACTions
--Dream's item menu links back to their main menu now
+-Cleaned up Dream's menu
 -Cleaned up shell surface code
 
 Bugfixes:
 -//Fixed being able to click anchors during cutscenes
 -Clicking the Nightmare Plush no longer switches it to the Dream plush
 -Fixed If you obtained the blanket you couldn't give it to him while he's sleeping
--Fixed typos
 -Now you can punch Dream
+-Fixed typos (Including showing up as the wrong pose)
 
 
 --- 24th February 2023 ---

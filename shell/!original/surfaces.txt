@@ -740,11 +740,12 @@ surface26
 	animation2.pattern3,overlay,1219,0,0,0
 	animation2.pattern4,overlay,1220,500,0,0
 	//Normal Crown
-	animation3.interval,runonce
-	animation3.pattern0,overlay,1221,0,0,0
+	animation30.interval,runonce
+	animation30.pattern0,overlay,1221,0,0,0
 	//Crossed arms
-	animation4.interval,runonce
-	animation4.pattern0,overlay,1222,0,0,0
+	animation4.interval,never
+	animation4.pattern0,stop,5
+	animation4.pattern1,overlay,1222,0,0,0
 	//dream plush
 	animation5.interval,runonce
 	animation5.pattern0,overlay,1223,0,0,0

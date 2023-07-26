@@ -282,7 +282,7 @@ RandomTalk : nonoverlap_pool
 				\![*]\q[Yes,whatswronglilbb]\n/
 				\![*]\q[No,lethimbeplsfortheloveofgod]\e"
 			}
-			"\0\s[4]Sometimes I wonder about birds in the village.\w8 There's a lot of land in there,\w4 but birds can fly pretty far.\w8\n\nIf they fly past the anseal,\w5 then they can't come back. \w8So all the birds are decendents of birds that were inside when it was created,\w3 and none of their ancestors flew away.\n\n\w8\s[26]\i[8]%(lps(3))I guess it's kind of dumb since *everything* inside the seal is decended from something or someone that didn't leave,\w6 \s[2]but birds don't really know what they're doing and would've done it on accident while people know not to.\e"
+			"\0\s[4]Sometimes I wonder about birds in the village.\w8 There's a lot of land in there,\w4 but birds can fly pretty far.\w8\n\nIf they fly past the anseal,\w5 then they can't come back. \w8So all the birds are decendents of birds that were inside when it was created,\w3 and none of their ancestors flew away.\n\n\w8\s[26]\i[8]\i[4]%(lps(3))I guess it's kind of dumb since \f[italic,true]everything\f[italic,false] inside the seal is decended from something or someone that didn't leave,\w6 \s[2]but birds don't really know what they're doing and would've done it on accident while people know not to.\e:chain=birdseal"
 		}
 		if nicensadlevel >= 50
 		{
@@ -837,6 +837,12 @@ misschain
 {{CHAIN
 //temp dialogue
 	"\0\s[0]\i[20]...Except for Dream. It's... Probably not fair to worry them.\w8 They worry about me a lot- but they won't usually say it.\w8I can tell with how they act. I think it's because they don't want me to feel bad about it, \w4but some days it just makes me feel more guilty.\e:chain=end"
+}}CHAIN
+
+birdseal
+{{CHAIN
+//temp dialogue
+	"\0\s[4]...Unless the birds can just get through the seal through holes or having strong enough souls...?\e:chain=end"
 }}CHAIN
 
 //Time stuff
