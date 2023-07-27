@@ -308,12 +308,23 @@ Select.statspage2
 	"\_qBirthday: %(birthdayprint) \f[sup,1](\q[Change it?,TEACHBDAY])\f[sup,0]\n/
 	Hourly Hits: %(hourhitannoying) \f[sup,1](\q[Change it?,stopevilhourhit])\f[sup,0]\n/
 	Hemisphere: %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n/
-	Update Text ([bold][yellow]WARNING: Turning this on will slow down updates significantly!): %(menusphere) \f[sup,1](\q[Change it?,changelovation])\f[sup,0]\n\n/
+	Update Text: %(UpdateText) \f[sup,1](\q[Change it?,changeupdatetext])\f[sup,0] (\f[color,255,255,0]WARNING:\f[color,default] This feature will slow updates significantly!)\n\n/
 	\![*]\q[Page 1,configmenu]\n/
 	\![*]\q[Go Back,BACKTOMENU]					   \![*]\q[ESCAPE,CANCEL]/
 	\e"
 }
 
+Select.changeupdatetext
+{
+	if UpdateText == "off"
+	{
+	UpdateText = "on"
+	}
+	else
+	{
+		UpdateText = "off"
+	}
+}
 Select.changelovation
 {
 	if menusphere != "Northern"
@@ -869,7 +880,7 @@ Select.TALKPOOR
 }
 Select.TALKNONE
 {
-	talktime = "Silent"
+	talktime = "NEVER"
 	aitalkinterval = 0
 	if nowmode == "Edgybitch"
 	{
@@ -2860,13 +2871,6 @@ Select.nomoresits
 {
 	"\0\s[1]Fine\w4, fine,\w4 I'll get up.\w8\w8\0\s[16]\![raise,OnSelfStand]"
 }
-Select.testvariable
-{
-	changemode("intodreams")
-	"\![change,Shell,Dream]"
-	--
-	"\s[7]AAAAAA"
-}
 
 
 Select.changeshell
@@ -2900,3 +2904,8 @@ Select.testgoo
 	"\![change,Shell,Nightmare]"
 }
 
+
+Select.testvariable
+{
+	askaboutnight = "on"
+}

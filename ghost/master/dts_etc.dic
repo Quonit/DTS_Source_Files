@@ -533,6 +533,7 @@ UpdateVars
 	if !ISVAR('friendzoned'); {friendzoned='off'}
 	if !ISVAR('skeleXapple'); {skeleXapple='off'}
 	if !ISVAR('UpdateText'); {skeleXapple='off'}
+	if !ISVAR('askaboutnight'); {askaboutnight='off'}
 	//counters
 	
 	if !ISVAR("posact") && !ISVAR("negact")

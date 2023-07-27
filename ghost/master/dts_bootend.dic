@@ -41,7 +41,8 @@
 	sittang = "off" //if he is sitting
 	hourhitannoying = "off" //If the ghost will announce the hour
 	skeleXapple = "off" //If you've unlocked MareNight mode
-	UpdateText = "off"
+	UpdateText = "off" //If you want updates to take a million years
+	askaboutnight = "off" //Unlock the rest of dream's ask menu
 	//Items
 	hasdreamplush = "off" //If you've given him the Dream plush
 	hasmareplush = "off" //If you've given him the Mare plush
