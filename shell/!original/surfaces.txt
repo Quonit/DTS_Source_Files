@@ -19,7 +19,7 @@ surface.append500-590
 	collision3,40,50,102,84,Book
 }
 //I don't know how this works but I'm doing to put tentacles here
-surface.append0-400
+surface.append0-100
 {
 	animation500.interval,never
 	animation500.pattern0,interpolate,1304,0,0,0
@@ -367,6 +367,14 @@ surface4
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1604,0,0,0
+	
+	animation500.interval,always
+	animation500.pattern0,interpolate,1304,0,0,0
+	animation500.pattern1,interpolate,1305,660,0,0
+	animation500.pattern2,interpolate,1304,500,0,0
+	animation500.pattern3,interpolate,1305,500,0,0
+	animation500.pattern4,start,500
+
 }
 
 //Sleeping
@@ -480,6 +488,14 @@ surface8
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1608,0,0,0
+	
+	animation500.interval,always
+	animation500.pattern0,interpolate,1304,0,0,0
+	animation500.pattern1,interpolate,1305,660,0,0
+	animation500.pattern2,interpolate,1304,500,0,0
+	animation500.pattern3,interpolate,1305,500,0,0
+	animation500.pattern4,start,500
+
 }
 
 //sad lookdown
@@ -527,6 +543,14 @@ surface12
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1612,0,0,0
+	
+	animation500.interval,always
+	animation500.pattern0,interpolate,1304,0,0,0
+	animation500.pattern1,interpolate,1305,660,0,0
+	animation500.pattern2,interpolate,1304,500,0,0
+	animation500.pattern3,interpolate,1305,500,0,0
+	animation500.pattern4,start,500
+
 }
 
 //Shy
@@ -1202,6 +1226,42 @@ surface2006 //Happy?
 	element0,overlay,surface2006.png,0,0
 }
 
+surface200
+{
+	element0,overlay,surface2200.png,0,0
+	
+	animation1.interval,runonce
+	animation1.pattern0,overlay,2520,0,0,0
+	//grrr
+	animation7.interval,never
+	animation7.pattern0,overlay,2213,0,0,0
+	
+	//Arms
+	//Polite Behind Back
+	animation2.interval,runonce
+	animation2.pattern0,interpolate,2300,0,0,0
+	
+	//Cape
+	//Cape top
+	animation1000.interval,runonce
+	animation1000.pattern0,interpolate,2500,0,0,0
+	//Cape bottom
+	animation1001.interval,runonce
+	animation1001.pattern0,overlay,2501,0,0,0
+}
+//Sigh
+surface202
+{
+	element0,overlay,surface2202.png,0,0
+	
+	//Cape
+	//Cape top
+	animation1000.interval,runonce
+	animation1000.pattern0,overlay,2510,0,0,0
+	//Cape bottom
+	animation1001.interval,runonce
+	animation1001.pattern0,interpolate,2511,0,0,0
+}
 //surface2007 //Worried
 //{
 //	element0,overlay,surface2007.png,0,0

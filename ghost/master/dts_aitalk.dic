@@ -24,6 +24,7 @@
 		}
 	}
 }
+}
 
 RandomTalk : nonoverlap_pool
 {
@@ -512,7 +513,7 @@ RandomTalk : nonoverlap_pool
 		if weekday == 6 //Saturday
 		{
 			"\0\s[0]Did you get to stay home today?\n\n\w8\0\s[4]I wonder actually,\w4 am I in your home?\w4 Or did you take me somewhere?\e"
-			"\0\s[8]anDream's always out hanging out with other people on Saturdays,\w4 so even if you let me leave I wouldn't have much to do\w4.\w4.\w4.\n\n\w8\w8\0\s[0]\i[11]Well\w4.\w4.\w4.\w8\i[10]It's more like other people are take up all their time on Saturday,\w5 and anDream can't really leave without those people getting back at them.\e"
+			"\0\s[8]anDream's always out hanging out with other people on Saturdays,\w4 so even if you let me leave I wouldn't have much to do\w4.\w4.\w4.\n\n\w8\w8\0\s[0]\i[11]Well\w4.\w4.\w4.\w8\i[10]It's more like other people take up all their time on Saturday,\w5 and anDream can't really leave without those people getting back at them.\e"
 		}
 		if weekday == 7 //Sunday
 		{
