@@ -24,7 +24,6 @@
 		}
 	}
 }
-}
 
 RandomTalk : nonoverlap_pool
 {

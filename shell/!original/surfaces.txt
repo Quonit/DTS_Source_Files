@@ -19,9 +19,12 @@ surface.append500-590
 	collision3,40,50,102,84,Book
 }
 //I don't know how this works but I'm doing to put tentacles here
-surface.append0-100
+surface.append0,2-100
 {
-	animation500.interval,never
+	animation41.interval,bind
+	animation41.pattern0,overlay,1700,0,0,0
+	
+	animation500.interval,bind
 	animation500.pattern0,interpolate,1304,0,0,0
 	animation500.pattern1,interpolate,1305,660,0,0
 	animation500.pattern2,interpolate,1304,500,0,0
@@ -34,6 +37,7 @@ surface.append0-100
 	animation501.pattern1,interpolate,1302,80,0,0
 	animation501.pattern2,interpolate,1303,80,0,0
 	animation501.pattern3,interpolate,0,80,0,0
+	
 }
 
 
@@ -367,13 +371,6 @@ surface4
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1604,0,0,0
-	
-	animation500.interval,always
-	animation500.pattern0,interpolate,1304,0,0,0
-	animation500.pattern1,interpolate,1305,660,0,0
-	animation500.pattern2,interpolate,1304,500,0,0
-	animation500.pattern3,interpolate,1305,500,0,0
-	animation500.pattern4,start,500
 
 }
 
@@ -489,13 +486,6 @@ surface8
 	animation100.interval,bind
 	animation100.pattern0,add,1608,0,0,0
 	
-	animation500.interval,always
-	animation500.pattern0,interpolate,1304,0,0,0
-	animation500.pattern1,interpolate,1305,660,0,0
-	animation500.pattern2,interpolate,1304,500,0,0
-	animation500.pattern3,interpolate,1305,500,0,0
-	animation500.pattern4,start,500
-
 }
 
 //sad lookdown
@@ -543,13 +533,6 @@ surface12
 	//Blushies
 	animation100.interval,bind
 	animation100.pattern0,add,1612,0,0,0
-	
-	animation500.interval,always
-	animation500.pattern0,interpolate,1304,0,0,0
-	animation500.pattern1,interpolate,1305,660,0,0
-	animation500.pattern2,interpolate,1304,500,0,0
-	animation500.pattern3,interpolate,1305,500,0,0
-	animation500.pattern4,start,500
 
 }
 
@@ -752,15 +735,11 @@ surface26
 	
 	//Holding Crown
 	animation1.interval,never
-	animation1.pattern0,stop,3
-	animation1.pattern1,stop,4
-	animation1.pattern2,stop,5
-	animation1.pattern3,overlay,1218,0,0,0
+	animation1.pattern0,parallelstop,(30,4,5)
+	animation1.pattern1,overlay,1218,0,0,0
 	//Put on
 	animation2.interval,never
-	animation2.pattern0,stop,3
-	animation2.pattern1,stop,4
-	animation2.pattern2,stop,5
+	animation2.pattern0,parallelstop,(30,4,5)
 	animation2.pattern3,overlay,1219,0,0,0
 	animation2.pattern4,overlay,1220,500,0,0
 	//Normal Crown
@@ -1400,4 +1379,21 @@ surface100000
 	
 	animation10.interval,never
 	animation10.pattern0,overlay,1025,0,0,0
+	
+	animation11.interval,never
+	animation11.pattern0,overlay,1137,0,0,0
+	animation11.pattern1,overlay,1138,0,0,0
+	animation11.pattern2,overlay,1139,0,0,0
+	
+	animation12.interval,never
+	animation12.pattern0,overlay,1321,0,0,0
+	animation12.pattern1,overlay,1322,0,0,0
+	
+	animation13.interval,never
+	animation13.pattern0,overlay,1622,0,0,0
+	
+	animation14.interval,never
+	animation14.pattern0,overlay,2208,0,0,0
+
+
 }

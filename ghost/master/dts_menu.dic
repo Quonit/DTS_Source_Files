@@ -1095,7 +1095,7 @@ Select.ChoiceGarbagecan
 		}
 		elseif sleepingmode == "on"
 		{
-			"* (%(lps(4)He is asleep. \w8He is not taking out the Recycling Bin.)"
+			"* (%(lps(4))He is asleep. \w8He is not taking out the Recycling Bin.)"
 		}
 		elseif privacyrespecter == "off" && blushiemode == "on"
 		{
@@ -1138,7 +1138,7 @@ Select.ChoiceGarbagecan
 		}
 		elseif sleepingmode == "on"
 		{
-			"* (%(lps(4)He is asleep. \w8He is not taking out the Recycling Bin.)"
+			"* (%(lps(4))He is asleep. \w8He is not taking out the Recycling Bin.)"
 		}
 		else
 		{

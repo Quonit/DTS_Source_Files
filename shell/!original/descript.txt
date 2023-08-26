@@ -68,5 +68,8 @@ sakura.bindgroup48.default,0
 sakura.bindgroup41.name,Flowers,Flowers
 sakura.bindgroup41.default,0
 
+sakura.bindgroup500.name,Tentacles,Default
+sakura.bindgroup500.default,0
+
 sakura.menuitem0,100
 sakura.menu,hidden
