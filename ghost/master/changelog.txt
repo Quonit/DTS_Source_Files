@@ -15,6 +15,7 @@ Additions:
 
 Tweaks:
 -Cleaned up some ACTions
+-Cleaned up Night's menu (split the STATs into two pages)
 -Cleaned up Dream's menu
 -Cleaned up shell surface code
 -Split the stats menu into two pages
@@ -25,6 +26,7 @@ Bugfixes:
 -Fixed If you obtained the blanket you couldn't give it to him while he's sleeping
 -Now you can punch Dream
 -Fixed typos (Including showing up as the wrong pose)
+-Fixed typos in changelog
 
 
 --- 24th February 2023 ---
@@ -66,7 +68,7 @@ Tweaks:
 Additions:
 -Dreamtale sans??? For real??? Boot ghost on Dec 21st to see!
 -Updated commu.dic to include ReplyToGhost for other modes.
--Added more ect.dic flavor text.
+-Added more etc.dic flavor text.
 -Some new random dialogue
 
 Bugfixes:
