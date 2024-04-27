@@ -24,7 +24,9 @@
 		}
 	}
 }
-
+//What season is it when you are on a trampoline? Spring time
+//Where did the computer go to dance? The Disc-o. Oh! I know what a computer is! I've read about them :3
+//What kind of armor is best for sleeping? umm... Leather, because it's made of hide.
 RandomTalk : nonoverlap_pool
 {
 //Replace all dialogue ifs
