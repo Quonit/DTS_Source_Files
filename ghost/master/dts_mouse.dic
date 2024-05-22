@@ -384,7 +384,7 @@ MouseDoubleClickSakura
 			"* (You tap at his circlet.)\n\n\w8"
 			"* (You bap the crown.)\n\n\w8"
 			--
-			"\s[8]You're super interested in seeing what's under there still,\w4 aren't you\w2.\w2.w2."
+			"\s[8]You're super interested in seeing what's under there still,\w4 aren't you%(lps(2))"
 			"\s[4]Why are you still trying to touch it?"
 			"* (It makes a little 'clink' sound.)"
 			"* (He sighs audibly.)"

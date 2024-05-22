@@ -174,7 +174,7 @@ MenuRun
 	\![*]\q[Use some items,itemsmenu]\n/
 	\![*]\q[Stats,configmenu]\n/
 	\![*]\q[Functions,dosomething]\n\n/
-	//\![*]\q[Testvariable,testvariable]\n\n/
+	\![*]\q[the button that makes u terrible,testvariable]\n\n/
 	\![*]\q[Nevermind,CANCEL]\n\n\n[half]%(wd) %(nowhour):%(nowmin) %(ap), %(month)/%(day)/%(year)\e"
 }
 
@@ -1005,7 +1005,7 @@ Select.dosomething
 	}
 	elseif sleepingmode == "on"
 	{
-		"\i[55]* (He's sleeping now,\w5 so he might not do much,\w5 but you might be able to still access some settings...)"
+		"\i[55]* (He's sleeping now,\w5 but you might be able to do some things without his help...)"
 	}
 	else
 	{
@@ -1039,22 +1039,12 @@ Select.CALENDAR
 	--
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[0]\i[55]* (Opening the calendar...)\w8"
-		"\0\s[8]Ah,\w5 yes, \w5because you can't just see the date on your computer.\w8"
-		"\0\s[8]You could also just press ctrl + D instead of making me do it.\w8"
-		--
-		randomfunction
+		"\0\s[8]Go make someone else you've trapped here do it.\w8\+" // \+ changes it to a random other ghost
 	}
-	elseif VillageLevel >= 150
-	{
-		"\0\s[19]\i[55]* (Opening the calendar...)\![open,calendar]"
-	}
-	else
-	{
-		"%(surface0)\i[55]* (Opening the calendar...)\![open,calendar]"
-	}
+	elseif VillageLevel >= 150	{ "\0\s[19]" }
+	else { "%(surface0)" }
 	--
-	"%(funmenu)"
+	"\i[55]* (Opening the calendar...)\![open,calendar]%(funmenu)"
 }
 Select.sspconfig
 {
@@ -1095,7 +1085,7 @@ Select.ChoiceGarbagecan
 		}
 		elseif sleepingmode == "on"
 		{
-			"* (%(lps(4))He is asleep. \w8He is not taking out the Recycling Bin.)"
+			"* (%(lps(4))Unfortunately, %(nightname) is not a good enough sleepwalker for this.)"
 		}
 		elseif privacyrespecter == "off" && blushiemode == "on"
 		{
@@ -1138,7 +1128,7 @@ Select.ChoiceGarbagecan
 		}
 		elseif sleepingmode == "on"
 		{
-			"* (%(lps(4))He is asleep. \w8He is not taking out the Recycling Bin.)"
+			"* (%(lps(4))Unfortunately, %(nightname) is not a good enough sleepwalker for this.)"
 		}
 		else
 		{
@@ -1195,7 +1185,7 @@ Select.bugreport
 {
 	if nowmode == "Edgybitch"
 	{
-		"\0\s[8]Please, \w4this thing is no doubt riddled with bugs and balancing issues.\w8\0\s[0] Go bug Quonit to fix it if you care that much:\n\n\w8\_qDiscord:   Quonit#9934\nTumblr: @Quonit\e"
+		"\0\s[8]Please, \w4this thing is no doubt riddled with bugs and balancing issues.\w8\0\s[0] Go bug Quonit to fix it if you care that much:\n\n\w8\_qDiscord:   Quonit\nTumblr: @Quonit\e"
 	}
 	elseif nicensadlevel <= -50 && punchout >= 20 || sleepingmode == "on"
 	{
@@ -1207,7 +1197,7 @@ Select.bugreport
 	}
 	else
 	{
-		"\0\s[0]Sure\w2.\w2.\w2.\w8 I can't really fix myself,\w8 so you should really tell them if something's wrong\w2.\w2.\w2.\n\n\w8\_qDiscord:   Quonit#9934\nTumblr:   @Quonit\e"
+		"\0\s[0]Sure\w2.\w2.\w2.\w8 I can't really fix myself,\w8 so you should really tell them if something's wrong\w2.\w2.\w2.\n\n\w8\_qDiscord:   Quonit\nTumblr:   @Quonit\e"
 	}
 	--
 	"%(funmenu)"
@@ -2670,7 +2660,7 @@ Select.nightyneedstoeat
 		if timeslot == "evening" //Late (Dinner)
 		{
 			"%(_norm)\i[55]* (You hand him a grilled cheese sandwich.)\0\s[6]\w8\n\nThank you!\w8%(_eat)\i[55]\w8\n\n"
-			"%(_norm)i[55]* (You ask him if he wants this pasta you made.)\n\n\w8* (He's a bit reluctant.)\w8\n\n\0\s[13]Well\w3.\w3.\w3. \w6It's not a good idea to take food from people you don't know\w3.\w3.\w3. \w8%(_happy)but okay, \w6sure.%(_eat)\i[55]\w8\n\n"
+			"%(_norm)\i[55]* (You ask him if he wants this pasta you made.)\n\n\w8* (He's a bit reluctant.)\w8\n\n\0\s[13]Well\w3.\w3.\w3. \w6It's not a good idea to take food from people you don't know\w3.\w3.\w3. \w8%(_happy)but okay, \w6sure.%(_eat)\i[55]\w8\n\n"
 			"%(_norm)\i[55]* (You make a bowl of macaroni and cheese for him.)\n\n\w8\0\s[4]\i[55]* (He looks at it curiously, like he doesn't recognize it.)\n\n\w8Is this a kind of pasta?\n\n\w8* (You tell him it is.\w6 It's called elbow macaroni.)\w8%(_eat)\i[55]\w8\n\n"
 			"%(_norm)\i[55]* (You give him a few potstickers.)\n\n\w8%(_attn)Uhm,\w4 thank you.\w8%(_eat)\i[55]\w8\n\n"
 		}
@@ -2906,6 +2896,6 @@ Select.testgoo
 
 
 Select.testvariable
-{
-	askaboutnight = "on"
+{	
+	"this dialogue is \&[quot]in quotes\&[quot]."
 }
