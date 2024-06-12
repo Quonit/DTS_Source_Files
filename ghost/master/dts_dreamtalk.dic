@@ -78,14 +78,14 @@ OnDreamBoot
 			"\![bind,Costume,Cape,false]"
 		}
 		--
+		"%(surface0)"
+		--
 			if sadnicelevel >= 25
 			{
-				"%(surface0)Oh,\w6 hello again."
+				"Oh,\w6 hello again."
 			}
 			else
 			{
-				"%(surface0)"
-				--
 				"Oh... \w8Hello."
 				"...\n\n\w8* (They look at you with quiet regard.)"
 				"...\n\n\w8* (It looks like they're still scared of you.)"
@@ -631,7 +631,7 @@ Select.lilpushietoy
 	//Only use it if they like you. Discuss how they and Nightmare (Nightmare!) use costumes for ceremonies a lot.
 Select.uhgfinallyoutfit
 {
-	if nicesadlevel >= 25
+	if sadnicelevel >= 25
 	{
 	"\b2\_q\![*]\q[Dreamswap,dreamswapd] - OneBizarreKai\n/
 	\![*]\q[DawnDream,dawndreamd] - Yume\n/

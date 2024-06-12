@@ -604,7 +604,7 @@ RandomTalk : nonoverlap_pool
 			"\0\s[4]You know%(lps(3)) \w8After a while,\w5 the noise becomes normal.\w8 You kinda stop noticing it."
 			"\0\s[8]How much longer am I going to be here?"
 			"Wonder if there's a way to predict when you're gonna put me here.\w8For me,\w4 I just kind of appear here when I stop being around people like fifty percent of the time.\w8...I doubt anyone misses me though.\e:missesnight=misschain"
-			if nicesadlevel >= 25
+			if sadnicelevel >= 25
 			{
 				"%(surface0)Staying here's not so bad.\w8\s[13] You're ''good company''\w3..............\w3\s[8]Or whatever they call it.\w8\s[9] Did that sound silly...?"
 			}

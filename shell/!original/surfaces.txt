@@ -950,7 +950,7 @@ surface43
 	//Smile
 	animation12.interval,never
 	animation12.pattern1,stop,7
-	animation12.pattern0,overlay,1146,0,0,0
+	animation12.pattern0,overlay,1148,0,0,0
 
 	//Right Arms
 	//At Side
@@ -965,6 +965,14 @@ surface43
 	//At Side
 	animation10.interval,runonce
 	animation10.pattern0,overlay,1212,0,0,0
+	
+	//Blushies
+	animation100.interval,bind
+	animation100.pattern0,add,1601,0,0,0
+	
+	//Blankie
+	animation48.interval,bind
+	animation48.pattern0,add,1146,0,0,0
 }
 
 //Positive Pick-Up

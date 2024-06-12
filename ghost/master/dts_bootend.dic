@@ -608,7 +608,7 @@ OnClose
 				{
 					if blushiemode == "on" && privacyrespecter == "off" 
 					{
-						"\0\s[20]Have a good rest %(username).\w8"
+						"%(surface0)Have a good rest %(username).\w8"
 						"\0\s[4]I wonder if the stars are out yet.\w8"
 					}
 					"\0\s[4]I hope anDream is back home\w2.\w2.\w2.\n\n\w8Otherwise someone might be trying to keep them from going home.\w8"

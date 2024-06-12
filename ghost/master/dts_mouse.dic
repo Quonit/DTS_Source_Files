@@ -479,13 +479,13 @@ MouseDoubleClickSakura
 		{
 			negact += 1
 			punchout += 1
-			"\0\s[290]Ah-\w5\0\s[23] Stop it!!!\e"
-			"\0\s[290]Hghk-! \w9\w9nnn...\e"
+			"\0\s[29]Ah-\w5\0\s[23] Stop it!!!\e"
+			"\0\s[29]Hghk-! \w9\w9nnn...\e"
 			"\0\s[30]Ah-\w5 Ow!! \w7\0\s[1619]Stop it!!\e"
 			"\0\s[30]Hey!\w7\w7\n\nOw...\w5 Ow...\w5 This hurts...\e"
 			"\0\s[30]Nngh-! \w9\w9hnnggg...\e"
-			"\0\s[290]!! \w9\w9Ow-\w4 Stop it!\e"
-			"\0\s[290]!! \w9\w9Don't do that!!\e"
+			"\0\s[29]!! \w9\w9Ow-\w4 Stop it!\e"
+			"\0\s[29]!! \w9\w9Don't do that!!\e"
 		}
 		else
 		{
@@ -528,7 +528,7 @@ Select.punchnighty
 		if nicensadlevel > 25; {negact += 10}
 		else; {negact += 1}
 		punchout += 1
-		"\0\s[290]Ack-! %(username)??\w4\0\s[21] Why did you do that???\e"
+		"\0\s[29]Ack-! %(username)??\w4\0\s[21] Why did you do that???\e"
 		"\0\s[30]Ow!! Wait,\w3\0\s[21] %(username)???\e"
 		"\0\s[30]Ah-!! Ow!!!\w4 %(username)?!\n\n\w8\0\s[21]Why did you do that???\w6 I-\w3 I thought you were my friend!\e"
 	}
@@ -536,11 +536,11 @@ Select.punchnighty
 	if nicensadlevel > 25; {negact += 10}
 	else; {negact += 1}
 	punchout += 1
-	"\0\s[290]Ow! \w3Why did you do that??"
-	"\0\s[290]Ow-! \w3Stop it!"
-	"\0\s[290]Ow- \w3Why did you hit me??"
+	"\0\s[29]Ow! \w3Why did you do that??"
+	"\0\s[29]Ow-! \w3Stop it!"
+	"\0\s[29]Ow- \w3Why did you hit me??"
 	"\0\s[30]Ack- \w3that hurt!"
-	"\0\s[290]Ah- \w3Don't do that!"
+	"\0\s[29]Ah- \w3Don't do that!"
 }
 
 Select.dontpunchnighty

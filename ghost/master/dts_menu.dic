@@ -2537,7 +2537,7 @@ Select.givetoy
 	{
 	"\0\s[0]\i[55]* (You set down a small,\w2 plastic dinosoar toy.)\n\n\w8\s[4]\i[55]* (He picks it up and studies it.)\n\n\w8\i[23]It's got a weird texture%(lps(3))\w8 Does it do anything?\n\n\w8\i[55]* (You tell him it's just plastic. \w5Nothing special.)\n\n\w8\i[23]What's plastic?"
 	"\0\s[0]\i[55]* (You give him a small,\w4 posable action figure.)\n\n\w8\s[4]\i[55]* (He's not sure what to do with it,\w8\s[6]\i[55] then starts messing with the joints,\w8 spinning them around into circles.)\n\n\w8\s[6]I'm pretty sure humans aren't supposed to move like that.\n\n\w8\s[4]\i[55]* (The arm pops off.)\n\n\w8\s[7]Ah!\w8 I broke it!\n\n\w8* (You easily insert the arm back into it's socket.)\n\n\w8\s[4]Oh%(lps(3)) \w8I see."
-	//temp dialogue "\0\s[0]\i[55]* (You set down one of those kids bead maze toys they have at doctor's offices on the ground for him.)\n\n\w8\s[43]* (He sits down to mess with it.)\n\n\w8So all your supposed to do is move the beads around? \w6Why?\n\n\w8* (You tell him it's a kids toy,\w4 so it doesn't really have a why.)\n\n\w8Hmm....\n\n\w8\i[12]* (He keeps messing with it, aparently enamored.)"
+	"\0\s[0]\i[55]* (You set down one of those kids bead maze toys they have at doctor's offices on the ground for him.)\n\n\w8\s[43]* (He sits down to mess with it.)\n\n\w8So all your supposed to do is move the beads around? \w8Why?\n\n\w8* (You tell him it's a kids toy,\w4 so it doesn't really have a why.)\n\n\w8Hmm....\n\n\w8\i[12]\i[55]* (He keeps messing with it, aparently enamored.)"
 	}
 	--
 	"%(ItemMOO)"

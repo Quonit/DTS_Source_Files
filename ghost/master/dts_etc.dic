@@ -569,7 +569,7 @@ UpdateVars
 
 OnUpdatedataCreating
 {
-	"\_q\i[55]* (* (Creating the updates2.dau file.))\e"
+	"\_q\i[55]* (Creating the updates2.dau file.)\e"
 }
 OnUpdatedataCreated
 {

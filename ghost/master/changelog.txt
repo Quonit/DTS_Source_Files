@@ -1,10 +1,7 @@
 Changelog for Dreamtale Sans!
 --------------------------------------------------------------------------------------------------------------------
---- ??? 2023 ---
+--- June 11 2024 ---
 Additions:
--//Added event for this ghost's birthday! Boot on April 1st to see.
--//Added new item to make him go to sleep
--//New outfits for Nighty (String Worm/casual)
 -New Jokes
 -Added more options to Night's sleeping menu
 -Some more dialogue for the negative route
@@ -21,11 +18,12 @@ Tweaks:
 -Split the stats menu into two pages
 
 Bugfixes:
--//Fixed being able to click anchors during cutscenes
 -Clicking the Nightmare Plush no longer switches it to the Dream plush
 -Fixed If you obtained the blanket you couldn't give it to him while he's sleeping
 -Now you can punch Dream
 -Fixed typos (Including showing up as the wrong pose)
+-Misc pose cleaning
+-Fixed blanket dress up for second sitting pose
 -Fixed typos in changelog
 
 
