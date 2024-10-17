@@ -279,7 +279,7 @@ TalkConfig
 	}
 	--
 	"Talk Rate: every %(talktime) \f[sup,1](\q[Change it?,talkinter])\f[sup,0]\n/
-	Update: June 11, 2024 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"	
+	Update: October 16, 2024 \f[sup,1](\q[Check for Updates?,Oncheckupdate])\f[sup,0]\n\n"	
 	--
 	if nowmode != "intodreams" && ringringuthere == "on"
 	{

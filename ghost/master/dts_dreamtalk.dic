@@ -304,7 +304,7 @@ OnDreamMenu
 		{
 			"\![*]\q[Repeat,OnLastTalk]\n\n"
 			"\![*]\q[Ask them to repeat themself,OnLastTalk]\n\n"
-			"\![*]\q[Ask them to repeat what they last said,OnLastTalk]\n\n"
+			"\![*]\q[Ask them to repeat what they last ./said,OnLastTalk]\n\n"
 			"\![*]\q[Ask them to say what they just said,OnLastTalk]\n\n"
 		}
 		--
@@ -419,7 +419,7 @@ Select.bnice2them //Compliment
 	"* (You gush that everyone should kiss Dream on their goldie little crown.)\n\n* (They smile and nod politely.)"
 	}
 	--
-	"\![*]\q[Again,bnice2them]\n%(actmeow)"
+	"\n\![*]\q[Again,bnice2them]%(actmeow)"
 }
 Select.dreamlikesstories //Story
 {
@@ -440,14 +440,14 @@ Select.scarethem //Tease
 	"* (You warn Dream about the computer bugs.)\n\n\w8\s[0]\i[1]...\n\n\w8\s[3]* (They keep glancing worriedly.)"
 	"* (You jump at them suddenly,\w8\s[7] they flinch.)\w8\n\n\s[0]\i[1]..."
 	--
-	"\![*]\q[Again,scarethem]\n%(actmeow)"
+	"\n\![*]\q[Again,scarethem]\n%(actmeow)"
 }
 Select.nowurjustmean2dream //Mock
 {
 	sadact += 1
 	//you comment that no wonder people treat %(nightname) as a punching bag. He's way less cautious than Dream is
 	--
-	"\![*]\q[Again,nowurjustmean2dream]\n%(actmeow)"
+	"\n\![*]\q[Again,nowurjustmean2dream]%(actmeow)"
 }
 //Joke
 	//they act like ur funnier than u are. rly.
@@ -545,7 +545,7 @@ Select.specilimportantcrown
 
 Select.lolasif
 {
-	"\s[6]...No."
+	"\s[0]\i[6]...No."
 	--
 	repeatDream
 }
